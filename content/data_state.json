@@ -820,5 +820,45 @@
     },
     "meta": {},
     "mistral": {}
+  },
+  "hn_weekly": {
+    "2026-09-27": {
+      "claude": {
+        "n": 761,
+        "notable": 60,
+        "comments": 13158,
+        "points": 19532
+      },
+      "gpt": {
+        "n": 730,
+        "notable": 78,
+        "comments": 17890,
+        "points": 28518
+      },
+      "gemini": {
+        "n": 76,
+        "notable": 8,
+        "comments": 1448,
+        "points": 2686
+      },
+      "grok": {
+        "n": 59,
+        "notable": 4,
+        "comments": 1432,
+        "points": 1456
+      },
+      "meta": {
+        "n": 25,
+        "notable": 4,
+        "comments": 887,
+        "points": 1526
+      },
+      "mistral": {
+        "n": 13,
+        "notable": 3,
+        "comments": 976,
+        "points": 1559
+      }
+    }
   }
 }
