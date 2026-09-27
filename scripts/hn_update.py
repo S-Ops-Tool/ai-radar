@@ -18,7 +18,7 @@ NOTABLE = 50
 VENDORS = {
     "claude": {"label": "Claude", "queries": ["Claude", "Anthropic"],
                "include": r"\b(claude|anthropic)\b", "exclude": r"\bshannon\b|\bdebussy\b|\bmonet\b"},
-    "gpt": {"label": "ChatGPT", "queries": ["ChatGPT", "OpenAI", "GPT-6"],
+    "gpt": {"label": "ChatGPT", "queries": ["ChatGPT", "OpenAI", "GPT"],
             "include": r"\b(chatgpt|openai|gpt-?\d)", "exclude": r"^$"},
     "gemini": {"label": "Gemini", "queries": ["Gemini"],
                "include": r"\bgemini\b", "exclude": r"protocol|capsule|gemtext|exchange|crypto|winklevoss|nasa|apollo"},
@@ -93,6 +93,14 @@ def update_hn_history(blocks, state, notes):
         months.append((y, m))
     months.reverse()
     hist = state.setdefault("hn_monthly", {})
+    sigs = state.setdefault("hn_query_sig", {})
+    for vid, cfg in VENDORS.items():
+        sig = json.dumps([cfg["queries"], cfg["include"], cfg["exclude"]])
+        if sigs.get(vid) != sig:
+            for row in hist.values():
+                row.pop(vid, None)
+            sigs[vid] = sig
+            notes.append(f"Hacker News : critères modifiés pour {cfg['label']}, historique recalculé.")
     fetched = 0
     for y, m in months:
         k = f"{y}-{m:02d}"

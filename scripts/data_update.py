@@ -220,25 +220,30 @@ def update_vectara_history(blocks, vendors_cfg, state, notes):
         if m == 0:
             y, m = y - 1, 12
     months.reverse()
-    since = f"{months[0][0]}-{months[0][1]:02d}-01T00:00:00Z"
+    y0, m0 = months[0]
+    since = f"{y0 - 1}-{m0:02d}-01T00:00:00Z"
     commits = []
     for page in (1, 2, 3):
         batch = gh_json(f"{GH_API}?path=README.md&per_page=100&page={page}&since={since}")
         commits += batch
         if len(batch) < 100:
             break
-    last_per_month = {}
-    for c in commits:
-        date = c["commit"]["committer"]["date"]
-        k = date[:7]
-        if k not in last_per_month or date > last_per_month[k][0]:
-            last_per_month[k] = (date, c["sha"])
+    dated = sorted((c["commit"]["committer"]["date"], c["sha"]) for c in commits)
     hist = state.setdefault("vectara_monthly", {})
     current = f"{now.year}-{now.month:02d}"
-    for k, (date, sha) in last_per_month.items():
+    readmes = {}
+    for (y, m) in months:
+        k = f"{y}-{m:02d}"
+        end = f"{y + (m == 12)}-{m % 12 + 1:02d}-01T00:00:00Z"
+        prior = [sha for date, sha in dated if date < end]
+        if not prior:
+            continue
+        sha = prior[-1]
         if k in hist and k != current and hist[k].get("sha") == sha:
             continue
-        md = fetch(RAW_AT.format(sha=sha))
+        if sha not in readmes:
+            readmes[sha] = fetch(RAW_AT.format(sha=sha))
+        md = readmes[sha]
         table = vectara_table(md)
         vals = {}
         for v, cfg in vendors_cfg.items():

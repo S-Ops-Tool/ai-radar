@@ -43,7 +43,22 @@ def m_2026_09_history(d):
         "Le dossier est désormais disponible en français, anglais, espagnol, allemand et italien ; les traductions sont produites par Claude et relues avec chaque mise à jour."]})
 
 
-MIGRATIONS = [("2026-09-history", m_2026_09_history)]
+def replace_text(obj, old, new):
+    if isinstance(obj, str):
+        return obj.replace(old, new)
+    if isinstance(obj, list):
+        return [replace_text(x, old, new) for x in obj]
+    if isinstance(obj, dict):
+        return {k: replace_text(v, old, new) for k, v in obj.items()}
+    return obj
+
+
+def m_2026_09_wording(d):
+    fixed = replace_text(d["sections"], "Une réponse sans source se vérifie ;", "Une réponse sans source doit être vérifiée ;")
+    d["sections"] = fixed
+
+
+MIGRATIONS = [("2026-09-history", m_2026_09_history), ("2026-09-wording", m_2026_09_wording)]
 
 
 def main():
