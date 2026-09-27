@@ -824,16 +824,16 @@
   "hn_weekly": {
     "2026-09-27": {
       "claude": {
-        "n": 761,
-        "notable": 60,
-        "comments": 13158,
-        "points": 19532
+        "n": 760,
+        "notable": 59,
+        "comments": 13162,
+        "points": 19208
       },
       "gpt": {
         "n": 730,
         "notable": 78,
-        "comments": 17890,
-        "points": 28518
+        "comments": 18018,
+        "points": 28698
       },
       "gemini": {
         "n": 76,
@@ -850,15 +850,80 @@
       "meta": {
         "n": 25,
         "notable": 4,
-        "comments": 887,
-        "points": 1526
+        "comments": 888,
+        "points": 1529
       },
       "mistral": {
         "n": 13,
         "notable": 3,
-        "comments": 976,
-        "points": 1559
+        "comments": 978,
+        "points": 1562
       }
+    }
+  },
+  "aa_last": {
+    "Anthropic": {
+      "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+      "intel": 57.6,
+      "pin": 4.0,
+      "pout": 20.0,
+      "speed": 98.588
+    },
+    "OpenAI": {
+      "name": "GPT-6 Astra (max)",
+      "intel": 52.7,
+      "pin": 10.0,
+      "pout": 50.0,
+      "speed": 63.32
+    },
+    "Meta": {
+      "name": "Muse Spark 1.3 (max)",
+      "intel": 48.1,
+      "pin": 1.25,
+      "pout": 4.25,
+      "speed": 164.278
+    },
+    "xAI": {
+      "name": "Grok 4.7 (xhigh)",
+      "intel": 46.4,
+      "pin": 2.0,
+      "pout": 6.0,
+      "speed": 71.899
+    },
+    "Alibaba (Qwen)": {
+      "name": "Qwen3.8 Max (0902)",
+      "intel": 45.4,
+      "pin": 2.0,
+      "pout": 6.0,
+      "speed": 37.728
+    },
+    "Z.ai (GLM)": {
+      "name": "GLM-5.3 (max)",
+      "intel": 44.8,
+      "pin": 1.4,
+      "pout": 4.4,
+      "speed": 85.501
+    },
+    "Google": {
+      "name": "Gemini 3.8 Flash (high)",
+      "intel": 40.9,
+      "pin": 0.75,
+      "pout": 3.75,
+      "speed": 311.351
+    },
+    "DeepSeek": {
+      "name": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
+      "intel": 39.5,
+      "pin": 0.3,
+      "pout": 1.2,
+      "speed": 227.327
+    },
+    "Mistral": {
+      "name": "Mistral Medium 3.5",
+      "intel": 14.2,
+      "pin": 1.5,
+      "pout": 7.5,
+      "speed": 165.768
     }
   }
 }
