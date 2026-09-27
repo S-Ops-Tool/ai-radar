@@ -26,7 +26,7 @@ WEB_TOOL = os.environ.get("WEB_SEARCH_TOOL", "web_search_20250305")
 MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES_PER_SECTION", "6"))
 ONLY = [s for s in os.environ.get("ONLY_SECTIONS", "").split(",") if s]
 
-BLOCK_TYPES = {"para", "subhead", "reading", "list", "table", "timeline", "bar_chart", "static", "why", "audiences", "details"}
+BLOCK_TYPES = {"para", "subhead", "reading", "list", "table", "timeline", "bar_chart", "static", "why", "audiences", "details", "dot_chart"}
 REF = re.compile(r"\[\[([sn]\d+[a-z]?)\]\]")
 
 SYSTEM = """Tu es analyste en veille technologique. Tu maintiens un dossier comparatif public, en français, sur six assistants IA : Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google), Grok (xAI), Muse (Meta) et Mistral Vibe (Mistral AI).
@@ -127,6 +127,8 @@ def validate_blocks(blocks, depth=0):
             float(b["max"])
             for bar in b["bars"]:
                 float(bar["value"])
+        if t == "dot_chart" and not b.get("auto"):
+            raise ValueError("dot_chart réservé aux données automatiques")
         if t == "audiences" and not all(isinstance(b.get(k), str) for k in ("public", "entreprises", "institutions")):
             raise ValueError("bloc audiences incomplet")
         if t == "details":
@@ -208,16 +210,60 @@ def update_section(client, data, idx, today):
     return new_sec, added, changes
 
 
+def month_gap(a, b):
+    if not a or not b:
+        return None
+    pa, pb = [int(x) for x in a.split("-")], [int(x) for x in b.split("-")]
+    return max(0, (pb[0] - pa[0]) * 12 + pb[1] - pa[1])
+
+
+def vectara_block(data):
+    for sec in data["sections"]:
+        for b in sec["blocks"]:
+            if b.get("auto") == "vectara_hhem":
+                return b
+    return None
+
+
+def latest_models(data):
+    b = vectara_block(data)
+    return {v: {k: c["latest"].get(k) for k in ("label", "date", "src")} for v, c in (b or {}).get("vendors", {}).items()}
+
+
+def apply_latest(data, proposed):
+    b = vectara_block(data)
+    if not b or not isinstance(proposed, dict):
+        return []
+    changed = []
+    for v, new in proposed.items():
+        if v not in b["vendors"] or not isinstance(new, dict):
+            continue
+        cur = b["vendors"][v]["latest"]
+        if (new.get("label"), new.get("date")) == (cur.get("label"), cur.get("date")):
+            continue
+        if not re.fullmatch(r"\d{4}-\d{2}(-\d{2})?", str(new.get("date", ""))) or new.get("src") not in data["sources"]:
+            continue
+        b["vendors"][v]["latest"] = {"label": str(new["label"])[:40], "date": new["date"], "src": new["src"]}
+        for row in b.get("rows", []):
+            if row["vendor"] == v:
+                row["latest"] = dict(b["vendors"][v]["latest"], evaluated=False)
+                row["gap_months"] = month_gap(row["tested"].get("date"), new["date"])
+        changed.append(f"Dernier modèle phare {b['vendors'][v]['label']} : {new['label']} ({new['date']}) [[{new['src']}]].")
+    return changed
+
+
 def update_matrix(client, data, all_changes, today):
     prompt = (
         f"Date du jour : {today}. Voici la matrice de lecture du dossier et la liste des changements de la semaine.\n\n"
         f"Matrice :\n{json.dumps(data['matrix'], ensure_ascii=False, indent=1)}\n\n"
+        f"Derniers modèles phares connus par éditeur (graphique Vectara) :\n{json.dumps(latest_models(data), ensure_ascii=False, indent=1)}\n\n"
         f"Constats clés en tête de page :\n{json.dumps(data.get('keypoints', []), ensure_ascii=False, indent=1)}\n\n"
         f"Changements :\n" + "\n".join(f"- {c}" for c in all_changes) + "\n\n"
         "Ajuste uniquement les cellules que ces changements justifient (band de 1 à 5, ou null si aucune donnée publique ; "
         "text de moins de 60 caractères). Ne touche pas aux cellules textonly sauf si un changement l'exige. "
         "Ajuste de même les constats clés (3 à 6 phrases, chacune avec ses références [[id]] existantes) uniquement si les changements le justifient. "
-        'Réponds uniquement par {"matrix": [...], "keypoints": [...], "changes": ["..."]}.'
+        "Si un changement de la semaine annonce un nouveau modèle phare pour un éditeur, remplace son entrée (label, date au format AAAA-MM-JJ ou AAAA-MM, src = identifiant de source existant) ; sinon laisse-la identique. "
+        'Réponds uniquement par {"matrix": [...], "keypoints": [...], "latest_models": {...}, "changes": ["..."]}.'
     )
     text, _ = call_claude(client, prompt, use_search=False)
     result = extract_json(text)
@@ -236,7 +282,7 @@ def update_matrix(client, data, all_changes, today):
         for ref in REF.findall(k):
             if ref not in data["sources"]:
                 raise ValueError(f"référence inconnue dans les constats : {ref}")
-    return matrix, keypoints, [c for c in result.get("changes") or [] if isinstance(c, str)]
+    return matrix, keypoints, result.get("latest_models"), [c for c in result.get("changes") or [] if isinstance(c, str)]
 
 
 def main():
@@ -263,9 +309,10 @@ def main():
 
     if all_changes:
         try:
-            matrix, keypoints, mchanges = update_matrix(client, data, all_changes, today)
+            matrix, keypoints, latest, mchanges = update_matrix(client, data, all_changes, today)
             data["matrix"] = matrix
             data["keypoints"] = keypoints
+            mchanges += apply_latest(data, latest)
             all_changes += mchanges
         except Exception as e:
             errors.append(f"matrice : {e}")

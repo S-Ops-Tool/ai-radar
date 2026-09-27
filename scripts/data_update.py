@@ -115,6 +115,19 @@ def update_epoch(block, notes):
         notes.append(f"Sites liés à Mistral dans la base Epoch : {', '.join(mistral)}.")
 
 
+def parse_date(x):
+    if not x:
+        return None
+    parts = [int(v) for v in x.split("-")]
+    return dt.date(parts[0], parts[1], parts[2] if len(parts) > 2 else 15)
+
+
+def month_gap(a, b):
+    if not a or not b:
+        return None
+    return max(0, round((b - a).days / 30.44))
+
+
 def update_vectara(block, state, notes):
     md = fetch(VECTARA_MD)
     m = re.search(r"Last updated on ([A-Za-z]+ \d+, \d{4})", md)
@@ -124,31 +137,42 @@ def update_vectara(block, state, notes):
         mm = re.match(r"^\|([^|]+)\|\s*([\d.]+)\s*%\|", line)
         if mm:
             table[mm.group(1).strip()] = float(mm.group(2))
-    models = block["models"]
-    bars = []
-    for vendor, cfg in models.items():
-        mid = cfg["id"]
-        if mid not in table:
-            notes.append(f"Vectara : modèle {mid} introuvable dans le classement, barre {vendor} retirée.")
-            continue
-        v = table[mid]
-        bars.append({"label": cfg["label"], "sublabel": cfg.get("sublabel", mid.split("/")[-1]),
-                     "value": v, "display": fr_num(v, 1), "vendor": vendor})
-    bars.sort(key=lambda b: b["value"])
-    block["bars"] = bars
-    block["max"] = max(20, int(max(b["value"] for b in bars) // 5 + 1) * 5) if bars else 20
-    step = block["max"] // 4
-    block["ticks"] = [0, step, 2 * step, 3 * step, block["max"]]
+    rows = []
+    for vendor, cfg in block["vendors"].items():
+        dots = [{"model": k, "value": v} for k, v in table.items() if k.startswith(cfg["prefix"])]
+        tested = dict(cfg["tested"])
+        if tested["id"] in table:
+            tested["value"] = table[tested["id"]]
+        else:
+            notes.append(f"Vectara : {tested['id']} absent du classement ; point mis en avant retiré pour {vendor}.")
+            tested["value"] = None
+        latest = dict(cfg["latest"])
+        latest["evaluated"] = bool(latest.get("id") and latest["id"] in table)
+        gap = None if latest["evaluated"] else month_gap(parse_date(tested.get("date")), parse_date(latest.get("date")))
+        rows.append({"vendor": vendor, "label": cfg["label"], "dots": dots, "tested": tested, "latest": latest, "gap_months": gap})
+    rows.sort(key=lambda r: (r["tested"]["value"] is None, r["tested"]["value"] or 0))
+    block["rows"] = rows
+    top = max([d["value"] for r in rows for d in r["dots"]] + [20])
+    block["max"] = int(top // 5 + 1) * 5
+    block["ticks"] = list(range(0, block["max"] + 1, 5))
     when = f"classement du {updated.day} {MONTHS[updated.month - 1]} {updated.year}" if updated else "dernier classement"
     block["caption"] = (f"Vectara HHEM, {when} : part des résumés contenant une information absente du document source [[s55]]. "
-                        "Ce test mesure la fidélité en résumé ; les connaissances générales relèvent d'autres tests. "
-                        "Muse n'y figure pas ; la barre Meta porte sur Llama 4.")
+                        "Points gris : tous les modèles de l'éditeur présents au classement ; point coloré : modèle phare le plus récent testé, avec sa date de sortie. "
+                        "Colonne de droite : dernier modèle phare de l'éditeur et écart avec le modèle testé. "
+                        "Ce test mesure la fidélité en résumé ; un modèle plus récent peut y faire moins bien qu'un ancien.")
     seen = set(state.get("vectara_seen", []))
-    relevant = {k for k in table if any(k.startswith(p) for p in VENDOR_PREFIX.values())}
+    prefixes = [c["prefix"] for c in block["vendors"].values()]
+    relevant = {k for k in table if any(k.startswith(p) for p in prefixes)}
     new = sorted(relevant - seen) if seen else []
     if new:
         notes.append("Nouveaux modèles au classement Vectara (à évaluer comme modèle phare) : "
                      + ", ".join(f"{k} ({fr_num(table[k], 1)} %)" for k in new) + ".")
+    for vendor, cfg in block["vendors"].items():
+        lid = cfg["latest"].get("id")
+        if not lid:
+            hits = [k for k in new if k.startswith(cfg["prefix"])]
+            if hits:
+                notes.append(f"{cfg['label']} : vérifier si {', '.join(hits)} correspond au dernier modèle phare ({cfg['latest']['label']}).")
     state["vectara_seen"] = sorted(relevant)
 
 

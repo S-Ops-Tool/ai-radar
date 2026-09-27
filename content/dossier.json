@@ -570,98 +570,449 @@
           "text": "Les taux d'hallucination publiés divergent d'un facteur dix selon le protocole. Pour les modèles de pointe, une étude sur 5 000 requêtes trouve entre 3,1 % et 19,1 % selon le modèle, la tâche et le niveau de raisonnement ; avec un protocole plus strict, Gemini 2.0 Flash passe de 0,7 % à environ 7,6 % [[s46]]."
         },
         {
-          "type": "bar_chart",
+          "type": "dot_chart",
           "auto": "vectara_hhem",
-          "title": "Taux d'hallucination en résumé de documents (Vectara HHEM), en %",
-          "max": 20,
+          "title": "Hallucinations en résumé de documents (Vectara HHEM), en %, et retard du classement sur les derniers modèles",
+          "max": 25,
           "ticks": [
             0,
             5,
             10,
             15,
-            20
+            20,
+            25
           ],
-          "bars": [
+          "rows": [
             {
-              "label": "Meta",
-              "sublabel": "Llama 4 Maverick (pas Muse)",
-              "value": 8.2,
-              "display": "8,2",
-              "vendor": "meta"
-            },
-            {
+              "vendor": "gpt",
               "label": "ChatGPT",
-              "sublabel": "GPT-6 Astra",
-              "value": 8.7,
-              "display": "8,7",
-              "vendor": "gpt"
+              "dots": [
+                {
+                  "model": "openai/gpt-5.4-nano-2026-03-17",
+                  "value": 3.1
+                },
+                {
+                  "model": "openai/gpt-5.4-mini-2026-03-17",
+                  "value": 5.5
+                },
+                {
+                  "model": "openai/gpt-4.1-2025-04-14",
+                  "value": 5.6
+                },
+                {
+                  "model": "openai/gpt-6-sol",
+                  "value": 6.5
+                },
+                {
+                  "model": "openai/gpt-5.4-2026-03-05",
+                  "value": 7.0
+                },
+                {
+                  "model": "openai/gpt-6-astra",
+                  "value": 8.7
+                },
+                {
+                  "model": "openai/gpt-5.4-pro-2026-03-05",
+                  "value": 8.3
+                },
+                {
+                  "model": "openai/gpt-5.2-low-2025-12-11",
+                  "value": 8.4
+                },
+                {
+                  "model": "openai/gpt-5.5",
+                  "value": 9.3
+                },
+                {
+                  "model": "openai/gpt-4o-2024-08-06",
+                  "value": 9.6
+                },
+                {
+                  "model": "openai/gpt-5-nano-2025-08-07",
+                  "value": 10.5
+                },
+                {
+                  "model": "openai/gpt-5.2-high-2025-12-11",
+                  "value": 10.8
+                },
+                {
+                  "model": "openai/gpt-5.1-low-2025-11-13",
+                  "value": 10.9
+                },
+                {
+                  "model": "openai/gpt-5.6-sol",
+                  "value": 12.4
+                },
+                {
+                  "model": "openai/gpt-5.1-high-2025-11-13",
+                  "value": 12.1
+                },
+                {
+                  "model": "openai/gpt-5-mini-2025-08-07",
+                  "value": 12.9
+                },
+                {
+                  "model": "openai/gpt-oss-120b",
+                  "value": 14.2
+                },
+                {
+                  "model": "openai/gpt-5-minimal-2025-08-07",
+                  "value": 14.7
+                },
+                {
+                  "model": "openai/gpt-5-high-2025-08-07",
+                  "value": 15.1
+                }
+              ],
+              "tested": {
+                "id": "openai/gpt-6-sol",
+                "label": "GPT-6 Sol",
+                "date": "2026-09-22",
+                "src": "s66",
+                "value": 6.5
+              },
+              "latest": {
+                "label": "GPT-6 Sol",
+                "date": "2026-09-22",
+                "src": "s66",
+                "id": "openai/gpt-6-sol",
+                "evaluated": true
+              },
+              "gap_months": null
             },
             {
+              "vendor": "meta",
+              "label": "Meta",
+              "dots": [
+                {
+                  "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+                  "value": 4.1
+                },
+                {
+                  "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+                  "value": 7.7
+                },
+                {
+                  "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+                  "value": 8.2
+                }
+              ],
+              "tested": {
+                "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+                "label": "Llama 4 Maverick",
+                "date": null,
+                "src": null,
+                "value": 8.2
+              },
+              "latest": {
+                "label": "Muse Spark",
+                "date": "2026-04-08",
+                "src": "s86",
+                "evaluated": false
+              },
+              "gap_months": null
+            },
+            {
+              "vendor": "gemini",
               "label": "Gemini",
-              "sublabel": "Gemini 3.1 Pro",
-              "value": 10.4,
-              "display": "10,4",
-              "vendor": "gemini"
+              "dots": [
+                {
+                  "model": "google/gemini-2.5-flash-lite",
+                  "value": 3.3
+                },
+                {
+                  "model": "google/gemini-2.5-pro",
+                  "value": 7.0
+                },
+                {
+                  "model": "google/gemini-2.5-flash",
+                  "value": 7.8
+                },
+                {
+                  "model": "google/gemini-3.1-flash-lite-preview",
+                  "value": 8.2
+                },
+                {
+                  "model": "google/gemini-3.1-pro-preview",
+                  "value": 10.4
+                },
+                {
+                  "model": "google/gemini-3-flash-preview",
+                  "value": 13.5
+                },
+                {
+                  "model": "google/gemini-3-pro-preview",
+                  "value": 13.6
+                }
+              ],
+              "tested": {
+                "id": "google/gemini-3.1-pro-preview",
+                "label": "Gemini 3.1 Pro",
+                "date": "2026-02-19",
+                "src": "s84",
+                "value": 10.4
+              },
+              "latest": {
+                "label": "Gemini 3.1 Pro",
+                "date": "2026-02-19",
+                "src": "s84",
+                "id": "google/gemini-3.1-pro-preview",
+                "evaluated": true
+              },
+              "gap_months": null
             },
             {
+              "vendor": "claude",
               "label": "Claude",
-              "sublabel": "Claude Opus 4.7",
-              "value": 12.0,
-              "display": "12,0",
-              "vendor": "claude"
+              "dots": [
+                {
+                  "model": "anthropic/claude-haiku-4-5-20251001",
+                  "value": 9.8
+                },
+                {
+                  "model": "anthropic/claude-sonnet-4-20250514",
+                  "value": 10.3
+                },
+                {
+                  "model": "anthropic/claude-sonnet-4-6",
+                  "value": 10.6
+                },
+                {
+                  "model": "anthropic/claude-opus-4-5-20251101",
+                  "value": 10.9
+                },
+                {
+                  "model": "anthropic/claude-opus-4-1-20250805",
+                  "value": 11.8
+                },
+                {
+                  "model": "anthropic/claude-opus-4-20250514",
+                  "value": 12.0
+                },
+                {
+                  "model": "anthropic/claude-sonnet-4-5-20250929",
+                  "value": 12.0
+                },
+                {
+                  "model": "anthropic/claude-opus-4-7",
+                  "value": 12.0
+                },
+                {
+                  "model": "anthropic/claude-opus-4-6",
+                  "value": 12.2
+                }
+              ],
+              "tested": {
+                "id": "anthropic/claude-opus-4-7",
+                "label": "Claude Opus 4.7",
+                "date": "2026-04-16",
+                "src": "s82",
+                "value": 12.0
+              },
+              "latest": {
+                "label": "Claude Opus 5.5",
+                "date": "2026-09-22",
+                "src": "s66",
+                "evaluated": false
+              },
+              "gap_months": 5
             },
             {
+              "vendor": "mistral",
               "label": "Mistral",
-              "sublabel": "Mistral Large 3",
-              "value": 14.5,
-              "display": "14,5",
-              "vendor": "mistral"
+              "dots": [
+                {
+                  "model": "mistralai/mistral-large-2411",
+                  "value": 4.5
+                },
+                {
+                  "model": "mistralai/mistral-small-2501",
+                  "value": 5.1
+                },
+                {
+                  "model": "mistralai/ministral-3b-2410",
+                  "value": 7.3
+                },
+                {
+                  "model": "mistralai/ministral-8b-2410",
+                  "value": 7.4
+                },
+                {
+                  "model": "mistralai/mistral-3-large-2512",
+                  "value": 14.5
+                },
+                {
+                  "model": "mistralai/ministral-3-14b-2512",
+                  "value": 19.4
+                },
+                {
+                  "model": "mistralai/ministral-3-8b-2512",
+                  "value": 21.7
+                },
+                {
+                  "model": "mistralai/mistral-medium-2508",
+                  "value": 22.7
+                },
+                {
+                  "model": "mistralai/ministral-3-3b-2512",
+                  "value": 24.2
+                }
+              ],
+              "tested": {
+                "id": "mistralai/mistral-3-large-2512",
+                "label": "Mistral Large 3",
+                "date": "2025-12",
+                "src": "s85",
+                "value": 14.5
+              },
+              "latest": {
+                "label": "Mistral Medium 3.5",
+                "date": "2026-04",
+                "src": "s51",
+                "evaluated": false
+              },
+              "gap_months": 4
             },
             {
+              "vendor": "grok",
               "label": "Grok",
-              "sublabel": "Grok 4.1 Fast",
-              "value": 19.2,
-              "display": "19,2",
-              "vendor": "grok"
+              "dots": [
+                {
+                  "model": "xai-org/grok-3",
+                  "value": 5.8
+                },
+                {
+                  "model": "xai-org/grok-4-1-fast-non-reasoning",
+                  "value": 17.8
+                },
+                {
+                  "model": "xai-org/grok-4-1-fast-reasoning",
+                  "value": 19.2
+                },
+                {
+                  "model": "xai-org/grok-4-fast-non-reasoning",
+                  "value": 19.7
+                },
+                {
+                  "model": "xai-org/grok-4-fast-reasoning",
+                  "value": 20.2
+                }
+              ],
+              "tested": {
+                "id": "xai-org/grok-4-1-fast-reasoning",
+                "label": "Grok 4.1 Fast",
+                "date": "2025-11-19",
+                "src": "s83",
+                "value": 19.2
+              },
+              "latest": {
+                "label": "Grok 4.7",
+                "date": "2026-09-21",
+                "src": "s66",
+                "evaluated": false
+              },
+              "gap_months": 10
             }
           ],
-          "models": {
+          "caption": "Vectara HHEM, classement du 22 septembre 2026 : part des résumés contenant une information absente du document source [[s55]]. Points gris : tous les modèles de l'éditeur présents au classement ; point coloré : modèle phare le plus récent testé, avec sa date de sortie. Colonne de droite : dernier modèle phare de l'éditeur et écart avec le modèle testé. Ce test mesure la fidélité en résumé ; un modèle plus récent peut y faire moins bien qu'un ancien.",
+          "vendors": {
             "gpt": {
-              "id": "openai/gpt-6-astra",
               "label": "ChatGPT",
-              "sublabel": "GPT-6 Astra"
-            },
-            "meta": {
-              "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-              "label": "Meta",
-              "sublabel": "Llama 4 Maverick (pas Muse)"
+              "prefix": "openai/gpt",
+              "tested": {
+                "id": "openai/gpt-6-sol",
+                "label": "GPT-6 Sol",
+                "date": "2026-09-22",
+                "src": "s66"
+              },
+              "latest": {
+                "label": "GPT-6 Sol",
+                "date": "2026-09-22",
+                "src": "s66",
+                "id": "openai/gpt-6-sol"
+              }
             },
             "gemini": {
-              "id": "google/gemini-3.1-pro-preview",
               "label": "Gemini",
-              "sublabel": "Gemini 3.1 Pro"
+              "prefix": "google/gemini",
+              "tested": {
+                "id": "google/gemini-3.1-pro-preview",
+                "label": "Gemini 3.1 Pro",
+                "date": "2026-02-19",
+                "src": "s84"
+              },
+              "latest": {
+                "label": "Gemini 3.1 Pro",
+                "date": "2026-02-19",
+                "src": "s84",
+                "id": "google/gemini-3.1-pro-preview"
+              }
             },
             "claude": {
-              "id": "anthropic/claude-opus-4-7",
               "label": "Claude",
-              "sublabel": "Claude Opus 4.7"
-            },
-            "mistral": {
-              "id": "mistralai/mistral-3-large-2512",
-              "label": "Mistral",
-              "sublabel": "Mistral Large 3"
+              "prefix": "anthropic/",
+              "tested": {
+                "id": "anthropic/claude-opus-4-7",
+                "label": "Claude Opus 4.7",
+                "date": "2026-04-16",
+                "src": "s82"
+              },
+              "latest": {
+                "label": "Claude Opus 5.5",
+                "date": "2026-09-22",
+                "src": "s66"
+              }
             },
             "grok": {
-              "id": "xai-org/grok-4-1-fast-reasoning",
               "label": "Grok",
-              "sublabel": "Grok 4.1 Fast"
+              "prefix": "xai-org/",
+              "tested": {
+                "id": "xai-org/grok-4-1-fast-reasoning",
+                "label": "Grok 4.1 Fast",
+                "date": "2025-11-19",
+                "src": "s83"
+              },
+              "latest": {
+                "label": "Grok 4.7",
+                "date": "2026-09-21",
+                "src": "s66"
+              }
+            },
+            "mistral": {
+              "label": "Mistral",
+              "prefix": "mistralai/",
+              "tested": {
+                "id": "mistralai/mistral-3-large-2512",
+                "label": "Mistral Large 3",
+                "date": "2025-12",
+                "src": "s85"
+              },
+              "latest": {
+                "label": "Mistral Medium 3.5",
+                "date": "2026-04",
+                "src": "s51"
+              }
+            },
+            "meta": {
+              "label": "Meta",
+              "prefix": "meta-llama/",
+              "tested": {
+                "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+                "label": "Llama 4 Maverick",
+                "date": null,
+                "src": null
+              },
+              "latest": {
+                "label": "Muse Spark",
+                "date": "2026-04-08",
+                "src": "s86"
+              }
             }
-          },
-          "caption": "Vectara HHEM, classement du 22 septembre 2026 : part des résumés contenant une information absente du document source [[s55]]. Ce test mesure la fidélité en résumé ; les connaissances générales relèvent d'autres tests. Muse n'y figure pas ; la barre Meta porte sur Llama 4."
+          }
         },
         {
           "type": "para",
-          "text": "Sur ce classement public, les modèles Claude se situent entre 10 et 12 %, derrière GPT-6 et Gemini 3.1 Pro [[s55]]. Plusieurs comparatifs commerciaux affirment au contraire que Claude mène ce même classement [[s48]] [[s49]] : la source primaire ne le confirme pas."
+          "text": "Sur ce classement public, les modèles Claude testés se situent entre 10 et 12 %, derrière GPT-6 et Gemini 3.1 Pro [[s55]]. Plusieurs comparatifs commerciaux affirment au contraire que Claude mène ce classement [[s48]] [[s49]] : la source primaire ne le confirme pas. Le classement a toutefois un temps de retard : Claude Opus 5.5, Grok 4.7, Mistral Medium 3.5 et Muse Spark n'y figurent pas, et Grok 4.1 Fast a été retiré par xAI en mai 2026 [[s83]]."
         },
         {
           "type": "reading",
@@ -680,7 +1031,6 @@
             {
               "type": "list",
               "items": [
-                "Les modèles les plus récents de chaque éditeur ne figurent pas tous au classement : Claude Opus 5.5, Grok 4.7 et Muse Spark n'y apparaissent pas à ce jour.",
                 "Sur le test FACTS, aucun modèle ne dépasse 70 % ; le meilleur, Gemini 3 Pro, atteint 68,8, et 83,8 avec la recherche web [[s47]].",
                 "Selon les évaluations d'OpenAI, l'accès au web réduit les hallucinations de 73 à 86 % [[s47]].",
                 "Pour Muse Spark, Meta n'a publié que des résultats en code, sans chiffre de factualité [[s47]]."
@@ -1430,7 +1780,7 @@
               "vendor": "gpt"
             }
           ],
-          "caption": "Puissance IT en service, estimée par Epoch AI (données CC-BY, relevé de septembre 2026). Epoch suit 93 sites totalisant 13,5 GW de puissance IT ; propriétaire et utilisateurs confirmés selon Epoch [[s5]].",
+          "caption": "Puissance IT en service, estimée par Epoch AI (données CC-BY, relevé de septembre 2026). Les 73 sites en service suivis totalisent 13,5 GW ; propriétaire et utilisateurs confirmés selon Epoch [[s5]].",
           "auto": "epoch_datacenters",
           "top": 5
         },
@@ -1581,6 +1931,12 @@
         "Nouvelle organisation en cinq parties, avec une lecture par profil : grand public, entreprises, institutions.",
         "Nouvelles sections : usages et adoption, autres acteurs (dont Apertus et les modèles ouverts chinois), prix et offres, confidentialité.",
         "Résumé en cinq constats, glossaire, et approfondissements dépliables pour les spécialistes."
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "items": [
+        "Graphique des hallucinations : tous les modèles testés de chaque éditeur, date de sortie du modèle mis en avant, et écart avec le dernier modèle phare de l'éditeur."
       ]
     }
   ],
@@ -1888,6 +2244,26 @@
     "s81": {
       "title": "Foxeet, Mistral et IA souveraines pour DSI et PME",
       "url": "https://foxeet.fr/contenu/le-chat-mistral-ia-souveraine-france-2026"
+    },
+    "s82": {
+      "title": "Anthropic, annonce de Claude Opus 4.7",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    "s83": {
+      "title": "AI Toolbox, chronologie des modèles Grok",
+      "url": "https://www.ai-toolbox.co/grok-models/grok-models-explained-2026"
+    },
+    "s84": {
+      "title": "Wikipedia, Google Gemini",
+      "url": "https://en.wikipedia.org/wiki/Google_Gemini"
+    },
+    "s85": {
+      "title": "Wikipedia, Mistral AI",
+      "url": "https://en.wikipedia.org/wiki/Mistral_AI"
+    },
+    "s86": {
+      "title": "Meta, annonce de Muse Spark",
+      "url": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/"
     }
   },
   "keypoints": [

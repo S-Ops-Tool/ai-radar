@@ -38,9 +38,15 @@ Onglet Actions > Mise à jour hebdomadaire > Run workflow. Le champ facultatif l
 
 Identifiants de sections : `usages`, `acteurs`, `precision`, `tempsreel`, `agents`, `prix`, `confidentialite`, `donnees`, `biais`, `cyber`, `gouvernance`, `calcul`, `energie`.
 
-## Choisir les modèles du graphique Vectara
+## Graphique Vectara : modèles testés et derniers modèles phares
 
-Le bloc `vectara_hhem` de la section `precision` liste un modèle par éditeur (`models`). Quand un éditeur publie un nouveau modèle phare et qu'il entre au classement, le brief de données le signale ; il suffit alors de remplacer l'identifiant correspondant dans `content/dossier.json`.
+Le bloc `vectara_hhem` de la section `precision` contient, pour chaque éditeur (`vendors`) :
+
+- `prefix` : le préfixe des identifiants Vectara de l'éditeur ; tous ses modèles au classement apparaissent en points gris ;
+- `tested` : le modèle mis en avant, avec sa date de sortie et sa source (`date: null` s'affiche « date non vérifiée ») ;
+- `latest` : le dernier modèle phare de l'éditeur, avec date et source ; `id` est renseigné quand ce modèle figure au classement.
+
+Le script de données calcule l'écart en mois et signale les nouveaux modèles entrés au classement. L'étape hebdomadaire de Claude peut remplacer `latest` quand un nouveau modèle phare sort, à condition de fournir une date valide et une source existante. Le choix du modèle `tested` reste manuel, à partir des signalements du brief de données.
 
 ## Structure du contenu
 

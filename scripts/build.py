@@ -107,6 +107,67 @@ def render_bar_chart(b, sources):
             f'<div class="scroll" style="margin:0">{"".join(parts)}</div>{cap}</figure>')
 
 
+MONTHS_SHORT = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+
+
+def short_date(x):
+    if not x:
+        return "date non vérifiée"
+    parts = x.split("-")
+    return f"{MONTHS_SHORT[int(parts[1]) - 1]} {parts[0]}"
+
+
+def render_dot_chart(b, sources):
+    x0, x1 = 120, 430
+    mx = float(b["max"])
+    sc = (x1 - x0) / mx
+    rows = b.get("rows", [])
+    top, step = 40, 62
+    h = top + step * len(rows) + 30
+    out = [f'<svg viewBox="0 0 660 {h}" role="img" aria-label="{html.escape(b["title"])}">']
+    out.append('<g class="grid">')
+    for t in b["ticks"]:
+        x = x0 + t * sc
+        out.append(f'<line x1="{x:.1f}" y1="{top - 16}" x2="{x:.1f}" y2="{top + step * len(rows) - 20}"/>')
+    out.append('</g><g font-size="12" text-anchor="middle">')
+    for t in b["ticks"]:
+        out.append(f'<text x="{x0 + t * sc:.1f}" y="{top + step * len(rows)}" class="muted">{t}</text>')
+    out.append("</g>")
+    out.append(f'<text x="455" y="{top - 22}" font-size="11" font-weight="600">Dernier modèle phare de l\'éditeur</text>')
+    for i, r in enumerate(rows):
+        y = top + i * step
+        v = r["vendor"]
+        out.append(f'<text x="0" y="{y + 4}" font-size="13" font-weight="600">{html.escape(r["label"])}</text>')
+        out.append(f'<line x1="{x0}" y1="{y}" x2="{x1}" y2="{y}" class="axis"/>')
+        for dtt in r["dots"]:
+            out.append(f'<circle cx="{x0 + dtt["value"] * sc:.1f}" cy="{y}" r="4" fill="var(--ink2)" opacity=".35">'
+                       f'<title>{html.escape(dtt["model"])} : {str(dtt["value"]).replace(".", ",")} %</title></circle>')
+        t = r["tested"]
+        if t.get("value") is not None:
+            cx = x0 + t["value"] * sc
+            out.append(f'<circle cx="{cx:.1f}" cy="{y}" r="7" class="f-{v}"/>')
+            lab = f'{t["label"]}, {str(t["value"]).replace(".", ",")} % ({short_date(t.get("date"))})'
+            anchor = "end" if cx > x0 + 0.3 * (x1 - x0) else "start"
+            tx = cx - 10 if anchor == "end" else cx + 10
+            out.append(f'<text x="{tx:.1f}" y="{y + 20}" font-size="11" text-anchor="{anchor}">{html.escape(lab)}</text>')
+        lt = r["latest"]
+        out.append(f'<text x="455" y="{y - 2}" font-size="12">{html.escape(lt["label"])} ({short_date(lt.get("date"))})</text>')
+        if lt.get("evaluated"):
+            out.append(f'<text x="455" y="{y + 14}" font-size="11" class="muted">Évalué ci-contre</text>')
+        else:
+            gap = r.get("gap_months")
+            w = 0 if gap is None else min(gap, 12) / 12 * 160
+            out.append(f'<rect x="455" y="{y + 6}" width="160" height="7" fill="var(--faint)"/>')
+            if gap is not None:
+                out.append(f'<rect x="455" y="{y + 6}" width="{w:.1f}" height="7" fill="var(--warn)"/>')
+            msg = "non évalué" + (f", {gap} mois d'écart" if gap is not None else ", écart inconnu")
+            out.append(f'<text x="455" y="{y + 28}" font-size="11" class="muted">{html.escape(msg)}</text>')
+    out.append("</svg>")
+    cap = f'<figcaption>{txt(b["caption"], sources)}</figcaption>' if b.get("caption") else ""
+    return (f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>'
+            f'<div class="scroll" style="margin:0">{"".join(out)}</div>{cap}</figure>')
+
+
 def render_block(b, sources):
     t = b["type"]
     if t == "para":
@@ -136,6 +197,8 @@ def render_block(b, sources):
         return f'<ol class="timeline">{items}</ol>'
     if t == "bar_chart":
         return render_bar_chart(b, sources)
+    if t == "dot_chart":
+        return render_dot_chart(b, sources)
     if t == "static":
         svg = STATIC.get(b["name"], "")
         cap = f'<figcaption>{txt(b["caption"], sources)}</figcaption>' if b.get("caption") else ""
