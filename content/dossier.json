@@ -503,7 +503,7 @@
           "bars": [
             {
               "label": "ChatGPT",
-              "sublabel": "730 articles, 18 018 commentaires",
+              "sublabel": "730 articles, 18 027 commentaires",
               "value": 78,
               "display": "78",
               "vendor": "gpt"
