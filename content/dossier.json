@@ -1070,7 +1070,7 @@
         {
           "type": "bar_chart",
           "auto": "status_chart",
-          "title": "Incidents déclarés sur 90 jours",
+          "title": "Incidents déclarés par mois, moyenne récente",
           "max": 10,
           "ticks": [
             0,
@@ -1088,7 +1088,8 @@
           "auto": "status_table",
           "headers": [
             "Assistant",
-            "Incidents (90 jours)",
+            "Incidents",
+            "Par mois",
             "Majeurs ou critiques",
             "Durée cumulée",
             "Couverture et source"
@@ -1123,8 +1124,8 @@
             {
               "id": "grok",
               "label": "Grok",
-              "kind": "statuspage",
-              "url": "https://status.x.ai",
+              "kind": "xai_rss",
+              "url": "https://status.x.ai/feed.xml",
               "src_ref": "[[s91]]"
             },
             {
@@ -1160,9 +1161,11 @@
             {
               "type": "list",
               "items": [
-                "Les pages Statuspage exposent les 50 derniers incidents environ ; le pipeline les accumule chaque semaine pour allonger l'historique.",
+                "Les pages Statuspage (Anthropic, Mistral) exposent les 50 derniers incidents environ ; le pipeline les accumule chaque semaine pour allonger l'historique.",
                 "OpenAI utilise incident.io, dont l'interface compatible renvoie un historique tronqué.",
-                "La durée cumulée additionne la durée de chaque incident, de son ouverture à sa résolution ; des incidents simultanés sont comptés deux fois.",
+                "xAI publie un flux RSS qui répète chaque panne pour chaque composant touché ; le pipeline regroupe les entrées de même titre ouvertes dans la même heure, et écarte les incidents de test. xAI ne renseigne pas la gravité : une panne dont le titre signale une indisponibilité est comptée comme majeure.",
+                "Quand l'historique publié couvre moins de 90 jours, la moyenne mensuelle est calculée sur la période disponible, ce qui la rend plus fragile.",
+                "La durée cumulée additionne la durée de chaque incident ; des incidents simultanés sont comptés deux fois.",
                 "Meta ne publie pas de page de statut pour Meta AI ou Muse."
               ]
             }
@@ -2407,8 +2410,8 @@
       "url": "https://status.mistral.ai"
     },
     "s91": {
-      "title": "Page de statut xAI",
-      "url": "https://status.x.ai"
+      "title": "xAI, flux RSS de la page de statut",
+      "url": "https://status.x.ai/feed.xml"
     }
   },
   "keypoints": [
