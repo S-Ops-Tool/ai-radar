@@ -21,7 +21,7 @@ BASE_URL = "https://s-ops-tool.github.io/ai-radar/"
 DEC = re.compile(r"(?<=\d),(?=\d)")
 SKIP_KEYS = {"id", "type", "auto", "vendor", "key", "url", "src", "date", "for", "name", "kind", "prefix",
              "src_ref", "handles", "names", "include", "exclude", "queries", "keywords", "updated", "display",
-             "model", "m", "textonly", "band", "migrations"}
+             "model", "m", "textonly", "band", "migrations", "by_lang", "row_vendors", "x", "y", "vtitle", "vchannel", "cat", "views"}
 
 
 def set_lang(lang):
@@ -244,6 +244,120 @@ def render_line_chart(b, sources):
             f'<div class="scroll" style="margin:0">{"".join(out)}</div>{cap}</figure>')
 
 
+def render_scatter(b, sources):
+    pts = b.get("points") or []
+    if not pts:
+        cap = f'<figcaption>{txt(b.get("caption") or "", sources)}</figcaption>' if b.get("caption") else ""
+        return f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>{cap}</figure>'
+    x0, x1, y0, y1 = 60, 520, 250, 30
+    def mnum(d):
+        return int(d[:4]) * 12 + int(d[5:7]) - 1 + (int(d[8:10]) - 1) / 31
+    xs = [mnum(p["x"]) for p in pts]
+    xmin, xmax = int(min(xs)), int(max(xs)) + 1
+    ymax = float(b["max"])
+    X = lambda v: x0 + (v - xmin) / ((xmax - xmin) or 1) * (x1 - x0)
+    Y = lambda v: y0 - v / ymax * (y0 - y1)
+    out = [f'<svg viewBox="0 0 680 300" role="img" aria-label="{html.escape(b["title"])}"><g class="grid">']
+    for t in b["ticks"]:
+        out.append(f'<line x1="{x0}" y1="{Y(t):.1f}" x2="{x1}" y2="{Y(t):.1f}"/>')
+    out.append('</g><g font-size="12">')
+    for t in b["ticks"]:
+        out.append(f'<text x="{x0 - 10}" y="{Y(t) + 4:.1f}" text-anchor="end" class="muted">{t}</text>')
+    step = max(1, (xmax - xmin) // 6)
+    for mth in range(xmin, xmax + 1, step):
+        y, m = divmod(mth, 12)
+        out.append(f'<text x="{X(mth):.1f}" y="{y0 + 22}" text-anchor="middle" class="muted">{U["months_short"][m]} {str(y)[2:]}</text>')
+    out.append("</g>")
+    for p, xv in zip(pts, xs):
+        out.append(f'<circle cx="{X(xv):.1f}" cy="{Y(p["y"]):.1f}" r="5" fill="var(--{p["vendor"]})" fill-opacity=".85" stroke="var(--sheet)" stroke-width="1">'
+                   f'<title>{html.escape(p["label"])} : {num(p["y"])} %</title></circle>')
+    ly = 40
+    for se in b.get("series", []):
+        if not any(p["vendor"] == se["vendor"] for p in pts):
+            continue
+        out.append(f'<circle cx="545" cy="{ly - 4}" r="5" fill="var(--{se["vendor"]})"/>'
+                   f'<text x="556" y="{ly}" font-size="12">{html.escape(se["label"])}</text>')
+        ly += 20
+    out.append("</svg>")
+    cap = f'<figcaption>{txt(b["caption"], sources)}</figcaption>' if b.get("caption") else ""
+    return (f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>'
+            f'<div class="scroll" style="margin:0">{"".join(out)}</div>{cap}</figure>')
+
+
+TOPIC_COLORS = {"news": "#2D66CF", "test": "#1C8468", "tutorial": "#D08000", "code": "#6E55C2",
+                "business": "#7C8B96", "ethics": "#C8407F", "risk": "#C2410C", "culture": "#0B9FB0"}
+
+
+def topic_legend(cats):
+    return '<div class="tlegend">' + "".join(
+        f'<span><i style="background:{TOPIC_COLORS.get(c["id"], "#999")}"></i>{html.escape(c["label"])}</span>' for c in cats) + "</div>"
+
+
+def render_topic_bars(b, sources):
+    rows = b.get("rows") or []
+    cats = b.get("categories") or []
+    cap = f'<figcaption>{txt(b.get("caption") or "", sources)}</figcaption>' if b.get("caption") else ""
+    if not rows:
+        return f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>{cap}</figure>'
+    x0, x1, step = 150, 640, 40
+    h = 20 + step * len(rows)
+    out = [f'<svg viewBox="0 0 660 {h}" role="img" aria-label="{html.escape(b["title"])}">']
+    for i, r in enumerate(rows):
+        y = 10 + i * step
+        out.append(f'<text x="0" y="{y + 16}" font-size="13" font-weight="600">{html.escape(r["label"])}</text>')
+        x = x0
+        for c in cats:
+            share = r["shares"].get(c["id"], 0)
+            w = share / 100 * (x1 - x0)
+            if w <= 0:
+                continue
+            out.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="24" fill="{TOPIC_COLORS.get(c["id"], "#999")}">'
+                       f'<title>{html.escape(r["label"])}, {html.escape(c["label"])} : {num(share)} %</title></rect>')
+            if w > 34:
+                out.append(f'<text x="{x + w / 2:.1f}" y="{y + 16}" font-size="11" text-anchor="middle" style="fill:#fff">{num(round(share))} %</text>')
+            x += w
+    out.append("</svg>")
+    return (f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>{topic_legend(cats)}'
+            f'<div class="scroll" style="margin:0">{"".join(out)}</div>{cap}</figure>')
+
+
+def render_video_scatter(b, sources):
+    import math
+    pts = b.get("points") or []
+    cats = b.get("categories") or []
+    cap = f'<figcaption>{txt(b.get("caption") or "", sources)}</figcaption>' if b.get("caption") else ""
+    if not pts:
+        return f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>{cap}</figure>'
+    x0, x1, y0, y1 = 60, 640, 260, 20
+    days = sorted({p["x"] for p in pts})
+    dmin, dmax = days[0], days[-1]
+    def dn(d):
+        return (int(d[:4]) * 372 + int(d[5:7]) * 31 + int(d[8:10]))
+    span = max(1, dn(dmax) - dn(dmin))
+    vmax = max(p["views"] for p in pts)
+    lmin, lmax = 3, max(4, math.ceil(math.log10(max(vmax, 10))))
+    X = lambda d: x0 + (dn(d) - dn(dmin)) / span * (x1 - x0)
+    Y = lambda v: y0 - (math.log10(max(v, 10 ** lmin)) - lmin) / (lmax - lmin) * (y0 - y1)
+    out = [f'<svg viewBox="0 0 660 300" role="img" aria-label="{html.escape(b["title"])}"><g class="grid">']
+    for e in range(lmin, lmax + 1):
+        out.append(f'<line x1="{x0}" y1="{Y(10 ** e):.1f}" x2="{x1}" y2="{Y(10 ** e):.1f}"/>')
+    out.append('</g><g font-size="12">')
+    labels = {3: "1 k", 4: "10 k", 5: "100 k", 6: "1 M", 7: "10 M", 8: "100 M"}
+    for e in range(lmin, lmax + 1):
+        out.append(f'<text x="{x0 - 8}" y="{Y(10 ** e) + 4:.1f}" text-anchor="end" class="muted">{labels.get(e, "")}</text>')
+    for d in (dmin, dmax):
+        out.append(f'<text x="{X(d):.1f}" y="{y0 + 22}" text-anchor="middle" class="muted">{int(d[8:10])} {U["months_short"][int(d[5:7]) - 1]}</text>')
+    out.append("</g>")
+    for p in sorted(pts, key=lambda p: -p["views"]):
+        tip = f'{p["vtitle"]} ({p["vchannel"]}), {num(round(p["views"] / 1000))} k {U["views"]}'
+        out.append(f'<a href="{html.escape(p["url"])}" target="_blank" rel="noopener"><circle cx="{X(p["x"]):.1f}" cy="{Y(p["views"]):.1f}" r="5.5" '
+                   f'fill="{TOPIC_COLORS.get(p["cat"], "#999")}" fill-opacity=".8" stroke="var(--sheet)" stroke-width="1">'
+                   f'<title>{html.escape(tip)}</title></circle></a>')
+    out.append("</svg>")
+    return (f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>{topic_legend(cats)}'
+            f'<div class="scroll" style="margin:0">{"".join(out)}</div>{cap}</figure>')
+
+
 def render_block(b, sources):
     t = b["type"]
     if t == "para":
@@ -265,7 +379,19 @@ def render_block(b, sources):
         return "<ul>" + "".join(f"<li>{txt(i, sources)}</li>" for i in b["items"]) + "</ul>"
     if t == "table":
         head = "".join(f"<th>{html.escape(h)}</th>" for h in b["headers"])
-        body = "".join("<tr>" + "".join(f"<td>{txt(c, sources)}</td>" for c in r) + "</tr>" for r in b["rows"])
+        rows = b["rows"]
+        if b.get("by_lang") and b.get("row_vendors") and len(b["headers"]) > len(rows[0] if rows else []):
+            extra = []
+            for v in b["row_vendors"]:
+                e = (b["by_lang"].get(v) or {}).get(LANG)
+                if e:
+                    t_ = e["title"].replace("[", "(").replace("]", ")")
+                    extra.append(f"[{t_}]({e['url']}), {num(round(e['views'] / 1000))} k {U['views']} ({e['channel']})"
+                                 if e["views"] >= 1000 else f"[{t_}]({e['url']}), {e['views']} {U['views']} ({e['channel']})")
+                else:
+                    extra.append(U["no_video_lang"])
+            rows = [list(r) + [x] for r, x in zip(rows, extra)]
+        body = "".join("<tr>" + "".join(f"<td>{txt(c, sources)}</td>" for c in r) + "</tr>" for r in rows)
         return (f'<div class="scroll"><table class="plain" style="min-width:680px">'
                 f"<thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>")
     if t == "timeline":
@@ -275,6 +401,12 @@ def render_block(b, sources):
         return render_bar_chart(b, sources)
     if t == "line_chart":
         return render_line_chart(b, sources)
+    if t == "scatter_chart":
+        return render_scatter(b, sources)
+    if t == "topic_bars":
+        return render_topic_bars(b, sources)
+    if t == "video_scatter":
+        return render_video_scatter(b, sources)
     if t == "dot_chart":
         return render_dot_chart(b, sources)
     if t == "static":
@@ -362,6 +494,8 @@ ol.log>li{{margin-bottom:14px}}
 .watch{{font-size:.85rem;color:var(--ink2);margin-top:18px;max-width:76ch}}
 .sources{{list-style:none}}
 .langs{{display:flex;gap:10px;font-size:.85rem;margin-top:10px}}
+.tlegend{{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.82rem;margin:4px 0 10px;color:var(--ink2)}}
+.tlegend i{{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px}}
 .langs span{{font-weight:700}}
 .langs a{{text-decoration:none;color:var(--ink2)}}
 .langs a:hover{{color:var(--accent)}}

@@ -26,7 +26,7 @@ WEB_TOOL = os.environ.get("WEB_SEARCH_TOOL", "web_search_20250305")
 MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES_PER_SECTION", "6"))
 ONLY = [s for s in os.environ.get("ONLY_SECTIONS", "").split(",") if s]
 
-BLOCK_TYPES = {"para", "subhead", "reading", "list", "table", "timeline", "bar_chart", "static", "why", "audiences", "details", "dot_chart", "line_chart"}
+BLOCK_TYPES = {"para", "subhead", "reading", "list", "table", "timeline", "bar_chart", "static", "why", "audiences", "details", "dot_chart", "line_chart", "scatter_chart", "topic_bars", "video_scatter"}
 REF = re.compile(r"\[\[([sn]\d+[a-z]?)\]\]")
 
 SYSTEM = """Tu es analyste en veille technologique. Tu maintiens un dossier comparatif public, en français, sur six assistants IA : Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google), Grok (xAI), Muse (Meta) et Mistral Vibe (Mistral AI).
@@ -278,7 +278,7 @@ def update_matrix(client, data, all_changes, today):
         f"Changements :\n" + "\n".join(f"- {c}" for c in all_changes) + "\n\n"
         "Ajuste uniquement les cellules que ces changements justifient (band de 1 à 5, ou null si aucune donnée publique ; "
         "text de moins de 60 caractères). Ne touche pas aux cellules textonly sauf si un changement l'exige. "
-        "Ajuste de même les constats clés (3 à 6 phrases, chacune avec ses références [[id]] existantes) uniquement si les changements le justifient. "
+        "Ajuste de même les constats clés (3 à 7 phrases, chacune avec ses références [[id]] existantes) uniquement si les changements le justifient. "
         "Si un changement de la semaine annonce un nouveau modèle phare pour un éditeur, remplace son entrée (label, date au format AAAA-MM-JJ ou AAAA-MM, src = identifiant de source existant) ; sinon laisse-la identique. "
         'Réponds uniquement par {"matrix": [...], "keypoints": [...], "latest_models": {...}, "changes": ["..."]}.'
     )
@@ -293,7 +293,7 @@ def update_matrix(client, data, all_changes, today):
             if c.get("band") is not None and int(c["band"]) not in range(1, 6):
                 raise ValueError("bande hors plage")
     keypoints = result.get("keypoints") or data.get("keypoints", [])
-    if not (3 <= len(keypoints) <= 6) or not all(isinstance(k, str) for k in keypoints):
+    if not (3 <= len(keypoints) <= 7) or not all(isinstance(k, str) for k in keypoints):
         raise ValueError("constats clés invalides")
     for k in keypoints:
         for ref in REF.findall(k):

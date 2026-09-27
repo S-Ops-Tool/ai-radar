@@ -4,7 +4,7 @@ Two measures:
 - official channels: subscribers, uploads over 30 days and their views (quota: ~3 units per vendor);
 - public attention: views of the most viewed videos published in the last 7 days whose title
   mentions the assistant, all creators (search.list: 2 x 100 units per vendor, medium and long videos).
-Weekly total: about 1,250 units out of the 10,000 daily quota.
+Weekly total: about 4,300 units out of the 10,000 daily quota.
 """
 import datetime as dt
 import json
@@ -52,15 +52,45 @@ def short(n):
     return str(int(n))
 
 
+LANGS = ["fr", "en", "es", "de", "it"]
+
+
+def iso_seconds(d):
+    m = re.match(r"P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", d or "")
+    if not m:
+        return 0
+    dd, h, mi, se = (int(x or 0) for x in m.groups())
+    return ((dd * 24 + h) * 60 + mi) * 60 + se
+
+
 def video_stats(key, ids):
     out = {}
     for i in range(0, len(ids), 50):
-        data = call("videos", key, part="statistics,snippet", id=",".join(ids[i:i + 50]), maxResults=50)
+        data = call("videos", key, part="statistics,snippet,contentDetails", id=",".join(ids[i:i + 50]), maxResults=50)
         for v in data.get("items", []):
-            out[v["id"]] = {"title": v["snippet"]["title"], "channel": v["snippet"]["channelTitle"],
-                            "published": v["snippet"]["publishedAt"],
+            sn = v["snippet"]
+            out[v["id"]] = {"title": sn["title"], "channel": sn["channelTitle"],
+                            "description": (sn.get("description") or "")[:200],
+                            "published": sn["publishedAt"],
+                            "lang": (sn.get("defaultAudioLanguage") or sn.get("defaultLanguage") or "").lower(),
+                            "seconds": iso_seconds(v.get("contentDetails", {}).get("duration")),
                             "views": int(v.get("statistics", {}).get("viewCount", 0))}
     return out
+
+
+def best_in_language(key, cfg, since7, lang):
+    """Most viewed video of the week, 4 minutes or more, whose declared language matches the page language."""
+    data = call("search", key, part="snippet", q=cfg["query"], type="video", order="viewCount",
+                publishedAfter=since7, relevanceLanguage=lang, maxResults=50)
+    inc, exc = re.compile(cfg["include"], re.I), re.compile(cfg["exclude"] + r"|#shorts?\b", re.I)
+    ids = [it["id"]["videoId"] for it in data.get("items", [])
+           if inc.search(it["snippet"]["title"]) and not exc.search(it["snippet"]["title"])]
+    stats = video_stats(key, ids) if ids else {}
+    ok = [(vid, v) for vid, v in stats.items() if v["lang"].startswith(lang) and v["seconds"] >= 240]
+    if not ok:
+        return None
+    vid, v = max(ok, key=lambda kv: kv[1]["views"])
+    return {"title": v["title"][:90], "url": WATCH.format(vid), "views": v["views"], "channel": v["channel"][:30]}
 
 
 MIN_SUBS = 1000
@@ -102,7 +132,49 @@ def attention(key, cfg, since7):
                 if inc.search(it["snippet"]["title"]) and not exc.search(it["snippet"]["title"])}
     stats = video_stats(key, sorted(ids)) if ids else {}
     top = sorted(stats.items(), key=lambda kv: -kv[1]["views"])[:25]
-    return {"views": sum(v["views"] for _, v in top), "n": len(top), "best": top[0] if top else None}
+    return {"views": sum(v["views"] for _, v in top), "n": len(top), "best": top[0] if top else None, "top": top}
+
+
+CATEGORIES = [
+    ("news", "Lancement et actualité", "annonces de modèles ou de fonctions, actualité des éditeurs"),
+    ("test", "Test et comparatif", "essais, évaluations, comparaisons entre assistants"),
+    ("tutorial", "Tutoriel et usage quotidien", "prise en main, astuces, usages personnels ou scolaires"),
+    ("code", "Code et développement", "programmation, agents de code, API, outils pour développeurs"),
+    ("business", "Travail, emploi et business", "productivité, entreprise, marché, emploi, finance"),
+    ("ethics", "Éthique et responsabilité", "biais, vie privée, désinformation, droits, impact social, controverses éthiques"),
+    ("risk", "Risques et sécurité", "incidents, agents incontrôlés, cybersécurité, sûreté des modèles, risques catastrophiques, appels à ralentir"),
+    ("culture", "Divertissement et culture", "humour, fiction, art, musique, créations, divertissement"),
+]
+CLASSIFY_SYSTEM = ("Tu classes des vidéos YouTube sur l'intelligence artificielle d'après leur titre, leur chaîne et le début de leur description, "
+                   "dans toutes les langues. Catégories possibles (identifiant : définition) :\n"
+                   + "\n".join(f"- {c[0]} : {c[2]}" for c in CATEGORIES)
+                   + "\nChoisis la catégorie dominante. Une vidéo qui traite surtout de biais, de vie privée, de droits ou d'impact social "
+                   "va dans ethics ; une vidéo qui traite surtout d'incidents, de sûreté, de cybersécurité ou de risques graves va dans risk. Réponds uniquement par un objet JSON {identifiant_video: identifiant_categorie}, sans texte autour.")
+
+
+def classify(videos, notes):
+    """Topic of each video via Claude (closed list); videos left unclassified are reported and excluded."""
+    import anthropic
+    if not os.environ.get("ANTHROPIC_API_KEY") or not videos:
+        return {}
+    client = anthropic.Anthropic()
+    model = os.environ.get("CLASSIFY_MODEL", "claude-haiku-4-5-20251001")
+    valid = {c[0] for c in CATEGORIES}
+    out, items = {}, list(videos.items())
+    for i in range(0, len(items), 60):
+        payload = {vid: f"{v['title']} | {v['channel']} | {v.get('description', '')[:150]}" for vid, v in items[i:i + 60]}
+        try:
+            resp = client.messages.create(model=model, max_tokens=4000, system=CLASSIFY_SYSTEM,
+                                          messages=[{"role": "user", "content": json.dumps(payload, ensure_ascii=False)}])
+            text = "".join(getattr(b, "text", "") for b in resp.content)
+            data = json.loads(text[text.find("{"): text.rfind("}") + 1])
+            out.update({k: c for k, c in data.items() if k in payload and c in valid})
+        except Exception as e:
+            notes.append(f"YouTube, classement thématique : {e}")
+    missing = len(videos) - len(out)
+    if missing:
+        notes.append(f"YouTube : {missing} vidéos non classées, écartées de la répartition par thème.")
+    return out
 
 
 def update_youtube(blocks, state, notes):
@@ -126,6 +198,12 @@ def update_youtube(blocks, state, notes):
             r["att"] = attention(key, cfg, since7)
         except Exception as e:
             notes.append(f"YouTube, recherche {cfg['label']} : {e}")
+        r["by_lang"] = {}
+        for lang in LANGS:
+            try:
+                r["by_lang"][lang] = best_in_language(key, cfg, since7, lang)
+            except Exception as e:
+                notes.append(f"YouTube, recherche {cfg['label']} en {lang} : {e}")
         res[vid] = r
     found = [f"{VENDORS[v]['label']} = {r['off']['handle']}" for v, r in res.items() if r["off"]]
     if found:
@@ -145,6 +223,13 @@ def update_youtube(blocks, state, notes):
                 yield from walk(x.get("blocks", []))
 
     ranked = sorted(res.items(), key=lambda kv: -((kv[1]["att"] or {}).get("views") or 0))
+    pool = {vid: info for _, r in res.items() for vid, info in ((r["att"] or {}).get("top") or [])}
+    cats = classify(pool, notes)
+    if cats:
+        import random
+        sample = random.sample(sorted(cats), min(8, len(cats)))
+        notes.append("YouTube, échantillon de classement à vérifier : "
+                     + " ; ".join(f"« {pool[v]['title'][:60]} » → {cats[v]}" for v in sample) + ".")
     for b in walk(blocks):
         if b.get("auto") == "yt_chart":
             bars = [{"label": VENDORS[v]["label"],
@@ -157,9 +242,38 @@ def update_youtube(blocks, state, notes):
             b["max"] = step * 5
             b["ticks"] = [round(i * step, 1) for i in range(6)]
             b["caption"] = (f"Vues cumulées, au {now.day}/{now.month}/{now.year}, des vidéos publiées dans les 7 derniers jours dont le titre "
-                            "mentionne l'assistant, d'une durée de 4 minutes ou plus, tous créateurs confondus (jusqu'à 25 vidéos parmi les plus vues), en millions [[s95]]. "
+                            "mentionne l'assistant, d'une durée de 4 minutes ou plus, tous créateurs et toutes langues confondus (jusqu'à 25 vidéos parmi les plus vues), en millions [[s95]]. "
                             "Les formats courts (Shorts, montages viraux) sont exclus : ils citent souvent un assistant sans en parler. "
                             "Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.")
+        if b.get("auto") == "yt_topics":
+            b["categories"] = [{"id": c[0], "label": c[1]} for c in CATEGORIES]
+            rows = []
+            for v, r in ranked:
+                top = (r["att"] or {}).get("top") or []
+                tot = {}
+                for vid, info in top:
+                    c = cats.get(vid)
+                    if c:
+                        tot[c] = tot.get(c, 0) + info["views"]
+                s_ = sum(tot.values())
+                if s_:
+                    rows.append({"vendor": v, "label": VENDORS[v]["label"],
+                                 "shares": {c: round(x / s_ * 100, 1) for c, x in tot.items()}})
+            b["rows"] = rows
+            b["caption"] = (f"Répartition des vues des vidéos retenues cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; "
+                            f"relevé du {now.day}/{now.month}/{now.year} [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début "
+                            "de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu.")
+        if b.get("auto") == "yt_scatter":
+            b["categories"] = [{"id": c[0], "label": c[1]} for c in CATEGORIES]
+            pts = []
+            for v, r in ranked:
+                for vid, info in (r["att"] or {}).get("top") or []:
+                    if vid in cats:
+                        pts.append({"x": info["published"][:10], "views": info["views"], "cat": cats[vid], "vendor": v,
+                                    "vtitle": info["title"][:90], "url": WATCH.format(vid), "vchannel": info["channel"][:30]})
+            b["points"] = pts
+            b["caption"] = ("Chaque point est une vidéo de la semaine : date de publication en abscisse, vues en ordonnée (échelle logarithmique), "
+                            "couleur selon le thème. Un clic ouvre la vidéo. Une vidéo qui cite plusieurs assistants apparaît une fois par assistant.")
         if b.get("auto") == "yt_table":
             rows = []
             for v, r in ranked:
@@ -174,3 +288,5 @@ def update_youtube(blocks, state, notes):
                              short(o["subs"]) if o else "", str(o["n30"]) if o else "",
                              short(o["views30"]) if o else "", best])
             b["rows"] = rows
+            b["row_vendors"] = [v for v, _ in ranked]
+            b["by_lang"] = {v: r.get("by_lang", {}) for v, r in ranked}
