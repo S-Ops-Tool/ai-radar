@@ -1071,17 +1071,46 @@
           "type": "bar_chart",
           "auto": "status_chart",
           "title": "Incidents déclarés par mois, moyenne récente",
-          "max": 10,
+          "max": 50,
           "ticks": [
             0,
-            2,
-            4,
-            6,
-            8,
-            10
+            10,
+            20,
+            30,
+            40,
+            50
           ],
-          "bars": [],
-          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
+          "bars": [
+            {
+              "label": "ChatGPT",
+              "sublabel": "25 incidents sur 17 jours, historique partiel",
+              "value": 45.1,
+              "display": "45,1",
+              "vendor": "gpt"
+            },
+            {
+              "label": "Claude",
+              "sublabel": "50 incidents sur 67 jours, historique partiel",
+              "value": 22.5,
+              "display": "22,5",
+              "vendor": "claude"
+            },
+            {
+              "label": "Grok",
+              "sublabel": "6 incidents sur 90 jours",
+              "value": 2.0,
+              "display": "2,0",
+              "vendor": "grok"
+            },
+            {
+              "label": "Gemini",
+              "sublabel": "0 incident sur 90 jours",
+              "value": 0.0,
+              "display": "0,0",
+              "vendor": "gemini"
+            }
+          ],
+          "caption": "Nombre moyen d'incidents déclarés par mois sur les pages de statut officielles, calculé sur les 90 derniers jours ou sur la période disponible quand l'historique publié est plus court ; relevé du 27/9/2026. Chaque éditeur choisit ce qu'il déclare et avec quelle granularité : un nombre élevé peut refléter une transparence plus grande autant qu'une fiabilité moindre. Google : incidents Google Cloud liés à Gemini et Vertex AI, sans l'application grand public."
         },
         {
           "type": "table",
@@ -1094,7 +1123,56 @@
             "Durée cumulée",
             "Couverture et source"
           ],
-          "rows": [],
+          "rows": [
+            [
+              "Claude",
+              "50",
+              "22,5",
+              "20",
+              "212 h",
+              "partiel, depuis le 22/7/2026 [[s87]]"
+            ],
+            [
+              "ChatGPT",
+              "25",
+              "45,1",
+              "3",
+              "53 h",
+              "partiel, depuis le 10/9/2026 [[s88]]"
+            ],
+            [
+              "Gemini",
+              "0",
+              "0,0",
+              "0",
+              "0 h",
+              "complet sur 90 jours [[s89]]"
+            ],
+            [
+              "Grok",
+              "6",
+              "2,0",
+              "3",
+              "7 h",
+              "complet sur 90 jours [[s91]]"
+            ],
+            [
+              "Muse (Meta)",
+              "Pas de page de statut publique",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Mistral Vibe",
+              "Lecture impossible cette semaine",
+              "",
+              "",
+              "",
+              "[[s90]]"
+            ]
+          ],
           "vendors": [
             {
               "id": "claude",
