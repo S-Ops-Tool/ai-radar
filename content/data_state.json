@@ -832,8 +832,8 @@
       "gpt": {
         "n": 730,
         "notable": 78,
-        "comments": 18029,
-        "points": 28717
+        "comments": 18038,
+        "points": 28727
       },
       "gemini": {
         "n": 76,
@@ -851,7 +851,7 @@
         "n": 25,
         "notable": 4,
         "comments": 888,
-        "points": 1530
+        "points": 1531
       },
       "mistral": {
         "n": 13,
@@ -929,34 +929,34 @@
   "youtube_weekly": {
     "2026-09-27": {
       "claude": {
-        "views7": 4732124,
+        "views7": 5040069,
         "subs": 806000,
         "n30": 3
       },
       "gpt": {
-        "views7": 23315441,
+        "views7": 6616780,
         "subs": 2070000,
         "n30": 50
       },
       "gemini": {
-        "views7": 6842823,
+        "views7": 1451335,
         "subs": 23800,
         "n30": 20
       },
       "grok": {
-        "views7": 3931162,
-        "subs": 20,
-        "n30": 0
+        "views7": 1745871,
+        "subs": 20600,
+        "n30": 2
       },
       "meta": {
-        "views7": 2724184,
+        "views7": 790679,
         "subs": 39700,
         "n30": 0
       },
       "mistral": {
-        "views7": 31704,
-        "subs": null,
-        "n30": null
+        "views7": 28689,
+        "subs": 16500,
+        "n30": 3
       }
     }
   }
