@@ -114,7 +114,7 @@ def render_block(b, sources):
     if t == "subhead":
         return f"<h3>{html.escape(b['text'])}</h3>"
     if t == "reading":
-        return f'<div class="reading"><p>Lecture : {txt(b["text"], sources)}</p></div>'
+        return f'<div class="reading"><p><strong>Lecture.</strong> {txt(b["text"], sources)}</p></div>'
     if t == "list":
         return "<ul>" + "".join(f"<li>{txt(i, sources)}</li>" for i in b["items"]) + "</ul>"
     if t == "table":
@@ -142,14 +142,16 @@ def render(d):
     toc += ['<a href="#journal">Journal des mises à jour</a>', '<a href="#angles">Angles morts</a>', '<a href="#sources">Sources</a>']
     sections = "".join(
         f'<section id="{s["id"]}"><h2>{html.escape(s["title"])}</h2>'
-        + "".join(render_block(b, sources) for b in s["blocks"]) + "</section>"
+        + "".join(render_block(b, sources) for b in s["blocks"])
+        + (f'<p class="watch">Sources suivies chaque semaine : {html.escape(", ".join(s["watch"]))}.</p>' if s.get("watch") else "")
+        + "</section>"
         for s in d["sections"])
     log = "".join(
         f"<li><time>{fr_date(c['date'])}</time><ul>" + "".join(f"<li>{txt(i, sources)}</li>" for i in c["items"]) + "</ul></li>"
         for c in sorted(d["changelog"], key=lambda c: c["date"], reverse=True)[:12])
     blind = "".join(f"<li>{html.escape(b)}</li>" for b in d["blind_spots"])
     srcs = "".join(
-        f'<li id="{sid}" value="{src_num(sid)}"><a href="{html.escape(s["url"])}">{html.escape(s["title"])}</a></li>'
+        f'<li id="{sid}"><span class="num">{src_num(sid)}.</span> <a href="{html.escape(s["url"])}">{html.escape(s["title"])}</a></li>'
         for sid, s in sorted(sources.items(), key=lambda kv: int(src_num(kv[0]) or 0)))
     return f"""<!DOCTYPE html>
 <html lang="fr">
@@ -164,6 +166,9 @@ def render(d):
 <style>{CSS}
 ol.log{{list-style:none;padding:0;max-width:76ch}}
 ol.log>li{{margin-bottom:14px}}
+.watch{{font-size:.85rem;color:var(--ink2);margin-top:22px;max-width:76ch}}
+.sources{{list-style:none}}
+.sources .num{{display:inline-block;min-width:2.2em;font-variant-numeric:tabular-nums}}
 ol.log time{{font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;font-weight:600}}
 </style>
 </head>
@@ -180,7 +185,7 @@ ol.log time{{font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;fon
 {sections}
 <section id="journal"><h2>Journal des mises à jour</h2><ol class="log">{log}</ol></section>
 <section id="angles"><h2>Ce que ce dossier ne voit pas</h2><ul>{blind}</ul></section>
-<section id="sources"><h2>Sources</h2><ol class="sources">{srcs}</ol></section>
+<section id="sources"><h2>Sources</h2><ul class="sources">{srcs}</ul></section>
 </div>
 <script>
 (function(){{

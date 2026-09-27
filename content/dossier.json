@@ -6,223 +6,883 @@
     "note": "Dossier mis à jour chaque semaine par un pipeline automatisé fondé sur Claude (Anthropic), partie prenante de la comparaison. Chaque modification est relue avant publication ; les points favorables à Anthropic méritent une vérification prioritaire."
   },
   "vendors": [
-    {"id": "claude", "name": "Claude"},
-    {"id": "gpt", "name": "ChatGPT"},
-    {"id": "gemini", "name": "Gemini"},
-    {"id": "grok", "name": "Grok"},
-    {"id": "meta", "name": "Muse (Meta)"},
-    {"id": "mistral", "name": "Mistral Vibe"}
+    {
+      "id": "claude",
+      "name": "Claude"
+    },
+    {
+      "id": "gpt",
+      "name": "ChatGPT"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini"
+    },
+    {
+      "id": "grok",
+      "name": "Grok"
+    },
+    {
+      "id": "meta",
+      "name": "Muse (Meta)"
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral Vibe"
+    }
   ],
   "matrix": [
-    {"label": "Factualité mesurée", "cells": {
-      "claude": {"band": 4, "text": "Hallucine le moins dans plusieurs tests"},
-      "gpt": {"band": 4, "text": "Proche, meilleur en mode raisonnement"},
-      "gemini": {"band": 3, "text": "Connaissances les plus larges, excès d'assurance"},
-      "grok": {"band": 2, "text": "Plus d'erreurs, citations peu fiables"},
-      "meta": {"band": null, "text": "Aucun chiffre publié"},
-      "mistral": {"band": null, "text": "Absent des tests consultés"}}},
-    {"label": "Accès à l'actualité", "cells": {
-      "claude": {"band": 3, "text": "Recherche web"},
-      "gpt": {"band": 3, "text": "Recherche web"},
-      "gemini": {"band": 4, "text": "Index Google"},
-      "grok": {"band": 5, "text": "Flux X, très frais, non vérifié"},
-      "meta": {"band": null, "text": "Non documenté"},
-      "mistral": {"band": 3, "text": "Web, dont dépêches AFP"}}},
-    {"label": "Agents et automatisation", "cells": {
-      "claude": {"band": 5, "text": "Code, tâches longues, protocole MCP"},
-      "gpt": {"band": 5, "text": "Mode agent, Codex"},
-      "gemini": {"band": 4, "text": "Intégré à Workspace et Android"},
-      "grok": {"band": 2, "text": "Grok Build, Grok Bot, récents"},
-      "meta": {"band": 4, "text": "Agent grand public, sous-agents parallèles"},
-      "mistral": {"band": 3, "text": "Work mode, déploiement sur site"}}},
-    {"label": "Gouvernance sécurité (FLI)", "cells": {
-      "claude": {"band": 4, "text": "C+"},
-      "gpt": {"band": 3, "text": "C"},
-      "gemini": {"band": 3, "text": "C (DeepMind)"},
-      "grok": {"band": 1, "text": "F"},
-      "meta": {"band": 2, "text": "D+"},
-      "mistral": {"band": 1, "text": "F"}}},
-    {"label": "Transparence énergie", "cells": {
-      "claude": {"band": 1, "text": "Pas de rapport publié"},
-      "gpt": {"band": 2, "text": "Un chiffre, sans méthode"},
-      "gemini": {"band": 4, "text": "Méthode publiée, non revue par des pairs"},
-      "grok": {"band": null, "text": "Rien trouvé"},
-      "meta": {"band": null, "text": "Rien trouvé"},
-      "mistral": {"band": 5, "text": "ACV avec ADEME et Carbone 4"}}},
-    {"label": "Maîtrise du calcul", "cells": {
-      "claude": {"band": 3, "text": "Loue (Amazon, Google, xAI)"},
-      "gpt": {"band": 4, "text": "Loue, programme Stargate"},
-      "gemini": {"band": 5, "text": "Puces TPU maison"},
-      "grok": {"band": 5, "text": "Colossus, propriétaire"},
-      "meta": {"band": 5, "text": "Propriétaire, Hyperion prévu à 5 GW"},
-      "mistral": {"band": 2, "text": "Plan de 1 GW en Europe"}}},
-    {"label": "Modèle économique", "cells": {
-      "claude": {"band": null, "text": "Abonnements et API, sans publicité", "textonly": true},
-      "gpt": {"band": null, "text": "Abonnements, publicité sur les offres gratuites", "textonly": true},
-      "gemini": {"band": null, "text": "Abonnements, adossé à l'écosystème Google", "textonly": true},
-      "grok": {"band": null, "text": "Abonnements X et xAI", "textonly": true},
-      "meta": {"band": null, "text": "Publicité Meta, commission future sur transactions", "textonly": true},
-      "mistral": {"band": null, "text": "Abonnements, contrats entreprise", "textonly": true}}},
-    {"label": "Juridiction de l'éditeur", "cells": {
-      "claude": {"band": null, "text": "États-Unis", "textonly": true},
-      "gpt": {"band": null, "text": "États-Unis", "textonly": true},
-      "gemini": {"band": null, "text": "États-Unis", "textonly": true},
-      "grok": {"band": null, "text": "États-Unis", "textonly": true},
-      "meta": {"band": null, "text": "États-Unis", "textonly": true},
-      "mistral": {"band": null, "text": "France (UE)", "textonly": true}}}
+    {
+      "label": "Factualité mesurée",
+      "cells": {
+        "claude": {
+          "band": 3,
+          "text": "10 à 12 % en résumé (HHEM), mieux classé ailleurs"
+        },
+        "gpt": {
+          "band": 4,
+          "text": "8,7 % en résumé (Astra), 6,5 % (Sol)"
+        },
+        "gemini": {
+          "band": 3,
+          "text": "Connaissances les plus larges, 10 % en résumé"
+        },
+        "grok": {
+          "band": 2,
+          "text": "Taux le plus élevé en résumé"
+        },
+        "meta": {
+          "band": null,
+          "text": "Muse non évalué ; Llama 4 à 8 %"
+        },
+        "mistral": {
+          "band": 2,
+          "text": "14,5 % en résumé (Large 3)"
+        }
+      }
+    },
+    {
+      "label": "Accès à l'actualité",
+      "cells": {
+        "claude": {
+          "band": 3,
+          "text": "Recherche web"
+        },
+        "gpt": {
+          "band": 3,
+          "text": "Recherche web"
+        },
+        "gemini": {
+          "band": 4,
+          "text": "Index Google"
+        },
+        "grok": {
+          "band": 5,
+          "text": "Flux X, très frais, non vérifié"
+        },
+        "meta": {
+          "band": null,
+          "text": "Non documenté"
+        },
+        "mistral": {
+          "band": 3,
+          "text": "Web, dont dépêches AFP"
+        }
+      }
+    },
+    {
+      "label": "Agents et automatisation",
+      "cells": {
+        "claude": {
+          "band": 5,
+          "text": "Code, tâches longues, protocole MCP"
+        },
+        "gpt": {
+          "band": 5,
+          "text": "Mode agent, Codex"
+        },
+        "gemini": {
+          "band": 4,
+          "text": "Intégré à Workspace et Android"
+        },
+        "grok": {
+          "band": 2,
+          "text": "Grok Build, Grok Bot, récents"
+        },
+        "meta": {
+          "band": 4,
+          "text": "Agent grand public, sous-agents parallèles"
+        },
+        "mistral": {
+          "band": 3,
+          "text": "Work mode, déploiement sur site"
+        }
+      }
+    },
+    {
+      "label": "Gouvernance sécurité (FLI)",
+      "cells": {
+        "claude": {
+          "band": 4,
+          "text": "C+"
+        },
+        "gpt": {
+          "band": 3,
+          "text": "C"
+        },
+        "gemini": {
+          "band": 3,
+          "text": "C (DeepMind)"
+        },
+        "grok": {
+          "band": 1,
+          "text": "F"
+        },
+        "meta": {
+          "band": 2,
+          "text": "D+"
+        },
+        "mistral": {
+          "band": 1,
+          "text": "F"
+        }
+      }
+    },
+    {
+      "label": "Transparence énergie",
+      "cells": {
+        "claude": {
+          "band": 1,
+          "text": "Pas de rapport publié"
+        },
+        "gpt": {
+          "band": 2,
+          "text": "Un chiffre, sans méthode"
+        },
+        "gemini": {
+          "band": 4,
+          "text": "Méthode publiée, non revue par des pairs"
+        },
+        "grok": {
+          "band": null,
+          "text": "Rien trouvé"
+        },
+        "meta": {
+          "band": null,
+          "text": "Rien trouvé"
+        },
+        "mistral": {
+          "band": 5,
+          "text": "ACV avec ADEME et Carbone 4"
+        }
+      }
+    },
+    {
+      "label": "Maîtrise du calcul",
+      "cells": {
+        "claude": {
+          "band": 3,
+          "text": "Loue (Amazon, Google, xAI)"
+        },
+        "gpt": {
+          "band": 4,
+          "text": "Loue, programme Stargate"
+        },
+        "gemini": {
+          "band": 5,
+          "text": "Puces TPU maison"
+        },
+        "grok": {
+          "band": 5,
+          "text": "Colossus, propriétaire"
+        },
+        "meta": {
+          "band": 5,
+          "text": "Propriétaire, Hyperion prévu à 5 GW"
+        },
+        "mistral": {
+          "band": 2,
+          "text": "Plan de 1 GW en Europe"
+        }
+      }
+    },
+    {
+      "label": "Modèle économique",
+      "cells": {
+        "claude": {
+          "band": null,
+          "text": "Abonnements et API, sans publicité",
+          "textonly": true
+        },
+        "gpt": {
+          "band": null,
+          "text": "Abonnements, publicité sur les offres gratuites",
+          "textonly": true
+        },
+        "gemini": {
+          "band": null,
+          "text": "Abonnements, adossé à l'écosystème Google",
+          "textonly": true
+        },
+        "grok": {
+          "band": null,
+          "text": "Abonnements X et xAI",
+          "textonly": true
+        },
+        "meta": {
+          "band": null,
+          "text": "Publicité Meta, commission future sur transactions",
+          "textonly": true
+        },
+        "mistral": {
+          "band": null,
+          "text": "Abonnements, contrats entreprise",
+          "textonly": true
+        }
+      }
+    },
+    {
+      "label": "Juridiction de l'éditeur",
+      "cells": {
+        "claude": {
+          "band": null,
+          "text": "États-Unis",
+          "textonly": true
+        },
+        "gpt": {
+          "band": null,
+          "text": "États-Unis",
+          "textonly": true
+        },
+        "gemini": {
+          "band": null,
+          "text": "États-Unis",
+          "textonly": true
+        },
+        "grok": {
+          "band": null,
+          "text": "États-Unis",
+          "textonly": true
+        },
+        "meta": {
+          "band": null,
+          "text": "États-Unis",
+          "textonly": true
+        },
+        "mistral": {
+          "band": null,
+          "text": "France (UE)",
+          "textonly": true
+        }
+      }
+    }
   ],
   "sections": [
     {
       "id": "donnees",
       "title": "Données d'entraînement : ce que les procès révèlent",
       "blocks": [
-        {"type": "para", "text": "Aucun éditeur ne publie la composition exacte de son corpus. Les contentieux américains et européens en donnent la meilleure image disponible. Selon un décompte, les plaintes pour droit d'auteur visant des entreprises d'IA aux États-Unis sont passées de 45 fin juin 2025 à 140 au 1er septembre 2026 [[s31]]."},
-        {"type": "table", "headers": ["Éditeur", "Fait établi ou allégué", "Statut"], "rows": [
-          ["Anthropic", "Plus de 7 millions de livres téléchargés depuis des bibliothèques pirates. Le juge a considéré l'entraînement comme un usage transformatif, mais pas la conservation des copies piratées [[s30]] [[s31]].", "Accord de 1,5 Md$, approuvé le 20 juillet 2026 [[s31]]. Plainte d'éditeurs musicaux en cours."],
-          ["Meta", "Livres piratés utilisés pour Llama, avec redistribution via BitTorrent [[s34]].", "Volet entraînement écarté au titre du fair use, volet torrent actif."],
-          ["OpenAI", "Mémorisation de paroles de chansons (GEMA, Munich). Procès du New York Times [[s33]].", "Condamnation en Allemagne. Litiges américains regroupés."],
-          ["Google", "Accusé d'avoir retiré les métadonnées de droits d'auteur pour masquer les œuvres utilisées [[s32]].", "Plainte déposée en 2026."],
-          ["xAI", "Données de X. Musk a admis une distillation partielle à partir des modèles GPT [[s35]].", "Visé par des plaintes d'auteurs."],
-          ["Mistral", "Aucun litige majeur trouvé dans les sources consultées.", "Absence de preuve, pas preuve d'absence."]
-        ]},
-        {"type": "reading", "text": "Le critère juridique qui se dessine porte sur la provenance (licence, collecte sur le web ou piratage) plus que sur l'entraînement lui-même. Le montant payé par Anthropic reflète le premier jugement sur le fond ; les autres dossiers restent ouverts."},
-        {"type": "para", "text": "Les conversations des utilisateurs forment une seconde source. Chez OpenAI, les échanges passés et la mémoire servent au ciblage publicitaire quand la personnalisation est activée [[s39]]. Les offres entreprise sont en général exclues de l'entraînement, mais le réglage se vérifie compte par compte."}
+        {
+          "type": "para",
+          "text": "Aucun éditeur ne publie la composition exacte de son corpus. Les contentieux américains et européens en donnent la meilleure image disponible. Selon un décompte, les plaintes pour droit d'auteur visant des entreprises d'IA aux États-Unis sont passées de 45 fin juin 2025 à 140 au 1er septembre 2026 [[s31]]."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Éditeur",
+            "Fait établi ou allégué",
+            "Statut"
+          ],
+          "rows": [
+            [
+              "Anthropic",
+              "Plus de 7 millions de livres téléchargés depuis des bibliothèques pirates. Le juge a considéré l'entraînement comme un usage transformatif, mais pas la conservation des copies piratées [[s30]] [[s31]].",
+              "Accord de 1,5 Md$, approuvé le 20 juillet 2026 [[s31]]. Plainte d'éditeurs musicaux en cours."
+            ],
+            [
+              "Meta",
+              "Livres piratés utilisés pour Llama, avec redistribution via BitTorrent [[s34]].",
+              "Volet entraînement écarté au titre du fair use, volet torrent actif."
+            ],
+            [
+              "OpenAI",
+              "Mémorisation de paroles de chansons (GEMA, Munich). Procès du New York Times [[s33]].",
+              "Condamnation en Allemagne. Litiges américains regroupés."
+            ],
+            [
+              "Google",
+              "Accusé d'avoir retiré les métadonnées de droits d'auteur pour masquer les œuvres utilisées [[s32]].",
+              "Plainte déposée en 2026."
+            ],
+            [
+              "xAI",
+              "Données de X. Musk a admis une distillation partielle à partir des modèles GPT [[s35]].",
+              "Visé par des plaintes d'auteurs."
+            ],
+            [
+              "Mistral",
+              "Aucun litige majeur trouvé dans les sources consultées.",
+              "Absence de preuve, pas preuve d'absence."
+            ]
+          ]
+        },
+        {
+          "type": "reading",
+          "text": "Le critère juridique qui se dessine porte sur la provenance (licence, collecte sur le web ou piratage) plus que sur l'entraînement lui-même. Le montant payé par Anthropic reflète le premier jugement sur le fond ; les autres dossiers restent ouverts."
+        },
+        {
+          "type": "para",
+          "text": "Les conversations des utilisateurs forment une seconde source. Chez OpenAI, les échanges passés et la mémoire servent au ciblage publicitaire quand la personnalisation est activée [[s39]]. Les offres entreprise sont en général exclues de l'entraînement, mais le réglage se vérifie compte par compte."
+        }
+      ],
+      "watch": [
+        "CourtListener (dossiers Kadrey c. Meta, In re OpenAI, Concord c. Anthropic)",
+        "AI Lawsuit Tracker",
+        "Commission européenne, résumés des données d'entraînement (AI Act)",
+        "Accords de licence presse et IA"
       ]
     },
     {
       "id": "biais",
       "title": "Biais : quatre familles distinctes",
       "blocks": [
-        {"type": "subhead", "text": "Idéologique"},
-        {"type": "para", "text": "Grok est né d'une intention affichée de « combattre les biais ». Les comparatifs relèvent au contraire des réponses alignées sur la vision du monde de son propriétaire sur les sujets politiques [[s53]]. Tout ajustement correctif est lui-même un choix éditorial."},
-        {"type": "subhead", "text": "Commercial"},
-        {"type": "para", "text": "OpenAI montre des publicités aux utilisateurs Free et Go depuis février 2026 et affirme que les annonces ne modifient pas les réponses [[s39]]. Depuis le 16 septembre 2026, un clic peut ouvrir une conversation avec un agent sponsorisé par une marque [[s40]]. Meta utilise les conversations avec son assistant pour cibler les annonces [[s41]] et prévoit une commission sur les transactions réalisées par Muse [[s43]]."},
-        {"type": "subhead", "text": "Culturel et linguistique"},
-        {"type": "para", "text": "Les corpus restent majoritairement anglophones et américains. Des utilisateurs francophones jugent la langue de Mistral plus naturelle, ce qui relève du témoignage plus que de la mesure."},
-        {"type": "subhead", "text": "Comportemental"},
-        {"type": "para", "text": "Tous les modèles ont tendance à abonder dans le sens de l'utilisateur. Une étude sur 1 324 échanges réels place Gemini en tête des réponses affirmées puis contredites (51,4 %), avec une amélioration quasi nulle sur les sujets à fort enjeu [[s50]]. Cette étude unique provient d'un éditeur de logiciel."}
+        {
+          "type": "subhead",
+          "text": "Idéologique"
+        },
+        {
+          "type": "para",
+          "text": "Grok est né d'une intention affichée de « combattre les biais ». Les comparatifs relèvent au contraire des réponses alignées sur la vision du monde de son propriétaire sur les sujets politiques [[s53]]. Tout ajustement correctif est lui-même un choix éditorial."
+        },
+        {
+          "type": "subhead",
+          "text": "Commercial"
+        },
+        {
+          "type": "para",
+          "text": "OpenAI montre des publicités aux utilisateurs Free et Go depuis février 2026 et affirme que les annonces ne modifient pas les réponses [[s39]]. Depuis le 16 septembre 2026, un clic peut ouvrir une conversation avec un agent sponsorisé par une marque [[s40]]. Meta utilise les conversations avec son assistant pour cibler les annonces [[s41]] et prévoit une commission sur les transactions réalisées par Muse [[s43]]."
+        },
+        {
+          "type": "subhead",
+          "text": "Culturel et linguistique"
+        },
+        {
+          "type": "para",
+          "text": "Les corpus restent majoritairement anglophones et américains. Des utilisateurs francophones jugent la langue de Mistral plus naturelle, ce qui relève du témoignage plus que de la mesure."
+        },
+        {
+          "type": "subhead",
+          "text": "Comportemental"
+        },
+        {
+          "type": "para",
+          "text": "Tous les modèles ont tendance à abonder dans le sens de l'utilisateur. Une étude sur 1 324 échanges réels place Gemini en tête des réponses affirmées puis contredites (51,4 %), avec une amélioration quasi nulle sur les sujets à fort enjeu [[s50]]. Cette étude unique provient d'un éditeur de logiciel."
+        }
+      ],
+      "watch": [
+        "Instructions système publiées par Anthropic et xAI",
+        "Rapports de transparence publicitaire d'OpenAI",
+        "Stanford HAI, AI Index",
+        "Études universitaires sur la complaisance des modèles"
       ]
     },
     {
       "id": "precision",
       "title": "Précision : la méthode fait le chiffre",
       "blocks": [
-        {"type": "para", "text": "Les taux d'hallucination publiés divergent d'un facteur dix selon le protocole. Pour les modèles de pointe, une étude sur 5 000 requêtes trouve entre 3,1 % et 19,1 % selon le modèle, la tâche et le niveau de raisonnement ; avec un protocole plus strict, Gemini 2.0 Flash passe de 0,7 % à environ 7,6 % [[s46]]."},
-        {"type": "bar_chart", "title": "Taux d'hallucination dans un test commercial (500 requêtes), en %", "max": 20, "ticks": [0, 5, 10, 15, 20], "bars": [
-          {"label": "Claude", "sublabel": "Claude 4.6", "value": 4, "display": "4", "vendor": "claude"},
-          {"label": "ChatGPT", "sublabel": "GPT-5.4", "value": 6, "display": "6", "vendor": "gpt"},
-          {"label": "Gemini", "sublabel": "Gemini 3.1", "value": 9, "display": "9", "vendor": "gemini"},
-          {"label": "Grok", "sublabel": "Grok 4.20", "value": 12, "display": "12", "vendor": "grok"}
-        ], "caption": "Source unique : Talkory, éditeur d'un outil multi-modèles [[s49]]. Muse et Mistral n'ont pas de donnée comparable publiée."},
-        {"type": "list", "items": [
-          "Sur le test FACTS, aucun modèle ne dépasse 70 % ; le meilleur, Gemini 3 Pro, atteint 68,8, et 83,8 avec la recherche web [[s47]].",
-          "Selon les évaluations d'OpenAI, l'accès au web réduit les hallucinations de 73 à 86 % [[s47]].",
-          "Gemini 3.1 Pro obtient 74,8 % sur SimpleQA tout en hallucinant davantage que Claude [[s48]] : l'étendue des connaissances et la retenue face à l'inconnu varient séparément.",
-          "Pour Muse Spark, Meta n'a publié que des résultats en code, sans chiffre de factualité [[s47]]."
-        ]},
-        {"type": "reading", "text": "Un classement unique a peu de sens. La question utile porte sur la tâche : rappel de faits, résumé d'un document fourni, citation de sources. L'écart entre une réponse avec et sans documents de référence dépasse souvent l'écart entre modèles."}
+        {
+          "type": "para",
+          "text": "Les taux d'hallucination publiés divergent d'un facteur dix selon le protocole. Pour les modèles de pointe, une étude sur 5 000 requêtes trouve entre 3,1 % et 19,1 % selon le modèle, la tâche et le niveau de raisonnement ; avec un protocole plus strict, Gemini 2.0 Flash passe de 0,7 % à environ 7,6 % [[s46]]."
+        },
+        {
+          "type": "bar_chart",
+          "auto": "vectara_hhem",
+          "title": "Taux d'hallucination en résumé de documents (Vectara HHEM), en %",
+          "max": 20,
+          "ticks": [
+            0,
+            5,
+            10,
+            15,
+            20
+          ],
+          "bars": [
+            {
+              "label": "Meta",
+              "sublabel": "Llama 4 Maverick (pas Muse)",
+              "value": 8.2,
+              "display": "8,2",
+              "vendor": "meta"
+            },
+            {
+              "label": "ChatGPT",
+              "sublabel": "GPT-6 Astra",
+              "value": 8.7,
+              "display": "8,7",
+              "vendor": "gpt"
+            },
+            {
+              "label": "Gemini",
+              "sublabel": "Gemini 3.1 Pro",
+              "value": 10.4,
+              "display": "10,4",
+              "vendor": "gemini"
+            },
+            {
+              "label": "Claude",
+              "sublabel": "Claude Opus 4.7",
+              "value": 12.0,
+              "display": "12,0",
+              "vendor": "claude"
+            },
+            {
+              "label": "Mistral",
+              "sublabel": "Mistral Large 3",
+              "value": 14.5,
+              "display": "14,5",
+              "vendor": "mistral"
+            },
+            {
+              "label": "Grok",
+              "sublabel": "Grok 4.1 Fast",
+              "value": 19.2,
+              "display": "19,2",
+              "vendor": "grok"
+            }
+          ],
+          "models": {
+            "gpt": {
+              "id": "openai/gpt-6-astra",
+              "label": "ChatGPT",
+              "sublabel": "GPT-6 Astra"
+            },
+            "meta": {
+              "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+              "label": "Meta",
+              "sublabel": "Llama 4 Maverick (pas Muse)"
+            },
+            "gemini": {
+              "id": "google/gemini-3.1-pro-preview",
+              "label": "Gemini",
+              "sublabel": "Gemini 3.1 Pro"
+            },
+            "claude": {
+              "id": "anthropic/claude-opus-4-7",
+              "label": "Claude",
+              "sublabel": "Claude Opus 4.7"
+            },
+            "mistral": {
+              "id": "mistralai/mistral-3-large-2512",
+              "label": "Mistral",
+              "sublabel": "Mistral Large 3"
+            },
+            "grok": {
+              "id": "xai-org/grok-4-1-fast-reasoning",
+              "label": "Grok",
+              "sublabel": "Grok 4.1 Fast"
+            }
+          },
+          "caption": "Vectara HHEM, classement du 22 septembre 2026 : part des résumés contenant une information absente du document source [[s55]]. Ce test mesure la fidélité en résumé, pas les connaissances générales. Muse n'y figure pas ; la barre Meta porte sur Llama 4."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sur ce classement public, les modèles Claude se situent entre 10 et 12 %, derrière GPT-6 et Gemini 3.1 Pro [[s55]]. Plusieurs comparatifs commerciaux affirment au contraire que Claude mène ce même classement [[s48]] [[s49]] : la source primaire ne le confirme pas.",
+            "Les modèles les plus récents de chaque éditeur ne figurent pas tous au classement : Claude Opus 5.5, Grok 4.7 et Muse Spark n'y apparaissent pas à ce jour.",
+            "Sur le test FACTS, aucun modèle ne dépasse 70 % ; le meilleur, Gemini 3 Pro, atteint 68,8, et 83,8 avec la recherche web [[s47]].",
+            "Selon les évaluations d'OpenAI, l'accès au web réduit les hallucinations de 73 à 86 % [[s47]].",
+            "Pour Muse Spark, Meta n'a publié que des résultats en code, sans chiffre de factualité [[s47]]."
+          ]
+        },
+        {
+          "type": "reading",
+          "text": "Les tests mesurent des choses différentes : fidélité à un document fourni (HHEM), rappel de faits (SimpleQA, FACTS), refus de répondre face à l'inconnu (AA-Omniscience). Un modèle peut mener l'un et reculer sur l'autre. Les classements relayés par des éditeurs d'outils se révèlent parfois inexacts par rapport à leur source."
+        }
+      ],
+      "watch": [
+        "Vectara Hallucination Leaderboard",
+        "Artificial Analysis, AA-Omniscience",
+        "Google DeepMind, FACTS Grounding",
+        "Cartes de modèles des éditeurs"
       ]
     },
     {
       "id": "tempsreel",
       "title": "Ce que « temps réel » recouvre",
       "blocks": [
-        {"type": "para", "text": "Aucun de ces modèles n'apprend en continu. Leurs connaissances s'arrêtent à une date de coupure. Le « temps réel » désigne une recherche lancée au moment de la question, dont le résultat est inséré dans le contexte du modèle. La fraîcheur et la fiabilité dépendent donc de la source interrogée."},
-        {"type": "static", "name": "pipeline", "caption": "Schéma de principe. Adossé à Google Search, Gemini descend à environ 3 à 4 % d'hallucinations sur l'actualité [[s49]]."},
-        {"type": "reading", "text": "Le circuit X capte un signal faible plus tôt, au prix d'un taux de rumeur élevé. Le circuit Google et les dépêches d'agence offrent un filtre éditorial en amont. Dans les deux cas, la source primaire reste à ouvrir."}
+        {
+          "type": "para",
+          "text": "Aucun de ces modèles n'apprend en continu. Leurs connaissances s'arrêtent à une date de coupure. Le « temps réel » désigne une recherche lancée au moment de la question, dont le résultat est inséré dans le contexte du modèle. La fraîcheur et la fiabilité dépendent donc de la source interrogée."
+        },
+        {
+          "type": "static",
+          "name": "pipeline",
+          "caption": "Schéma de principe. Adossé à Google Search, Gemini descend à environ 3 à 4 % d'hallucinations sur l'actualité [[s49]]."
+        },
+        {
+          "type": "reading",
+          "text": "Le circuit X capte un signal faible plus tôt, au prix d'un taux de rumeur élevé. Le circuit Google et les dépêches d'agence offrent un filtre éditorial en amont. Dans les deux cas, la source primaire reste à ouvrir."
+        }
+      ],
+      "watch": [
+        "Documentation des outils de recherche web des éditeurs",
+        "Accords avec les agences de presse (AFP, AP, Reuters)",
+        "Reuters Institute, Digital News Report"
       ]
     },
     {
       "id": "agents",
       "title": "Agents : ce qui les distingue vraiment",
       "blocks": [
-        {"type": "para", "text": "Un agent planifie, appelle des outils (navigateur, messagerie, fichiers, code) et enchaîne les actions sans validation à chaque étape. Les différences tiennent à trois choix de conception : où l'agent agit, avec quels droits, et qui en tire un revenu."},
-        {"type": "table", "headers": ["Assistant", "Terrain d'action", "Architecture", "Incitation économique"], "rows": [
-          ["Claude", "Code, poste de travail, navigateur, Excel", "Tâches longues, protocole MCP créé par Anthropic", "Abonnement et usage API"],
-          ["ChatGPT", "Web, code (Codex), outils bureautiques", "Mode agent, séparation Chat, Work et Codex [[s53]]", "Abonnement, agents sponsorisés [[s40]]"],
-          ["Gemini", "Gmail, Docs, Sheets, Android", "Intégré aux documents déjà ouverts", "Rétention dans l'écosystème Google"],
-          ["Muse", "Rendez-vous, formulaires, caméras domestiques, lunettes [[s42]] [[s43]]", "Agent principal et sous-agents parallèles, compatible MCP [[s44]]", "Commission prévue sur les transactions"],
-          ["Grok", "Code (Grok Build), équipes (Grok Bot) [[s35]]", "Peu documentée", "Abonnements X et xAI"],
-          ["Mistral Vibe", "Boîte mail, rapports, code [[s51]]", "Work mode, déployable sur site", "Contrats entreprise"]
-        ]},
-        {"type": "para", "text": "Le risque commun porte sur l'injection d'instructions : un agent qui lit un email ou une page web peut exécuter un ordre caché dans ce contenu. Plus l'agent a de droits, plus ce risque pèse."}
+        {
+          "type": "para",
+          "text": "Un agent planifie, appelle des outils (navigateur, messagerie, fichiers, code) et enchaîne les actions sans validation à chaque étape. Les différences tiennent à trois choix de conception : où l'agent agit, avec quels droits, et qui en tire un revenu."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Assistant",
+            "Terrain d'action",
+            "Architecture",
+            "Incitation économique"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Code, poste de travail, navigateur, Excel",
+              "Tâches longues, protocole MCP créé par Anthropic",
+              "Abonnement et usage API"
+            ],
+            [
+              "ChatGPT",
+              "Web, code (Codex), outils bureautiques",
+              "Mode agent, séparation Chat, Work et Codex [[s53]]",
+              "Abonnement, agents sponsorisés [[s40]]"
+            ],
+            [
+              "Gemini",
+              "Gmail, Docs, Sheets, Android",
+              "Intégré aux documents déjà ouverts",
+              "Rétention dans l'écosystème Google"
+            ],
+            [
+              "Muse",
+              "Rendez-vous, formulaires, caméras domestiques, lunettes [[s42]] [[s43]]",
+              "Agent principal et sous-agents parallèles, compatible MCP [[s44]]",
+              "Commission prévue sur les transactions"
+            ],
+            [
+              "Grok",
+              "Code (Grok Build), équipes (Grok Bot) [[s35]]",
+              "Peu documentée",
+              "Abonnements X et xAI"
+            ],
+            [
+              "Mistral Vibe",
+              "Boîte mail, rapports, code [[s51]]",
+              "Work mode, déployable sur site",
+              "Contrats entreprise"
+            ]
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Le risque commun porte sur l'injection d'instructions : un agent qui lit un email ou une page web peut exécuter un ordre caché dans ce contenu. Plus l'agent a de droits, plus ce risque pèse."
+        }
+      ],
+      "watch": [
+        "OSWorld",
+        "Terminal-Bench",
+        "tau-bench",
+        "Rapports d'incidents d'injection d'instructions (OWASP, éditeurs)"
       ]
     },
     {
       "id": "cyber",
       "title": "Cybersécurité : le point de bascule de 2026",
       "blocks": [
-        {"type": "para", "text": "La capacité à trouver et exploiter des failles logicielles a émergé des progrès généraux en code et en raisonnement, sans entraînement dédié [[s17]]. Cette propriété concerne tous les laboratoires de pointe."},
-        {"type": "timeline", "items": [
-          {"date": "Mi-septembre 2025", "text": "Anthropic détecte une campagne d'espionnage attribuée avec une forte confiance à un groupe étatique chinois. Claude Code a été manipulé pour tenter d'infiltrer une trentaine de cibles, avec quelques succès [[s19]]."},
-          {"date": "Décembre 2025 à février 2026", "text": "Neuf administrations mexicaines compromises. Environ 75 % des commandes à distance ont été générées et exécutées par Claude Code ; un outil passait les données volées par l'API d'OpenAI [[s20]]."},
-          {"date": "7 avril 2026", "text": "Annonce de Claude Mythos Preview et du Project Glasswing : des milliers de failles critiques découvertes [[s14]]. L'AI Security Institute britannique confirme le premier succès d'un modèle sur sa simulation d'attaque réseau en 32 étapes [[s16]], avec 3 succès sur 10 essais [[s15]]."},
-          {"date": "Avril 2026", "text": "OpenAI publie GPT-5.4-Cyber puis GPT-5.5-Cyber, réservés à des partenaires agréés [[s14]]. Le Trésor américain et la Fed réunissent en urgence les patrons des grandes banques [[s17]]."},
-          {"date": "12 juin au 1er juillet 2026", "text": "Anthropic suspend l'accès à Claude Fable 5 et Mythos 5 pour se conformer à des contrôles à l'exportation américains, levés le 30 juin ; accès rétabli le 1er juillet [[s23]]."},
-          {"date": "Septembre 2026", "text": "Le rapport de menace d'Anthropic décrit des acteurs utilisant Claude comme chef d'orchestre sur toute la chaîne d'attaque [[s22]]."}
-        ]},
-        {"type": "subhead", "text": "Côté défense"},
-        {"type": "para", "text": "Big Sleep (Google) a repéré une faille sur le point d'être exploitée, CodeMender corrige du code vulnérable, et Codex Security (OpenAI) revendique plus de 3 000 failles critiques corrigées. Anthropic a engagé 100 millions de dollars de crédits pour ouvrir Mythos aux défenseurs [[s18]]."},
-        {"type": "subhead", "text": "Côté Grok, Meta et Mistral"},
-        {"type": "para", "text": "Grok concentre 87 % des fichiers générés par IA liés à des attaques par deepfake au premier semestre 2026, sur les incidents rapportés publiquement [[s38]]. Aucun rapport public de menace comparable n'a été trouvé pour xAI, Meta ou Mistral."},
-        {"type": "reading", "text": "Anthropic et OpenAI apparaissent plus souvent dans les incidents documentés, en partie parce qu'ils publient leurs rapports d'abus. Des capacités équivalentes à Mythos pourraient atteindre des acteurs hostiles d'ici 6 à 24 mois [[s17]]. Question ouverte pour un industriel : les logiciels embarqués et les machines connectées suivent-ils le rythme de correctifs de l'informatique de gestion ?"}
+        {
+          "type": "para",
+          "text": "La capacité à trouver et exploiter des failles logicielles a émergé des progrès généraux en code et en raisonnement, sans entraînement dédié [[s17]]. Cette propriété concerne tous les laboratoires de pointe."
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "date": "Mi-septembre 2025",
+              "text": "Anthropic détecte une campagne d'espionnage attribuée avec une forte confiance à un groupe étatique chinois. Claude Code a été manipulé pour tenter d'infiltrer une trentaine de cibles, avec quelques succès [[s19]]."
+            },
+            {
+              "date": "Décembre 2025 à février 2026",
+              "text": "Neuf administrations mexicaines compromises. Environ 75 % des commandes à distance ont été générées et exécutées par Claude Code ; un outil passait les données volées par l'API d'OpenAI [[s20]]."
+            },
+            {
+              "date": "7 avril 2026",
+              "text": "Annonce de Claude Mythos Preview et du Project Glasswing : des milliers de failles critiques découvertes [[s14]]. L'AI Security Institute britannique confirme le premier succès d'un modèle sur sa simulation d'attaque réseau en 32 étapes [[s16]], avec 3 succès sur 10 essais [[s15]]."
+            },
+            {
+              "date": "Avril 2026",
+              "text": "OpenAI publie GPT-5.4-Cyber puis GPT-5.5-Cyber, réservés à des partenaires agréés [[s14]]. Le Trésor américain et la Fed réunissent en urgence les patrons des grandes banques [[s17]]."
+            },
+            {
+              "date": "12 juin au 1er juillet 2026",
+              "text": "Anthropic suspend l'accès à Claude Fable 5 et Mythos 5 pour se conformer à des contrôles à l'exportation américains, levés le 30 juin ; accès rétabli le 1er juillet [[s23]]."
+            },
+            {
+              "date": "Septembre 2026",
+              "text": "Le rapport de menace d'Anthropic décrit des acteurs utilisant Claude comme chef d'orchestre sur toute la chaîne d'attaque [[s22]]."
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "Côté défense"
+        },
+        {
+          "type": "para",
+          "text": "Big Sleep (Google) a repéré une faille sur le point d'être exploitée, CodeMender corrige du code vulnérable, et Codex Security (OpenAI) revendique plus de 3 000 failles critiques corrigées. Anthropic a engagé 100 millions de dollars de crédits pour ouvrir Mythos aux défenseurs [[s18]]."
+        },
+        {
+          "type": "subhead",
+          "text": "Côté Grok, Meta et Mistral"
+        },
+        {
+          "type": "para",
+          "text": "Grok concentre 87 % des fichiers générés par IA liés à des attaques par deepfake au premier semestre 2026, sur les incidents rapportés publiquement [[s38]]. Aucun rapport public de menace comparable n'a été trouvé pour xAI, Meta ou Mistral."
+        },
+        {
+          "type": "reading",
+          "text": "Anthropic et OpenAI apparaissent plus souvent dans les incidents documentés, en partie parce qu'ils publient leurs rapports d'abus. Des capacités équivalentes à Mythos pourraient atteindre des acteurs hostiles d'ici 6 à 24 mois [[s17]]. Question ouverte pour un industriel : les logiciels embarqués et les machines connectées suivent-ils le rythme de correctifs de l'informatique de gestion ?"
+        }
+      ],
+      "watch": [
+        "Rapports de menace Anthropic",
+        "Rapports de menace OpenAI",
+        "Google Threat Intelligence Group",
+        "UK AI Security Institute",
+        "ENISA, ANSSI, NCSC suisse",
+        "Project Glasswing"
       ]
     },
     {
       "id": "calcul",
       "title": "Puissance de calcul : qui possède, qui loue",
       "blocks": [
-        {"type": "bar_chart", "title": "Plus grands centres de données IA en service, puissance IT en MW", "max": 1000, "ticks": [0, 250, 500, 750, 1000], "refline": {"value": 800, "label": "San Diego, 800 MW"}, "bars": [
-          {"label": "Colossus 2", "sublabel": "xAI, loué aussi à Anthropic et Google", "value": 946, "display": "946", "vendor": "grok"},
-          {"label": "New Carlisle", "sublabel": "Anthropic et Amazon", "value": 910, "display": "910", "vendor": "claude"},
-          {"label": "Fairwater Atlanta", "sublabel": "Microsoft", "value": 636, "display": "636", "vendor": "ms"},
-          {"label": "Prometheus", "sublabel": "Meta", "value": 496, "display": "496", "vendor": "meta"},
-          {"label": "Stargate Abilene", "sublabel": "OpenAI et Oracle", "value": 421, "display": "421", "vendor": "gpt"}
-        ], "caption": "Capacité opérationnelle estimée par Epoch AI, septembre 2026 [[s4]] [[s5]]. Les sites de Google dans l'Ohio dépassent 1 GW au total, dont environ 500 MW pour l'IA [[s6]]."},
-        {"type": "list", "items": [
-          "Google contrôle ses puces TPU de bout en bout ; OpenAI et Anthropic louent l'essentiel de leur calcul [[s12]].",
-          "Anthropic diversifie ses fournisseurs : Amazon, Google avec jusqu'à un million de TPU [[s10]], et des capacités louées à xAI [[s6]].",
-          "Meta prévoit Hyperion en Louisiane, à 5 GW [[s9]]. Fairwater Wisconsin de Microsoft vise environ 2 263 MW en 2028 [[s4]].",
-          "En mars 2026, OpenAI et Oracle ont abandonné une extension de 600 MW à Abilene faute de financement [[s8]].",
-          "Mistral prévoit 1 GW d'infrastructure souveraine en Europe [[s13]] et a levé 3 milliards d'euros en septembre 2026 [[s54]].",
-          "Ordre de grandeur : environ 29 milliards de dollars d'investissement par gigawatt [[s11]]."
-        ]},
-        {"type": "reading", "text": "L'écart de calcul entre Mistral et les laboratoires américains se compte en ordres de grandeur. Les concurrents louent parfois les mêmes installations, ce qui rend la notion de propriétaire du calcul plus fluide qu'elle n'en a l'air."}
+        {
+          "type": "bar_chart",
+          "title": "Plus grands centres de données IA en service, puissance IT en MW",
+          "max": 1000,
+          "ticks": [
+            0,
+            250,
+            500,
+            750,
+            1000
+          ],
+          "refline": {
+            "value": 800,
+            "label": "San Diego, 800 MW"
+          },
+          "bars": [
+            {
+              "label": "Colossus 2",
+              "sublabel": "SpaceXAI ; utilisé par Anthropic, Cursor",
+              "value": 946,
+              "display": "946",
+              "vendor": "grok"
+            },
+            {
+              "label": "New Carlisle",
+              "sublabel": "Amazon ; utilisé par Anthropic",
+              "value": 910,
+              "display": "910",
+              "vendor": "claude"
+            },
+            {
+              "label": "Fairwater Atlanta",
+              "sublabel": "Microsoft",
+              "value": 636,
+              "display": "636",
+              "vendor": "ms"
+            },
+            {
+              "label": "Prometheus",
+              "sublabel": "Meta",
+              "value": 496,
+              "display": "496",
+              "vendor": "meta"
+            },
+            {
+              "label": "Stargate Abilene",
+              "sublabel": "Oracle ; utilisé par OpenAI",
+              "value": 421,
+              "display": "421",
+              "vendor": "gpt"
+            }
+          ],
+          "caption": "Puissance IT en service, estimée par Epoch AI (données CC-BY, relevé de septembre 2026). Epoch suit 93 sites totalisant 13,5 GW de puissance IT ; propriétaire et utilisateurs confirmés selon Epoch [[s5]].",
+          "auto": "epoch_datacenters",
+          "top": 5
+        },
+        {
+          "type": "list",
+          "items": [
+            "Google contrôle ses puces TPU de bout en bout ; OpenAI et Anthropic louent l'essentiel de leur calcul [[s12]].",
+            "Anthropic diversifie ses fournisseurs : Amazon, Google avec jusqu'à un million de TPU [[s10]], et des capacités louées à xAI sur Colossus [[s5]].",
+            "Meta prévoit Hyperion en Louisiane, à 5 GW [[s9]]. Fairwater Wisconsin de Microsoft vise environ 2 263 MW en 2028 [[s4]].",
+            "En mars 2026, OpenAI et Oracle ont abandonné une extension de 600 MW à Abilene faute de financement [[s8]].",
+            "Mistral prévoit 1 GW d'infrastructure souveraine en Europe [[s13]] et a levé 3 milliards d'euros en septembre 2026 [[s54]].",
+            "Ordre de grandeur : environ 29 milliards de dollars d'investissement par gigawatt [[s11]]."
+          ]
+        },
+        {
+          "type": "reading",
+          "text": "L'écart de calcul entre Mistral et les laboratoires américains se compte en ordres de grandeur. Les concurrents louent parfois les mêmes installations, ce qui rend la notion de propriétaire du calcul plus fluide qu'elle n'en a l'air."
+        }
+      ],
+      "watch": [
+        "Epoch AI, AI data centers",
+        "Rapports trimestriels des hyperscalers (capex)",
+        "SemiAnalysis"
       ]
     },
     {
       "id": "energie",
       "title": "Énergie et eau : des chiffres non comparables",
       "blocks": [
-        {"type": "para", "text": "Trois éditeurs ont publié un chiffre par requête, avec des méthodes différentes. Les placer sur un même graphique produirait une fausse comparaison."},
-        {"type": "table", "headers": ["Éditeur", "Chiffre publié", "Méthode et périmètre", "Limites relevées"], "rows": [
-          ["Google (Gemini)", "0,24 Wh, 0,03 gCO₂e, 0,26 mL d'eau par requête texte médiane [[s24]]", "Mesure en production, machines inactives et refroidissement inclus", "Émissions « market-based » seulement ; pas de revue par des pairs à la publication [[s25]]"],
-          ["OpenAI (ChatGPT)", "0,34 Wh par requête moyenne", "Non publiée ; moyenne là où Google donne une médiane [[s26]]", "Une estimation externe évoque plus de 18 Wh pour GPT-5 [[s25]]"],
-          ["Mistral", "1,14 gCO₂e et 45 mL pour 400 tokens ; 20,4 ktCO₂e pour l'entraînement et 18 mois d'usage de Large 2 [[s27]]", "Analyse de cycle de vie avec l'ADEME et Carbone 4", "Énergie non publiée"],
-          ["Anthropic, xAI, Meta", "Aucun chiffre par requête trouvé", "Renvoi aux engagements des hébergeurs [[s28]]", "Colossus produit une partie de son électricité au gaz sur site [[s7]]"]
-        ]},
-        {"type": "para", "text": "Les modèles de raisonnement changent l'échelle : sur une même requête courte, l'écart entre modèles dépasse un facteur 200 [[s29]]."},
-        {"type": "reading", "text": "Pour un rapport ESRS E1, ces chiffres par requête servent peu sans volume d'usage ni facteur d'émission localisé. Le scope 3 lié aux assistants IA d'une entreprise reste aujourd'hui une estimation."}
+        {
+          "type": "para",
+          "text": "Trois éditeurs ont publié un chiffre par requête, avec des méthodes différentes. Les placer sur un même graphique produirait une fausse comparaison."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Éditeur",
+            "Chiffre publié",
+            "Méthode et périmètre",
+            "Limites relevées"
+          ],
+          "rows": [
+            [
+              "Google (Gemini)",
+              "0,24 Wh, 0,03 gCO₂e, 0,26 mL d'eau par requête texte médiane [[s24]]",
+              "Mesure en production, machines inactives et refroidissement inclus",
+              "Émissions « market-based » seulement ; pas de revue par des pairs à la publication [[s25]]"
+            ],
+            [
+              "OpenAI (ChatGPT)",
+              "0,34 Wh par requête moyenne",
+              "Non publiée ; moyenne là où Google donne une médiane [[s26]]",
+              "Une estimation externe évoque plus de 18 Wh pour GPT-5 [[s25]]"
+            ],
+            [
+              "Mistral",
+              "1,14 gCO₂e et 45 mL pour 400 tokens ; 20,4 ktCO₂e pour l'entraînement et 18 mois d'usage de Large 2 [[s27]]",
+              "Analyse de cycle de vie avec l'ADEME et Carbone 4",
+              "Énergie non publiée"
+            ],
+            [
+              "Anthropic, xAI, Meta",
+              "Aucun chiffre par requête trouvé",
+              "Renvoi aux engagements des hébergeurs [[s28]]",
+              "Colossus produit une partie de son électricité au gaz sur site [[s7]]"
+            ]
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Les modèles de raisonnement changent l'échelle : sur une même requête courte, l'écart entre modèles dépasse un facteur 200 [[s29]]."
+        },
+        {
+          "type": "reading",
+          "text": "Pour un rapport ESRS E1, ces chiffres par requête servent peu sans volume d'usage ni facteur d'émission localisé. Le scope 3 lié aux assistants IA d'une entreprise reste aujourd'hui une estimation."
+        }
+      ],
+      "watch": [
+        "AIE, électricité et centres de données",
+        "Hugging Face, AI Energy Score",
+        "ADEME",
+        "Rapports environnementaux de Google, Microsoft, Meta, Amazon",
+        "Directive européenne sur l'efficacité énergétique, déclarations des centres de données"
       ]
     },
     {
       "id": "gouvernance",
       "title": "Gouvernance de la sécurité",
       "blocks": [
-        {"type": "bar_chart", "title": "AI Safety Index, Future of Life Institute, été 2026 (note sur 4)", "max": 4, "ticks": [0, 1, 2, 3, 4], "ticklabels": ["0 F", "1 D", "2 C", "3 B", "4 A"], "bars": [
-          {"label": "Anthropic", "value": 2.66, "display": "2,66 C+", "vendor": "claude"},
-          {"label": "OpenAI", "value": 2.28, "display": "2,28 C", "vendor": "gpt"},
-          {"label": "Google DeepMind", "value": 2.01, "display": "2,01 C", "vendor": "gemini"},
-          {"label": "Meta", "value": 1.32, "display": "1,32 D+", "vendor": "meta"},
-          {"label": "xAI", "value": 0.65, "display": "0,65 F", "vendor": "grok"},
-          {"label": "Mistral", "value": 0.33, "display": "0,33 F", "vendor": "mistral"}
-        ], "caption": "Neuf entreprises évaluées sur 37 indicateurs, preuves collectées jusqu'au 3 juin 2026 [[s1]] [[s2]]. Le FLI est une organisation militante centrée sur les risques de l'IA."},
-        {"type": "list", "items": [
-          "Aucune entreprise ne dépasse C+. Anthropic mène dans cinq domaines sur six ; OpenAI mène en évaluation des risques [[s1]].",
-          "Selon le panel, Anthropic, OpenAI, Google DeepMind et Meta ont affaibli leurs engagements de pause en cas de seuil de risque [[s3]].",
-          "Le rapport signale le virage vers les usages militaires entre 2024 et 2026 [[s1]].",
-          "Mistral obtient la note la plus basse : la souveraineté des données et la sûreté des modèles restent deux critères séparés."
-        ]}
+        {
+          "type": "bar_chart",
+          "title": "AI Safety Index, Future of Life Institute, été 2026 (note sur 4)",
+          "max": 4,
+          "ticks": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "ticklabels": [
+            "0 F",
+            "1 D",
+            "2 C",
+            "3 B",
+            "4 A"
+          ],
+          "bars": [
+            {
+              "label": "Anthropic",
+              "value": 2.66,
+              "display": "2,66 C+",
+              "vendor": "claude"
+            },
+            {
+              "label": "OpenAI",
+              "value": 2.28,
+              "display": "2,28 C",
+              "vendor": "gpt"
+            },
+            {
+              "label": "Google DeepMind",
+              "value": 2.01,
+              "display": "2,01 C",
+              "vendor": "gemini"
+            },
+            {
+              "label": "Meta",
+              "value": 1.32,
+              "display": "1,32 D+",
+              "vendor": "meta"
+            },
+            {
+              "label": "xAI",
+              "value": 0.65,
+              "display": "0,65 F",
+              "vendor": "grok"
+            },
+            {
+              "label": "Mistral",
+              "value": 0.33,
+              "display": "0,33 F",
+              "vendor": "mistral"
+            }
+          ],
+          "caption": "Neuf entreprises évaluées sur 37 indicateurs, preuves collectées jusqu'au 3 juin 2026 [[s1]] [[s2]]. Le FLI est une organisation militante centrée sur les risques de l'IA."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Aucune entreprise ne dépasse C+. Anthropic mène dans cinq domaines sur six ; OpenAI mène en évaluation des risques [[s1]].",
+            "Selon le panel, Anthropic, OpenAI, Google DeepMind et Meta ont affaibli leurs engagements de pause en cas de seuil de risque [[s3]].",
+            "Le rapport signale le virage vers les usages militaires entre 2024 et 2026 [[s1]].",
+            "Mistral obtient la note la plus basse : la souveraineté des données et la sûreté des modèles restent deux critères séparés."
+          ]
+        }
+      ],
+      "watch": [
+        "Future of Life Institute, AI Safety Index",
+        "METR",
+        "Politiques de mise à l'échelle publiées par les éditeurs",
+        "Signataires du code de bonnes pratiques de l'AI Act"
       ]
     }
   ],
@@ -234,57 +894,221 @@
     "Le contexte d'usage de chaque organisation lectrice (langues, confidentialité, outils en place) pèse davantage que les écarts mesurés ici."
   ],
   "changelog": [
-    {"date": "2026-09-27", "items": ["Version initiale du dossier."]}
+    {
+      "date": "2026-09-27",
+      "items": [
+        "Version initiale du dossier."
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "items": [
+        "Correction : le classement Vectara HHEM, consulté à la source, place Claude derrière GPT-6 et Gemini 3.1 Pro en résumé de documents. La matrice et la section Précision reprenaient à tort des comparatifs commerciaux [[s55]].",
+        "Graphiques des centres de données et des hallucinations désormais alimentés directement par Epoch AI et Vectara.",
+        "Chaque section affiche les sources primaires suivies chaque semaine."
+      ]
+    }
   ],
   "sources": {
-    "s1": {"title": "Future of Life Institute, AI Safety Index Summer 2026", "url": "https://futureoflife.org/ai-safety-index-summer-2026/"},
-    "s2": {"title": "MIT Sloan ME, scores de l'index 2026", "url": "https://www.mitsloanme.com/article/anthropic-tops-2026-ai-safety-index-but-no-ai-firm-earns-above-a-c/"},
-    "s3": {"title": "TIME, classement sécurité juillet 2026", "url": "https://time.com/article/2026/07/07/ai-safety-rankings-openai-anthropic-meta/"},
-    "s4": {"title": "Epoch AI, plus grands centres de données par puissance", "url": "https://epoch.ai/graphs/largest-ai-data-centers-by-power-capacity"},
-    "s5": {"title": "Epoch AI, base de données des centres IA", "url": "https://epoch.ai/data/ai-data-centers"},
-    "s6": {"title": "Brightlio, 10 plus grands centres IA", "url": "https://brightlio.com/largest-ai-data-centers-in-the-world/"},
-    "s7": {"title": "Introl, Colossus à 2 GW", "url": "https://introl.com/blog/xai-colossus-2-gigawatt-expansion-555k-gpus-january-2026"},
-    "s8": {"title": "Data Center Knowledge, FLOPS vs mégawatts 2026", "url": "https://www.datacenterknowledge.com/supercomputers/flops-vs-megawatts-who-s-winning-in-2026-supercomputing-"},
-    "s9": {"title": "Wikipedia, AI data center", "url": "https://en.wikipedia.org/wiki/AI_data_center"},
-    "s10": {"title": "Wikipedia, Anthropic", "url": "https://en.wikipedia.org/wiki/Anthropic"},
-    "s11": {"title": "NextBigFuture, centres de plus d'1 GW", "url": "https://www.nextbigfuture.com/2025/11/first-five-ai-data-center-with-over-one-gigawatt-of-power-arriving-in-2026-2027.html"},
-    "s12": {"title": "Living with Agents, paysage du calcul IA 2026", "url": "https://livingwithagents.com/ai-compute-landscape/"},
-    "s13": {"title": "Blog Nouvelles Technologies, Mistral AI 2026", "url": "https://www.blog-nouvelles-technologies.fr/319394/quest-ce-que-mistral-ai/"},
-    "s14": {"title": "Infosecurity Magazine, Mythos et GPT-Cyber", "url": "https://www.infosecurity-magazine.com/news-features/what-mythos-gptcybe-ai-mean-for/"},
-    "s15": {"title": "Illumio, guide technique Mythos", "url": "https://www.illumio.com/cybersecurity-101/what-is-mythos"},
-    "s16": {"title": "arXiv 2605.09504, évaluer les systèmes et non les seuls modèles", "url": "https://arxiv.org/pdf/2605.09504"},
-    "s17": {"title": "Data Protection Report, Mythos et la suite", "url": "https://www.dataprotectionreport.com/2026/05/when-ai-becomes-the-cyber-attacker-mythos-and-what-comes-next/"},
-    "s18": {"title": "Brightside AI, de WormGPT à Mythos", "url": "https://www.brside.com/blog/from-wormgpt-to-mythos-ai-in-cybersecurity-2021%E2%80%932026"},
-    "s19": {"title": "Anthropic, campagne d'espionnage orchestrée par IA", "url": "https://www.anthropic.com/news/disrupting-AI-espionage"},
-    "s20": {"title": "TechRadar, attaque contre le gouvernement mexicain", "url": "https://www.techradar.com/pro/security/hackers-use-claude-and-chatgpt-in-a-significant-evolution-in-offensive-capability-to-breach-government-agencies-leak-hundreds-of-millions-of-citizen-records"},
-    "s22": {"title": "Digital Watch, rapport de menace Anthropic septembre 2026", "url": "https://dig.watch/updates/anthropic-reports-ai-misuse-in-cyberattacks"},
-    "s23": {"title": "Anthropic, déclaration sur l'accès à Fable et Mythos", "url": "https://www.anthropic.com/news/fable-mythos-access"},
-    "s24": {"title": "Google Cloud, impact environnemental de l'inférence", "url": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/"},
-    "s25": {"title": "DCD, requête Gemini à 0,24 Wh", "url": "https://www.datacenterdynamics.com/en/news/google-median-gemini-prompt-uses-024-watt-hours-of-power-and-consumes-026ml-of-water/"},
-    "s26": {"title": "Towards Data Science, progrès ou greenwashing", "url": "https://towardsdatascience.com/is-googles-reveal-of-geminis-impact-progress-or-greenwashing/"},
-    "s27": {"title": "arXiv 2512.11863, risques environnementaux systémiques de l'IA", "url": "https://arxiv.org/pdf/2512.11863"},
-    "s28": {"title": "arXiv 2603.23528, transparence énergétique des fournisseurs", "url": "https://arxiv.org/pdf/2603.23528"},
-    "s29": {"title": "Devera, énergie et eau par modèle", "url": "https://devera.ai/resources/environmental-impact-ai-energy-carbon/"},
-    "s30": {"title": "Norton Rose Fulbright, contentieux IA 2026", "url": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026"},
-    "s31": {"title": "Statistiques des procès sur les données d'entraînement 2026", "url": "https://www.aboutchromebooks.com/ai-training-data-licensing-lawsuit-statistics/"},
-    "s32": {"title": "Wittliff Cutter, affaires Google et Anthropic", "url": "https://www.wittliffcutter.com/news-insights/ai-training-data-litigation-google-anthropic-2026"},
-    "s33": {"title": "AI Lawsuit Tracker", "url": "https://ailawsuittracker.com/"},
-    "s34": {"title": "National Law Review, Anthropic et Meta", "url": "https://natlawreview.com/article/ai-vs-authors-update-court-approves-historic-anthropic-settlement-while-meta"},
-    "s35": {"title": "Wikipedia, Grok", "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"},
-    "s38": {"title": "Tom's Guide, rapport Resemble AI sur les deepfakes", "url": "https://www.tomsguide.com/ai/grok/elon-musks-grok-dominates-alarming-deepfake-report-1-in-6-attacks-involved-sexual-images-including-children"},
-    "s39": {"title": "Segwise, publicité dans ChatGPT", "url": "https://segwise.ai/blog/chatgpt-ads-2026-guide"},
-    "s40": {"title": "Agents sponsorisés dans ChatGPT", "url": "https://arwriterai.com/en/blog/openai-sponsored-agents-chatgpt-ads-2026/"},
-    "s41": {"title": "Dataslayer, conversations Meta AI et publicité", "url": "https://www.dataslayer.ai/blog/meta-will-use-ai-conversations-to-personalize-ads"},
-    "s42": {"title": "CNBC, agent Muse", "url": "https://www.cnbc.com/2026/09/08/meta-personal-ai-agents-public-reckoning-privacy-safety.html"},
-    "s43": {"title": "TechCrunch, Muse à Meta Connect", "url": "https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/"},
-    "s44": {"title": "Meta, Muse Spark 1.1", "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"},
-    "s46": {"title": "AI Business Weekly, statistiques d'hallucination", "url": "https://aibusinessweekly.net/p/ai-hallucination-statistics"},
-    "s47": {"title": "Suprmind, taux d'hallucination 2026", "url": "https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/"},
-    "s48": {"title": "Fast.io, IA les plus précises 2026", "url": "https://fast.io/resources/most-accurate-ai-2026/"},
-    "s49": {"title": "Talkory, test sur 5 modèles", "url": "https://www.talkory.ai/blog/ai-models-lowest-hallucination-rate-2026"},
-    "s50": {"title": "Suprmind, Gemini comparé", "url": "https://suprmind.ai/hub/gemini/vs-other-ai/"},
-    "s51": {"title": "i-actu, Mistral et Vibe", "url": "https://www.i-actu.fr/mistral-ai-entreprise-francaise-ia-guide/"},
-    "s53": {"title": "Omid Saffari, comparatif septembre 2026", "url": "https://omidsaffari.com/blog/chatgpt-vs-claude-vs-gemini-vs-grok"},
-    "s54": {"title": "Alegria, fiche Mistral (série D)", "url": "https://www.alegria.group/outils-ia-nocode/mistral"}
+    "s1": {
+      "title": "Future of Life Institute, AI Safety Index Summer 2026",
+      "url": "https://futureoflife.org/ai-safety-index-summer-2026/"
+    },
+    "s2": {
+      "title": "MIT Sloan ME, scores de l'index 2026",
+      "url": "https://www.mitsloanme.com/article/anthropic-tops-2026-ai-safety-index-but-no-ai-firm-earns-above-a-c/"
+    },
+    "s3": {
+      "title": "TIME, classement sécurité juillet 2026",
+      "url": "https://time.com/article/2026/07/07/ai-safety-rankings-openai-anthropic-meta/"
+    },
+    "s4": {
+      "title": "Epoch AI, plus grands centres de données par puissance",
+      "url": "https://epoch.ai/graphs/largest-ai-data-centers-by-power-capacity"
+    },
+    "s5": {
+      "title": "Epoch AI, base de données des centres IA",
+      "url": "https://epoch.ai/data/ai-data-centers"
+    },
+    "s6": {
+      "title": "Brightlio, 10 plus grands centres IA",
+      "url": "https://brightlio.com/largest-ai-data-centers-in-the-world/"
+    },
+    "s7": {
+      "title": "Introl, Colossus à 2 GW",
+      "url": "https://introl.com/blog/xai-colossus-2-gigawatt-expansion-555k-gpus-january-2026"
+    },
+    "s8": {
+      "title": "Data Center Knowledge, FLOPS vs mégawatts 2026",
+      "url": "https://www.datacenterknowledge.com/supercomputers/flops-vs-megawatts-who-s-winning-in-2026-supercomputing-"
+    },
+    "s9": {
+      "title": "Wikipedia, AI data center",
+      "url": "https://en.wikipedia.org/wiki/AI_data_center"
+    },
+    "s10": {
+      "title": "Wikipedia, Anthropic",
+      "url": "https://en.wikipedia.org/wiki/Anthropic"
+    },
+    "s11": {
+      "title": "NextBigFuture, centres de plus d'1 GW",
+      "url": "https://www.nextbigfuture.com/2025/11/first-five-ai-data-center-with-over-one-gigawatt-of-power-arriving-in-2026-2027.html"
+    },
+    "s12": {
+      "title": "Living with Agents, paysage du calcul IA 2026",
+      "url": "https://livingwithagents.com/ai-compute-landscape/"
+    },
+    "s13": {
+      "title": "Blog Nouvelles Technologies, Mistral AI 2026",
+      "url": "https://www.blog-nouvelles-technologies.fr/319394/quest-ce-que-mistral-ai/"
+    },
+    "s14": {
+      "title": "Infosecurity Magazine, Mythos et GPT-Cyber",
+      "url": "https://www.infosecurity-magazine.com/news-features/what-mythos-gptcybe-ai-mean-for/"
+    },
+    "s15": {
+      "title": "Illumio, guide technique Mythos",
+      "url": "https://www.illumio.com/cybersecurity-101/what-is-mythos"
+    },
+    "s16": {
+      "title": "arXiv 2605.09504, évaluer les systèmes et non les seuls modèles",
+      "url": "https://arxiv.org/pdf/2605.09504"
+    },
+    "s17": {
+      "title": "Data Protection Report, Mythos et la suite",
+      "url": "https://www.dataprotectionreport.com/2026/05/when-ai-becomes-the-cyber-attacker-mythos-and-what-comes-next/"
+    },
+    "s18": {
+      "title": "Brightside AI, de WormGPT à Mythos",
+      "url": "https://www.brside.com/blog/from-wormgpt-to-mythos-ai-in-cybersecurity-2021%E2%80%932026"
+    },
+    "s19": {
+      "title": "Anthropic, campagne d'espionnage orchestrée par IA",
+      "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+    },
+    "s20": {
+      "title": "TechRadar, attaque contre le gouvernement mexicain",
+      "url": "https://www.techradar.com/pro/security/hackers-use-claude-and-chatgpt-in-a-significant-evolution-in-offensive-capability-to-breach-government-agencies-leak-hundreds-of-millions-of-citizen-records"
+    },
+    "s22": {
+      "title": "Digital Watch, rapport de menace Anthropic septembre 2026",
+      "url": "https://dig.watch/updates/anthropic-reports-ai-misuse-in-cyberattacks"
+    },
+    "s23": {
+      "title": "Anthropic, déclaration sur l'accès à Fable et Mythos",
+      "url": "https://www.anthropic.com/news/fable-mythos-access"
+    },
+    "s24": {
+      "title": "Google Cloud, impact environnemental de l'inférence",
+      "url": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/"
+    },
+    "s25": {
+      "title": "DCD, requête Gemini à 0,24 Wh",
+      "url": "https://www.datacenterdynamics.com/en/news/google-median-gemini-prompt-uses-024-watt-hours-of-power-and-consumes-026ml-of-water/"
+    },
+    "s26": {
+      "title": "Towards Data Science, progrès ou greenwashing",
+      "url": "https://towardsdatascience.com/is-googles-reveal-of-geminis-impact-progress-or-greenwashing/"
+    },
+    "s27": {
+      "title": "arXiv 2512.11863, risques environnementaux systémiques de l'IA",
+      "url": "https://arxiv.org/pdf/2512.11863"
+    },
+    "s28": {
+      "title": "arXiv 2603.23528, transparence énergétique des fournisseurs",
+      "url": "https://arxiv.org/pdf/2603.23528"
+    },
+    "s29": {
+      "title": "Devera, énergie et eau par modèle",
+      "url": "https://devera.ai/resources/environmental-impact-ai-energy-carbon/"
+    },
+    "s30": {
+      "title": "Norton Rose Fulbright, contentieux IA 2026",
+      "url": "https://www.nortonrosefulbright.com/en/knowledge/publications/ce8eaa5f/ai-in-litigation-series-an-update-on-ai-copyright-cases-in-2026"
+    },
+    "s31": {
+      "title": "Statistiques des procès sur les données d'entraînement 2026",
+      "url": "https://www.aboutchromebooks.com/ai-training-data-licensing-lawsuit-statistics/"
+    },
+    "s32": {
+      "title": "Wittliff Cutter, affaires Google et Anthropic",
+      "url": "https://www.wittliffcutter.com/news-insights/ai-training-data-litigation-google-anthropic-2026"
+    },
+    "s33": {
+      "title": "AI Lawsuit Tracker",
+      "url": "https://ailawsuittracker.com/"
+    },
+    "s34": {
+      "title": "National Law Review, Anthropic et Meta",
+      "url": "https://natlawreview.com/article/ai-vs-authors-update-court-approves-historic-anthropic-settlement-while-meta"
+    },
+    "s35": {
+      "title": "Wikipedia, Grok",
+      "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
+    },
+    "s38": {
+      "title": "Tom's Guide, rapport Resemble AI sur les deepfakes",
+      "url": "https://www.tomsguide.com/ai/grok/elon-musks-grok-dominates-alarming-deepfake-report-1-in-6-attacks-involved-sexual-images-including-children"
+    },
+    "s39": {
+      "title": "Segwise, publicité dans ChatGPT",
+      "url": "https://segwise.ai/blog/chatgpt-ads-2026-guide"
+    },
+    "s40": {
+      "title": "Agents sponsorisés dans ChatGPT",
+      "url": "https://arwriterai.com/en/blog/openai-sponsored-agents-chatgpt-ads-2026/"
+    },
+    "s41": {
+      "title": "Dataslayer, conversations Meta AI et publicité",
+      "url": "https://www.dataslayer.ai/blog/meta-will-use-ai-conversations-to-personalize-ads"
+    },
+    "s42": {
+      "title": "CNBC, agent Muse",
+      "url": "https://www.cnbc.com/2026/09/08/meta-personal-ai-agents-public-reckoning-privacy-safety.html"
+    },
+    "s43": {
+      "title": "TechCrunch, Muse à Meta Connect",
+      "url": "https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/"
+    },
+    "s44": {
+      "title": "Meta, Muse Spark 1.1",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+    },
+    "s46": {
+      "title": "AI Business Weekly, statistiques d'hallucination",
+      "url": "https://aibusinessweekly.net/p/ai-hallucination-statistics"
+    },
+    "s47": {
+      "title": "Suprmind, taux d'hallucination 2026",
+      "url": "https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/"
+    },
+    "s48": {
+      "title": "Fast.io, IA les plus précises 2026",
+      "url": "https://fast.io/resources/most-accurate-ai-2026/"
+    },
+    "s49": {
+      "title": "Talkory, test sur 5 modèles",
+      "url": "https://www.talkory.ai/blog/ai-models-lowest-hallucination-rate-2026"
+    },
+    "s50": {
+      "title": "Suprmind, Gemini comparé",
+      "url": "https://suprmind.ai/hub/gemini/vs-other-ai/"
+    },
+    "s51": {
+      "title": "i-actu, Mistral et Vibe",
+      "url": "https://www.i-actu.fr/mistral-ai-entreprise-francaise-ia-guide/"
+    },
+    "s53": {
+      "title": "Omid Saffari, comparatif septembre 2026",
+      "url": "https://omidsaffari.com/blog/chatgpt-vs-claude-vs-gemini-vs-grok"
+    },
+    "s54": {
+      "title": "Alegria, fiche Mistral (série D)",
+      "url": "https://www.alegria.group/outils-ia-nocode/mistral"
+    },
+    "s55": {
+      "title": "Vectara, Hallucination Leaderboard (HHEM)",
+      "url": "https://github.com/vectara/hallucination-leaderboard"
+    }
   }
 }

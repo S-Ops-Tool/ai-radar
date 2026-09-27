@@ -35,6 +35,9 @@ jobs:
       - name: Dépendances
         run: pip install anthropic
 
+      - name: Données chiffrées (Epoch AI, Vectara)
+        run: python scripts/data_update.py
+
       - name: Recherche et mise à jour du contenu
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -46,9 +49,12 @@ jobs:
       - name: Test de construction du site
         run: python scripts/build.py
 
-      - name: Nom du brief
+      - name: Description de la pull request
         id: brief
-        run: echo "path=content/briefs/$(date -u +%F).md" >> "$GITHUB_OUTPUT"
+        run: |
+          D=$(date -u +%F)
+          cat "content/briefs/$D.md" "content/briefs/data-$D.md" > "$RUNNER_TEMP/pr.md" 2>/dev/null || true
+          echo "path=$RUNNER_TEMP/pr.md" >> "$GITHUB_OUTPUT"
 
       - name: Proposer les changements en pull request
         if: vars.AUTO_PUBLISH != 'true'

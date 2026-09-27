@@ -130,6 +130,25 @@ def validate_section(old, new):
                 float(bar["value"])
 
 
+def protect(old, new):
+    """Keep the watch list and data-driven blocks exactly as they were."""
+    new["watch"] = old.get("watch", [])
+    autos = {b["auto"]: b for b in old["blocks"] if b.get("auto")}
+    blocks, placed = [], set()
+    for b in new["blocks"]:
+        key = b.get("auto")
+        if key in autos:
+            blocks.append(autos[key])
+            placed.add(key)
+        elif not key:
+            blocks.append(b)
+    for i, b in enumerate(old["blocks"]):
+        if b.get("auto") and b["auto"] not in placed:
+            blocks.insert(min(i, len(blocks)), b)
+    new["blocks"] = blocks
+    return new
+
+
 def next_id(sources):
     nums = [int(re.sub(r"\D", "", k)) for k in sources if re.sub(r"\D", "", k)]
     return max(nums or [0]) + 1
@@ -138,9 +157,12 @@ def next_id(sources):
 def update_section(client, data, idx, today):
     sec = data["sections"][idx]
     catalog = "\n".join(f"{k}: {v['title']}" for k, v in data["sources"].items())
+    watch = "\n".join(f"- {w}" for w in sec.get("watch", [])) or "- (aucune)"
     prompt = (
         f"Date du jour : {today}. Dernière mise à jour du dossier : {data['meta']['updated']}.\n\n"
         f"Sources déjà référencées (identifiant : titre) :\n{catalog}\n\n"
+        f"Sources primaires à consulter en priorité :\n{watch}\n\n"
+        "Les blocs portant une clé auto sont alimentés par un script de données : ne les modifie pas.\n\n"
         f"Section à mettre à jour :\n{json.dumps(sec, ensure_ascii=False, indent=1)}\n\n"
         "Recherche les faits nouveaux, études, chiffres ou décisions publiés depuis la dernière mise à jour "
         "qui modifient ou complètent cette section pour l'un des six assistants, puis renvoie le JSON demandé."
@@ -149,6 +171,7 @@ def update_section(client, data, idx, today):
     result = extract_json(text)
     new_sec = result.get("section")
     validate_section(sec, new_sec)
+    new_sec = protect(sec, new_sec)
     new_sources = result.get("new_sources") or {}
     mapping, added = {}, {}
     n = next_id(data["sources"])
