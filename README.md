@@ -24,6 +24,7 @@ Dossier comparatif public (Claude, ChatGPT, Gemini, Grok, Muse, Mistral Vibe), m
 - `content/dossier.json` : tout le contenu (matrice, sections, graphiques, sources, journal).
 - `scripts/data_update.py` : données chiffrées depuis les jeux de données d'origine.
 - `scripts/aa_update.py` : indice d'intelligence, prix et vitesse des modèles (API Artificial Analysis, secret `ARTIFICIAL_ANALYSIS_API_KEY`).
+- `scripts/yt_update.py` : chaînes officielles et attention sur YouTube (YouTube Data API v3, secret `YOUTUBE_API_KEY`, environ 650 unités de quota par semaine).
 - `scripts/hn_update.py` : articles Hacker News par assistant (API Algolia, sans clé), avec historique hebdomadaire dans `content/data_state.json`.
 - `scripts/status_update.py` : incidents déclarés sur les pages de statut des éditeurs, accumulés dans `content/data_state.json`.
 - `content/data_state.json` : modèles déjà vus au classement Vectara, pour signaler les nouveaux.
@@ -39,7 +40,7 @@ Neuf sections, au plus six recherches chacune, plus un appel pour la matrice. Le
 
 Onglet Actions > Mise à jour hebdomadaire > Run workflow. Le champ facultatif limite la mise à jour à certaines sections, par exemple `cyber,calcul`.
 
-Identifiants de sections : `usages`, `perception`, `acteurs`, `capacites`, `precision`, `disponibilite`, `tempsreel`, `agents`, `prix`, `confidentialite`, `donnees`, `biais`, `cyber`, `gouvernance`, `calcul`, `energie`.
+Identifiants de sections : `usages`, `perception`, `video`, `acteurs`, `capacites`, `precision`, `disponibilite`, `tempsreel`, `agents`, `prix`, `confidentialite`, `donnees`, `biais`, `cyber`, `gouvernance`, `calcul`, `energie`.
 
 ## Graphique Vectara : modèles testés et derniers modèles phares
 

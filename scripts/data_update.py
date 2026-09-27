@@ -15,6 +15,7 @@ import urllib.request
 
 import aa_update
 import hn_update
+import yt_update
 import status_update
 from pathlib import Path
 
@@ -196,6 +197,11 @@ def main():
                 aa_update.update_aa(sec["blocks"], state, notes)
             except Exception as e:
                 errors.append(f"artificial analysis : {e}")
+        if any(b.get("auto") == "yt_chart" for b in sec["blocks"]):
+            try:
+                yt_update.update_youtube(sec["blocks"], state, notes)
+            except Exception as e:
+                errors.append(f"youtube : {e}")
         if any(b.get("auto") == "hn_chart" for b in sec["blocks"]):
             try:
                 hn_update.update_hn(sec["blocks"], state, notes)

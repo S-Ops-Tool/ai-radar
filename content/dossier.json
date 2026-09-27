@@ -491,60 +491,17 @@
           "type": "bar_chart",
           "auto": "hn_chart",
           "title": "Articles marquants sur Hacker News, 30 derniers jours",
-          "max": 80,
+          "max": 10,
           "ticks": [
             0,
-            16,
-            32,
-            48,
-            64,
-            80
+            2,
+            4,
+            6,
+            8,
+            10
           ],
-          "bars": [
-            {
-              "label": "ChatGPT",
-              "sublabel": "730 articles, 18 027 commentaires",
-              "value": 78,
-              "display": "78",
-              "vendor": "gpt"
-            },
-            {
-              "label": "Claude",
-              "sublabel": "760 articles, 13 162 commentaires",
-              "value": 59,
-              "display": "59",
-              "vendor": "claude"
-            },
-            {
-              "label": "Gemini",
-              "sublabel": "76 articles, 1 448 commentaires",
-              "value": 8,
-              "display": "8",
-              "vendor": "gemini"
-            },
-            {
-              "label": "Grok",
-              "sublabel": "59 articles, 1 432 commentaires",
-              "value": 4,
-              "display": "4",
-              "vendor": "grok"
-            },
-            {
-              "label": "Meta (Muse, Llama)",
-              "sublabel": "25 articles, 888 commentaires",
-              "value": 4,
-              "display": "4",
-              "vendor": "meta"
-            },
-            {
-              "label": "Mistral",
-              "sublabel": "13 articles, 978 commentaires",
-              "value": 3,
-              "display": "3",
-              "vendor": "mistral"
-            }
-          ],
-          "caption": "Articles publiés sur Hacker News au cours des 30 derniers jours dont le titre mentionne l'assistant ou son éditeur, et ayant dépassé 50 points ; relevé du 27/9/2026 via l'API Algolia [[s92]]. Hacker News reflète l'attention d'un public de développeurs, surtout anglophone ; un article critique compte autant qu'un article élogieux."
+          "bars": [],
+          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
         },
         {
           "type": "reading",
@@ -569,116 +526,7 @@
                 "Points",
                 "Commentaires"
               ],
-              "rows": [
-                [
-                  "ChatGPT",
-                  "[GPT-6 Sol and Luna](https://news.ycombinator.com/item?id=49805509)",
-                  "1774",
-                  "853"
-                ],
-                [
-                  "",
-                  "[ChatGPT now knows what you do on other websites via ad collector](https://news.ycombinator.com/item?id=49776729)",
-                  "764",
-                  "395"
-                ],
-                [
-                  "",
-                  "[OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005](https://news.ycombinator.com/item?id=49801324)",
-                  "735",
-                  "444"
-                ],
-                [
-                  "Claude",
-                  "[Claude Opus 5.5](https://news.ycombinator.com/item?id=49803892)",
-                  "1801",
-                  "1129"
-                ],
-                [
-                  "",
-                  "[Claude discovers a novel enzyme system with CRISPR-like repeats](https://news.ycombinator.com/item?id=49820134)",
-                  "780",
-                  "799"
-                ],
-                [
-                  "",
-                  "[U.S. appeals court upholds designation of Anthropic as supply chain risk](https://news.ycombinator.com/item?id=49845977)",
-                  "492",
-                  "871"
-                ],
-                [
-                  "Gemini",
-                  "[Gemini 3.8 text-to-speech](https://news.ycombinator.com/item?id=49817615)",
-                  "330",
-                  "151"
-                ],
-                [
-                  "",
-                  "[Hackers influence ChatGPT and Gemini to direct users to scam centers](https://news.ycombinator.com/item?id=49829387)",
-                  "142",
-                  "52"
-                ],
-                [
-                  "",
-                  "[Google confirms Gemini models hacked three companies in May 2026](https://news.ycombinator.com/item?id=49795129)",
-                  "6",
-                  "0"
-                ],
-                [
-                  "Grok",
-                  "[Grok 4.7](https://news.ycombinator.com/item?id=49788838)",
-                  "609",
-                  "537"
-                ],
-                [
-                  "",
-                  "[xAI Moves to Buy Out Southaven Residents Who Agree Not to Sue over Plant Noise](https://news.ycombinator.com/item?id=49848217)",
-                  "17",
-                  "0"
-                ],
-                [
-                  "",
-                  "[Grok 4.7 Intelligence, Performance and Price Analysis](https://news.ycombinator.com/item?id=49789558)",
-                  "13",
-                  "1"
-                ],
-                [
-                  "Meta (Muse, Llama)",
-                  "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)",
-                  "628",
-                  "391"
-                ],
-                [
-                  "",
-                  "[42x faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)",
-                  "11",
-                  "2"
-                ],
-                [
-                  "",
-                  "[Llama.cpp Under the Hood](https://news.ycombinator.com/item?id=49814172)",
-                  "4",
-                  "0"
-                ],
-                [
-                  "Mistral",
-                  "[CEO of Mistral: AI is software. It can be controlled](https://news.ycombinator.com/item?id=49856034)",
-                  "96",
-                  "164"
-                ],
-                [
-                  "",
-                  "[GLM 5.3 Hosted by Mistral](https://news.ycombinator.com/item?id=49791496)",
-                  "3",
-                  "0"
-                ],
-                [
-                  "",
-                  "[ESA and Mistral strengthen cooperation on AI](https://news.ycombinator.com/item?id=49839390)",
-                  "2",
-                  "0"
-                ]
-              ]
+              "rows": []
             },
             {
               "type": "list",
@@ -687,6 +535,77 @@
                 "Des filtres écartent les homonymes courants (protocole Gemini, cryptomonnaie Gemini, Claude Shannon).",
                 "Pour Meta, le relevé inclut Llama : Muse Spark reste encore peu discuté sous son propre nom.",
                 "Reddit n'est pas suivi : son API est fermée aux nouveaux accès sans approbation manuelle depuis novembre 2025."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "title": "Sur YouTube : communication des éditeurs et attention du public",
+      "for": [
+        "public",
+        "entreprises"
+      ],
+      "watch": [
+        "Chaînes YouTube officielles des éditeurs",
+        "Chaînes de vulgarisation et de tests d'IA"
+      ],
+      "blocks": [
+        {
+          "type": "why",
+          "text": "YouTube est le premier lieu où le grand public découvre et compare les assistants ; les éditeurs y lancent leurs modèles, les créateurs les testent."
+        },
+        {
+          "type": "bar_chart",
+          "auto": "yt_chart",
+          "title": "Vues des vidéos de la semaine citant l'assistant, en millions",
+          "max": 5,
+          "ticks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "bars": [],
+          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
+        },
+        {
+          "type": "reading",
+          "text": "Ce graphique mesure l'attention suscitée auprès du public, sans distinguer l'enthousiasme de la critique. Les chaînes de vulgarisation pèsent souvent davantage que les chaînes officielles des éditeurs."
+        },
+        {
+          "type": "audiences",
+          "public": "Les vidéos de test comparent souvent les assistants sur des cas concrets ; leur date compte, car les modèles changent vite.",
+          "entreprises": "L'écart entre la communication officielle d'un éditeur et l'attention qu'il obtient renseigne sur la force de sa marque.",
+          "institutions": "Les chiffres de YouTube portent sur un public mondial ; ils ne renseignent pas sur l'usage en Suisse ou en Europe."
+        },
+        {
+          "type": "details",
+          "summary": "Pour aller plus loin : chaînes officielles et vidéo la plus vue de la semaine",
+          "blocks": [
+            {
+              "type": "table",
+              "auto": "yt_table",
+              "headers": [
+                "Assistant",
+                "Chaîne officielle",
+                "Abonnés",
+                "Vidéos (30 jours)",
+                "Vues de ces vidéos",
+                "Vidéo la plus vue de la semaine, tous créateurs"
+              ],
+              "rows": []
+            },
+            {
+              "type": "list",
+              "items": [
+                "Sont retenues les vidéos dont le titre mentionne l'assistant ; des filtres écartent les homonymes courants (astrologie pour Gemini, personnalités prénommées Claude).",
+                "Le nombre de vues est celui du jour du relevé ; une vidéo récente continue d'en accumuler.",
+                "La recherche YouTube renvoie au plus 50 résultats par requête ; le relevé donne une tendance, pas un recensement."
               ]
             }
           ]
@@ -802,60 +721,17 @@
           "type": "bar_chart",
           "auto": "aa_chart",
           "title": "Indice d'intelligence Artificial Analysis, meilleur modèle de chaque éditeur",
-          "max": 60,
+          "max": 100,
           "ticks": [
             0,
-            12,
-            24,
-            36,
-            48,
-            60
+            20,
+            40,
+            60,
+            80,
+            100
           ],
-          "bars": [
-            {
-              "label": "Anthropic",
-              "sublabel": "Claude Opus 5.5 (Adaptive Reasoning, Max",
-              "value": 57.6,
-              "display": "57,6",
-              "vendor": "claude"
-            },
-            {
-              "label": "OpenAI",
-              "sublabel": "GPT-6 Astra (max)",
-              "value": 52.7,
-              "display": "52,7",
-              "vendor": "gpt"
-            },
-            {
-              "label": "Meta",
-              "sublabel": "Muse Spark 1.3 (max)",
-              "value": 48.1,
-              "display": "48,1",
-              "vendor": "meta"
-            },
-            {
-              "label": "xAI",
-              "sublabel": "Grok 4.7 (xhigh)",
-              "value": 46.4,
-              "display": "46,4",
-              "vendor": "grok"
-            },
-            {
-              "label": "Google",
-              "sublabel": "Gemini 3.8 Flash (high)",
-              "value": 40.9,
-              "display": "40,9",
-              "vendor": "gemini"
-            },
-            {
-              "label": "Mistral",
-              "sublabel": "Mistral Medium 3.5",
-              "value": 14.2,
-              "display": "14,2",
-              "vendor": "mistral"
-            }
-          ],
-          "caption": "Artificial Analysis Intelligence Index : score composite sur une série de tests de raisonnement, de connaissances, de mathématiques et de code, mesurés de façon indépendante [[s93]]. Pour chaque éditeur, le modèle le mieux noté ; un éditeur absent n'a aucun modèle évalué."
+          "bars": [],
+          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
         },
         {
           "type": "reading",
@@ -881,71 +757,7 @@
                 "Prix API entrée / sortie (par million de tokens)",
                 "Vitesse (tokens par seconde)"
               ],
-              "rows": [
-                [
-                  "Anthropic",
-                  "Claude Opus 5.5 (Adaptive Reasoning, Max Effort,",
-                  "57,6",
-                  "4,00 $ / 20,00 $",
-                  "99"
-                ],
-                [
-                  "OpenAI",
-                  "GPT-6 Astra (max)",
-                  "52,7",
-                  "10,00 $ / 50,00 $",
-                  "63"
-                ],
-                [
-                  "Meta",
-                  "Muse Spark 1.3 (max)",
-                  "48,1",
-                  "1,25 $ / 4,25 $",
-                  "164"
-                ],
-                [
-                  "xAI",
-                  "Grok 4.7 (xhigh)",
-                  "46,4",
-                  "2,00 $ / 6,00 $",
-                  "72"
-                ],
-                [
-                  "Alibaba (Qwen)",
-                  "Qwen3.8 Max (0902)",
-                  "45,4",
-                  "2,00 $ / 6,00 $",
-                  "38"
-                ],
-                [
-                  "Z.ai (GLM)",
-                  "GLM-5.3 (max)",
-                  "44,8",
-                  "1,40 $ / 4,40 $",
-                  "86"
-                ],
-                [
-                  "Google",
-                  "Gemini 3.8 Flash (high)",
-                  "40,9",
-                  "0,75 $ / 3,75 $",
-                  "311"
-                ],
-                [
-                  "DeepSeek",
-                  "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
-                  "39,5",
-                  "0,30 $ / 1,20 $",
-                  "227"
-                ],
-                [
-                  "Mistral",
-                  "Mistral Medium 3.5",
-                  "14,2",
-                  "1,50 $ / 7,50 $",
-                  "166"
-                ]
-              ]
+              "rows": []
             },
             {
               "type": "list",
@@ -1406,9 +1218,9 @@
                 "src": null
               },
               "latest": {
-                "label": "Muse Spark",
-                "date": "2026-04-08",
-                "src": "s86"
+                "label": "Muse Spark 1.3",
+                "date": "2026-09-02",
+                "src": "s94"
               }
             }
           }
@@ -1474,46 +1286,17 @@
           "type": "bar_chart",
           "auto": "status_chart",
           "title": "Incidents déclarés par mois, moyenne récente",
-          "max": 50,
+          "max": 10,
           "ticks": [
             0,
-            10,
-            20,
-            30,
-            40,
-            50
+            2,
+            4,
+            6,
+            8,
+            10
           ],
-          "bars": [
-            {
-              "label": "ChatGPT",
-              "sublabel": "25 incidents sur 17 jours, historique partiel",
-              "value": 44.8,
-              "display": "44,8",
-              "vendor": "gpt"
-            },
-            {
-              "label": "Claude",
-              "sublabel": "50 incidents sur 67 jours, historique partiel",
-              "value": 22.4,
-              "display": "22,4",
-              "vendor": "claude"
-            },
-            {
-              "label": "Grok",
-              "sublabel": "6 incidents sur 90 jours",
-              "value": 2.0,
-              "display": "2,0",
-              "vendor": "grok"
-            },
-            {
-              "label": "Gemini",
-              "sublabel": "0 incident sur 90 jours",
-              "value": 0.0,
-              "display": "0,0",
-              "vendor": "gemini"
-            }
-          ],
-          "caption": "Nombre moyen d'incidents déclarés par mois sur les pages de statut officielles, calculé sur les 90 derniers jours ou sur la période disponible quand l'historique publié est plus court ; relevé du 27/9/2026. Chaque éditeur choisit ce qu'il déclare et avec quelle granularité : un nombre élevé peut refléter une transparence plus grande autant qu'une fiabilité moindre. Google : incidents Google Cloud liés à Gemini et Vertex AI, sans l'application grand public."
+          "bars": [],
+          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
         },
         {
           "type": "table",
@@ -1526,56 +1309,7 @@
             "Durée cumulée",
             "Couverture et source"
           ],
-          "rows": [
-            [
-              "Claude",
-              "50",
-              "22,4",
-              "20",
-              "212 h",
-              "partiel, depuis le 22/7/2026 [[s87]]"
-            ],
-            [
-              "ChatGPT",
-              "25",
-              "44,8",
-              "3",
-              "53 h",
-              "partiel, depuis le 10/9/2026 [[s88]]"
-            ],
-            [
-              "Gemini",
-              "0",
-              "0,0",
-              "0",
-              "0 h",
-              "complet sur 90 jours [[s89]]"
-            ],
-            [
-              "Grok",
-              "6",
-              "2,0",
-              "3",
-              "7 h",
-              "complet sur 90 jours [[s91]]"
-            ],
-            [
-              "Muse (Meta)",
-              "Pas de page de statut publique",
-              "",
-              "",
-              "",
-              ""
-            ],
-            [
-              "Mistral Vibe",
-              "Page Checkly sans flux public exploitable ; incidents générés automatiquement par des sondes",
-              "",
-              "",
-              "",
-              "[[s90]]"
-            ]
-          ],
+          "rows": [],
           "vendors": [
             {
               "id": "claude",
@@ -2561,6 +2295,13 @@
       "items": [
         "Nouvelle section « Capacités mesurées », alimentée chaque semaine par Artificial Analysis."
       ]
+    },
+    {
+      "date": "2026-09-27",
+      "items": [
+        "Nouvelle section YouTube : activité des chaînes officielles et attention du public.",
+        "Dernier modèle phare de Meta mis à jour : Muse Spark 1.3 (2 septembre 2026) [[s94]]."
+      ]
     }
   ],
   "sources": {
@@ -2915,6 +2656,14 @@
     "s93": {
       "title": "Artificial Analysis, indices et données de modèles",
       "url": "https://artificialanalysis.ai"
+    },
+    "s94": {
+      "title": "Mungomash, modèles de pointe au 25 septembre 2026",
+      "url": "https://mungomash.com/ai/models/"
+    },
+    "s95": {
+      "title": "YouTube Data API v3",
+      "url": "https://developers.google.com/youtube/v3"
     }
   },
   "keypoints": [
@@ -2971,6 +2720,7 @@
       "sections": [
         "usages",
         "perception",
+        "video",
         "acteurs"
       ]
     },
