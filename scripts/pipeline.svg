@@ -1,0 +1,30 @@
+<svg viewBox="0 0 680 300" role="img" aria-label="Schéma : la question part vers un index web, l'index Google ou le flux X, puis vers un modèle figé à sa date de coupure qui produit la réponse">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink2)"/></marker></defs>
+<rect x="10" y="125" width="100" height="50" fill="var(--sheet)" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="60" y="155" font-size="13" text-anchor="middle" font-weight="600">Question</text>
+<g stroke="var(--ink2)" stroke-width="1.3" fill="none" marker-end="url(#ar)">
+<path d="M110,150 C140,150 140,70 168,70"/><path d="M110,150 L168,150"/><path d="M110,150 C140,150 140,232 168,232"/>
+<path d="M342,70 C372,70 372,140 398,140"/><path d="M342,150 L398,150"/><path d="M342,232 C372,232 372,160 398,160"/>
+<path d="M530,150 L568,150"/>
+</g>
+<rect x="170" y="38" width="172" height="64" fill="var(--sheet)" stroke="var(--gpt)" stroke-width="2"/>
+<text x="180" y="58" font-size="12.5" font-weight="600">Index web</text>
+<text x="180" y="74" font-size="11" class="muted">ChatGPT, Claude, Vibe (AFP)</text>
+<text x="180" y="90" font-size="11" class="muted">Heures à jours, tri variable</text>
+<rect x="170" y="118" width="172" height="64" fill="var(--sheet)" stroke="var(--gemini)" stroke-width="2"/>
+<text x="180" y="138" font-size="12.5" font-weight="600">Index Google</text>
+<text x="180" y="154" font-size="11" class="muted">Gemini</text>
+<text x="180" y="170" font-size="11" class="muted">Couverture la plus large</text>
+<rect x="170" y="200" width="172" height="64" fill="var(--sheet)" stroke="var(--grok)" stroke-width="2"/>
+<text x="180" y="220" font-size="12.5" font-weight="600">Flux X</text>
+<text x="180" y="236" font-size="11" class="muted">Grok</text>
+<text x="180" y="252" font-size="11" class="muted">Minutes, aucune vérification</text>
+<rect x="400" y="110" width="130" height="80" fill="var(--ink)"/>
+<text x="465" y="140" font-size="12.5" text-anchor="middle" font-weight="600" style="fill:var(--paper)">Modèle figé</text>
+<text x="465" y="158" font-size="11" text-anchor="middle" style="fill:var(--paper)">à sa date</text>
+<text x="465" y="174" font-size="11" text-anchor="middle" style="fill:var(--paper)">de coupure</text>
+<rect x="570" y="125" width="100" height="50" fill="var(--sheet)" stroke="var(--ink)" stroke-width="1.5"/>
+<text x="620" y="155" font-size="13" text-anchor="middle" font-weight="600">Réponse</text>
+<text x="400" y="228" font-size="11" class="muted">Le modèle ne vérifie pas la source :</text>
+<text x="400" y="244" font-size="11" class="muted">il résume ce qu'on lui transmet.</text>
+</svg>

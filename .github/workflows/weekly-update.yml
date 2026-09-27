@@ -1,0 +1,77 @@
+name: Mise à jour hebdomadaire
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+    inputs:
+      only_sections:
+        description: "Sections à mettre à jour, séparées par des virgules (vide = toutes)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dépendances
+        run: pip install anthropic
+
+      - name: Recherche et mise à jour du contenu
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL || 'claude-opus-5-5' }}
+          MAX_SEARCHES_PER_SECTION: ${{ vars.MAX_SEARCHES_PER_SECTION || '6' }}
+          ONLY_SECTIONS: ${{ github.event.inputs.only_sections }}
+        run: python scripts/update.py
+
+      - name: Test de construction du site
+        run: python scripts/build.py
+
+      - name: Nom du brief
+        id: brief
+        run: echo "path=content/briefs/$(date -u +%F).md" >> "$GITHUB_OUTPUT"
+
+      - name: Proposer les changements en pull request
+        if: vars.AUTO_PUBLISH != 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: weekly-update
+          delete-branch: true
+          add-paths: content/**
+          commit-message: "Mise à jour hebdomadaire du dossier"
+          title: "Mise à jour hebdomadaire du dossier"
+          body-path: ${{ steps.brief.outputs.path }}
+          labels: mise-a-jour-auto
+
+      - name: Publier directement sur main
+        if: vars.AUTO_PUBLISH == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content
+          git diff --cached --quiet || git commit -m "Mise à jour hebdomadaire du dossier"
+          git push origin main
+
+  deploy:
+    needs: update
+    if: vars.AUTO_PUBLISH == 'true'
+    uses: ./.github/workflows/pages.yml
