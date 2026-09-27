@@ -62,7 +62,9 @@
     "dot_gap_unknown": "écart inconnu",
     "date_unverified": "date non vérifiée",
     "languages": "Langues",
-    "pipeline": {}
+    "pipeline": {},
+    "views": "vues",
+    "no_video_lang": "Aucune vidéo de 4 minutes ou plus cette semaine"
   },
   "en": {
     "lang_name": "English",
@@ -141,7 +143,9 @@
       "Réponse": "Answer",
       "Le modèle ne vérifie pas la source :": "The model does not check the source:",
       "il résume ce qu'on lui transmet.": "it summarises what it is given."
-    }
+    },
+    "views": "views",
+    "no_video_lang": "No video of 4 minutes or more this week"
   },
   "es": {
     "lang_name": "Español",
@@ -220,7 +224,9 @@
       "Réponse": "Respuesta",
       "Le modèle ne vérifie pas la source :": "El modelo no verifica la fuente:",
       "il résume ce qu'on lui transmet.": "resume lo que se le transmite."
-    }
+    },
+    "views": "visualizaciones",
+    "no_video_lang": "Ningún vídeo de 4 minutos o más esta semana"
   },
   "de": {
     "lang_name": "Deutsch",
@@ -299,7 +305,9 @@
       "Réponse": "Antwort",
       "Le modèle ne vérifie pas la source :": "Das Modell prüft die Quelle nicht:",
       "il résume ce qu'on lui transmet.": "es fasst zusammen, was es erhält."
-    }
+    },
+    "views": "Aufrufe",
+    "no_video_lang": "Kein Video von mindestens 4 Minuten in dieser Woche"
   },
   "it": {
     "lang_name": "Italiano",
@@ -378,6 +386,8 @@
       "Réponse": "Risposta",
       "Le modèle ne vérifie pas la source :": "Il modello non verifica la fonte:",
       "il résume ce qu'on lui transmet.": "riassume ciò che riceve."
-    }
+    },
+    "views": "visualizzazioni",
+    "no_video_lang": "Nessun video di almeno 4 minuti questa settimana"
   }
 }

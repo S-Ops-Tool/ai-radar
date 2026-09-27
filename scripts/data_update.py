@@ -210,52 +210,41 @@ def vectara_signature(md):
     return [ev.group(1) if ev else None, "old-dataset" in md.lower()]
 
 
-def update_vectara_history(blocks, vendors_cfg, state, notes):
+def update_vectara_scatter(blocks, vendors_cfg, state, notes):
+    """One point per model: x = month the model entered the leaderboard (from git history), y = current rate."""
     now = dt.date.today()
-    months = []
-    y, m = now.year, now.month
-    for _ in range(12):
-        months.append((y, m))
-        m -= 1
-        if m == 0:
-            y, m = y - 1, 12
-    months.reverse()
-    y0, m0 = months[0]
-    since = f"{y0 - 1}-{m0:02d}-01T00:00:00Z"
+    since = f"{now.year - 2}-{now.month:02d}-01T00:00:00Z"
     commits = []
-    for page in (1, 2, 3):
+    for page in range(1, 6):
         batch = gh_json(f"{GH_API}?path=README.md&per_page=100&page={page}&since={since}")
         commits += batch
         if len(batch) < 100:
             break
     dated = sorted((c["commit"]["committer"]["date"], c["sha"]) for c in commits)
-    hist = state.setdefault("vectara_monthly", {})
-    current = f"{now.year}-{now.month:02d}"
-    readmes = {}
-    for (y, m) in months:
-        k = f"{y}-{m:02d}"
-        end = f"{y + (m == 12)}-{m % 12 + 1:02d}-01T00:00:00Z"
-        prior = [sha for date, sha in dated if date < end]
-        if not prior:
+    first = state.setdefault("vectara_first_seen", {})
+    parsed = set(state.setdefault("vectara_parsed_shas", []))
+    new_models = 0
+    for date, sha in dated:
+        if sha in parsed:
             continue
-        sha = prior[-1]
-        if k in hist and k != current and hist[k].get("sha") == sha:
+        for name in vectara_table(fetch(RAW_AT.format(sha=sha))):
+            if name not in first or date[:10] < first[name]:
+                if name not in first:
+                    new_models += 1
+                first[name] = date[:10]
+        parsed.add(sha)
+    state["vectara_parsed_shas"] = sorted(parsed)
+    oldest = dated[0][0][:10] if dated else None
+    table = vectara_table(fetch(VECTARA_MD))
+    pts = []
+    for name, rate in table.items():
+        vendor = next((v for v, c in vendors_cfg.items() if name.startswith(c["prefix"])), None)
+        seen = first.get(name)
+        if not vendor or not seen or (oldest and seen <= oldest):
             continue
-        if sha not in readmes:
-            readmes[sha] = fetch(RAW_AT.format(sha=sha))
-        md = readmes[sha]
-        table = vectara_table(md)
-        vals = {}
-        for v, cfg in vendors_cfg.items():
-            rates = [r for name, r in table.items() if name.startswith(cfg["prefix"])]
-            if rates:
-                vals[v] = min(rates)
-        hist[k] = {"sha": sha, "sig": vectara_signature(md), "vals": vals}
-    cur_sig = vectara_signature(fetch(VECTARA_MD))
-    kept = [(y, m) for (y, m) in months if hist.get(f"{y}-{m:02d}", {}).get("sig") == cur_sig]
-    dropped = [f"{y}-{m:02d}" for (y, m) in months if f"{y}-{m:02d}" in hist and (y, m) not in kept]
-    if dropped:
-        notes.append("Vectara, historique : mois écartés car établis avec une autre méthode : " + ", ".join(dropped) + ".")
+        pts.append({"x": seen, "y": rate, "vendor": vendor, "label": name.split("/")[-1][:40]})
+    if new_models:
+        notes.append(f"Vectara : {new_models} modèles datés d'après l'historique du classement.")
 
     def walk(bs):
         for x in bs:
@@ -264,23 +253,18 @@ def update_vectara_history(blocks, vendors_cfg, state, notes):
                 yield from walk(x.get("blocks", []))
 
     for b in walk(blocks):
-        if b.get("auto") != "vectara_trend":
+        if b.get("auto") != "vectara_scatter":
             continue
-        pts = []
-        for i, (y, m) in enumerate(kept):
-            label = f"{MONTHS_SHORT[m - 1]} {str(y)[2:]}" if (i == 0 or m == 1) else MONTHS_SHORT[m - 1]
-            off = (y - now.year) * 12 + (m - now.month)
-            pts.append({"m": off, "label": label, "values": hist[f"{y}-{m:02d}"]["vals"]})
-        b["points"] = pts
+        b["points"] = sorted(pts, key=lambda p: p["x"])
         b["series"] = [{"key": v, "label": c["label"], "vendor": v} for v, c in vendors_cfg.items()]
-        top = max([v for p in pts for v in p["values"].values()] + [5])
+        top = max([p["y"] for p in pts] + [10])
         b["max"] = int(top // 5 + 1) * 5
-        b["ticks"] = list(range(0, b["max"] + 1, max(1, b["max"] // 5)))
-        n = len(pts)
-        b["caption"] = (f"Taux d'hallucination du meilleur modèle de chaque éditeur présent au classement Vectara, en %, "
-                        f"à la fin de chaque mois ; {n} mois établis avec la méthode actuelle [[s55]]. "
-                        "Le meilleur modèle d'un éditeur est souvent un petit modèle, plus fidèle en résumé que ses modèles phares. "
-                        "Les mois antérieurs à un changement d'évaluateur ou de jeu de documents sont écartés : leurs chiffres ne sont pas comparables.")
+        b["ticks"] = list(range(0, b["max"] + 1, 5))
+        start = f"{int(oldest[:4])}-{oldest[5:7]}" if oldest else ""
+        b["caption"] = (f"Chaque point est un modèle : en abscisse, le mois de son entrée au classement Vectara, reconstitué depuis l'historique "
+                        f"du classement ; en ordonnée, son taux d'hallucination actuel en résumé de documents [[s55]]. {len(pts)} modèles entrés "
+                        "depuis le début de l'historique disponible. Le taux affiché est celui mesuré avec la méthode actuelle ; "
+                        "une tendance descendante chez un éditeur signale des générations successives plus fidèles.")
 
 
 def main():
@@ -321,7 +305,7 @@ def main():
                 elif auto == "vectara_hhem":
                     update_vectara(block, state, notes)
                     try:
-                        update_vectara_history(sec["blocks"], block["vendors"], state, notes)
+                        update_vectara_scatter(sec["blocks"], block["vendors"], state, notes)
                     except Exception as e:
                         errors.append(f"vectara, historique : {e}")
             except Exception as e:

@@ -1,6 +1,7 @@
 """Render content/dossier.json into site/index.html (no external dependencies)."""
 import html
 import json
+import os
 import re
 from pathlib import Path
 
@@ -24,9 +25,16 @@ SKIP_KEYS = {"id", "type", "auto", "vendor", "key", "url", "src", "date", "for",
              "model", "m", "textonly", "band", "migrations", "by_lang", "row_vendors", "x", "y", "vtitle", "vchannel", "cat", "views"}
 
 
+UI_DEFAULTS = {"views": "vues", "no_video_lang": "Aucune vidéo de 4 minutes ou plus cette semaine"}
+RENDER_ERRORS = []
+
+
 def set_lang(lang):
+    """Interface strings of the language, completed by French, then by built-in defaults."""
     global U, LANG
-    LANG, U = lang, UI_ALL[lang]
+    LANG = lang
+    U = {**UI_DEFAULTS, **UI_ALL.get("fr", {}), **UI_ALL.get(lang, {})}
+    U["pipeline"] = UI_ALL.get(lang, {}).get("pipeline", {})
 
 
 def num(x, d=None):
@@ -418,9 +426,17 @@ def render_block(b, sources):
     return ""
 
 
+def safe_block(b, sources, sid):
+    try:
+        return render_block(b, sources)
+    except Exception as e:
+        RENDER_ERRORS.append(f"{LANG} / {sid} / {b.get('auto') or b.get('type')} : {type(e).__name__} {e}")
+        return ""
+
+
 def render_section(s, sources):
     tags = "".join(f'<span class="tag">{U["aud_" + a]}</span>' for a in s.get("for", []) if "aud_" + a in U)
-    body = "".join(render_block(b, sources) for b in s["blocks"])
+    body = "".join(safe_block(b, sources, s["id"]) for b in s["blocks"])
     watch = (f'<p class="watch">{U["watch"]} {html.escape(", ".join(s["watch"]))}.</p>'
              if s.get("watch") else "")
     return (f'<section class="sec" id="{s["id"]}" data-for="{" ".join(s.get("for", []))}">'
@@ -595,6 +611,13 @@ def main():
         (out / "index.html").write_text(render(doc), encoding="utf-8")
         print(f"{lang} : {len(table)} traductions disponibles")
     set_lang("fr")
+    if RENDER_ERRORS:
+        msg = "\n".join(f"- {e}" for e in RENDER_ERRORS)
+        print("Blocs non affichés :\n" + msg)
+        summary = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary:
+            with open(summary, "a", encoding="utf-8") as f:
+                f.write("\n## Blocs non affichés\n\n" + msg + "\n")
     print(f"site écrit en {len(LANGS)} langues ({len(d['sources'])} sources, {len(d['sections'])} sections)")
 
 
