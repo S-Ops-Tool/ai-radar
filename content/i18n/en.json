@@ -27,10 +27,6 @@
   "fr": "Exception américaine au droit d'auteur, invoquée par les éditeurs pour justifier l'entraînement sur des œuvres protégées.",
   "tr": "US copyright exception, invoked by publishers to justify training on protected works."
  },
- "0377e819f92cb2e1": {
-  "fr": "[Jev will 10x your Claude Code (Here's How)](https://www.youtube.com/watch?v=tTnUcSj-QPA), 639 k vues (Jay E | RoboNuggets)",
-  "tr": "[Jev will 10x your Claude Code (Here's How)](https://www.youtube.com/watch?v=tTnUcSj-QPA), 639K views (Jay E | RoboNuggets)"
- },
  "03ef8dc5066f5870": {
   "fr": "The Professor, entraînement sur les conversations par défaut",
   "tr": "The Professor, default training on conversations"
@@ -91,6 +87,10 @@
   "fr": "25 vidéos retenues",
   "tr": "25 videos selected"
  },
+ "0954226001f2fa8c": {
+  "fr": "[Meta AI賭對了！Muse Agent能幫你賺錢、殺價、砍帳單？股價大漲背後的秘密｜哈佛姐夢遊矽谷](https://www.youtube.com/watch?v=MpiAqsEgWDo), 293 k vues (哈佛姐夢遊矽谷 AliceInSiliconWonderla)",
+  "tr": "[Meta AI賭對了！Muse Agent能幫你賺錢、殺價、砍帳單？股價大漲背後的秘密｜哈佛姐夢遊矽谷](https://www.youtube.com/watch?v=MpiAqsEgWDo), 293k views (哈佛姐夢遊矽谷 AliceInSiliconWonderla)"
+ },
  "0a54547bdb142dee": {
   "fr": "Vectara HHEM, classement du 22 septembre 2026 : part des résumés contenant une information absente du document source [[s55]]. Points gris : tous les modèles de l'éditeur présents au classement ; point coloré : modèle phare le plus récent testé, avec sa date de sortie. Colonne de droite : dernier modèle phare de l'éditeur et écart avec le modèle testé. Ce test mesure la fidélité en résumé ; un modèle plus récent peut y faire moins bien qu'un ancien.",
   "tr": "Vectara HHEM, ranking as of September 22, 2026: share of summaries containing information absent from the source document [[s55]]. Gray points: all of the vendor's models present in the ranking; colored point: latest flagship model tested, with its release date. Right-hand column: vendor's latest flagship model and the gap with the tested model. This test measures faithfulness in summarization; a newer model may perform worse on it than an older one."
@@ -111,13 +111,9 @@
   "fr": "Pour aller plus loin : prix de l'API par million de tokens",
   "tr": "To go further: API price per million tokens"
  },
- "0d81d49c4ba81fdc": {
-  "fr": "759 articles, 13 166 commentaires",
-  "tr": "759 articles, 13,166 comments"
- },
- "0da23025598af783": {
-  "fr": "[Meta AI賭對了！Muse Agent能幫你賺錢、殺價、砍帳單？股價大漲背後的秘密｜哈佛姐夢遊矽谷](https://www.youtube.com/watch?v=MpiAqsEgWDo), 288 k vues (哈佛姐夢遊矽谷 AliceInSiliconWonderla)",
-  "tr": "[Meta AI賭對了！Muse Agent能幫你賺錢、殺價、砍帳單？股價大漲背後的秘密｜哈佛姐夢遊矽谷](https://www.youtube.com/watch?v=MpiAqsEgWDo), 288k views (哈佛姐夢遊矽谷 AliceInSiliconWonderla)"
+ "0d4a863d93c5ca4f": {
+  "fr": "Une réponse sans source doit être vérifiée ; fournir le document de référence réduit nettement les erreurs.",
+  "tr": "An answer without a source must be verified; providing the reference document significantly reduces errors."
  },
  "0dc095369d5525e2": {
   "fr": "Similarweb, part du trafic web des IA génératives, édition d'août 2026",
@@ -247,6 +243,10 @@
   "fr": "Pour les données sensibles, l'hébergement interne des poids écarte le risque juridictionnel des API hébergées en Chine [[s71]].",
   "tr": "For sensitive data, internal hosting of weights removes the jurisdictional risk of APIs hosted in China [[s71]]."
  },
+ "17c3fd971fb550cb": {
+  "fr": "[【AIヴィーガン】ChatGPTをあえて使わない？「喜びも達成感もない」生成AIとの付き合い方をひろゆきらと議論｜アベプラ](https://www.youtube.com/watch?v=U5TEeaeyH-I), 616 k vues (ABEMA Prime #アベプラ【公式】)",
+  "tr": "[【AIヴィーガン】ChatGPTをあえて使わない？「喜びも達成感もない」生成AIとの付き合い方をひろゆきらと議論｜アベプラ](https://www.youtube.com/watch?v=U5TEeaeyH-I), 616k views (ABEMA Prime #アベプラ【公式】)"
+ },
  "17c58afe4f04f60d": {
   "fr": "Prix mensuels américains relevés fin septembre 2026 par un agrégateur à partir des pages des éditeurs [[s66]] ; les prix en francs suisses et en euros diffèrent et se vérifient sur chaque page officielle. xAI ne précise pas quelle offre donne accès à Grok 4.7 [[s66]].",
   "tr": "US monthly prices recorded at the end of September 2026 by an aggregator based on providers' pages [[s66]]; prices in Swiss francs and euros differ and can be checked on each official page. xAI does not specify which plan gives access to Grok 4.7 [[s66]]."
@@ -327,10 +327,6 @@
   "fr": "[Llama.cpp Under the Hood](https://news.ycombinator.com/item?id=49814172)",
   "tr": "[Llama.cpp Under the Hood](https://news.ycombinator.com/item?id=49814172)"
  },
- "1db3bc53a9078ea7": {
-  "fr": "Une réponse sans source se vérifie ; fournir le document de référence réduit nettement les erreurs.",
-  "tr": "An answer without a source can be checked; providing the reference document significantly reduces errors."
- },
  "1e40c2bbfed12ef4": {
   "fr": "Pour aller plus loin : chronologie, défense et autres acteurs",
   "tr": "To go further: timeline, defense and other players"
@@ -387,10 +383,6 @@
   "fr": "sept.",
   "tr": "Sept."
  },
- "22ec175181a6d37b": {
-  "fr": "Taux d'hallucination du meilleur modèle de chaque éditeur présent au classement Vectara, en %, à la fin de chaque mois ; 8 mois établis avec la méthode actuelle [[s55]]. Le meilleur modèle d'un éditeur est souvent un petit modèle, plus fidèle en résumé que ses modèles phares. Les mois antérieurs à un changement d'évaluateur ou de jeu de documents sont écartés : leurs chiffres ne sont pas comparables.",
-  "tr": "Hallucination rate of the best model from each publisher on the Vectara leaderboard, in %, at the end of each month; 8 months established with the current method [[s55]]. A publisher's best model is often a small model, more faithful in summarization than its flagship models. Months preceding a change in evaluator or document set are excluded: their figures are not comparable."
- },
  "22ef6096401d0ca7": {
   "fr": "Puissance de calcul : qui possède, qui loue",
   "tr": "Computing power: who owns, who leases"
@@ -398,6 +390,10 @@
  "2307da27c94476e1": {
   "fr": "L'usage professionnel se concentre sur trois fournisseurs d'API ; Claude domine le code.",
   "tr": "Professional usage is concentrated among three API providers; Claude dominates coding."
+ },
+ "236d4d2f0ac35a21": {
+  "fr": "[Claude Opus 5.5 is ridiculous](https://www.youtube.com/watch?v=gX0L0aFA2xg), 647 k vues (AI Search)",
+  "tr": "[Claude Opus 5.5 is ridiculous](https://www.youtube.com/watch?v=gX0L0aFA2xg), 647k views (AI Search)"
  },
  "23feeab1d00d2dc4": {
   "fr": "Artificial Analysis",
@@ -455,10 +451,6 @@
   "fr": "Point d'attention",
   "tr": "Point of attention"
  },
- "28777543b6867d55": {
-  "fr": "25 articles, 888 commentaires",
-  "tr": "25 articles, 888 comments"
- },
  "29c2ce0641945460": {
   "fr": "Aucune obligation de déclaration harmonisée n'existe ; la transparence varie d'un éditeur à l'autre.",
   "tr": "No harmonized reporting obligation exists; transparency varies from one vendor to another."
@@ -466,10 +458,6 @@
  "29e91124075e9cee": {
   "fr": "Non vérifié",
   "tr": "Unverified"
- },
- "29f669a56877069b": {
-  "fr": "[42x faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)",
-  "tr": "[42x faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)"
  },
  "29f89454d30423eb": {
   "fr": "Anthropic, déclaration sur l'accès à Fable et Mythos",
@@ -619,10 +607,6 @@
   "fr": "Tarifs API par million de tokens",
   "tr": "API prices per million tokens"
  },
- "362d8942af323eba": {
-  "fr": "18 vidéos retenues",
-  "tr": "18 videos selected"
- },
  "36b5769af1566146": {
   "fr": "Le tableau ajoute DeepSeek, Qwen, Kimi et GLM comme points de repère.",
   "tr": "The table adds DeepSeek, Qwen, Kimi, and GLM as benchmarks."
@@ -638,10 +622,6 @@
  "3737d26ad650e4bc": {
   "fr": "[AI at Meta](https://www.youtube.com/@aiatmeta)",
   "tr": "[AI at Meta](https://www.youtube.com/@aiatmeta)"
- },
- "3795cdb6d6779d22": {
-  "fr": "13 articles, 979 commentaires",
-  "tr": "13 articles, 979 comments"
  },
  "37f1cee3609dc0d1": {
   "fr": "Dossier mis à jour chaque semaine par un pipeline automatisé fondé sur Claude (Anthropic), partie prenante de la comparaison. Chaque modification est relue avant publication ; les points favorables à Anthropic méritent une vérification prioritaire.",
@@ -662,6 +642,10 @@
  "38bc529901fb27e1": {
   "fr": "Le circuit X capte un signal faible plus tôt, au prix d'un taux de rumeur élevé. Le circuit Google et les dépêches d'agence offrent un filtre éditorial en amont. Dans les deux cas, la source primaire reste à ouvrir.",
   "tr": "The X circuit picks up a weak signal earlier, at the cost of a high rumor rate. The Google circuit and wire agency dispatches offer an upstream editorial filter. In both cases, the primary source still needs to be checked."
+ },
+ "392ef73f2e6a7b50": {
+  "fr": "25 articles, 891 commentaires",
+  "tr": "25 articles, 891 comments"
  },
  "3977f630993d470f": {
   "fr": "Anthropic a lancé en avril 2026 une enquête directe auprès des utilisateurs de Claude sur leur expérience au travail, en complément de l'analyse des conversations [[s61]].",
@@ -919,10 +903,6 @@
   "fr": "Grok 4.7 (xhigh)",
   "tr": "Grok 4.7 (xhigh)"
  },
- "50790032254e240a": {
-  "fr": "62 articles, 1 453 commentaires",
-  "tr": "62 articles, 1,453 comments"
- },
  "51a0a42c141b32e9": {
   "fr": "Apertus, version 1.5 (juillet 2026)",
   "tr": "Apertus, version 1.5 (July 2026)"
@@ -938,10 +918,6 @@
  "51f0eca3d244c918": {
   "fr": "6 incidents sur 90 jours",
   "tr": "6 incidents over 90 days"
- },
- "52955427c75a2c41": {
-  "fr": "60,3 M",
-  "tr": "60.3M"
  },
  "52e1850acdda01bf": {
   "fr": "Claude Opus 5.5",
@@ -1027,6 +1003,10 @@
   "fr": "Colossus 2",
   "tr": "Colossus 2"
  },
+ "5a8192ee7e54301d": {
+  "fr": "[Faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)",
+  "tr": "[Faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)"
+ },
  "5aace9775feb76a5": {
   "fr": "La durée cumulée additionne la durée de chaque incident ; des incidents simultanés sont comptés deux fois.",
   "tr": "The cumulative duration adds up the duration of each incident; simultaneous incidents are counted twice."
@@ -1091,10 +1071,6 @@
   "fr": "212 h",
   "tr": "212 h"
  },
- "6068046cbebc229e": {
-  "fr": "730 articles, 18 150 commentaires",
-  "tr": "730 articles, 18,150 comments"
- },
  "60b26f7d0ea9846a": {
   "fr": "Le risque commun porte sur l'injection d'instructions : un agent qui lit un email ou une page web peut exécuter un ordre caché dans ce contenu. Plus l'agent a de droits, plus ce risque pèse.",
   "tr": "The common risk concerns instruction injection: an agent reading an email or a web page can execute a hidden command contained in that content. The more rights the agent has, the greater this risk."
@@ -1127,10 +1103,6 @@
   "fr": "Infrastructure et empreinte",
   "tr": "Infrastructure and footprint"
  },
- "631a9b4c8e80e4e5": {
-  "fr": "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 209 k vues (AI Search)",
-  "tr": "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 209K views (AI Search)"
- },
  "635db508e5c52472": {
   "fr": "Mode agent, séparation Chat, Work et Codex [[s53]]",
   "tr": "Agent mode, separation of Chat, Work, and Codex [[s53]]"
@@ -1158,6 +1130,10 @@
  "6466df1d3d4f14f5": {
   "fr": "Mistral",
   "tr": "Mistral"
+ },
+ "64eccc496481eddb": {
+  "fr": "Taux d'hallucination du meilleur modèle de chaque éditeur présent au classement Vectara, en %, à la fin de chaque mois ; 11 mois établis avec la méthode actuelle [[s55]]. Le meilleur modèle d'un éditeur est souvent un petit modèle, plus fidèle en résumé que ses modèles phares. Les mois antérieurs à un changement d'évaluateur ou de jeu de documents sont écartés : leurs chiffres ne sont pas comparables.",
+  "tr": "Hallucination rate of the best model from each publisher featured in the Vectara ranking, in %, at the end of each month; 11 months established with the current method [[s55]]. The best model from a publisher is often a small model, more faithful in summarization than its flagship models. Months prior to a change in evaluator or document set are excluded: their figures are not comparable."
  },
  "65193aa76badd892": {
   "fr": "Désactiver l'entraînement dans les réglages et utiliser les conversations temporaires pour les sujets sensibles réduit l'exposition.",
@@ -1451,6 +1427,10 @@
   "fr": "Brightside AI, de WormGPT à Mythos",
   "tr": "Brightside AI, from WormGPT to Mythos"
  },
+ "7e3b11653bf66fc5": {
+  "fr": "13 articles, 980 commentaires",
+  "tr": "13 articles, 980 comments"
+ },
  "7ebc56d904aa46f5": {
   "fr": "Anthropic Economic Index, rapport de juin 2026",
   "tr": "Anthropic Economic Index, June 2026 report"
@@ -1598,6 +1578,10 @@
  "89bac00ec50c063e": {
   "fr": "Peu documentée",
   "tr": "Poorly documented"
+ },
+ "89cac5dc867fd34a": {
+  "fr": "744 articles, 18 506 commentaires",
+  "tr": "744 articles, 18,506 comments"
  },
  "89dec3a40ff8b5d1": {
   "fr": "Factualité mesurée",
@@ -2067,6 +2051,10 @@
   "fr": "Microsoft Copilot revendique environ 420 millions d'utilisateurs mensuels, dont plus de 30 millions de licences Microsoft 365 Copilot payantes [[s58]].",
   "tr": "Microsoft Copilot claims about 420 million monthly users, including more than 30 million paid Microsoft 365 Copilot licenses [[s58]]."
  },
+ "b1a44148f5645d65": {
+  "fr": "765 articles, 13 201 commentaires",
+  "tr": "765 articles, 13,201 comments"
+ },
  "b1bec915657f381c": {
   "fr": "Pour aller plus loin : les autres tests de référence",
   "tr": "To go further: the other benchmark tests"
@@ -2110,6 +2098,10 @@
  "b570d8de4524daaf": {
   "fr": "Panto, statistiques Anthropic 2026 (Economic Index)",
   "tr": "Panto, Anthropic 2026 statistics (Economic Index)"
+ },
+ "b57727dd0f726b51": {
+  "fr": "947 k",
+  "tr": "947k"
  },
  "b57aafb462afc971": {
   "fr": "Sont retenus les articles dont le titre mentionne l'assistant ou son éditeur ; un même article peut compter pour plusieurs assistants.",
@@ -2415,6 +2407,14 @@
   "fr": "Pour un usage critique, les engagements de disponibilité contractuels (SLA) des offres entreprise comptent davantage que l'historique public.",
   "tr": "For critical use, the contractual availability commitments (SLAs) of enterprise plans matter more than the public track record."
  },
+ "cc995bed79fdae47": {
+  "fr": "56 articles, 1 432 commentaires",
+  "tr": "56 articles, 1,432 comments"
+ },
+ "cccfb43b69777813": {
+  "fr": "61,0 M",
+  "tr": "61.0M"
+ },
  "cd368a50d2f2aa9e": {
   "fr": "[Grok 4.7 Intelligence, Performance and Price Analysis](https://news.ycombinator.com/item?id=49789558)",
   "tr": "[Grok 4.7 Intelligence, Performance and Price Analysis](https://news.ycombinator.com/item?id=49789558)"
@@ -2478,10 +2478,6 @@
  "d1f52e5a133d0705": {
   "fr": "Les usages déclarés par les éditeurs portent chacun sur leur propre produit, avec leur propre méthode. Aucune étude indépendante ne compare les six assistants avec un protocole commun.",
   "tr": "The usage figures disclosed by publishers each cover their own product, with their own method. No independent study compares the six assistants with a common protocol."
- },
- "d2a825f081f06828": {
-  "fr": "[【AIヴィーガン】ChatGPTをあえて使わない？「喜びも達成感もない」生成AIとの付き合い方をひろゆきらと議論｜アベプラ](https://www.youtube.com/watch?v=U5TEeaeyH-I), 611 k vues (ABEMA Prime #アベプラ【公式】)",
-  "tr": "[【AIヴィーガン】ChatGPTをあえて使わない？「喜びも達成感もない」生成AIとの付き合い方をひろゆきらと議論｜アベプラ](https://www.youtube.com/watch?v=U5TEeaeyH-I), 611k views (ABEMA Prime #アベプラ【公式】)"
  },
  "d2ccd8109361016c": {
   "fr": "Conservation",
@@ -2727,10 +2723,6 @@
   "fr": "Un agent agit à votre place : il lit, écrit, clique et envoie, avec les droits que vous lui accordez.",
   "tr": "An agent acts on your behalf: it reads, writes, clicks and sends, with the rights you grant it."
  },
- "e3b6cf6bd4480715": {
-  "fr": "[AI뉴스 - Jev 열풍, OpenAI 해킹, Astra for Law, 구글도 드디어 해킹, Gemini 4 Pro 소문, RSI 등](https://www.youtube.com/watch?v=vrIBLHcqPRs), 250 k vues (조코딩 JoCoding)",
-  "tr": "[AI뉴스 - Jev 열풍, OpenAI 해킹, Astra for Law, 구글도 드디어 해킹, Gemini 4 Pro 소문, RSI 등](https://www.youtube.com/watch?v=vrIBLHcqPRs), 250k views (조코딩 JoCoding)"
- },
  "e3f0b09167252d6f": {
   "fr": "Pas d'offre équipe distincte",
   "tr": "No separate team plan"
@@ -2803,6 +2795,10 @@
   "fr": "53 h",
   "tr": "53 h"
  },
+ "e916a4c75620f399": {
+  "fr": "[AI뉴스 - Jev 열풍, OpenAI 해킹, Astra for Law, 구글도 드디어 해킹, Gemini 4 Pro 소문, RSI 등](https://www.youtube.com/watch?v=vrIBLHcqPRs), 251 k vues (조코딩 JoCoding)",
+  "tr": "[AI뉴스 - Jev 열풍, OpenAI 해킹, Astra for Law, 구글도 드디어 해킹, Gemini 4 Pro 소문, RSI 등](https://www.youtube.com/watch?v=vrIBLHcqPRs), 251k views (조코딩 JoCoding)"
+ },
  "e960f1ac8ea0ed9c": {
   "fr": "Oui par défaut, désactivable",
   "tr": "Yes by default, can be disabled"
@@ -2859,6 +2855,10 @@
   "fr": "Réputés pour les tâches longues d'agent et le code [[s68]]",
   "tr": "Noted for long agent tasks and code [[s68]]"
  },
+ "ee297bdb7637fb7c": {
+  "fr": "19 vidéos retenues",
+  "tr": "19 videos selected"
+ },
  "ee8221dd954bee09": {
   "fr": "Les capacités offensives en cybersécurité émergent chez tous les laboratoires de pointe, et aucun ne dépasse la note C+ en gouvernance de la sécurité selon le FLI [[s17]] [[s1]].",
   "tr": "Offensive cybersecurity capabilities are emerging across all frontier labs, and none exceeds a C+ grade in safety governance according to FLI [[s17]] [[s1]]."
@@ -2899,13 +2899,13 @@
   "fr": "Non documenté",
   "tr": "Not documented"
  },
- "f0d918b5feaaac2d": {
-  "fr": "946 k",
-  "tr": "946k"
- },
  "f10e65f6a5844317": {
   "fr": "Vectara, Hallucination Leaderboard (HHEM)",
   "tr": "Vectara, Hallucination Leaderboard (HHEM)"
+ },
+ "f11df6dbd28c88da": {
+  "fr": "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 244 k vues (AI Search)",
+  "tr": "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 244k views (AI Search)"
  },
  "f13e3bb1a90966c6": {
   "fr": "3 B",
