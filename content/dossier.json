@@ -471,6 +471,77 @@
       ]
     },
     {
+      "id": "perception",
+      "title": "Ce qu'en disent les développeurs",
+      "for": [
+        "public",
+        "entreprises"
+      ],
+      "watch": [
+        "Hacker News",
+        "Forums de développeurs",
+        "Chaînes YouTube des éditeurs"
+      ],
+      "blocks": [
+        {
+          "type": "why",
+          "text": "Les développeurs testent les nouveaux modèles dès leur sortie ; leurs discussions signalent tôt les forces, les régressions et les controverses."
+        },
+        {
+          "type": "bar_chart",
+          "auto": "hn_chart",
+          "title": "Articles marquants sur Hacker News, 30 derniers jours",
+          "max": 10,
+          "ticks": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10
+          ],
+          "bars": [],
+          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
+        },
+        {
+          "type": "reading",
+          "text": "Ce graphique mesure l'attention, pas l'approbation : une panne ou une controverse génère autant de discussions qu'un lancement réussi. L'intérêt tient surtout à l'évolution d'une semaine à l'autre et aux sujets qui dominent."
+        },
+        {
+          "type": "audiences",
+          "public": "Les discussions de développeurs annoncent souvent les changements qui toucheront ensuite les applications grand public.",
+          "entreprises": "Les régressions et problèmes de quotas signalés sur Hacker News précèdent souvent leur reconnaissance officielle.",
+          "institutions": "Ce public reste majoritairement anglophone et nord-américain ; il ne représente pas les utilisateurs européens."
+        },
+        {
+          "type": "details",
+          "summary": "Pour aller plus loin : les articles les plus discutés de la semaine",
+          "blocks": [
+            {
+              "type": "table",
+              "auto": "hn_top",
+              "headers": [
+                "Assistant",
+                "Article (lien vers la discussion)",
+                "Points",
+                "Commentaires"
+              ],
+              "rows": []
+            },
+            {
+              "type": "list",
+              "items": [
+                "Sont retenus les articles dont le titre mentionne l'assistant ou son éditeur ; un même article peut compter pour plusieurs assistants.",
+                "Des filtres écartent les homonymes courants (protocole Gemini, cryptomonnaie Gemini, Claude Shannon).",
+                "Pour Meta, le relevé inclut Llama : Muse Spark reste encore peu discuté sous son propre nom.",
+                "Reddit n'est pas suivi : son API est fermée aux nouveaux accès sans approbation manuelle depuis novembre 2025."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "acteurs",
       "title": "Au-delà des six : les autres acteurs",
       "for": [
@@ -1071,46 +1142,17 @@
           "type": "bar_chart",
           "auto": "status_chart",
           "title": "Incidents déclarés par mois, moyenne récente",
-          "max": 50,
+          "max": 10,
           "ticks": [
             0,
-            10,
-            20,
-            30,
-            40,
-            50
+            2,
+            4,
+            6,
+            8,
+            10
           ],
-          "bars": [
-            {
-              "label": "ChatGPT",
-              "sublabel": "25 incidents sur 17 jours, historique partiel",
-              "value": 45.1,
-              "display": "45,1",
-              "vendor": "gpt"
-            },
-            {
-              "label": "Claude",
-              "sublabel": "50 incidents sur 67 jours, historique partiel",
-              "value": 22.5,
-              "display": "22,5",
-              "vendor": "claude"
-            },
-            {
-              "label": "Grok",
-              "sublabel": "6 incidents sur 90 jours",
-              "value": 2.0,
-              "display": "2,0",
-              "vendor": "grok"
-            },
-            {
-              "label": "Gemini",
-              "sublabel": "0 incident sur 90 jours",
-              "value": 0.0,
-              "display": "0,0",
-              "vendor": "gemini"
-            }
-          ],
-          "caption": "Nombre moyen d'incidents déclarés par mois sur les pages de statut officielles, calculé sur les 90 derniers jours ou sur la période disponible quand l'historique publié est plus court ; relevé du 27/9/2026. Chaque éditeur choisit ce qu'il déclare et avec quelle granularité : un nombre élevé peut refléter une transparence plus grande autant qu'une fiabilité moindre. Google : incidents Google Cloud liés à Gemini et Vertex AI, sans l'application grand public."
+          "bars": [],
+          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
         },
         {
           "type": "table",
@@ -1123,56 +1165,7 @@
             "Durée cumulée",
             "Couverture et source"
           ],
-          "rows": [
-            [
-              "Claude",
-              "50",
-              "22,5",
-              "20",
-              "212 h",
-              "partiel, depuis le 22/7/2026 [[s87]]"
-            ],
-            [
-              "ChatGPT",
-              "25",
-              "45,1",
-              "3",
-              "53 h",
-              "partiel, depuis le 10/9/2026 [[s88]]"
-            ],
-            [
-              "Gemini",
-              "0",
-              "0,0",
-              "0",
-              "0 h",
-              "complet sur 90 jours [[s89]]"
-            ],
-            [
-              "Grok",
-              "6",
-              "2,0",
-              "3",
-              "7 h",
-              "complet sur 90 jours [[s91]]"
-            ],
-            [
-              "Muse (Meta)",
-              "Pas de page de statut publique",
-              "",
-              "",
-              "",
-              ""
-            ],
-            [
-              "Mistral Vibe",
-              "Lecture impossible cette semaine",
-              "",
-              "",
-              "",
-              "[[s90]]"
-            ]
-          ],
+          "rows": [],
           "vendors": [
             {
               "id": "claude",
@@ -1216,9 +1209,10 @@
             {
               "id": "mistral",
               "label": "Mistral Vibe",
-              "kind": "statuspage",
+              "kind": "none",
               "url": "https://status.mistral.ai",
-              "src_ref": "[[s90]]"
+              "src_ref": "[[s90]]",
+              "note": "Page Checkly sans flux public exploitable ; incidents générés automatiquement par des sondes"
             }
           ]
         },
@@ -1242,6 +1236,7 @@
                 "Les pages Statuspage (Anthropic, Mistral) exposent les 50 derniers incidents environ ; le pipeline les accumule chaque semaine pour allonger l'historique.",
                 "OpenAI utilise incident.io, dont l'interface compatible renvoie un historique tronqué.",
                 "xAI publie un flux RSS qui répète chaque panne pour chaque composant touché ; le pipeline regroupe les entrées de même titre ouvertes dans la même heure, et écarte les incidents de test. xAI ne renseigne pas la gravité : une panne dont le titre signale une indisponibilité est comptée comme majeure.",
+                "Mistral publie une page Checkly : les incidents y sont ouverts automatiquement par des sondes, parfois pour moins d'une minute, et aucun flux public documenté ne permet de les collecter.",
                 "Quand l'historique publié couvre moins de 90 jours, la moyenne mensuelle est calculée sur la période disponible, ce qui la rend plus fragile.",
                 "La durée cumulée additionne la durée de chaque incident ; des incidents simultanés sont comptés deux fois.",
                 "Meta ne publie pas de page de statut pour Meta AI ou Muse."
@@ -2144,6 +2139,12 @@
       "items": [
         "Nouvelle section Disponibilité, alimentée chaque semaine par les pages de statut officielles des éditeurs."
       ]
+    },
+    {
+      "date": "2026-09-27",
+      "items": [
+        "Nouvelle section « Ce qu'en disent les développeurs », alimentée chaque semaine par Hacker News."
+      ]
     }
   ],
   "sources": {
@@ -2490,6 +2491,10 @@
     "s91": {
       "title": "xAI, flux RSS de la page de statut",
       "url": "https://status.x.ai/feed.xml"
+    },
+    "s92": {
+      "title": "Hacker News Search API (Algolia)",
+      "url": "https://hn.algolia.com/api"
     }
   },
   "keypoints": [
@@ -2545,6 +2550,7 @@
       "intro": "Qui utilise quoi, et quels acteurs comptent au-delà des six assistants étudiés.",
       "sections": [
         "usages",
+        "perception",
         "acteurs"
       ]
     },

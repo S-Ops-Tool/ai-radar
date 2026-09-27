@@ -13,6 +13,7 @@ import json
 import re
 import urllib.request
 
+import hn_update
 import status_update
 from pathlib import Path
 
@@ -189,6 +190,11 @@ def main():
                 status_update.update_status(sec["blocks"], state, notes, cfg)
             except Exception as e:
                 errors.append(f"statuts : {e}")
+        if any(b.get("auto") == "hn_chart" for b in sec["blocks"]):
+            try:
+                hn_update.update_hn(sec["blocks"], state, notes)
+            except Exception as e:
+                errors.append(f"hacker news : {e}")
         for block in sec["blocks"]:
             auto = block.get("auto")
             try:

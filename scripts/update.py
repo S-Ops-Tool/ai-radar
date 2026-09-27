@@ -145,22 +145,33 @@ def validate_section(old, new):
     validate_blocks(new["blocks"])
 
 
+def auto_key(b):
+    if b.get("auto"):
+        return b["auto"]
+    if b.get("type") == "details":
+        for x in b.get("blocks", []):
+            if x.get("auto"):
+                return x["auto"]
+    return None
+
+
 def protect(old, new):
-    """Keep the watch list and data-driven blocks exactly as they were."""
+    """Keep the watch list, audience tags and data-driven blocks (including folds that hold them) exactly as they were."""
     new["watch"] = old.get("watch", [])
     if old.get("for"):
         new["for"] = old["for"]
-    autos = {b["auto"]: b for b in old["blocks"] if b.get("auto")}
+    autos = {auto_key(b): b for b in old["blocks"] if auto_key(b)}
     blocks, placed = [], set()
     for b in new["blocks"]:
-        key = b.get("auto")
-        if key in autos:
+        key = auto_key(b)
+        if key in autos and key not in placed:
             blocks.append(autos[key])
             placed.add(key)
         elif not key:
             blocks.append(b)
     for i, b in enumerate(old["blocks"]):
-        if b.get("auto") and b["auto"] not in placed:
+        k = auto_key(b)
+        if k and k not in placed:
             blocks.insert(min(i, len(blocks)), b)
     new["blocks"] = blocks
     return new

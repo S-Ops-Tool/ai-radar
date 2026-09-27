@@ -10,6 +10,7 @@ OUT_DIR = ROOT / "site"
 CSS = (ROOT / "scripts" / "style.css").read_text(encoding="utf-8")
 STATIC = {"pipeline": (ROOT / "scripts" / "pipeline.svg").read_text(encoding="utf-8")}
 
+LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
 REF = re.compile(r"\s*\[\[(s\d+[a-z]?)\]\]")
 MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
           "août", "septembre", "octobre", "novembre", "décembre"]
@@ -34,7 +35,8 @@ def txt(s, sources):
             return ""
         return f'<sup><a href="#{sid}">{src_num(sid)}</a></sup>'
 
-    return REF.sub(rep, out)
+    out = REF.sub(rep, out)
+    return LINK.sub(lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', out)
 
 
 def band_html(band):
