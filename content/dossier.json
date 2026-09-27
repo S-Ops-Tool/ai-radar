@@ -1071,17 +1071,39 @@
           "type": "bar_chart",
           "auto": "status_chart",
           "title": "Incidents déclarés sur 90 jours",
-          "max": 10,
+          "max": 60,
           "ticks": [
             0,
-            2,
-            4,
-            6,
-            8,
-            10
+            12,
+            24,
+            36,
+            48,
+            60
           ],
-          "bars": [],
-          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
+          "bars": [
+            {
+              "label": "Claude",
+              "sublabel": "dont 20 majeurs ou critiques",
+              "value": 50,
+              "display": "50",
+              "vendor": "claude"
+            },
+            {
+              "label": "ChatGPT",
+              "sublabel": "dont 3 majeurs ou critiques",
+              "value": 25,
+              "display": "25",
+              "vendor": "gpt"
+            },
+            {
+              "label": "Gemini",
+              "sublabel": "dont 0 majeur ou critique",
+              "value": 0,
+              "display": "0",
+              "vendor": "gemini"
+            }
+          ],
+          "caption": "Incidents déclarés sur les pages de statut officielles au cours des 90 derniers jours, relevé du 27/9/2026. Chaque éditeur choisit ce qu'il déclare et avec quelle granularité : un nombre élevé peut refléter une transparence plus grande autant qu'une fiabilité moindre. Google : incidents Google Cloud liés à Gemini et Vertex AI, sans l'application grand public."
         },
         {
           "type": "table",
@@ -1093,7 +1115,50 @@
             "Durée cumulée",
             "Couverture et source"
           ],
-          "rows": [],
+          "rows": [
+            [
+              "Claude",
+              "50",
+              "20",
+              "212 h",
+              "depuis le 22/7/2026 [[s87]]"
+            ],
+            [
+              "ChatGPT",
+              "25",
+              "3",
+              "53 h",
+              "depuis le 10/9/2026 [[s88]]"
+            ],
+            [
+              "Gemini",
+              "0",
+              "0",
+              "0 h",
+              "complet sur 90 jours [[s89]]"
+            ],
+            [
+              "Grok",
+              "Lecture impossible cette semaine",
+              "",
+              "",
+              "[[s91]]"
+            ],
+            [
+              "Muse (Meta)",
+              "Pas de page de statut publique",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Mistral Vibe",
+              "Lecture impossible cette semaine",
+              "",
+              "",
+              "[[s90]]"
+            ]
+          ],
           "vendors": [
             {
               "id": "claude",
