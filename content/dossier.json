@@ -720,7 +720,7 @@
               "vendor": "gpt"
             }
           ],
-          "caption": "Puissance IT en service, estimée par Epoch AI (données CC-BY, relevé de septembre 2026). Epoch suit 93 sites totalisant 13,5 GW de puissance IT ; propriétaire et utilisateurs confirmés selon Epoch [[s5]].",
+          "caption": "Puissance IT en service, estimée par Epoch AI (données CC-BY, relevé de septembre 2026). Les 73 sites en service suivis totalisent 13,5 GW ; propriétaire et utilisateurs confirmés selon Epoch [[s5]].",
           "auto": "epoch_datacenters",
           "top": 5
         },
