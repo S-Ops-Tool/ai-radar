@@ -1,0 +1,3090 @@
+{
+ "00f88ddb56e4c6c4": {
+  "fr": "Plus de 7 millions de livres téléchargés depuis des bibliothèques pirates. Le juge a considéré l'entraînement comme un usage transformatif, mais pas la conservation des copies piratées [[s30]] [[s31]].",
+  "tr": "More than 7 million books downloaded from pirate libraries. The judge considered training a transformative use, but not the retention of pirated copies [[s30]] [[s31]]."
+ },
+ "013434792a236dc3": {
+  "fr": "Aucun chiffre par requête trouvé",
+  "tr": "No per-request figure found"
+ },
+ "014c8317f33d4bd3": {
+  "fr": "Entraînement sur les conversations (offre grand public)",
+  "tr": "Training on conversations (consumer offering)"
+ },
+ "02578c9b4f197607": {
+  "fr": "X Premium 8 $, SuperGrok 30 $",
+  "tr": "X Premium $8, SuperGrok $30"
+ },
+ "029f645c2a4247fb": {
+  "fr": "Page de statut Mistral AI",
+  "tr": "Mistral AI status page"
+ },
+ "02aaebdc0ee6e197": {
+  "fr": "Le dossier est désormais disponible en français, anglais, espagnol, allemand et italien ; les traductions sont produites par Claude et relues avec chaque mise à jour.",
+  "tr": "The report is now available in French, English, Spanish, German and Italian; the translations are produced by Claude and reviewed with each update."
+ },
+ "02b1b60955c8aea5": {
+  "fr": "Exception américaine au droit d'auteur, invoquée par les éditeurs pour justifier l'entraînement sur des œuvres protégées.",
+  "tr": "US copyright exception, invoked by publishers to justify training on protected works."
+ },
+ "0377e819f92cb2e1": {
+  "fr": "[Jev will 10x your Claude Code (Here's How)](https://www.youtube.com/watch?v=tTnUcSj-QPA), 639 k vues (Jay E | RoboNuggets)",
+  "tr": "[Jev will 10x your Claude Code (Here's How)](https://www.youtube.com/watch?v=tTnUcSj-QPA), 639K views (Jay E | RoboNuggets)"
+ },
+ "03ef8dc5066f5870": {
+  "fr": "The Professor, entraînement sur les conversations par défaut",
+  "tr": "The Professor, default training on conversations"
+ },
+ "049841e6c26c407f": {
+  "fr": "Un indice composite résume des tests très différents en un seul chiffre. Deux modèles proches au classement peuvent diverger nettement sur une tâche précise ; l'essai sur ses propres cas d'usage reste le test décisif.",
+  "tr": "A composite index summarizes very different tests into a single figure. Two models close in ranking can diverge markedly on a specific task; testing on one's own use cases remains the decisive test."
+ },
+ "050eedf9ad0626da": {
+  "fr": "GLM-5.3 (max)",
+  "tr": "GLM-5.3 (max)"
+ },
+ "055feaf31f6523df": {
+  "fr": "0 incident sur 90 jours",
+  "tr": "0 incidents over 90 days"
+ },
+ "05960ec6aafa7779": {
+  "fr": "Au-delà des annonces des éditeurs, des tests indépendants mesurent chaque semaine le raisonnement, les connaissances, les mathématiques et le code des modèles.",
+  "tr": "Beyond publishers' announcements, independent tests measure models' reasoning, knowledge, mathematics and code every week."
+ },
+ "06746deaaea65f0d": {
+  "fr": "Data Center Knowledge, FLOPS vs mégawatts 2026",
+  "tr": "Data Center Knowledge, FLOPS vs megawatts 2026"
+ },
+ "067951cfc63daca8": {
+  "fr": "Pour aller plus loin : comment l'audience est mesurée",
+  "tr": "To go further: how audience is measured"
+ },
+ "0701e0eec0ef5398": {
+  "fr": "Chaînes YouTube officielles des éditeurs",
+  "tr": "Official YouTube channels of the publishers"
+ },
+ "0733bc4a49169faf": {
+  "fr": "Le 1,2 milliard d'utilisateurs mensuels de Meta AI inclut des personnes qui l'ont utilisé dans WhatsApp ou Instagram sans l'avoir choisi [[s57]].",
+  "tr": "Meta AI's 1.2 billion monthly users includes people who used it in WhatsApp or Instagram without having chosen it [[s57]]."
+ },
+ "0798e17836b70801": {
+  "fr": "SuperGrok Heavy 300 $",
+  "tr": "SuperGrok Heavy $300"
+ },
+ "0800a06630860899": {
+  "fr": "Pour un rapport ESRS E1, ces chiffres par requête servent peu sans volume d'usage ni facteur d'émission localisé. Le scope 3 lié aux assistants IA d'une entreprise reste aujourd'hui une estimation.",
+  "tr": "For an ESRS E1 report, these per-request figures are of limited use without usage volume or a localized emission factor. The scope 3 emissions linked to a company's AI assistants remain today an estimate."
+ },
+ "08229d9cc4e2157f": {
+  "fr": "Accès programmatique à un modèle, facturé à l'usage, utilisé par les entreprises pour intégrer l'IA dans leurs propres outils.",
+  "tr": "Programmatic access to a model, billed by usage, used by businesses to integrate AI into their own tools."
+ },
+ "08dc22c256cf3b53": {
+  "fr": "Workspace exclu de l'entraînement [[s76]]",
+  "tr": "Workspace excluded from training [[s76]]"
+ },
+ "09172f52ea8793c8": {
+  "fr": "Choix explicite demandé depuis septembre 2025 ; les sources divergent sur la position proposée par défaut [[s76]] [[s77]]",
+  "tr": "Explicit choice requested since September 2025; sources disagree on the default position offered [[s76]] [[s77]]"
+ },
+ "09247617bd584274": {
+  "fr": "25 vidéos retenues",
+  "tr": "25 videos selected"
+ },
+ "0a54547bdb142dee": {
+  "fr": "Vectara HHEM, classement du 22 septembre 2026 : part des résumés contenant une information absente du document source [[s55]]. Points gris : tous les modèles de l'éditeur présents au classement ; point coloré : modèle phare le plus récent testé, avec sa date de sortie. Colonne de droite : dernier modèle phare de l'éditeur et écart avec le modèle testé. Ce test mesure la fidélité en résumé ; un modèle plus récent peut y faire moins bien qu'un ancien.",
+  "tr": "Vectara HHEM, ranking as of September 22, 2026: share of summaries containing information absent from the source document [[s55]]. Gray points: all of the vendor's models present in the ranking; colored point: latest flagship model tested, with its release date. Right-hand column: vendor's latest flagship model and the gap with the tested model. This test measures faithfulness in summarization; a newer model may perform worse on it than an older one."
+ },
+ "0ab59cb96804bec8": {
+  "fr": "Entrée",
+  "tr": "Input"
+ },
+ "0ae8dbfd1a09ec2a": {
+  "fr": "Les modèles de raisonnement changent l'échelle : sur une même requête courte, l'écart entre modèles dépasse un facteur 200 [[s29]].",
+  "tr": "Reasoning models change the scale: for the same short request, the gap between models exceeds a factor of 200 [[s29]]."
+ },
+ "0cb62e5727ccc19b": {
+  "fr": "National Law Review, Anthropic et Meta",
+  "tr": "National Law Review, Anthropic and Meta"
+ },
+ "0d07b49e718b8f56": {
+  "fr": "Pour aller plus loin : prix de l'API par million de tokens",
+  "tr": "To go further: API price per million tokens"
+ },
+ "0d81d49c4ba81fdc": {
+  "fr": "759 articles, 13 166 commentaires",
+  "tr": "759 articles, 13,166 comments"
+ },
+ "0da23025598af783": {
+  "fr": "[Meta AI賭對了！Muse Agent能幫你賺錢、殺價、砍帳單？股價大漲背後的秘密｜哈佛姐夢遊矽谷](https://www.youtube.com/watch?v=MpiAqsEgWDo), 288 k vues (哈佛姐夢遊矽谷 AliceInSiliconWonderla)",
+  "tr": "[Meta AI賭對了！Muse Agent能幫你賺錢、殺價、砍帳單？股價大漲背後的秘密｜哈佛姐夢遊矽谷](https://www.youtube.com/watch?v=MpiAqsEgWDo), 288k views (哈佛姐夢遊矽谷 AliceInSiliconWonderla)"
+ },
+ "0dc095369d5525e2": {
+  "fr": "Similarweb, part du trafic web des IA génératives, édition d'août 2026",
+  "tr": "Similarweb, generative AI web traffic share, August 2026 edition"
+ },
+ "0dc5ab28509c4828": {
+  "fr": "La plupart des comparatifs chiffrés viennent d'éditeurs d'outils multi-modèles ou de blogs spécialisés ; peu proviennent de publications revues par des pairs. Les ordres de grandeur sont plus fiables que les décimales.",
+  "tr": "Most quantitative comparisons come from multi-model tool publishers or specialized blogs; few come from peer-reviewed publications. Orders of magnitude are more reliable than decimal figures."
+ },
+ "0e76631d37d82144": {
+  "fr": "Momentic, parts de marché des assistants IA (Similarweb), août 2026",
+  "tr": "Momentic, AI assistant market shares (Similarweb), August 2026"
+ },
+ "0f5534e0ece5c46a": {
+  "fr": "AI Business Weekly, parts de marché 2026 et méthodes de comptage",
+  "tr": "AI Business Weekly, 2026 market shares and counting methods"
+ },
+ "0fc7732af5811493": {
+  "fr": "Sur OpenRouter, principale plateforme d'accès multi-modèles, les modèles ouverts chinois représentaient environ 61 % des tokens consommés en mai 2026 [[s70]]. OpenRouter ne mesure qu'une partie du marché : ni l'usage direct des API, ni l'hébergement interne [[s71]].",
+  "tr": "On OpenRouter, the leading multi-model access platform, Chinese open models accounted for around 61% of tokens consumed in May 2026 [[s70]]. OpenRouter only measures part of the market: neither direct API usage nor internal hosting [[s71]]."
+ },
+ "0fdc55b545270104": {
+  "fr": "Hacker News Search API (Algolia)",
+  "tr": "Hacker News Search API (Algolia)"
+ },
+ "105ac7602214d106": {
+  "fr": "Signalements d'utilisateurs (StatusGator, Downdetector)",
+  "tr": "User reports (StatusGator, Downdetector)"
+ },
+ "10a1f490a67fdc89": {
+  "fr": "Oriente vers des modèles tiers sans liste publiée figée [[s66]]",
+  "tr": "Directs to third-party models without a fixed published list [[s66]]"
+ },
+ "10ccaac641609d6a": {
+  "fr": "Gemini 3.1 Pro",
+  "tr": "Gemini 3.1 Pro"
+ },
+ "110763ade437b2ca": {
+  "fr": "Contrats entreprise",
+  "tr": "Enterprise contracts"
+ },
+ "11d1ac2e0d03d640": {
+  "fr": "Team 25 $ à 125 $ par siège",
+  "tr": "Team plan $25 to $125 per seat"
+ },
+ "11f3242118ff2add": {
+  "fr": "Microsoft",
+  "tr": "Microsoft"
+ },
+ "127c18c593295d99": {
+  "fr": "MIT Sloan ME, scores de l'index 2026",
+  "tr": "MIT Sloan ME, 2026 index scores"
+ },
+ "12c08941783b9a22": {
+  "fr": "[Mistral](https://www.youtube.com/@MistralAIofficial)",
+  "tr": "[Mistral](https://www.youtube.com/@MistralAIofficial)"
+ },
+ "12c2ef9a4f93baee": {
+  "fr": "Pages tarifaires officielles des éditeurs",
+  "tr": "Publishers' official pricing pages"
+ },
+ "133b5519a47eff75": {
+  "fr": "Directive européenne sur l'efficacité énergétique, déclarations des centres de données",
+  "tr": "European Energy Efficiency Directive, data center disclosures"
+ },
+ "135dcaaeaa28b28b": {
+  "fr": "L'actualité d'un assistant dépend de la source qu'il consulte au moment de la question.",
+  "tr": "How up to date an assistant's information is depends on the source it consults at the time of the question."
+ },
+ "13b99c5d9ed69282": {
+  "fr": "Brightlio, 10 plus grands centres IA",
+  "tr": "Brightlio, 10 largest AI data centers"
+ },
+ "13eccb1604105573": {
+  "fr": "Pour aller plus loin : prix et vitesse, y compris les modèles ouverts",
+  "tr": "To go further: price and speed, including open models"
+ },
+ "13fe847cc63b4fa2": {
+  "fr": "xAI publie un flux RSS qui répète chaque panne pour chaque composant touché ; le pipeline regroupe les entrées de même titre ouvertes dans la même heure, et écarte les incidents de test. xAI ne renseigne pas la gravité : une panne dont le titre signale une indisponibilité est comptée comme majeure.",
+  "tr": "xAI publishes an RSS feed that repeats each outage for every affected component; the pipeline groups entries with the same title opened within the same hour, and excludes test incidents. xAI does not indicate severity: an outage whose title reports unavailability is counted as major."
+ },
+ "143c0ea01a3ffa8d": {
+  "fr": "Mémorisation de paroles de chansons (GEMA, Munich). Procès du New York Times [[s33]].",
+  "tr": "Memorization of song lyrics (GEMA, Munich). New York Times lawsuit [[s33]]."
+ },
+ "14526e21de3ea2ca": {
+  "fr": "partiel, depuis le 10/9/2026 [[s88]]",
+  "tr": "partial, since 10/9/2026 [[s88]]"
+ },
+ "149d969b258b98f4": {
+  "fr": "Le prix affiché de DeepSeek V4 Flash est de 0,14 $ par million de tokens en entrée et 0,28 $ en sortie [[s74]].",
+  "tr": "The listed price of DeepSeek V4 Flash is $0.14 per million input tokens and $0.28 per million output tokens [[s74]]."
+ },
+ "1559fd2fc7595748": {
+  "fr": "20 $ [[s42]]",
+  "tr": "$20 [[s42]]"
+ },
+ "156f66cc4ab551a0": {
+  "fr": "La licence de Llama 4 retire les droits multimodaux aux développeurs établis dans l'UE, tout en exemptant les utilisateurs finaux des produits qui l'intègrent [[s67]].",
+  "tr": "The Llama 4 license withdraws multimodal rights from developers established in the EU, while exempting end users of products that incorporate it [[s67]]."
+ },
+ "15888d00576e47f6": {
+  "fr": "Un éditeur qui loue son calcul dépend de ses fournisseurs, ce qui pèse sur ses prix et sa disponibilité.",
+  "tr": "A publisher that rents its computing power depends on its suppliers, which affects its prices and availability."
+ },
+ "15d39a6053cf3072": {
+  "fr": "Souveraineté, conformité, dépendance technologique, sécurité publique ?",
+  "tr": "Sovereignty, compliance, technological dependency, public safety?"
+ },
+ "15d99ae02afa959b": {
+  "fr": "[OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005](https://news.ycombinator.com/item?id=49801324)",
+  "tr": "[OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005](https://news.ycombinator.com/item?id=49801324)"
+ },
+ "161640a88824af15": {
+  "fr": "TIME, classement sécurité juillet 2026",
+  "tr": "TIME, July 2026 safety ranking"
+ },
+ "16b70311c24271f5": {
+  "fr": "Pour Meta, le relevé inclut Llama : Muse Spark reste encore peu discuté sous son propre nom.",
+  "tr": "For Meta, the record includes Llama: Muse Spark is still rarely discussed under its own name."
+ },
+ "177530de114e3c2f": {
+  "fr": "ChatGPT garde la plus large audience, mais sa part des visites web a perdu près de 18 points en un an au profit de Gemini et Claude ; depuis mai, elle remonte légèrement [[s96]].",
+  "tr": "ChatGPT retains the largest audience, but its share of web visits has lost nearly 18 points in a year to the benefit of Gemini and Claude; since May, it has recovered slightly [[s96]]."
+ },
+ "177b86455386e1bc": {
+  "fr": "Pour les données sensibles, l'hébergement interne des poids écarte le risque juridictionnel des API hébergées en Chine [[s71]].",
+  "tr": "For sensitive data, internal hosting of weights removes the jurisdictional risk of APIs hosted in China [[s71]]."
+ },
+ "17c58afe4f04f60d": {
+  "fr": "Prix mensuels américains relevés fin septembre 2026 par un agrégateur à partir des pages des éditeurs [[s66]] ; les prix en francs suisses et en euros diffèrent et se vérifient sur chaque page officielle. xAI ne précise pas quelle offre donne accès à Grok 4.7 [[s66]].",
+  "tr": "US monthly prices recorded at the end of September 2026 by an aggregator based on providers' pages [[s66]]; prices in Swiss francs and euros differ and can be checked on each official page. xAI does not specify which plan gives access to Grok 4.7 [[s66]]."
+ },
+ "17fc26926a9caac5": {
+  "fr": "TechCrunch, Muse à Meta Connect",
+  "tr": "TechCrunch, Muse à Meta Connect"
+ },
+ "1830905e8f132ed4": {
+  "fr": "La capacité à trouver et exploiter des failles logicielles a émergé des progrès généraux en code et en raisonnement, sans entraînement dédié [[s17]]. Cette propriété concerne tous les laboratoires de pointe.",
+  "tr": "The ability to find and exploit software vulnerabilities emerged from general progress in code and reasoning, without dedicated training [[s17]]. This property applies to all leading labs."
+ },
+ "1947a6c77280f455": {
+  "fr": "ETH Zurich, lancement d'Apertus",
+  "tr": "ETH Zurich, Apertus launch"
+ },
+ "194d6ecc01a795f3": {
+  "fr": "Infosecurity Magazine, Mythos et GPT-Cyber",
+  "tr": "Infosecurity Magazine, Mythos and GPT-Cyber"
+ },
+ "197231b54f4ce3ed": {
+  "fr": "Agents sponsorisés dans ChatGPT",
+  "tr": "Sponsored agents in ChatGPT"
+ },
+ "19defdadd39bf3f2": {
+  "fr": "SERP Forge, rapport 2026 sur la confidentialité des assistants",
+  "tr": "SERP Forge, 2026 report on assistant privacy"
+ },
+ "1a4d697ce520dfe6": {
+  "fr": "Abonnements et API, sans publicité",
+  "tr": "Subscriptions and API, no advertising"
+ },
+ "1a5e1bb2fe9cbf15": {
+  "fr": "HHEM",
+  "tr": "HHEM"
+ },
+ "1a7daffc8fec0bb4": {
+  "fr": "Équipe",
+  "tr": "Team"
+ },
+ "1a9c04bc51df6e56": {
+  "fr": "Les limites d'usage et les pannes reflètent en partie la capacité de calcul de l'éditeur.",
+  "tr": "Usage limits and outages partly reflect the publisher's computing capacity."
+ },
+ "1acbf48e569f764d": {
+  "fr": "Vues des vidéos de la semaine citant l'assistant, en millions",
+  "tr": "Views of the week's videos mentioning the assistant, in millions"
+ },
+ "1acd282e1c76a8e4": {
+  "fr": "Pour aller plus loin : incidents et cas particuliers",
+  "tr": "Further reading: incidents and special cases"
+ },
+ "1b7e94b08b234e74": {
+  "fr": "ACV",
+  "tr": "LCA"
+ },
+ "1b7ee903bc93f323": {
+  "fr": "YouTube Data API v3",
+  "tr": "YouTube Data API v3"
+ },
+ "1ba5baa92a2317d0": {
+  "fr": "DeepSeek stocke les données en Chine ; l'application a été interdite en Italie et la Corée du Sud a ordonné la destruction de données transférées [[s75]].",
+  "tr": "DeepSeek stores data in China; the app has been banned in Italy and South Korea has ordered the destruction of transferred data [[s75]]."
+ },
+ "1c41d7ec1a47447a": {
+  "fr": "Méthode et périmètre",
+  "tr": "Method and scope"
+ },
+ "1c697daa6069c18f": {
+  "fr": "[Claude Opus 5.5](https://news.ycombinator.com/item?id=49803892)",
+  "tr": "[Claude Opus 5.5](https://news.ycombinator.com/item?id=49803892)"
+ },
+ "1c9fbd41925a6d18": {
+  "fr": "Artificial Analysis, AA-Omniscience",
+  "tr": "Artificial Analysis, AA-Omniscience"
+ },
+ "1d0b8361622f2527": {
+  "fr": "[Llama.cpp Under the Hood](https://news.ycombinator.com/item?id=49814172)",
+  "tr": "[Llama.cpp Under the Hood](https://news.ycombinator.com/item?id=49814172)"
+ },
+ "1db3bc53a9078ea7": {
+  "fr": "Une réponse sans source se vérifie ; fournir le document de référence réduit nettement les erreurs.",
+  "tr": "An answer without a source can be checked; providing the reference document significantly reduces errors."
+ },
+ "1e40c2bbfed12ef4": {
+  "fr": "Pour aller plus loin : chronologie, défense et autres acteurs",
+  "tr": "To go further: timeline, defense and other players"
+ },
+ "1e4693e6e6ef43c0": {
+  "fr": "Ordre de grandeur : environ 29 milliards de dollars d'investissement par gigawatt [[s11]].",
+  "tr": "Order of magnitude: about $29 billion in investment per gigawatt [[s11]]."
+ },
+ "1f9216135b8b91d3": {
+  "fr": "Correction : le classement Vectara HHEM, consulté à la source, place Claude derrière GPT-6 et Gemini 3.1 Pro en résumé de documents. La matrice et la section Précision reprenaient à tort des comparatifs commerciaux [[s55]].",
+  "tr": "Correction: the Vectara HHEM ranking, checked at the source, places Claude behind GPT-6 and Gemini 3.1 Pro in document summarization. The matrix and the Accuracy section wrongly reused commercial comparisons [[s55]]."
+ },
+ "200fbf6f77795aec": {
+  "fr": "La ligne de partage sépare les offres personnelles, gratuites ou payantes, des offres professionnelles : 9 des 10 assistants les plus utilisés entraînent leurs modèles sur les conversations par défaut, et seules les offres entreprise et l'API les excluent de façon fiable [[s75]].",
+  "tr": "The dividing line separates personal offers, free or paid, from professional offers: 9 of the 10 most used assistants train their models on conversations by default, and only enterprise offers and the API reliably exclude them [[s75]]."
+ },
+ "212ff2e94b2ca8fe": {
+  "fr": "Disponibilité : les pannes déclarées",
+  "tr": "Availability: reported outages"
+ },
+ "21593b807a966ea1": {
+  "fr": "MCP",
+  "tr": "MCP"
+ },
+ "220c092f0f38d0b6": {
+  "fr": "Neuf entreprises évaluées sur 37 indicateurs, preuves collectées jusqu'au 3 juin 2026 [[s1]] [[s2]]. Le FLI est une organisation militante centrée sur les risques de l'IA.",
+  "tr": "Nine companies assessed on 37 indicators, evidence collected up to 3 June 2026 [[s1]] [[s2]]. The FLI is an advocacy organization focused on AI risks."
+ },
+ "221831f04202d034": {
+  "fr": "Hugging Face, téléchargements",
+  "tr": "Hugging Face, downloads"
+ },
+ "2219f1f1c360fe79": {
+  "fr": "Web, code (Codex), outils bureautiques",
+  "tr": "Web, code (Codex), office tools"
+ },
+ "2224c78678683163": {
+  "fr": "OfficeChai, rapport Menlo Ventures sur l'API en entreprise",
+  "tr": "OfficeChai, Menlo Ventures report on enterprise API"
+ },
+ "223c8b53edb84d13": {
+  "fr": "Abonnements, publicité sur les offres gratuites",
+  "tr": "Subscriptions, advertising on free tiers"
+ },
+ "22692277ad2a4863": {
+  "fr": "Pour aller plus loin : les articles les plus discutés de la semaine",
+  "tr": "To go further: the most discussed articles of the week"
+ },
+ "22735f6e180c1e1d": {
+  "fr": "Maîtrise du calcul",
+  "tr": "Compute control"
+ },
+ "22ad8e709d83abde": {
+  "fr": "sept.",
+  "tr": "Sept."
+ },
+ "22ec175181a6d37b": {
+  "fr": "Taux d'hallucination du meilleur modèle de chaque éditeur présent au classement Vectara, en %, à la fin de chaque mois ; 8 mois établis avec la méthode actuelle [[s55]]. Le meilleur modèle d'un éditeur est souvent un petit modèle, plus fidèle en résumé que ses modèles phares. Les mois antérieurs à un changement d'évaluateur ou de jeu de documents sont écartés : leurs chiffres ne sont pas comparables.",
+  "tr": "Hallucination rate of the best model from each publisher on the Vectara leaderboard, in %, at the end of each month; 8 months established with the current method [[s55]]. A publisher's best model is often a small model, more faithful in summarization than its flagship models. Months preceding a change in evaluator or document set are excluded: their figures are not comparable."
+ },
+ "22ef6096401d0ca7": {
+  "fr": "Puissance de calcul : qui possède, qui loue",
+  "tr": "Computing power: who owns, who leases"
+ },
+ "2307da27c94476e1": {
+  "fr": "L'usage professionnel se concentre sur trois fournisseurs d'API ; Claude domine le code.",
+  "tr": "Professional usage is concentrated among three API providers; Claude dominates coding."
+ },
+ "23feeab1d00d2dc4": {
+  "fr": "Artificial Analysis",
+  "tr": "Artificial Analysis"
+ },
+ "240736c6994078df": {
+  "fr": "Côté défense",
+  "tr": "On the defense side"
+ },
+ "2449ff83e8bcd6a6": {
+  "fr": "Fortune, études d'usage OpenAI et Anthropic",
+  "tr": "Fortune, OpenAI and Anthropic usage studies"
+ },
+ "2454fb3197ebceeb": {
+  "fr": "Le rapport entre indice, prix et vitesse compte davantage que l'indice seul pour un usage à grande échelle via l'API.",
+  "tr": "The ratio between index, price, and speed matters more than the index alone for large-scale use via the API."
+ },
+ "2468360f7f213da0": {
+  "fr": "[[s90]]",
+  "tr": "[[s90]]"
+ },
+ "24836e1997b351d6": {
+  "fr": "Selon le panel, Anthropic, OpenAI, Google DeepMind et Meta ont affaibli leurs engagements de pause en cas de seuil de risque [[s3]].",
+  "tr": "According to the panel, Anthropic, OpenAI, Google DeepMind and Meta have weakened their pause commitments in case of a risk threshold [[s3]]."
+ },
+ "25593a10d468b4d6": {
+  "fr": "Application hébergée en Chine ; interdite sur les appareils de plusieurs administrations [[s68]]",
+  "tr": "App hosted in China; banned on devices of several administrations [[s68]]"
+ },
+ "259cd9394246cc77": {
+  "fr": "Rapports trimestriels des hyperscalers (capex)",
+  "tr": "Hyperscaler quarterly reports (capex)"
+ },
+ "25ef9cdc09f5200e": {
+  "fr": "juil.",
+  "tr": "Jul."
+ },
+ "26c2147c4e9bbbdb": {
+  "fr": "Vidéos (30 jours)",
+  "tr": "Videos (30 days)"
+ },
+ "26eb538f62a5ab43": {
+  "fr": "Généraliste le moins cher ; poids publiés sous licence MIT [[s67]] [[s68]]",
+  "tr": "Cheapest generalist; weights released under MIT license [[s67]] [[s68]]"
+ },
+ "272917e9afede6bb": {
+  "fr": "Apertus (Swiss AI Initiative)",
+  "tr": "Apertus (Swiss AI Initiative)"
+ },
+ "274adc88c342dacd": {
+  "fr": "GPT-6 Luna",
+  "tr": "GPT-6 Luna"
+ },
+ "27705deaf195484c": {
+  "fr": "Point d'attention",
+  "tr": "Point of attention"
+ },
+ "28777543b6867d55": {
+  "fr": "25 articles, 888 commentaires",
+  "tr": "25 articles, 888 comments"
+ },
+ "29c2ce0641945460": {
+  "fr": "Aucune obligation de déclaration harmonisée n'existe ; la transparence varie d'un éditeur à l'autre.",
+  "tr": "No harmonized reporting obligation exists; transparency varies from one vendor to another."
+ },
+ "29e91124075e9cee": {
+  "fr": "Non vérifié",
+  "tr": "Unverified"
+ },
+ "29f669a56877069b": {
+  "fr": "[42x faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)",
+  "tr": "[42x faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)"
+ },
+ "29f89454d30423eb": {
+  "fr": "Anthropic, déclaration sur l'accès à Fable et Mythos",
+  "tr": "Anthropic, statement on access to Fable and Mythos"
+ },
+ "2a144acbf96f1003": {
+  "fr": "Chaîne officielle",
+  "tr": "Official channel"
+ },
+ "2a1a3b4f4e9aeb41": {
+  "fr": "Condamnation en Allemagne. Litiges américains regroupés.",
+  "tr": "Conviction in Germany. US lawsuits consolidated."
+ },
+ "2afd0811ec607c5b": {
+  "fr": "Future of Life Institute, AI Safety Index",
+  "tr": "Future of Life Institute, AI Safety Index"
+ },
+ "2b03b3e6a70a8e3e": {
+  "fr": "Wavect, comparatif des modèles à poids ouverts 2026",
+  "tr": "Wavect, 2026 comparison of open-weight models"
+ },
+ "2b09965333384b3e": {
+  "fr": "Intégré à Workspace et Android",
+  "tr": "Integrated into Workspace and Android"
+ },
+ "2b681c0a24baff88": {
+  "fr": "Google",
+  "tr": "Google"
+ },
+ "2b8939917b6ad8fd": {
+  "fr": "DeepSeek",
+  "tr": "DeepSeek"
+ },
+ "2b8f70360636c017": {
+  "fr": "Suprmind, Gemini comparé",
+  "tr": "Suprmind, Gemini compared"
+ },
+ "2bb7ee2f7b88144e": {
+  "fr": "Autorités de protection des données (PFPDT, CNIL, DPC irlandaise)",
+  "tr": "Data protection authorities (PFPDT, CNIL, Irish DPC)"
+ },
+ "2bc6fbfca670ba9d": {
+  "fr": "Enquête de l'autorité irlandaise depuis février 2026 [[s79]]",
+  "tr": "Investigation by the Irish authority since February 2026 [[s79]]"
+ },
+ "2c4c6926fd0e1b34": {
+  "fr": "Colossus produit une partie de son électricité au gaz sur site [[s7]]",
+  "tr": "Colossus produces part of its electricity from on-site gas [[s7]]"
+ },
+ "2d79b04093007186": {
+  "fr": "Une politique de sécurité publiée ne remplace pas un audit indépendant ni des clauses contractuelles.",
+  "tr": "A published security policy does not replace an independent audit or contractual clauses."
+ },
+ "2d7e71e1bb936605": {
+  "fr": "Au-delà des six : les autres acteurs",
+  "tr": "Beyond the six: the other players"
+ },
+ "2ded2e63d39b66e8": {
+  "fr": "Signataires du code de bonnes pratiques de l'AI Act",
+  "tr": "Signatories of the AI Act code of good practice"
+ },
+ "2df8385cca18a58f": {
+  "fr": "[GPT-6 Sol and Luna](https://news.ycombinator.com/item?id=49805509)",
+  "tr": "[GPT-6 Sol and Luna](https://news.ycombinator.com/item?id=49805509)"
+ },
+ "2e61adc9e965af4e": {
+  "fr": "Norton Rose Fulbright, contentieux IA 2026",
+  "tr": "Norton Rose Fulbright, 2026 AI litigation"
+ },
+ "2f126f7d36754ad0": {
+  "fr": "Introl, Colossus à 2 GW",
+  "tr": "Introl, Colossus at 2 GW"
+ },
+ "2f20061bc38798ed": {
+  "fr": "Sur le test FACTS, aucun modèle ne dépasse 70 % ; le meilleur, Gemini 3 Pro, atteint 68,8, et 83,8 avec la recherche web [[s47]].",
+  "tr": "On the FACTS test, no model exceeds 70%; the best, Gemini 3 Pro, reaches 68.8, and 83.8 with web search [[s47]]."
+ },
+ "300dc55f295ae59b": {
+  "fr": "Les discussions de développeurs annoncent souvent les changements qui toucheront ensuite les applications grand public.",
+  "tr": "Developer discussions often announce changes that will later affect consumer applications."
+ },
+ "3096a55a8020aab5": {
+  "fr": "Grok",
+  "tr": "Grok"
+ },
+ "30cf9b267ee361f0": {
+  "fr": "ChatGPT reste la porte d'entrée la plus répandue ; Gemini progresse surtout via Android et Google Search.",
+  "tr": "ChatGPT remains the most widely used entry point; Gemini is gaining ground mainly through Android and Google Search."
+ },
+ "31b2b362ef1b6733": {
+  "fr": "Un assistant oriente les réponses selon son corpus, ses réglages et le modèle économique de son éditeur.",
+  "tr": "An assistant shapes its answers according to its corpus, its settings, and its provider's business model."
+ },
+ "32096c2e0eff33d8": {
+  "fr": "C",
+  "tr": "C"
+ },
+ "322ff8f48fa25d99": {
+  "fr": "Flux X, très frais, non vérifié",
+  "tr": "X feed, very fresh, unverified"
+ },
+ "324b71a6a4038944": {
+  "fr": "févr. 2026",
+  "tr": "Feb. 2026"
+ },
+ "3265224068a60538": {
+  "fr": "Pour aller plus loin : langue et comportement",
+  "tr": "To learn more: language and behavior"
+ },
+ "32a090a378e564e5": {
+  "fr": "Acteur",
+  "tr": "Actor"
+ },
+ "330eaeafcb8bfa68": {
+  "fr": "0,24 Wh, 0,03 gCO₂e, 0,26 mL d'eau par requête texte médiane [[s24]]",
+  "tr": "0.24 Wh, 0.03 gCO₂e, 0.26 mL of water per median text request [[s24]]"
+ },
+ "3321e0a33b2da0cb": {
+  "fr": "Quel coût, quelle intégration, quels risques juridiques, de sécurité et d'empreinte carbone ?",
+  "tr": "What cost, what integration, what legal, security, and carbon footprint risks?"
+ },
+ "34f2132932695981": {
+  "fr": "DeepSeek, Qwen, Kimi, GLM",
+  "tr": "DeepSeek, Qwen, Kimi, GLM"
+ },
+ "351ed8f486e13b9e": {
+  "fr": "L'absence de publication chez plusieurs éditeurs plaide pour des obligations de transparence harmonisées.",
+  "tr": "The lack of publication by several publishers argues for harmonized transparency requirements."
+ },
+ "3539e4fdb7887f05": {
+  "fr": "GPT-6 Astra (max)",
+  "tr": "GPT-6 Astra (max)"
+ },
+ "35771a287dbcd6e6": {
+  "fr": "Conversations utilisées pour cibler la publicité [[s41]]",
+  "tr": "Conversations used to target advertising [[s41]]"
+ },
+ "359d2f401be234cd": {
+  "fr": "Licences spécifiques avec conditions commerciales [[s67]]",
+  "tr": "Specific licenses with commercial terms [[s67]]"
+ },
+ "35c6a17c17ab4c1a": {
+  "fr": "TrustScan, désactiver l'entraînement et droit d'opposition RGPD",
+  "tr": "TrustScan, disabling training and GDPR right to object"
+ },
+ "35f18ccfa4137102": {
+  "fr": "Tarifs API par million de tokens",
+  "tr": "API prices per million tokens"
+ },
+ "362d8942af323eba": {
+  "fr": "18 vidéos retenues",
+  "tr": "18 videos selected"
+ },
+ "36b5769af1566146": {
+  "fr": "Le tableau ajoute DeepSeek, Qwen, Kimi et GLM comme points de repère.",
+  "tr": "The table adds DeepSeek, Qwen, Kimi, and GLM as benchmarks."
+ },
+ "371d2fa00c658f1d": {
+  "fr": "Puissance IT",
+  "tr": "IT power"
+ },
+ "371ecda02b70a043": {
+  "fr": "Les vues des chaînes officielles incluent la promotion payante : une campagne publicitaire peut les multiplier sans refléter l'intérêt spontané.",
+  "tr": "Views on official channels include paid promotion: an advertising campaign can multiply them without reflecting spontaneous interest."
+ },
+ "3737d26ad650e4bc": {
+  "fr": "[AI at Meta](https://www.youtube.com/@aiatmeta)",
+  "tr": "[AI at Meta](https://www.youtube.com/@aiatmeta)"
+ },
+ "3795cdb6d6779d22": {
+  "fr": "13 articles, 979 commentaires",
+  "tr": "13 articles, 979 comments"
+ },
+ "37f1cee3609dc0d1": {
+  "fr": "Dossier mis à jour chaque semaine par un pipeline automatisé fondé sur Claude (Anthropic), partie prenante de la comparaison. Chaque modification est relue avant publication ; les points favorables à Anthropic méritent une vérification prioritaire.",
+  "tr": "Dossier updated weekly by an automated pipeline built on Claude (Anthropic), a stakeholder in the comparison. Every change is reviewed before publication; points favorable to Anthropic deserve priority verification."
+ },
+ "38137979bbe890ad": {
+  "fr": "Pour aller plus loin : évolution sur douze mois",
+  "tr": "To go further: evolution over twelve months"
+ },
+ "38196b6c0996ee06": {
+  "fr": "Politiques de mise à l'échelle publiées par les éditeurs",
+  "tr": "Scaling policies published by developers"
+ },
+ "381b99004849973a": {
+  "fr": "Fairwater Atlanta",
+  "tr": "Fairwater Atlanta"
+ },
+ "38bc529901fb27e1": {
+  "fr": "Le circuit X capte un signal faible plus tôt, au prix d'un taux de rumeur élevé. Le circuit Google et les dépêches d'agence offrent un filtre éditorial en amont. Dans les deux cas, la source primaire reste à ouvrir.",
+  "tr": "The X circuit picks up a weak signal earlier, at the cost of a high rumor rate. The Google circuit and wire agency dispatches offer an upstream editorial filter. In both cases, the primary source still needs to be checked."
+ },
+ "3977f630993d470f": {
+  "fr": "Anthropic a lancé en avril 2026 une enquête directe auprès des utilisateurs de Claude sur leur expérience au travail, en complément de l'analyse des conversations [[s61]].",
+  "tr": "In April 2026, Anthropic launched a direct survey of Claude users about their experience at work, in addition to analyzing conversations [[s61]]."
+ },
+ "399a225bc201c64c": {
+  "fr": "Articles marquants sur Hacker News, 30 derniers jours",
+  "tr": "Notable articles on Hacker News, last 30 days"
+ },
+ "3ab284d590e829bf": {
+  "fr": "Code (Grok Build), équipes (Grok Bot) [[s35]]",
+  "tr": "Code (Grok Build), teams (Grok Bot) [[s35]]"
+ },
+ "3b48d475c6fd056e": {
+  "fr": "Version initiale du dossier.",
+  "tr": "Initial version of the report."
+ },
+ "3b4b63e3804337e0": {
+  "fr": "Les écarts entre les meilleurs modèles sont souvent faibles pour les usages courants : rédaction, résumé, questions pratiques.",
+  "tr": "The gaps between the best models are often small for everyday uses: writing, summarizing, practical questions."
+ },
+ "3b7e0a61a33dd377": {
+  "fr": "Résumé en cinq constats, glossaire, et approfondissements dépliables pour les spécialistes.",
+  "tr": "Summary in five findings, glossary, and expandable deep dives for specialists."
+ },
+ "3bc0d07f0ddcfe37": {
+  "fr": "Rapports environnementaux de Google, Microsoft, Meta, Amazon",
+  "tr": "Environmental reports from Google, Microsoft, Meta, Amazon"
+ },
+ "3bd42eb5a3fd6737": {
+  "fr": "Muse Spark 1.3",
+  "tr": "Muse Spark 1.3"
+ },
+ "3d9715fba5c8cf46": {
+  "fr": "nov. 25",
+  "tr": "Nov. 25"
+ },
+ "3dd20b89e502de94": {
+  "fr": "Pas de rapport publié",
+  "tr": "No published report"
+ },
+ "3ecc3514e91dd938": {
+  "fr": "Pour aller plus loin : méthode de calcul",
+  "tr": "To go further: calculation method"
+ },
+ "3f6e28e225ff38af": {
+  "fr": "Data Gravity, les modèles ouverts chinois sur OpenRouter",
+  "tr": "Data Gravity, Chinese open models on OpenRouter"
+ },
+ "40b733f0aa0f94d9": {
+  "fr": "Chiffre publié",
+  "tr": "Published figure"
+ },
+ "40f8b1f5db7f0ffd": {
+  "fr": "Les attaques par hameçonnage et deepfake deviennent plus crédibles ; la vérification par un second canal reste la parade simple.",
+  "tr": "Phishing and deepfake attacks are becoming more convincing; verification through a second channel remains the simple safeguard."
+ },
+ "41a3e1a11bec04f5": {
+  "fr": "[OpenAI](https://www.youtube.com/@OpenAI)",
+  "tr": "[OpenAI](https://www.youtube.com/@OpenAI)"
+ },
+ "41ab1464ee8f7503": {
+  "fr": "Suprmind, taux d'hallucination 2026",
+  "tr": "Suprmind, 2026 hallucination rate"
+ },
+ "41dbc0916ab2eaac": {
+  "fr": "Les corpus restent majoritairement anglophones et américains. Des utilisateurs francophones jugent la langue de Mistral plus naturelle, ce qui relève du témoignage plus que de la mesure.",
+  "tr": "Corpora remain predominantly English-language and American. Some French-speaking users find Mistral's language more natural, which is anecdotal rather than measured."
+ },
+ "422e2d42c6913acc": {
+  "fr": "Le contexte d'usage de chaque organisation lectrice (langues, confidentialité, outils en place) pèse davantage que les écarts mesurés ici.",
+  "tr": "Each reading organization's usage context (languages, confidentiality, existing tools) matters more than the gaps measured here."
+ },
+ "436aec81a9324883": {
+  "fr": "Digital Watch, rapport de menace Anthropic septembre 2026",
+  "tr": "Digital Watch, Anthropic threat report September 2026"
+ },
+ "43f02c4a72759969": {
+  "fr": "Pour aller plus loin : licences et hébergement des modèles ouverts",
+  "tr": "To learn more: licenses and hosting of open models"
+ },
+ "43fb2d0c9f928dce": {
+  "fr": "[The Local AI Tier List (Qwen, Deepseek, Mistral, Llama)](https://www.youtube.com/watch?v=wobPalPV3uY), 12 k vues (Coding Horizon)",
+  "tr": "[The Local AI Tier List (Qwen, Deepseek, Mistral, Llama)](https://www.youtube.com/watch?v=wobPalPV3uY), 12k views (Coding Horizon)"
+ },
+ "445b09cef566fa64": {
+  "fr": "Les engagements publics des éditeurs sur la sécurité de leurs modèles varient fortement et évoluent.",
+  "tr": "Providers' public commitments on the safety of their models vary widely and keep evolving."
+ },
+ "44a07a1c8cc71de0": {
+  "fr": "mars",
+  "tr": "March"
+ },
+ "44a43c5a5fb7e643": {
+  "fr": "Amazon ; utilisé par Anthropic",
+  "tr": "Amazon; used by Anthropic"
+ },
+ "44d9b4d388e1bc43": {
+  "fr": "La dépendance aux accords avec les agences de presse pose la question du pluralisme des sources.",
+  "tr": "Reliance on agreements with news agencies raises the question of source pluralism."
+ },
+ "461d352615e628f0": {
+  "fr": "Les textes publiés en ligne, y compris par des particuliers, entrent dans les corpus d'entraînement.",
+  "tr": "Texts published online, including by individuals, enter training corpora."
+ },
+ "4673dd13495acb54": {
+  "fr": "Pour la veille, le circuit consulté (index web, Google, X, agences) détermine la fraîcheur et le taux de rumeur.",
+  "tr": "For monitoring, the channel consulted (web index, Google, X, news agencies) determines freshness and the rate of rumor."
+ },
+ "46dee94be531e947": {
+  "fr": "août 2025",
+  "tr": "August 2025"
+ },
+ "47186824a656ec64": {
+  "fr": "Tech Insider, prix des abonnements IA, septembre 2026 (agrégateur)",
+  "tr": "Tech Insider, AI subscription prices, September 2026 (aggregator)"
+ },
+ "47346e7d0c732ba6": {
+  "fr": "Ce qu'en disent les développeurs",
+  "tr": "What developers say about it"
+ },
+ "4764ed0f48b9bf8c": {
+  "fr": "Puces TPU maison",
+  "tr": "In-house TPU chips"
+ },
+ "47944e70565a6a23": {
+  "fr": "OpenAI montre des publicités aux utilisateurs Free et Go depuis février 2026 et affirme que les annonces ne modifient pas les réponses [[s39]]. Depuis le 16 septembre 2026, un clic peut ouvrir une conversation avec un agent sponsorisé par une marque [[s40]]. Meta utilise les conversations avec son assistant pour cibler les annonces [[s41]] et prévoit une commission sur les transactions réalisées par Muse [[s43]].",
+  "tr": "OpenAI has been showing ads to Free and Go users since February 2026 and states that ads do not alter responses [[s39]]. Since September 16, 2026, a click can open a conversation with a brand-sponsored agent [[s40]]. Meta uses conversations with its assistant to target ads [[s41]] and plans a commission on transactions made through Muse [[s43]]."
+ },
+ "47e5d977c8822280": {
+  "fr": "L'usage des assistants entre dans l'empreinte carbone des organisations, avec des données encore lacunaires.",
+  "tr": "The use of assistants factors into organizations' carbon footprint, with data that remains incomplete."
+ },
+ "481bd22b5e67c316": {
+  "fr": "Anthropic, xAI, Meta",
+  "tr": "Anthropic, xAI, Meta"
+ },
+ "483a47dffb739c49": {
+  "fr": "Entraîner un modèle à imiter les réponses d'un autre modèle.",
+  "tr": "Training a model to imitate the responses of another model."
+ },
+ "484e637b32b012d8": {
+  "fr": "Incitation économique",
+  "tr": "Economic incentive"
+ },
+ "485f63284aac3b3a": {
+  "fr": "L'écart de calcul entre Mistral et les laboratoires américains se compte en ordres de grandeur. Les concurrents louent parfois les mêmes installations, ce qui rend la notion de propriétaire du calcul plus fluide qu'elle n'en a l'air.",
+  "tr": "The computing gap between Mistral and the American labs is measured in orders of magnitude. Competitors sometimes rent the same facilities, which makes the notion of who owns the compute more fluid than it appears."
+ },
+ "4866ff3c3b36ef53": {
+  "fr": "AI Toolbox, chronologie des modèles Grok",
+  "tr": "AI Toolbox, Grok model timeline"
+ },
+ "4870a46801da9025": {
+  "fr": "déc.",
+  "tr": "Dec."
+ },
+ "487aa6e633b362f7": {
+  "fr": "Décisions judiciaires sur la conservation des conversations",
+  "tr": "Court decisions on conversation retention"
+ },
+ "48fd78cc43588885": {
+  "fr": "Les classements relayés par des éditeurs d'outils se révèlent parfois inexacts : la source primaire fait foi.",
+  "tr": "Rankings relayed by tool providers sometimes prove inaccurate: the primary source prevails."
+ },
+ "495265260f5b6d5b": {
+  "fr": "ChatGPT",
+  "tr": "ChatGPT"
+ },
+ "49939c37466b2208": {
+  "fr": "Hugging Face, AI Energy Score",
+  "tr": "Hugging Face, AI Energy Score"
+ },
+ "49bec1b62f4e822a": {
+  "fr": "i-actu, Mistral et Vibe",
+  "tr": "i-actu, Mistral and Vibe"
+ },
+ "49e4a6ba01d6ef43": {
+  "fr": "Deux façons de compter les émissions liées à l'électricité : selon les contrats d'achat d'énergie, ou selon le mix réel du réseau local.",
+  "tr": "Two ways to count emissions related to electricity: based on energy purchase agreements, or based on the actual mix of the local grid."
+ },
+ "4a1c8f32bd035e48": {
+  "fr": "4 A",
+  "tr": "4 A"
+ },
+ "4b2a6a3149566c82": {
+  "fr": "Points",
+  "tr": "Points"
+ },
+ "4b32f54fb46c53b7": {
+  "fr": "[Anthropic](https://www.youtube.com/@anthropic-ai)",
+  "tr": "[Anthropic](https://www.youtube.com/@anthropic-ai)"
+ },
+ "4b69f01f20bd533e": {
+  "fr": "GPT-6 Sol",
+  "tr": "GPT-6 Sol"
+ },
+ "4bc55f31894aeb2f": {
+  "fr": "Énergie et eau : des chiffres non comparables",
+  "tr": "Energy and water: non-comparable figures"
+ },
+ "4bd73bf22c2575a3": {
+  "fr": "ChatGPT compte ses utilisateurs actifs par semaine, Claude par mois ; Gemini ajoute à son application les personnes exposées aux AI Overviews de Google Search [[s57]].",
+  "tr": "ChatGPT counts its active users weekly, Claude monthly; Gemini adds to its app the people exposed to Google Search's AI Overviews [[s57]]."
+ },
+ "4c018de80ae81b5e": {
+  "fr": "Vues cumulées, au 27/9/2026, des vidéos publiées dans les 7 derniers jours dont le titre mentionne l'assistant, d'une durée de 4 minutes ou plus, tous créateurs confondus (jusqu'à 25 vidéos parmi les plus vues), en millions [[s95]]. Les formats courts (Shorts, montages viraux) sont exclus : ils citent souvent un assistant sans en parler. Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.",
+  "tr": "Cumulative views, as of 27/9/2026, of videos published in the last 7 days whose title mentions the assistant, lasting 4 minutes or more, across all creators (up to 25 of the most viewed videos), in millions [[s95]]. Short formats (Shorts, viral edits) are excluded: they often mention an assistant without discussing it. A critical video counts as much as a laudatory one; YouTube search does not guarantee completeness."
+ },
+ "4c033c2145ae0ade": {
+  "fr": "[Hackers influence ChatGPT and Gemini to direct users to scam centers](https://news.ycombinator.com/item?id=49829387)",
+  "tr": "[Hackers influence ChatGPT and Gemini to direct users to scam centers](https://news.ycombinator.com/item?id=49829387)"
+ },
+ "4c0b82da02f1f93c": {
+  "fr": "Reddit n'est pas suivi : son API est fermée aux nouveaux accès sans approbation manuelle depuis novembre 2025.",
+  "tr": "Reddit is not tracked: its API has been closed to new access without manual approval since November 2025."
+ },
+ "4c3eb8dcb818361f": {
+  "fr": "Abonnements, contrats entreprise",
+  "tr": "Subscriptions, enterprise contracts"
+ },
+ "4d2f7abcb67d895a": {
+  "fr": "xAI, flux RSS de la page de statut",
+  "tr": "xAI, RSS feed from the status page"
+ },
+ "4d4a247243212fc4": {
+  "fr": "Devera, énergie et eau par modèle",
+  "tr": "Devera, energy and water per model"
+ },
+ "4d6a0bafff0286b4": {
+  "fr": "Rapports de transparence publicitaire d'OpenAI",
+  "tr": "OpenAI advertising transparency reports"
+ },
+ "4deb91d8188fd69b": {
+  "fr": "Livres piratés utilisés pour Llama, avec redistribution via BitTorrent [[s34]].",
+  "tr": "Pirated books used for Llama, redistributed via BitTorrent [[s34]]."
+ },
+ "4eb3dd6873ba7d47": {
+  "fr": "24 k",
+  "tr": "24k"
+ },
+ "4ec0deeaafdc51a4": {
+  "fr": "Sensor Tower, State of AI",
+  "tr": "Sensor Tower, State of AI"
+ },
+ "4f807cfaf628eed9": {
+  "fr": "Selon les évaluations d'OpenAI, l'accès au web réduit les hallucinations de 73 à 86 % [[s47]].",
+  "tr": "According to OpenAI's evaluations, web access reduces hallucinations by 73 to 86% [[s47]]."
+ },
+ "5031f666b43ae696": {
+  "fr": "Commission européenne, résumés des données d'entraînement (AI Act)",
+  "tr": "European Commission, training data summaries (AI Act)"
+ },
+ "50438cd19ba5c435": {
+  "fr": "Grok 4.7 (xhigh)",
+  "tr": "Grok 4.7 (xhigh)"
+ },
+ "50790032254e240a": {
+  "fr": "62 articles, 1 453 commentaires",
+  "tr": "62 articles, 1,453 comments"
+ },
+ "51a0a42c141b32e9": {
+  "fr": "Apertus, version 1.5 (juillet 2026)",
+  "tr": "Apertus, version 1.5 (July 2026)"
+ },
+ "51b9033d8e7016ef": {
+  "fr": "TechRadar, attaque contre le gouvernement mexicain",
+  "tr": "TechRadar, attack on the Mexican government"
+ },
+ "51eb880e6dba2d90": {
+  "fr": "Article (lien vers la discussion)",
+  "tr": "Article (link to the discussion)"
+ },
+ "51f0eca3d244c918": {
+  "fr": "6 incidents sur 90 jours",
+  "tr": "6 incidents over 90 days"
+ },
+ "52955427c75a2c41": {
+  "fr": "60,3 M",
+  "tr": "60.3M"
+ },
+ "52e1850acdda01bf": {
+  "fr": "Claude Opus 5.5",
+  "tr": "Claude Opus 5.5"
+ },
+ "5309cd6c60701be7": {
+  "fr": "Muse Spark 1.3 (max)",
+  "tr": "Muse Spark 1.3 (max)"
+ },
+ "530d57fcc555d501": {
+  "fr": "METR",
+  "tr": "METR"
+ },
+ "53ced2f8e655372d": {
+  "fr": "Publications X par défaut",
+  "tr": "X posts by default"
+ },
+ "53d6a268c0a779d4": {
+  "fr": "Max 100 $ ou 200 $",
+  "tr": "Max $100 or $200"
+ },
+ "54087af207a79b61": {
+  "fr": "Biais : quatre familles distinctes",
+  "tr": "Bias: four distinct families"
+ },
+ "543d3974c1ab378f": {
+  "fr": "Meta prévoit Hyperion en Louisiane, à 5 GW [[s9]]. Fairwater Wisconsin de Microsoft vise environ 2 263 MW en 2028 [[s4]].",
+  "tr": "Meta plans Hyperion in Louisiana, at 5 GW [[s9]]. Microsoft's Fairwater Wisconsin targets around 2,263 MW by 2028 [[s4]]."
+ },
+ "549a93627a7db840": {
+  "fr": "Google Cloud Service Health (incidents)",
+  "tr": "Google Cloud Service Health (incidents)"
+ },
+ "54fc858f352eceae": {
+  "fr": "Microsoft Copilot",
+  "tr": "Microsoft Copilot"
+ },
+ "55d59693358967f7": {
+  "fr": "Les modèles ouverts chinois figurent dans le tableau détaillé : ils offrent un point de comparaison pour l'hébergement souverain.",
+  "tr": "Chinese open models appear in the detailed table: they offer a point of comparison for sovereign hosting."
+ },
+ "5669b175dd3d92b0": {
+  "fr": "Claude, ChatGPT, Gemini, Grok, Muse et Mistral Vibe comparés sur ce qui compte à l'usage : fiabilité, prix, confidentialité, sécurité, gouvernance et empreinte. Une lecture pour le grand public, les entreprises et les institutions, avec des approfondissements pour les spécialistes.",
+  "tr": "Claude, ChatGPT, Gemini, Grok, Muse and Mistral Vibe compared on what matters in practice: reliability, price, privacy, security, governance and footprint. A read for the general public, businesses and institutions, with deeper dives for specialists."
+ },
+ "56d0eb999dd76782": {
+  "fr": "Le rapport signale le virage vers les usages militaires entre 2024 et 2026 [[s1]].",
+  "tr": "The report notes the shift toward military uses between 2024 and 2026 [[s1]]."
+ },
+ "56d9383166f322a3": {
+  "fr": "Mode agent, Codex",
+  "tr": "Agent mode, Codex"
+ },
+ "570fcb71b0695428": {
+  "fr": "L'AI Act impose désormais un résumé public des données d'entraînement, ce qui ouvre un droit de regard.",
+  "tr": "The AI Act now requires a public summary of training data, which opens up a right of scrutiny."
+ },
+ "575423dc509a8503": {
+  "fr": "Durée cumulée",
+  "tr": "Cumulative duration"
+ },
+ "5786ea5771908725": {
+  "fr": "Gmail, Docs, Sheets, Android",
+  "tr": "Gmail, Docs, Sheets, Android"
+ },
+ "579e4c6c1cd11b2b": {
+  "fr": "Articles ayant dépassé 50 points et dont le titre mentionne l'assistant ou son éditeur, par mois complet, via l'API Algolia [[s92]]. Les points d'un article se stabilisent en quelques jours : les mois passés sont figés.",
+  "tr": "Articles that exceeded 50 points and whose title mentions the assistant or its provider, per full month, via the Algolia API [[s92]]. An article's points stabilize within a few days: past months are locked in."
+ },
+ "5848884065ec0b6d": {
+  "fr": "100 $ [[s42]]",
+  "tr": "$100 [[s42]]"
+ },
+ "585f871356cb54ce": {
+  "fr": "Perplexity",
+  "tr": "Perplexity"
+ },
+ "58a024973bc9b7a9": {
+  "fr": "Les taux d'hallucination publiés divergent d'un facteur dix selon le protocole. Pour les modèles de pointe, une étude sur 5 000 requêtes trouve entre 3,1 % et 19,1 % selon le modèle, la tâche et le niveau de raisonnement ; avec un protocole plus strict, Gemini 2.0 Flash passe de 0,7 % à environ 7,6 % [[s46]].",
+  "tr": "Published hallucination rates diverge by a factor of ten depending on the protocol. For frontier models, a study of 5,000 queries found between 3.1% and 19.1% depending on the model, the task, and the reasoning level; with a stricter protocol, Gemini 2.0 Flash goes from 0.7% to about 7.6% [[s46]]."
+ },
+ "5a617761a05aac5a": {
+  "fr": "Colossus 2",
+  "tr": "Colossus 2"
+ },
+ "5aace9775feb76a5": {
+  "fr": "La durée cumulée additionne la durée de chaque incident ; des incidents simultanés sont comptés deux fois.",
+  "tr": "The cumulative duration adds up the duration of each incident; simultaneous incidents are counted twice."
+ },
+ "5abfe93aa5ad7ada": {
+  "fr": "Culturel et linguistique",
+  "tr": "Cultural and linguistic"
+ },
+ "5af5e497f66c2e58": {
+  "fr": "En entreprise, l'ordre s'inverse : Anthropic mène les dépenses d'API selon Menlo Ventures, lui-même investisseur d'Anthropic [[s62]] [[s63]].",
+  "tr": "In enterprise, the order reverses: Anthropic leads API spending according to Menlo Ventures, itself an investor in Anthropic [[s62]] [[s63]]."
+ },
+ "5b33f393abcf28a8": {
+  "fr": "Les parts de marché web, application et API mesurent des populations différentes ; les additionner ou en faire la moyenne n'a pas de sens [[s63]].",
+  "tr": "Web, app, and API market shares measure different populations; adding or averaging them makes no sense [[s63]]."
+ },
+ "5c31e867cf822a91": {
+  "fr": "Une panne se vérifie d'abord sur la page de statut de l'éditeur avant d'incriminer sa connexion.",
+  "tr": "An outage should first be checked on the provider's status page before blaming your own connection."
+ },
+ "5c9f59aab9c683e6": {
+  "fr": "Wikipedia, Anthropic",
+  "tr": "Wikipedia, Anthropic"
+ },
+ "5cc35a944a59e4b9": {
+  "fr": "25 incidents sur 17 jours, historique partiel",
+  "tr": "25 incidents over 17 days, partial history"
+ },
+ "5ce2e6f40299204d": {
+  "fr": "Agent",
+  "tr": "Agent"
+ },
+ "5d28a2bf7da9c3e5": {
+  "fr": "À prix égal, les offres diffèrent par le modèle servi, les limites d'usage et les garanties sur les données.",
+  "tr": "At the same price, offerings differ in the model served, usage limits, and data guarantees."
+ },
+ "5d5a678f111de943": {
+  "fr": "Kingy AI, modèles à poids ouverts 2026",
+  "tr": "Kingy AI, open-weight models 2026"
+ },
+ "5dc6df5a70a6e1c0": {
+  "fr": "Anthropic Economic Index",
+  "tr": "Anthropic Economic Index"
+ },
+ "5e326b17d2aa7f3a": {
+  "fr": "Incidents",
+  "tr": "Incidents"
+ },
+ "5e49c841032dff22": {
+  "fr": "Meta ne publie pas de page de statut pour Meta AI ou Muse.",
+  "tr": "Meta does not publish a status page for Meta AI or Muse."
+ },
+ "5e96894ab10b3e4b": {
+  "fr": "Poids ouverts",
+  "tr": "Open weights"
+ },
+ "5f6fde8cedb71bf6": {
+  "fr": "First Page Sage, assistants IA par part de marché, septembre 2026",
+  "tr": "First Page Sage, AI assistants by market share, September 2026"
+ },
+ "5f7e38ea07a2d4b0": {
+  "fr": "212 h",
+  "tr": "212 h"
+ },
+ "6068046cbebc229e": {
+  "fr": "730 articles, 18 150 commentaires",
+  "tr": "730 articles, 18,150 comments"
+ },
+ "60b26f7d0ea9846a": {
+  "fr": "Le risque commun porte sur l'injection d'instructions : un agent qui lit un email ou une page web peut exécuter un ordre caché dans ce contenu. Plus l'agent a de droits, plus ce risque pèse.",
+  "tr": "The common risk concerns instruction injection: an agent reading an email or a web page can execute a hidden command contained in that content. The more rights the agent has, the greater this risk."
+ },
+ "60b4d39754ec6750": {
+  "fr": "Non publié",
+  "tr": "Not published"
+ },
+ "617adf311b2cc3eb": {
+  "fr": "Les tests à mener portent sur vos propres documents et tâches, plus parlants que les classements publics.",
+  "tr": "Tests should be run on your own documents and tasks, which are more meaningful than public rankings."
+ },
+ "61bd662316810693": {
+  "fr": "Fast.io, IA les plus précises 2026",
+  "tr": "Fast.io, most accurate AI 2026"
+ },
+ "6209861481f0927f": {
+  "fr": "Gemini 3.8 Flash (high)",
+  "tr": "Gemini 3.8 Flash (high)"
+ },
+ "62788583a01d4d07": {
+  "fr": "1,14 gCO₂e et 45 mL pour 400 tokens ; 20,4 ktCO₂e pour l'entraînement et 18 mois d'usage de Large 2 [[s27]]",
+  "tr": "1.14 gCO₂e and 45 mL for 400 tokens; 20.4 ktCO₂e for training and 18 months of Large 2 usage [[s27]]"
+ },
+ "628469d46e6dbf1c": {
+  "fr": "Artificial Analysis, indices et données de modèles",
+  "tr": "Artificial Analysis, model indices and data"
+ },
+ "62db090f3c5f0c07": {
+  "fr": "Infrastructure et empreinte",
+  "tr": "Infrastructure and footprint"
+ },
+ "631a9b4c8e80e4e5": {
+  "fr": "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 209 k vues (AI Search)",
+  "tr": "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 209K views (AI Search)"
+ },
+ "635db508e5c52472": {
+  "fr": "Mode agent, séparation Chat, Work et Codex [[s53]]",
+  "tr": "Agent mode, separation of Chat, Work, and Codex [[s53]]"
+ },
+ "63632142c127cff0": {
+  "fr": "Meta, annonce de Muse Spark",
+  "tr": "Meta, Muse Spark announcement"
+ },
+ "63ac5c7f7eeddc06": {
+  "fr": "Les chiffres d'audience proviennent d'éditeurs ou de sociétés de mesure privées ; aucune statistique publique ne compare encore les assistants.",
+  "tr": "Audience figures come from publishers or private measurement firms; no public statistics yet compare the assistants."
+ },
+ "63dc045b33c3f52a": {
+  "fr": "Google Threat Intelligence Group",
+  "tr": "Google Threat Intelligence Group"
+ },
+ "64001fb9d66dc9c4": {
+  "fr": "Mistral obtient la note la plus basse : la souveraineté des données et la sûreté des modèles restent deux critères séparés.",
+  "tr": "Mistral gets the lowest score: data sovereignty and model safety remain two separate criteria."
+ },
+ "64669e19ff28a33a": {
+  "fr": "Foxeet, Mistral et IA souveraines pour DSI et PME",
+  "tr": "Foxeet, Mistral and sovereign AI for CIOs and SMEs"
+ },
+ "6466df1d3d4f14f5": {
+  "fr": "Mistral",
+  "tr": "Mistral"
+ },
+ "65193aa76badd892": {
+  "fr": "Désactiver l'entraînement dans les réglages et utiliser les conversations temporaires pour les sujets sensibles réduit l'exposition.",
+  "tr": "Disabling training in settings and using temporary conversations for sensitive topics reduces exposure."
+ },
+ "659499f38a5647a0": {
+  "fr": "Statut",
+  "tr": "Status"
+ },
+ "65b060b560062437": {
+  "fr": "LMArena",
+  "tr": "LMArena"
+ },
+ "664d7522ce252b23": {
+  "fr": "Non publiée ; moyenne là où Google donne une médiane [[s26]]",
+  "tr": "Not published; average where Google gives a median [[s26]]"
+ },
+ "66cd46e4975d6d46": {
+  "fr": "[Gemini 3.8 text-to-speech](https://news.ycombinator.com/item?id=49817615)",
+  "tr": "[Gemini 3.8 text-to-speech](https://news.ycombinator.com/item?id=49817615)"
+ },
+ "6717fc8365c9e514": {
+  "fr": "Articles marquants sur Hacker News, par mois",
+  "tr": "Notable articles on Hacker News, by month"
+ },
+ "67d56dfad45e9e75": {
+  "fr": "Ce qu'on leur confie",
+  "tr": "What is entrusted to them"
+ },
+ "681ad8f3b516deac": {
+  "fr": "Agent principal et sous-agents parallèles, compatible MCP [[s44]]",
+  "tr": "Main agent and parallel sub-agents, MCP compatible [[s44]]"
+ },
+ "682af937e86c461b": {
+  "fr": "Vitesse (tokens par seconde)",
+  "tr": "Speed (tokens per second)"
+ },
+ "68b991847ef42bc6": {
+  "fr": "TechCrunch, part de ChatGPT sous 50 % (Sensor Tower)",
+  "tr": "TechCrunch, ChatGPT share below 50% (Sensor Tower)"
+ },
+ "692f6e5128f2e6bd": {
+  "fr": "Par mois",
+  "tr": "Per month"
+ },
+ "6947a315b2a45760": {
+  "fr": "Un assistant indisponible bloque le travail qui en dépend ; les pages de statut officielles en gardent la trace.",
+  "tr": "An unavailable assistant blocks the work that depends on it; official status pages keep a record of this."
+ },
+ "69dc98f2ecec24bc": {
+  "fr": "Grok Build, Grok Bot, récents",
+  "tr": "Grok Build, Grok Bot, recent"
+ },
+ "6a597dba4b6f983c": {
+  "fr": "DeepSeek V4 Flash",
+  "tr": "DeepSeek V4 Flash"
+ },
+ "6a8516d5dcc95f05": {
+  "fr": "Comportemental",
+  "tr": "Behavioral"
+ },
+ "6b0db60b32979eec": {
+  "fr": "Connaissances les plus larges, 10 % en résumé",
+  "tr": "Broadest knowledge, 10% summarized"
+ },
+ "6b713219f52e0c71": {
+  "fr": "Un compte personnel utilisé pour des documents clients expose ces données à l'entraînement ; le contrat de traitement des données de l'offre pro fait foi.",
+  "tr": "A personal account used for client documents exposes that data to training; the professional offer's data processing agreement governs this."
+ },
+ "6c70c0f0271cf82a": {
+  "fr": "Rapports d'incidents d'injection d'instructions (OWASP, éditeurs)",
+  "tr": "Prompt injection incident reports (OWASP, vendors)"
+ },
+ "6c85342adf6f3439": {
+  "fr": "João Queirós, le coût réel des modèles ouverts chinois",
+  "tr": "João Queirós, the real cost of open Chinese models"
+ },
+ "6cd025f7b9e42b12": {
+  "fr": "Exclues de l'entraînement par défaut [[s66]]",
+  "tr": "Excluded from default training [[s66]]"
+ },
+ "6d1217d390d68635": {
+  "fr": "806 k",
+  "tr": "806K"
+ },
+ "6d26cf5fa3a403ac": {
+  "fr": "Illumio, guide technique Mythos",
+  "tr": "Illumio, Mythos technical guide"
+ },
+ "6e345dd17f967c98": {
+  "fr": "Lequel utiliser au quotidien ? Puis-je me fier aux réponses ? Que deviennent mes conversations ?",
+  "tr": "Which one to use day to day? Can I trust the answers? What happens to my conversations?"
+ },
+ "6e4a2888b07a4de3": {
+  "fr": "Aucun litige majeur trouvé dans les sources consultées.",
+  "tr": "No major litigation found in the sources consulted."
+ },
+ "6e8ca5b24f5ca458": {
+  "fr": "D+",
+  "tr": "D+"
+ },
+ "6ea7bff6090eace4": {
+  "fr": "Relevés publiés par Similarweb dans son édition d'août 2026, à 12, 6, 3, 2 et 1 mois ; l'axe respecte les écarts de temps [[s96]]. Part des visites web mondiales parmi sept assistants ; les applications mobiles et Meta AI, intégré aux applications de Meta, n'y figurent pas. Copilot et Perplexity, sous 2 %, ne sont pas tracés.",
+  "tr": "Figures published by Similarweb in its August 2026 edition, at 12, 6, 3, 2 and 1 months; the axis respects the time gaps [[s96]]. Share of global web visits among seven assistants; mobile apps and Meta AI, integrated into Meta's apps, are not included. Copilot and Perplexity, below 2%, are not tracked."
+ },
+ "6ec539591043d5a2": {
+  "fr": "Un chiffre, sans méthode",
+  "tr": "A figure, without methodology"
+ },
+ "6f02279e0f132155": {
+  "fr": "Commission prévue sur les transactions",
+  "tr": "Planned commission on transactions"
+ },
+ "6f936df71f6139a7": {
+  "fr": "14,5 % en résumé (Large 3)",
+  "tr": "14.5% in summarization (Large 3)"
+ },
+ "6fedee6bb71c2f8d": {
+  "fr": "Un agent planifie, appelle des outils (navigateur, messagerie, fichiers, code) et enchaîne les actions sans validation à chaque étape. Les différences tiennent à trois choix de conception : où l'agent agit, avec quels droits, et qui en tire un revenu.",
+  "tr": "An agent plans, calls tools (browser, email, files, code) and chains actions without validation at each step. The differences hinge on three design choices: where the agent acts, with what permissions, and who earns revenue from it."
+ },
+ "705667eefc65c731": {
+  "fr": "Gratuit",
+  "tr": "Free"
+ },
+ "70828506351c0059": {
+  "fr": "Risques et gouvernance",
+  "tr": "Risks and governance"
+ },
+ "7169e7c8b29c1bca": {
+  "fr": "Tech Insider Ireland, confidentialité ChatGPT, Gemini, Claude",
+  "tr": "Tech Insider Ireland, ChatGPT, Gemini, Claude privacy"
+ },
+ "717a91db355e5f58": {
+  "fr": "Taux le plus élevé en résumé",
+  "tr": "Highest rate in summarization"
+ },
+ "71e6d0dea459f8ad": {
+  "fr": "Renvoi aux engagements des hébergeurs [[s28]]",
+  "tr": "Reference to hosting providers' commitments [[s28]]"
+ },
+ "72086709ed80d50e": {
+  "fr": "Pour aller plus loin : propriété, location et projets",
+  "tr": "To go further: ownership, leasing and projects"
+ },
+ "7287991cef4522f7": {
+  "fr": "févr.",
+  "tr": "Feb."
+ },
+ "730d70e4b0a853d1": {
+  "fr": "Forums de développeurs",
+  "tr": "Developer forums"
+ },
+ "73b78403ae19d91f": {
+  "fr": "Cybersécurité : le point de bascule de 2026",
+  "tr": "Cybersecurity: the 2026 tipping point"
+ },
+ "74539ef4852da9a8": {
+  "fr": "Unité de texte traitée par un modèle, de l'ordre de trois quarts de mot en moyenne ; sert d'unité de facturation.",
+  "tr": "Unit of text processed by a model, roughly three-quarters of a word on average; used as a billing unit."
+ },
+ "745a8c9d2b1ccc15": {
+  "fr": "Muse / Meta AI",
+  "tr": "Muse / Meta AI"
+ },
+ "7517c606372abfd1": {
+  "fr": "Éditeur",
+  "tr": "Publisher"
+ },
+ "758ca459cda88153": {
+  "fr": "Instant Press, statistiques d'usage de l'IA 2026",
+  "tr": "Instant Press, 2026 AI usage statistics"
+ },
+ "762a7fe103874d86": {
+  "fr": "Date de coupure",
+  "tr": "Cutoff date"
+ },
+ "763c9ebf37f11b6b": {
+  "fr": "AI Business Weekly, statistiques d'hallucination",
+  "tr": "AI Business Weekly, hallucination statistics"
+ },
+ "7644bc37d5471506": {
+  "fr": "Des filtres écartent les homonymes courants (astrologie pour Gemini, personnalités prénommées Claude).",
+  "tr": "Filters exclude common homonyms (astrology for Gemini, people named Claude)."
+ },
+ "7663254611b798f3": {
+  "fr": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort,",
+  "tr": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort,"
+ },
+ "76f4feb7eb1c4397": {
+  "fr": "Les régressions et problèmes de quotas signalés sur Hacker News précèdent souvent leur reconnaissance officielle.",
+  "tr": "Regressions and quota issues reported on Hacker News often precede their official acknowledgment."
+ },
+ "76f61bc209b01f35": {
+  "fr": "L'écart de calcul entre l'Europe et les États-Unis se compte en ordres de grandeur.",
+  "tr": "The computing gap between Europe and the United States is measured in orders of magnitude."
+ },
+ "77b3ecc0113ed7a9": {
+  "fr": "janv. 26",
+  "tr": "Jan. 26"
+ },
+ "7809325b61b722be": {
+  "fr": "France (UE)",
+  "tr": "France (EU)"
+ },
+ "781163e9a36af385": {
+  "fr": "Nouvelle section YouTube : activité des chaînes officielles et attention du public.",
+  "tr": "New YouTube section: activity of official channels and audience attention."
+ },
+ "790332002c30c14e": {
+  "fr": "Articles publiés sur Hacker News au cours des 30 derniers jours dont le titre mentionne l'assistant ou son éditeur, et ayant dépassé 50 points ; relevé du 27/9/2026 via l'API Algolia [[s92]]. Hacker News reflète l'attention d'un public de développeurs, surtout anglophone ; un article critique compte autant qu'un article élogieux.",
+  "tr": "Articles published on Hacker News in the last 30 days whose title mentions the assistant or its publisher, and that exceeded 50 points; data collected on September 27, 2026 via the Algolia API [[s92]]. Hacker News reflects the attention of a developer audience, mostly English-speaking; a critical article counts as much as a laudatory one."
+ },
+ "791010a08833b1a4": {
+  "fr": "Les offres équipe excluent en général les données de l'entraînement ; xAI et Perplexity n'ont pas d'offre équipe distincte [[s66]].",
+  "tr": "Team plans generally exclude data from training; xAI and Perplexity have no separate team plan [[s66]]."
+ },
+ "798910e4d321f424": {
+  "fr": "Agents et automatisation",
+  "tr": "Agents and automation"
+ },
+ "798f92a40ae718f9": {
+  "fr": "Ces chiffres mesurent ce que les éditeurs déclarent. Anthropic publie des incidents détaillés par composant ; d'autres regroupent ou déclarent moins. La comparaison la plus fiable porte sur l'évolution d'un même éditeur dans le temps.",
+  "tr": "These figures measure what publishers report. Anthropic publishes detailed incidents by component; others group them together or report fewer. The most reliable comparison concerns the same publisher's evolution over time."
+ },
+ "79c02c6b174d7429": {
+  "fr": "Offre d'entrée",
+  "tr": "Entry-level offering"
+ },
+ "7a4e1876ed84f391": {
+  "fr": "San Diego, 800 MW",
+  "tr": "San Diego, 800 MW"
+ },
+ "7b131a3117aabac1": {
+  "fr": "ACV avec ADEME et Carbone 4",
+  "tr": "LCA with ADEME and Carbone 4"
+ },
+ "7b327f896838031b": {
+  "fr": "Epoch AI, base de données des centres IA",
+  "tr": "Epoch AI, AI centers database"
+ },
+ "7bd4257854c41a5a": {
+  "fr": "ENISA, ANSSI, NCSC suisse",
+  "tr": "ENISA, ANSSI, Swiss NCSC"
+ },
+ "7bda834d64364653": {
+  "fr": "Kimi, GLM",
+  "tr": "Kimi, GLM"
+ },
+ "7bf4153ec8b3bed0": {
+  "fr": "Reuters Institute, Digital News Report",
+  "tr": "Reuters Institute, Digital News Report"
+ },
+ "7c4218f786870b2a": {
+  "fr": "OpenAI publie GPT-5.4-Cyber puis GPT-5.5-Cyber, réservés à des partenaires agréés [[s14]]. Le Trésor américain et la Fed réunissent en urgence les patrons des grandes banques [[s17]].",
+  "tr": "OpenAI releases GPT-5.4-Cyber then GPT-5.5-Cyber, reserved for approved partners [[s14]]. The US Treasury and the Fed urgently convene the heads of major banks [[s17]]."
+ },
+ "7c628b4797ba2bd6": {
+  "fr": "Graphique des hallucinations : tous les modèles testés de chaque éditeur, date de sortie du modèle mis en avant, et écart avec le dernier modèle phare de l'éditeur.",
+  "tr": "Hallucination chart: all tested models from each provider, highlighted model release date, and gap with the provider's latest flagship model."
+ },
+ "7cc7a2befc17008b": {
+  "fr": "Mungomash, modèles de pointe au 25 septembre 2026",
+  "tr": "Mungomash, frontier models as of September 25, 2026"
+ },
+ "7cf22ed37609e3e4": {
+  "fr": "Selon l'usage, l'assistant réellement utilisé est souvent un autre : Copilot dans Office, un modèle ouvert hébergé en interne, un moteur de réponse spécialisé.",
+  "tr": "Depending on the use case, the assistant actually used is often a different one: Copilot in Office, an open model hosted in-house, a specialized answer engine."
+ },
+ "7d1e6f45427dae68": {
+  "fr": "Sur un an, ChatGPT a perdu près de 18 points de part, captés surtout par Gemini et Claude [[s96]]. La tendance s'est inversée depuis mai : ChatGPT est remonté de 52,7 % à 55,5 %, Gemini a reculé de 27,8 % à 25,6 %, et Claude s'est stabilisé autour de 9,3 % [[s96]]. Sensor Tower observe aussi davantage de changements d'assistant ; l'accord d'OpenAI avec le Département de la Défense américain en février 2026 a provoqué un pic de désinstallations [[s64]].",
+  "tr": "Over one year, ChatGPT lost nearly 18 share points, captured mainly by Gemini and Claude [[s96]]. The trend has reversed since May: ChatGPT climbed back from 52.7% to 55.5%, Gemini fell from 27.8% to 25.6%, and Claude stabilized around 9.3% [[s96]]. Sensor Tower also observes more assistant switching; OpenAI's agreement with the US Department of Defense in February 2026 triggered a spike in uninstalls [[s64]]."
+ },
+ "7d5770183d023ee6": {
+  "fr": "Ce que « temps réel » recouvre",
+  "tr": "What \"real time\" covers"
+ },
+ "7daa618590cafcd7": {
+  "fr": "Entraînement sur les conversations (grand public)",
+  "tr": "Training on conversations (consumer)"
+ },
+ "7e008e5ebeccfee7": {
+  "fr": "Code, tâches longues, protocole MCP",
+  "tr": "Code, long tasks, MCP protocol"
+ },
+ "7e07d159953a19c1": {
+  "fr": "C+",
+  "tr": "C+"
+ },
+ "7e22aefd729f2481": {
+  "fr": "Brightside AI, de WormGPT à Mythos",
+  "tr": "Brightside AI, from WormGPT to Mythos"
+ },
+ "7ebc56d904aa46f5": {
+  "fr": "Anthropic Economic Index, rapport de juin 2026",
+  "tr": "Anthropic Economic Index, June 2026 report"
+ },
+ "7ee369837e9bb04b": {
+  "fr": "Les agents qui agissent sur des systèmes publics posent la question de la responsabilité en cas d'erreur.",
+  "tr": "Agents that act on public systems raise the question of liability in case of error."
+ },
+ "7f47e56a8ba6daa5": {
+  "fr": "OSWorld",
+  "tr": "OSWorld"
+ },
+ "7f9bb6ab19bb0e69": {
+  "fr": "Oui par défaut, 18 mois de conservation",
+  "tr": "Yes by default, 18-month retention"
+ },
+ "8010d1f4d0696ce1": {
+  "fr": "Assistant",
+  "tr": "Assistant"
+ },
+ "804c0b70535ea9c2": {
+  "fr": "Données d'entraînement : ce que les procès révèlent",
+  "tr": "Training data: what the lawsuits reveal"
+ },
+ "8086eb46b13e0140": {
+  "fr": "Loue, programme Stargate",
+  "tr": "Leases, Stargate program"
+ },
+ "80dbd5dae022651b": {
+  "fr": "NextBigFuture, centres de plus d'1 GW",
+  "tr": "NextBigFuture, centers over 1 GW"
+ },
+ "811457021dc3a554": {
+  "fr": "Anthropic diversifie ses fournisseurs : Amazon, Google avec jusqu'à un million de TPU [[s10]], et des capacités louées à xAI sur Colossus [[s5]].",
+  "tr": "Anthropic diversifies its suppliers: Amazon, Google with up to one million TPUs [[s10]], and capacity leased from xAI on Colossus [[s5]]."
+ },
+ "8166089d4f997ca8": {
+  "fr": "Page de statut Claude (Anthropic)",
+  "tr": "Claude status page (Anthropic)"
+ },
+ "817505728074b3a8": {
+  "fr": "[Grok 4.7](https://news.ycombinator.com/item?id=49788838)",
+  "tr": "[Grok 4.7](https://news.ycombinator.com/item?id=49788838)"
+ },
+ "81829c7ff3f237d0": {
+  "fr": "Analyse de cycle de vie avec l'ADEME et Carbone 4",
+  "tr": "Life cycle analysis with ADEME and Carbone 4"
+ },
+ "81b6c3e2b68491d0": {
+  "fr": "arXiv 2512.11863, risques environnementaux systémiques de l'IA",
+  "tr": "arXiv 2512.11863, systemic environmental risks of AI"
+ },
+ "81d26ca3e845a42e": {
+  "fr": "complet sur 90 jours [[s91]]",
+  "tr": "full over 90 days [[s91]]"
+ },
+ "827ee0928816418f": {
+  "fr": "Les mêmes capacités qui aident à corriger les failles logicielles permettent aussi de les exploiter.",
+  "tr": "The same capabilities that help fix software vulnerabilities also make it possible to exploit them."
+ },
+ "828726a79257d26f": {
+  "fr": "Anthropic suspend l'accès à Claude Fable 5 et Mythos 5 pour se conformer à des contrôles à l'exportation américains, levés le 30 juin ; accès rétabli le 1er juillet [[s23]].",
+  "tr": "Anthropic suspends access to Claude Fable 5 and Mythos 5 to comply with US export controls, lifted on June 30; access restored on July 1 [[s23]]."
+ },
+ "82906090b78f3ab9": {
+  "fr": "La provenance des données d'entraînement engage la responsabilité juridique des éditeurs, et parfois celle de leurs clients.",
+  "tr": "The provenance of training data creates legal liability for developers, and sometimes for their clients."
+ },
+ "83125a9ef5acbe7c": {
+  "fr": "Assistant capable d'agir (naviguer, écrire, envoyer, exécuter du code) en enchaînant plusieurs étapes sans validation à chacune.",
+  "tr": "Assistant capable of acting (browsing, writing, sending, executing code) by chaining several steps without validation at each one."
+ },
+ "83f886aec0fa586c": {
+  "fr": "AI Lawsuit Tracker",
+  "tr": "AI Lawsuit Tracker"
+ },
+ "843699b596003bf7": {
+  "fr": "À quoi servent-ils",
+  "tr": "What they are used for"
+ },
+ "8493243f722caf7c": {
+  "fr": "Pro 200 $",
+  "tr": "Pro $200"
+ },
+ "84f68d53d3201bf4": {
+  "fr": "Stargate Abilene",
+  "tr": "Stargate Abilene"
+ },
+ "85a86a3cca11e810": {
+  "fr": "Une conversation peut servir à entraîner les modèles, être relue par des humains ou conservée pendant des années, selon l'offre et les réglages.",
+  "tr": "A conversation may be used to train models, reviewed by humans, or kept for years, depending on the offer and the settings."
+ },
+ "85b21863182f5cf6": {
+  "fr": "Les biais commerciaux (publicité, agents sponsorisés) comptent pour les usages d'achat et de veille.",
+  "tr": "Commercial biases (advertising, sponsored agents) count for purchasing and monitoring uses."
+ },
+ "860366a4a63d772a": {
+  "fr": "Le recul des engagements de pause et le virage militaire relèvent directement du débat public.",
+  "tr": "The decline in pause commitments and the military shift are directly part of the public debate."
+ },
+ "863c4ba40798ea74": {
+  "fr": "Ce que deviennent les conversations, d'où viennent les données d'entraînement, et quels biais en résultent.",
+  "tr": "What happens to conversations, where training data comes from, and what biases result."
+ },
+ "867ce5b7d1c976cd": {
+  "fr": "18 mois par défaut ; échantillons relus conservés jusqu'à 3 ans [[s76]]",
+  "tr": "18 months by default; reviewed samples kept for up to 3 years [[s76]]"
+ },
+ "86fabc02244ac8f6": {
+  "fr": "5 vidéos retenues",
+  "tr": "5 videos selected"
+ },
+ "87edf4d48a3a08b5": {
+  "fr": "Rapports de menace Anthropic",
+  "tr": "Anthropic threat reports"
+ },
+ "880aa831ef70f440": {
+  "fr": "Stanford HAI, AI Index",
+  "tr": "Stanford HAI, AI Index"
+ },
+ "881c413579928d4b": {
+  "fr": "ADEME",
+  "tr": "ADEME"
+ },
+ "88b3c8414665d381": {
+  "fr": "sept. 25",
+  "tr": "Sep 25"
+ },
+ "88bc2b844d1b809a": {
+  "fr": "Work mode, déployable sur site",
+  "tr": "Work mode, deployable on-premises"
+ },
+ "88e569aca7900dd6": {
+  "fr": "Fait établi ou allégué",
+  "tr": "Established or alleged fact"
+ },
+ "893e4b04dd0b0cbe": {
+  "fr": "OpenRouter, classements d'usage",
+  "tr": "OpenRouter, usage rankings"
+ },
+ "898ff6736adc545d": {
+  "fr": "Annonce de Claude Mythos Preview et du Project Glasswing : des milliers de failles critiques découvertes [[s14]]. L'AI Security Institute britannique confirme le premier succès d'un modèle sur sa simulation d'attaque réseau en 32 étapes [[s16]], avec 3 succès sur 10 essais [[s15]].",
+  "tr": "Announcement of Claude Mythos Preview and Project Glasswing: thousands of critical vulnerabilities discovered [[s14]]. The UK's AI Security Institute confirms a model's first success on its 32-step network attack simulation [[s16]], with 3 successes out of 10 attempts [[s15]]."
+ },
+ "89bac00ec50c063e": {
+  "fr": "Peu documentée",
+  "tr": "Poorly documented"
+ },
+ "89dec3a40ff8b5d1": {
+  "fr": "Factualité mesurée",
+  "tr": "Measured factuality"
+ },
+ "8afadeb5c87b005b": {
+  "fr": "Une requête simple consomme peu ; les modèles de raisonnement et la génération d'images consomment nettement plus.",
+  "tr": "A simple query consumes little; reasoning models and image generation consume significantly more."
+ },
+ "8b4b12c42ae7badb": {
+  "fr": "OpenAI (ChatGPT)",
+  "tr": "OpenAI (ChatGPT)"
+ },
+ "8b704e1f2f2773bd": {
+  "fr": "Exclues de l'entraînement",
+  "tr": "Excluded from training"
+ },
+ "8b77577e69988a25": {
+  "fr": "Google (Gemini)",
+  "tr": "Google (Gemini)"
+ },
+ "8b7add47a974bea4": {
+  "fr": "1 D",
+  "tr": "1 D"
+ },
+ "8b85ccb85f931719": {
+  "fr": "Chaînes de vulgarisation et de tests d'IA",
+  "tr": "AI explainer and testing channels"
+ },
+ "8c7a69428893e9bf": {
+  "fr": "Les applications chinoises hébergées traitent les requêtes en Chine ; les poids ouverts peuvent en revanche tourner sur un ordinateur personnel.",
+  "tr": "Chinese hosted applications process requests in China; open weights, however, can run on a personal computer."
+ },
+ "8d546a6dea9ff90d": {
+  "fr": "Meta",
+  "tr": "Meta"
+ },
+ "8d84a0ef3a08a433": {
+  "fr": "Z.ai (GLM)",
+  "tr": "Z.ai (GLM)"
+ },
+ "8da309779bb1afe1": {
+  "fr": "Méthode publiée, non revue par des pairs",
+  "tr": "Published method, not peer-reviewed"
+ },
+ "8df14a406bbbe0ab": {
+  "fr": "Politiques de confidentialité des éditeurs",
+  "tr": "Publishers' privacy policies"
+ },
+ "8df9063f2ce5c9d5": {
+  "fr": "Intégré aux documents déjà ouverts",
+  "tr": "Integrated into already open documents"
+ },
+ "8ec1310d879fdcc1": {
+  "fr": "Les développeurs testent les nouveaux modèles dès leur sortie ; leurs discussions signalent tôt les forces, les régressions et les controverses.",
+  "tr": "Developers test new models as soon as they are released; their discussions signal strengths, regressions, and controversies early on."
+ },
+ "8ec69deaaff21b3e": {
+  "fr": "Fiabilité : la méthode fait le chiffre",
+  "tr": "Reliability: the method makes the figure"
+ },
+ "8fd819f8b1bb7820": {
+  "fr": "complet sur 90 jours [[s89]]",
+  "tr": "full over 90 days [[s89]]"
+ },
+ "8ff20fd957ed07ef": {
+  "fr": "Anthropic et OpenAI apparaissent plus souvent dans les incidents documentés, en partie parce qu'ils publient leurs rapports d'abus. Des capacités équivalentes à Mythos pourraient atteindre des acteurs hostiles d'ici 6 à 24 mois [[s17]]. Question ouverte pour un industriel : les logiciels embarqués et les machines connectées suivent-ils le rythme de correctifs de l'informatique de gestion ?",
+  "tr": "Anthropic and OpenAI appear more often in documented incidents, partly because they publish their abuse reports. Capabilities equivalent to Mythos could reach hostile actors within 6 to 24 months [[s17]]. An open question for manufacturers: do embedded software and connected machines keep pace with the patching rhythm of enterprise IT?"
+ },
+ "90774d76e161a461": {
+  "fr": "Majeurs ou critiques",
+  "tr": "Major or critical"
+ },
+ "9094681c7581db5a": {
+  "fr": "Modèle le mieux noté",
+  "tr": "Highest-rated model"
+ },
+ "90c3c976c6529314": {
+  "fr": "Llama 4 Maverick",
+  "tr": "Llama 4 Maverick"
+ },
+ "90e3703012603de4": {
+  "fr": "Usages : évolution des parts de visites web sur douze mois, d'après la série publiée par Similarweb [[s96]] ; la tendance récente nuance le recul de ChatGPT.",
+  "tr": "Usage: change in web visit shares over twelve months, based on the series published by Similarweb [[s96]]; the recent trend qualifies ChatGPT's decline."
+ },
+ "914ab5349a2bedd2": {
+  "fr": "Pro, environ 15 € [[s13]]",
+  "tr": "Pro, about €15 [[s13]]"
+ },
+ "924bc21fe5b8e0e8": {
+  "fr": "Le critère juridique qui se dessine porte sur la provenance (licence, collecte sur le web ou piratage) plus que sur l'entraînement lui-même. Le montant payé par Anthropic reflète le premier jugement sur le fond ; les autres dossiers restent ouverts.",
+  "tr": "The legal criterion that is emerging concerns provenance (license, web scraping or piracy) more than the training itself. The amount paid by Anthropic reflects the first ruling on the merits; the other cases remain open."
+ },
+ "9261e22345cdd8a1": {
+  "fr": "Historique sur douze mois pour Hacker News et le classement Vectara, reconstitué à partir des sources d'origine.",
+  "tr": "Twelve-month history for Hacker News and the Vectara ranking, reconstructed from original sources."
+ },
+ "935dfc7dfa6aeb46": {
+  "fr": "Le droit d'opposition RGPD (article 21) offre un recours même sans bouton de désactivation [[s80]] ; la juridiction de l'éditeur détermine l'exposition au Cloud Act.",
+  "tr": "The GDPR right to object (Article 21) provides recourse even without an opt-out button [[s80]]; the vendor's jurisdiction determines exposure to the Cloud Act."
+ },
+ "94713e16ec592ac1": {
+  "fr": "Publicité Meta, commission future sur transactions",
+  "tr": "Meta advertising, future commission on transactions"
+ },
+ "94e206087e0d254e": {
+  "fr": "Les notes de gouvernance décrivent les pratiques de l'éditeur ; la qualité d'une réponse donnée se mesure ailleurs.",
+  "tr": "Governance notes describe the publisher's practices; the quality of a given answer is measured elsewhere."
+ },
+ "94eb0b236d4ec6a8": {
+  "fr": "La puissance de calcul conditionne la capacité à entraîner les modèles et à servir les utilisateurs sans limite d'usage.",
+  "tr": "Computing power determines the ability to train models and serve users without usage limits."
+ },
+ "9502865a88064ac9": {
+  "fr": "CourtListener (dossiers Kadrey c. Meta, In re OpenAI, Concord c. Anthropic)",
+  "tr": "CourtListener (Kadrey v. Meta, In re OpenAI, Concord v. Anthropic cases)"
+ },
+ "952a4fd5d2e42fef": {
+  "fr": "Neuf administrations mexicaines compromises. Environ 75 % des commandes à distance ont été générées et exécutées par Claude Code ; un outil passait les données volées par l'API d'OpenAI [[s20]].",
+  "tr": "Nine Mexican government agencies compromised. About 75% of remote commands were generated and executed by Claude Code; one tool passed the stolen data through OpenAI's API [[s20]]."
+ },
+ "9597ba87527e7519": {
+  "fr": "Google Cloud, impact environnemental de l'inférence",
+  "tr": "Google Cloud, environmental impact of inference"
+ },
+ "96176bdbe4637e8e": {
+  "fr": "Les tests mesurent des choses différentes : fidélité à un document fourni (HHEM), rappel de faits (SimpleQA, FACTS), refus de répondre face à l'inconnu (AA-Omniscience). Un modèle peut mener l'un et reculer sur l'autre. Les classements relayés par des éditeurs d'outils se révèlent parfois inexacts par rapport à leur source.",
+  "tr": "Tests measure different things: faithfulness to a provided document (HHEM), factual recall (SimpleQA, FACTS), refusal to answer when facing the unknown (AA-Omniscience). A model can lead on one and fall behind on another. Rankings relayed by tool publishers sometimes turn out to be inaccurate compared with their source."
+ },
+ "9641501eabf05688": {
+  "fr": "Rendez-vous, formulaires, caméras domestiques, lunettes [[s42]] [[s43]]",
+  "tr": "Appointments, forms, home cameras, glasses [[s42]] [[s43]]"
+ },
+ "9699c8c602f468b8": {
+  "fr": "Accès à l'actualité",
+  "tr": "Access to news"
+ },
+ "97b8b694e67f9ecf": {
+  "fr": "Wikipedia, Grok",
+  "tr": "Wikipedia, Grok"
+ },
+ "9853170f16b4a089": {
+  "fr": "Modèle",
+  "tr": "Model"
+ },
+ "98a0832e91e38ab8": {
+  "fr": "Towards Data Science, progrès ou greenwashing",
+  "tr": "Towards Data Science, progress or greenwashing"
+ },
+ "98b386a71951a8d4": {
+  "fr": "Wikipedia, AI data center",
+  "tr": "Wikipedia, AI data center"
+ },
+ "98d1539003bb4b1c": {
+  "fr": "Via Google Workspace",
+  "tr": "Via Google Workspace"
+ },
+ "992978aca1ec65fd": {
+  "fr": "xAI",
+  "tr": "xAI"
+ },
+ "99d5f70a9640c471": {
+  "fr": "Confidentialité : ce que deviennent les conversations",
+  "tr": "Privacy: what happens to conversations"
+ },
+ "9a1c2cff85b79281": {
+  "fr": "16 k",
+  "tr": "16k"
+ },
+ "9a597265c6f9d4f3": {
+  "fr": "Wittliff Cutter, affaires Google et Anthropic",
+  "tr": "Wittliff Cutter, Google and Anthropic cases"
+ },
+ "9aad1250a1908f36": {
+  "fr": "Pour aller plus loin : détail des constats du panel",
+  "tr": "To go further: detail of the panel's findings"
+ },
+ "9affcc37a1319c97": {
+  "fr": "Documentation des outils de recherche web des éditeurs",
+  "tr": "Documentation of publishers' web search tools"
+ },
+ "9b50812f919fa20e": {
+  "fr": "10 à 12 % en résumé (HHEM), mieux classé ailleurs",
+  "tr": "10 to 12% in summary (HHEM), ranked better elsewhere"
+ },
+ "9b8048c839b23f8d": {
+  "fr": "Pour Muse Spark, Meta n'a publié que des résultats en code, sans chiffre de factualité [[s47]].",
+  "tr": "For Muse Spark, Meta only published results in code, without a factuality figure [[s47]]."
+ },
+ "9bec446e512f9315": {
+  "fr": "Menlo Ventures, marché de l'IA en entreprise",
+  "tr": "Menlo Ventures, enterprise AI market"
+ },
+ "9c6fa39b8e05537c": {
+  "fr": "Wikipedia, Google Gemini",
+  "tr": "Wikipedia, Google Gemini"
+ },
+ "9c6fa98959ba0251": {
+  "fr": "Grok est né d'une intention affichée de « combattre les biais ». Les comparatifs relèvent au contraire des réponses alignées sur la vision du monde de son propriétaire sur les sujets politiques [[s53]]. Tout ajustement correctif est lui-même un choix éditorial.",
+  "tr": "Grok was born from a stated intention to \"fight bias.\" Comparative reviews instead show answers aligned with its owner's worldview on political topics [[s53]]. Any corrective adjustment is itself an editorial choice."
+ },
+ "9c7610644d2fa50d": {
+  "fr": "Études universitaires sur la complaisance des modèles",
+  "tr": "Academic studies on model sycophancy"
+ },
+ "9d6bcaf6035a730b": {
+  "fr": "Les offres à 20 $ se valent en prix ; les différences portent sur les outils inclus (code, agents, génération d'images) et les limites d'usage.",
+  "tr": "The $20 plans are comparable in price; the differences lie in the included tools (code, agents, image generation) and usage limits."
+ },
+ "9db210411e2e1008": {
+  "fr": "Anthropic, campagne d'espionnage orchestrée par IA",
+  "tr": "Anthropic, AI-orchestrated espionage campaign"
+ },
+ "9db50bb51bccee8a": {
+  "fr": "Quand l'historique publié couvre moins de 90 jours, la moyenne mensuelle est calculée sur la période disponible, ce qui la rend plus fragile.",
+  "tr": "When the published history covers less than 90 days, the monthly average is calculated over the available period, making it less reliable."
+ },
+ "9e1dbf33d669a63f": {
+  "fr": "Agent grand public, sous-agents parallèles",
+  "tr": "Consumer agent, parallel sub-agents"
+ },
+ "9e2e6e77e08ee999": {
+  "fr": "Énergie non publiée",
+  "tr": "Energy not disclosed"
+ },
+ "9e9737df821417a0": {
+  "fr": "8,7 % en résumé (Astra), 6,5 % (Sol)",
+  "tr": "8.7% in summarization (Astra), 6.5% (Sol)"
+ },
+ "9f401972566b0389": {
+  "fr": "Plainte déposée en 2026.",
+  "tr": "Complaint filed in 2026."
+ },
+ "9f82c226338db7f3": {
+  "fr": "Les versions les plus récentes de DeepSeek utilisent la licence MIT ; Qwen publie certains modèles sous Apache 2.0 et d'autres sous licence propre [[s67]].",
+  "tr": "The most recent versions of DeepSeek use the MIT license; Qwen releases some models under Apache 2.0 and others under its own license [[s67]]."
+ },
+ "a0775e653cb56a38": {
+  "fr": "Nouvelle section « Ce qu'en disent les développeurs », alimentée chaque semaine par Hacker News.",
+  "tr": "New section \"What developers are saying\", updated weekly from Hacker News."
+ },
+ "a0e8e970469921d7": {
+  "fr": "Instructions système publiées par Anthropic et xAI",
+  "tr": "System prompts published by Anthropic and xAI"
+ },
+ "a1141eb96836ed96": {
+  "fr": "Token",
+  "tr": "Token"
+ },
+ "a11f159350e54e3a": {
+  "fr": "Claude Opus 4.7",
+  "tr": "Claude Opus 4.7"
+ },
+ "a19ee5a9fdc19109": {
+  "fr": "OpenAI",
+  "tr": "OpenAI"
+ },
+ "a24995024d492193": {
+  "fr": "Activé par défaut, désactivable [[s76]]",
+  "tr": "Enabled by default, can be disabled [[s76]]"
+ },
+ "a28a131c6ccadc96": {
+  "fr": "nov.",
+  "tr": "Nov"
+ },
+ "a2a7c139f03aa365": {
+  "fr": "Meta (Muse, Llama)",
+  "tr": "Meta (Muse, Llama)"
+ },
+ "a2c432d06a26520c": {
+  "fr": "GeoToolbox, modèles chinois comparés 2026",
+  "tr": "GeoToolbox, Chinese models compared 2026"
+ },
+ "a2ed706aaefc117d": {
+  "fr": "Fair use",
+  "tr": "Fair use"
+ },
+ "a3a85aff264d1fee": {
+  "fr": "Publications X utilisées par défaut, désactivable [[s78]]",
+  "tr": "X posts used by default, can be disabled [[s78]]"
+ },
+ "a3e57bfa35b05eb1": {
+  "fr": "Meilleur taux d'hallucination de chaque éditeur, fin de mois, en %",
+  "tr": "Best hallucination rate for each provider, end of month, in %"
+ },
+ "a409c16c9e91a85d": {
+  "fr": "Accords avec les agences de presse (AFP, AP, Reuters)",
+  "tr": "Agreements with news agencies (AFP, AP, Reuters)"
+ },
+ "a40d6e02087f42e6": {
+  "fr": "Modèle économique",
+  "tr": "Business model"
+ },
+ "a414bcdefe61c45e": {
+  "fr": "Recherche web",
+  "tr": "Web search"
+ },
+ "a4a04eb60515935e": {
+  "fr": "Puissance électrique consommée par les serveurs d'un centre de données, hors refroidissement et pertes.",
+  "tr": "Electrical power consumed by a data center's servers, excluding cooling and losses."
+ },
+ "a4be56756d59f21f": {
+  "fr": "Trois éditeurs ont publié un chiffre par requête, avec des méthodes différentes. Les placer sur un même graphique produirait une fausse comparaison.",
+  "tr": "Three publishers released a figure per request, using different methods. Placing them on the same chart would produce a false comparison."
+ },
+ "a556a8167e0d9a18": {
+  "fr": "UK AI Security Institute",
+  "tr": "UK AI Security Institute"
+ },
+ "a5c02cb24b8471e0": {
+  "fr": "Epoch AI, AI data centers",
+  "tr": "Epoch AI, AI data centers"
+ },
+ "a60737ee7c28b3b7": {
+  "fr": "Index Google",
+  "tr": "Google Index"
+ },
+ "a64ffd12fce827e1": {
+  "fr": "L'écart entre la communication officielle d'un éditeur et l'attention qu'il obtient renseigne sur la force de sa marque.",
+  "tr": "The gap between a provider's official communication and the attention it receives reveals the strength of its brand."
+ },
+ "a6caa4dd13561c20": {
+  "fr": "Tous les assistants inventent parfois des faits ; le taux varie selon le modèle et surtout selon la tâche.",
+  "tr": "All assistants sometimes make up facts; the rate varies by model and above all by task."
+ },
+ "a6f85b71b9ef3623": {
+  "fr": "Mesure en production, machines inactives et refroidissement inclus",
+  "tr": "Measured in production, idle machines and cooling included"
+ },
+ "a6ff97e3063c280a": {
+  "fr": "Sur ce classement public, les modèles Claude testés se situent entre 10 et 12 %, derrière GPT-6 et Gemini 3.1 Pro [[s55]]. Plusieurs comparatifs commerciaux affirment au contraire que Claude mène ce classement [[s48]] [[s49]] : la source primaire ne le confirme pas. Le classement a toutefois un temps de retard : Claude Opus 5.5, Grok 4.7, Mistral Medium 3.5 et Muse Spark n'y figurent pas, et Grok 4.1 Fast a été retiré par xAI en mai 2026 [[s83]].",
+  "tr": "In this public ranking, the tested Claude models score between 10 and 12%, behind GPT-6 and Gemini 3.1 Pro [[s55]]. Several commercial comparisons instead claim that Claude leads this ranking [[s48]] [[s49]]: the primary source does not confirm this. However, the ranking lags behind: Claude Opus 5.5, Grok 4.7, Mistral Medium 3.5, and Muse Spark are not listed, and Grok 4.1 Fast was withdrawn by xAI in May 2026 [[s83]]."
+ },
+ "a8071f358fbd21b9": {
+  "fr": "États-Unis",
+  "tr": "United States"
+ },
+ "a82f2210dd3d1e03": {
+  "fr": "DCD, requête Gemini à 0,24 Wh",
+  "tr": "DCD, Gemini query at 0.24 Wh"
+ },
+ "a95c4b5869620ac9": {
+  "fr": "Anthropic, annonce de Claude Opus 4.7",
+  "tr": "Anthropic, announcement of Claude Opus 4.7"
+ },
+ "a978d8e92c5ffb4c": {
+  "fr": "Hallucination",
+  "tr": "Hallucination"
+ },
+ "a9a1a952146c6a5c": {
+  "fr": "Google DeepMind, FACTS Grounding",
+  "tr": "Google DeepMind, FACTS Grounding"
+ },
+ "a9dd6c301119a38b": {
+  "fr": "Une chaîne officielle n'est retenue que si son nom correspond à l'éditeur et qu'elle dépasse 1 000 abonnés : certains identifiants évidents appartiennent à des tiers.",
+  "tr": "An official channel is only counted if its name matches the publisher and it has more than 1,000 subscribers: some obvious handles belong to third parties."
+ },
+ "aa8f595751848f96": {
+  "fr": "Gemini 3.8 Flash (tarif de lancement)",
+  "tr": "Gemini 3.8 Flash (launch pricing)"
+ },
+ "ab16b8bb9565c621": {
+  "fr": "Grok concentre 87 % des fichiers générés par IA liés à des attaques par deepfake au premier semestre 2026, sur les incidents rapportés publiquement [[s38]]. Aucun rapport public de menace comparable n'a été trouvé pour xAI, Meta ou Mistral.",
+  "tr": "Grok accounts for 87% of AI-generated files linked to deepfake attacks in the first half of 2026, based on publicly reported incidents [[s38]]. No comparable public threat report was found for xAI, Meta, or Mistral."
+ },
+ "ab35b8c0fca195e6": {
+  "fr": "En mars 2026, OpenAI et Oracle ont abandonné une extension de 600 MW à Abilene faute de financement [[s8]].",
+  "tr": "In March 2026, OpenAI and Oracle abandoned a 600 MW expansion in Abilene due to lack of funding [[s8]]."
+ },
+ "ab49a2272bc7cc61": {
+  "fr": "Artificial Analysis est une société indépendante des éditeurs ; sa méthodologie est publiée sur son site.",
+  "tr": "Artificial Analysis is a company independent of the publishers; its methodology is published on its website."
+ },
+ "abe0f4acefa6c1ae": {
+  "fr": "AI Ultra 99,99 $",
+  "tr": "AI Ultra $99.99"
+ },
+ "ac4b58c8e8a64b89": {
+  "fr": "Omid Saffari, comparatif septembre 2026",
+  "tr": "Omid Saffari, September 2026 comparison"
+ },
+ "ac856570b0565381": {
+  "fr": "Gouvernance sécurité (FLI)",
+  "tr": "Security governance (FLI)"
+ },
+ "acd26152009bf6d1": {
+  "fr": "Le paysage",
+  "tr": "The landscape"
+ },
+ "acd6a7cb4a58fe5a": {
+  "fr": "Limites relevées",
+  "tr": "Limitations noted"
+ },
+ "acf2c927b66fea4d": {
+  "fr": "Analyse de cycle de vie : évaluation des impacts environnementaux de la fabrication à la fin de vie.",
+  "tr": "Life cycle analysis: assessment of environmental impacts from manufacturing to end of life."
+ },
+ "ad29e81e7b54079d": {
+  "fr": "0 h",
+  "tr": "0 h"
+ },
+ "ad6041a0bb8c3516": {
+  "fr": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
+  "tr": "DeepSeek V4.1 Flash (Reasoning, Max Effort)"
+ },
+ "adda2f333d6e8af5": {
+  "fr": "Offre Enterprise traitée en Europe, hors Cloud Act selon un blog spécialisé [[s81]]",
+  "tr": "Enterprise plan processed in Europe, outside the Cloud Act according to a specialized blog [[s81]]"
+ },
+ "adf14ae31c4019d8": {
+  "fr": "Sur YouTube : communication des éditeurs et attention du public",
+  "tr": "On YouTube: publisher communication and audience attention"
+ },
+ "ae03de13143c7343": {
+  "fr": "New Carlisle",
+  "tr": "New Carlisle"
+ },
+ "ae701fa7aaaa6ad5": {
+  "fr": "Epoch AI, Capabilities Index",
+  "tr": "Epoch AI, Capabilities Index"
+ },
+ "aef7e44fd7322c8e": {
+  "fr": "30 jours après suppression, sauf obligation judiciaire [[s75]]",
+  "tr": "30 days after deletion, unless a legal obligation applies [[s75]]"
+ },
+ "af2bfaa224d2ffd7": {
+  "fr": "Qui utilise quoi, et pour quoi faire, montre où chaque assistant a fait ses preuves.",
+  "tr": "Who uses what, and for what purpose, shows where each assistant has proven itself."
+ },
+ "afc7f833a9b41907": {
+  "fr": "La vitesse de correction des failles devient le facteur décisif, y compris pour les machines connectées.",
+  "tr": "The speed of vulnerability patching is becoming the decisive factor, including for connected machines."
+ },
+ "b019bd23b493e7f2": {
+  "fr": "Environ 420 millions d'utilisateurs mensuels, plus de 30 millions de licences Microsoft 365 payantes [[s58]]",
+  "tr": "About 420 million monthly users, more than 30 million paid Microsoft 365 licenses [[s58]]"
+ },
+ "b038239a375fceb3": {
+  "fr": "Claude Opus 5.5 (Adaptive Reasoning, Max",
+  "tr": "Claude Opus 5.5 (Adaptive Reasoning, Max"
+ },
+ "b040b4179b8b0070": {
+  "fr": "Architecture",
+  "tr": "Architecture"
+ },
+ "b04eab36345fbd5f": {
+  "fr": "Part des visites web des assistants IA, en %",
+  "tr": "Share of AI assistants' web visits, in %"
+ },
+ "b07d8e27d9ae43f7": {
+  "fr": "Boîte mail, rapports, code [[s51]]",
+  "tr": "Mailbox, reports, code [[s51]]"
+ },
+ "b0b83ed2f6e068d2": {
+  "fr": "Idéologique",
+  "tr": "Ideological"
+ },
+ "b0e16ed9274578c6": {
+  "fr": "La puissance de calcul derrière les assistants et son coût énergétique.",
+  "tr": "The computing power behind the assistants and its energy cost."
+ },
+ "b10e68bbd79adbfb": {
+  "fr": "Souvent déjà présent dans les organisations équipées d'Office",
+  "tr": "Often already present in organizations equipped with Office"
+ },
+ "b179858c04b94136": {
+  "fr": "Microsoft Copilot revendique environ 420 millions d'utilisateurs mensuels, dont plus de 30 millions de licences Microsoft 365 Copilot payantes [[s58]].",
+  "tr": "Microsoft Copilot claims about 420 million monthly users, including more than 30 million paid Microsoft 365 Copilot licenses [[s58]]."
+ },
+ "b1bec915657f381c": {
+  "fr": "Pour aller plus loin : les autres tests de référence",
+  "tr": "To go further: the other benchmark tests"
+ },
+ "b22616480306147b": {
+  "fr": "Plus grands centres de données IA en service, puissance IT en MW",
+  "tr": "Largest AI data centers in operation, IT power in MW"
+ },
+ "b258a164d2c0f399": {
+  "fr": "Les pages Statuspage (Anthropic, Mistral) exposent les 50 derniers incidents environ ; le pipeline les accumule chaque semaine pour allonger l'historique.",
+  "tr": "Statuspage pages (Anthropic, Mistral) expose roughly the last 50 incidents; the pipeline accumulates them weekly to extend the history."
+ },
+ "b25a5f6728e3e045": {
+  "fr": "Ce public reste majoritairement anglophone et nord-américain ; il ne représente pas les utilisateurs européens.",
+  "tr": "This audience remains predominantly English-speaking and North American; it does not represent European users."
+ },
+ "b39947d466a8aea3": {
+  "fr": "Prometheus",
+  "tr": "Prometheus"
+ },
+ "b3a3b60b5631b3fd": {
+  "fr": "Project Glasswing",
+  "tr": "Project Glasswing"
+ },
+ "b3ed0a63bda6337c": {
+  "fr": "Les prix sont ceux de l'API, facturée à l'usage ; ils ne correspondent pas aux abonnements grand public.",
+  "tr": "The prices are those of the API, billed per use; they do not correspond to consumer subscriptions."
+ },
+ "b40228d162131a61": {
+  "fr": "Big Sleep (Google) a repéré une faille sur le point d'être exploitée, CodeMender corrige du code vulnérable, et Codex Security (OpenAI) revendique plus de 3 000 failles critiques corrigées. Anthropic a engagé 100 millions de dollars de crédits pour ouvrir Mythos aux défenseurs [[s18]].",
+  "tr": "Big Sleep (Google) spotted a flaw about to be exploited, CodeMender fixes vulnerable code, and Codex Security (OpenAI) claims over 3,000 critical flaws fixed. Anthropic committed $100 million in credits to open Mythos to defenders [[s18]]."
+ },
+ "b48513e4d112b083": {
+  "fr": "Commercial",
+  "tr": "Commercial"
+ },
+ "b53a072a3b1d6a19": {
+  "fr": "Architecture, poids, données et méthodes entièrement publiés ; version 1.5 en juillet 2026 [[s72]] [[s73]]",
+  "tr": "Architecture, weights, data, and methods fully published; version 1.5 in July 2026 [[s72]] [[s73]]"
+ },
+ "b570d8de4524daaf": {
+  "fr": "Panto, statistiques Anthropic 2026 (Economic Index)",
+  "tr": "Panto, Anthropic 2026 statistics (Economic Index)"
+ },
+ "b57aafb462afc971": {
+  "fr": "Sont retenus les articles dont le titre mentionne l'assistant ou son éditeur ; un même article peut compter pour plusieurs assistants.",
+  "tr": "Articles whose title mentions the assistant or its vendor are included; a single article may count for several assistants."
+ },
+ "b57c43c47aa50237": {
+  "fr": "Chaînes YouTube des éditeurs",
+  "tr": "Publishers' YouTube channels"
+ },
+ "b582696e308490e7": {
+  "fr": "Date après laquelle un modèle ne connaît plus rien par lui-même ; au-delà, il dépend d'une recherche en ligne.",
+  "tr": "Date after which a model no longer knows anything on its own; beyond that, it depends on an online search."
+ },
+ "b5fe4030c8b21d75": {
+  "fr": "40 k",
+  "tr": "40k"
+ },
+ "b6830ad3fe94ce50": {
+  "fr": "Puissance IT en service, estimée par Epoch AI (données CC-BY, relevé de septembre 2026). Les 73 sites en service suivis totalisent 13,5 GW ; propriétaire et utilisateurs confirmés selon Epoch [[s5]].",
+  "tr": "IT power in service, estimated by Epoch AI (CC-BY data, September 2026 survey). The 73 sites in service tracked total 13.5 GW; owner and confirmed users according to Epoch [[s5]]."
+ },
+ "b6d6d2eedf9ee756": {
+  "fr": "Oui, via X",
+  "tr": "Yes, via X"
+ },
+ "b74eb16e1e77e5e2": {
+  "fr": "Terminal-Bench",
+  "tr": "Terminal-Bench"
+ },
+ "b760128c15b2fce6": {
+  "fr": "Injection d'instructions",
+  "tr": "Prompt injection"
+ },
+ "b77df871aba2a899": {
+  "fr": "Sont retenues les vidéos de 4 minutes ou plus dont le titre mentionne l'assistant ; les Shorts et montages viraux, qui citent un assistant sans en parler, sont exclus.",
+  "tr": "Videos of 4 minutes or more whose title mentions the assistant are included; Shorts and viral compilations, which reference an assistant without discussing it, are excluded."
+ },
+ "b780a23b530ef6bb": {
+  "fr": "Anthropic",
+  "tr": "Anthropic"
+ },
+ "b86c9e66c3629a63": {
+  "fr": "Muse (Meta)",
+  "tr": "Muse (Meta)"
+ },
+ "b8ed9a9b181d2bb7": {
+  "fr": "Nouvelle section « Capacités mesurées », alimentée chaque semaine par Artificial Analysis.",
+  "tr": "New \"Measured capabilities\" section, updated weekly by Artificial Analysis."
+ },
+ "b8fceeeea0e066e5": {
+  "fr": "Émissions « market-based » seulement ; pas de revue par des pairs à la publication [[s25]]",
+  "tr": "\"Market-based\" emissions only; no peer review at publication [[s25]]"
+ },
+ "b9144961cba731d1": {
+  "fr": "Offre haute",
+  "tr": "High-end plan"
+ },
+ "b9600462f04e5953": {
+  "fr": "Pro, environ 15 €",
+  "tr": "Pro, about €15"
+ },
+ "b98b935a9f0147fe": {
+  "fr": "Modèle dont les paramètres sont téléchargeables et exécutables sur ses propres serveurs, sous une licence plus ou moins permissive.",
+  "tr": "A model whose parameters can be downloaded and run on your own servers, under a more or less permissive license."
+ },
+ "b9e9313860292183": {
+  "fr": "Offres professionnelles",
+  "tr": "Professional offerings"
+ },
+ "b9ec377743d7f658": {
+  "fr": "Nouvelle organisation en cinq parties, avec une lecture par profil : grand public, entreprises, institutions.",
+  "tr": "New five-part structure, with a reading path by profile: general public, business, institutions."
+ },
+ "ba8b737e809735d0": {
+  "fr": "CNBC, agent Muse",
+  "tr": "CNBC, Muse agent"
+ },
+ "ba8f8a6c3837a65b": {
+  "fr": "Nouvelles sections : usages et adoption, autres acteurs (dont Apertus et les modèles ouverts chinois), prix et offres, confidentialité.",
+  "tr": "New sections: usage and adoption, other players (including Apertus and Chinese open models), pricing and plans, privacy."
+ },
+ "ba9a15034ff31ba3": {
+  "fr": "Alegria, fiche Mistral (série D)",
+  "tr": "Alegria, Mistral fact sheet (Series D)"
+ },
+ "bc07aba14a9cc459": {
+  "fr": "Vues de ces vidéos",
+  "tr": "Views of these videos"
+ },
+ "bc1ae33a4539c20e": {
+  "fr": "Non vérifié dans les sources consultées",
+  "tr": "Not verified in the sources consulted"
+ },
+ "bc4baa009354760c": {
+  "fr": "75 articles, 1 449 commentaires",
+  "tr": "75 articles, 1,449 comments"
+ },
+ "bc635c49031c6454": {
+  "fr": "2 C",
+  "tr": "2 C"
+ },
+ "bc6ac055cb7fdda4": {
+  "fr": "Ce graphique mesure l'attention suscitée auprès du public, sans distinguer l'enthousiasme de la critique. Les chaînes de vulgarisation pèsent souvent davantage que les chaînes officielles des éditeurs.",
+  "tr": "This chart measures the attention generated among the public, without distinguishing enthusiasm from criticism. Popularization channels often carry more weight than publishers' official channels."
+ },
+ "bc7d80b37357d4c9": {
+  "fr": "Information inventée présentée comme un fait.",
+  "tr": "Made-up information presented as fact."
+ },
+ "bd4b09135ef1ea33": {
+  "fr": "Prix API entrée / sortie (par million de tokens)",
+  "tr": "API price input / output (per million tokens)"
+ },
+ "be66ef0f605edf4d": {
+  "fr": "SemiAnalysis",
+  "tr": "SemiAnalysis"
+ },
+ "be93841f0284034c": {
+  "fr": "Tâches longues, protocole MCP créé par Anthropic",
+  "tr": "Long tasks, MCP protocol created by Anthropic"
+ },
+ "bebe4ea2481c1967": {
+  "fr": "Propriétaire, Hyperion prévu à 5 GW",
+  "tr": "Owner, Hyperion planned at 5 GW"
+ },
+ "bf34e83cf0de8e53": {
+  "fr": "Le nombre de vues est celui du jour du relevé ; une vidéo récente continue d'en accumuler.",
+  "tr": "The view count is that of the day of the measurement; a recent video keeps accumulating views."
+ },
+ "bf48c8822b23b121": {
+  "fr": "Chaque section affiche les sources primaires suivies chaque semaine.",
+  "tr": "Each section displays the primary sources tracked each week."
+ },
+ "bf703a58f81d57ae": {
+  "fr": "AIE, électricité et centres de données",
+  "tr": "IEA, electricity and data centers"
+ },
+ "bf9132c0c7c4d35d": {
+  "fr": "Pour un reporting CSRD (ESRS E1), les chiffres par requête doivent être combinés à un volume d'usage et à un facteur d'émission.",
+  "tr": "For CSRD reporting (ESRS E1), figures per request must be combined with a usage volume and an emission factor."
+ },
+ "bfa2d8d30ea23a61": {
+  "fr": "Un abonnement personnel payant ne protège pas les conversations : seules les offres entreprise et l'API les excluent par défaut de l'entraînement [[s75]] [[s76]].",
+  "tr": "A paid personal subscription does not protect conversations: only enterprise plans and the API exclude them from training by default [[s75]] [[s76]]."
+ },
+ "bffac113bc669eda": {
+  "fr": "Oui, modèle GPT-6 Luna",
+  "tr": "Yes, GPT-6 Luna model"
+ },
+ "c0839e3e7c0d129f": {
+  "fr": "0 F",
+  "tr": "£0"
+ },
+ "c11a4bb9b301f3f6": {
+  "fr": "Conditions des offres équipe et entreprise",
+  "tr": "Terms of team and enterprise plans"
+ },
+ "c12af3ab60abcbca": {
+  "fr": "Quantité de texte qu'un modèle peut lire en une fois, exprimée en tokens.",
+  "tr": "Amount of text a model can read at once, expressed in tokens."
+ },
+ "c138a9173a7330d5": {
+  "fr": "Hallucinations en résumé de documents (Vectara HHEM), en %, et retard du classement sur les derniers modèles",
+  "tr": "Hallucinations in document summarization (Vectara HHEM), in %, and how far the ranking lags behind the latest models"
+ },
+ "c16b89b3ece0cfd9": {
+  "fr": "Dernier modèle phare de Meta mis à jour : Muse Spark 1.3 (2 septembre 2026) [[s94]].",
+  "tr": "Latest updated Meta flagship model: Muse Spark 1.3 (September 2, 2026) [[s94]]."
+ },
+ "c1c0201437412e9f": {
+  "fr": "Indice",
+  "tr": "Index"
+ },
+ "c2e9d879da4af31d": {
+  "fr": "[xAI Moves to Buy Out Southaven Residents Who Agree Not to Sue over Plant Noise](https://news.ycombinator.com/item?id=49848217)",
+  "tr": "[xAI Moves to Buy Out Southaven Residents Who Agree Not to Sue over Plant Noise](https://news.ycombinator.com/item?id=49848217)"
+ },
+ "c31ab8b10a4cac41": {
+  "fr": "[Grok](https://www.youtube.com/@grok)",
+  "tr": "[Grok](https://www.youtube.com/@grok)"
+ },
+ "c32939a1e70c76a4": {
+  "fr": "Abonnements X et xAI",
+  "tr": "X and xAI subscriptions"
+ },
+ "c3654c14471f880d": {
+  "fr": "Web, dont dépêches AFP",
+  "tr": "Web, including AFP dispatches"
+ },
+ "c3807576defb2705": {
+  "fr": "LumiChats, désactiver l'entraînement sur chaque plateforme",
+  "tr": "LumiChats, disabling training on each platform"
+ },
+ "c3cef88c3b12cbdf": {
+  "fr": "[Claude discovers a novel enzyme system with CRISPR-like repeats](https://news.ycombinator.com/item?id=49820134)",
+  "tr": "[Claude discovers a novel enzyme system with CRISPR-like repeats](https://news.ycombinator.com/item?id=49820134)"
+ },
+ "c5b30395d81292d4": {
+  "fr": "GhostVault, désactiver l'entraînement IA en 2026",
+  "tr": "GhostVault, disabling AI training in 2026"
+ },
+ "c5d5d89962c1ff56": {
+  "fr": "Ce que les assistants font",
+  "tr": "What assistants do"
+ },
+ "c6643f05d2efad66": {
+  "fr": "Grok 4.7",
+  "tr": "Grok 4.7"
+ },
+ "c68d0f0339ece845": {
+  "fr": "Famille ouverte la plus téléchargée, près d'un milliard de téléchargements cumulés en mars 2026 [[s69]]",
+  "tr": "Most downloaded open family, nearly one billion cumulative downloads in March 2026 [[s69]]"
+ },
+ "c73cb118b963e770": {
+  "fr": "Qui utilise quoi, et quels acteurs comptent au-delà des six assistants étudiés.",
+  "tr": "Who uses what, and which players matter beyond the six assistants studied."
+ },
+ "c7fb60cac5276f3b": {
+  "fr": "Dans l'Union européenne, l'autorité irlandaise est chef de file pour OpenAI comme pour X [[s79]].",
+  "tr": "In the European Union, the Irish authority is the lead authority for OpenAI as well as for X [[s79]]."
+ },
+ "c84039ea8e1b344e": {
+  "fr": "arXiv 2603.23528, transparence énergétique des fournisseurs",
+  "tr": "arXiv 2603.23528, provider energy transparency"
+ },
+ "c8420efb6c7d66c3": {
+  "fr": "Abonnements, adossé à l'écosystème Google",
+  "tr": "Subscriptions, backed by the Google ecosystem"
+ },
+ "c875f211c4fe7b88": {
+  "fr": "arXiv 2604.07190, ATOM Report sur l'écosystème des modèles ouverts",
+  "tr": "arXiv 2604.07190, ATOM Report on the open model ecosystem"
+ },
+ "c89d01e1a9937c06": {
+  "fr": "[Google Gemini](https://www.youtube.com/@googlegemini)",
+  "tr": "[Google Gemini](https://www.youtube.com/@googlegemini)"
+ },
+ "c8fb69d6e9d585a2": {
+  "fr": "Segwise, publicité dans ChatGPT",
+  "tr": "Segwise, advertising in ChatGPT"
+ },
+ "c95b12dcb7ea288d": {
+  "fr": "Similarweb",
+  "tr": "Similarweb"
+ },
+ "c98b6105c3792cac": {
+  "fr": "AI Safety Index, Future of Life Institute, été 2026 (note sur 4)",
+  "tr": "AI Safety Index, Future of Life Institute, summer 2026 (rating out of 4)"
+ },
+ "c9b89a2650f9bfa7": {
+  "fr": "SpaceXAI ; utilisé par Anthropic, Cursor",
+  "tr": "SpaceXAI; used by Anthropic, Cursor"
+ },
+ "c9bf2e2393f79d2c": {
+  "fr": "Fiabilité des réponses, accès à l'actualité, capacité à agir, et prix.",
+  "tr": "Reliability of answers, access to news, ability to take action, and price."
+ },
+ "ca5ce38d3f9f5258": {
+  "fr": "En entreprise",
+  "tr": "In business"
+ },
+ "ca846dc402c58784": {
+  "fr": "Living with Agents, paysage du calcul IA 2026",
+  "tr": "Living with Agents, AI computing landscape 2026"
+ },
+ "cab00ed9c0970a52": {
+  "fr": "Mistral prévoit 1 GW d'infrastructure souveraine en Europe [[s13]] et a levé 3 milliards d'euros en septembre 2026 [[s54]].",
+  "tr": "Mistral plans 1 GW of sovereign infrastructure in Europe [[s13]] and raised €3 billion in September 2026 [[s54]]."
+ },
+ "cab711786d485806": {
+  "fr": "Poser la question sous plusieurs angles et demander les arguments contraires limite l'effet de complaisance.",
+  "tr": "Asking the question from several angles and requesting counterarguments limits the sycophancy effect."
+ },
+ "cabd327bf6076f7b": {
+  "fr": "Ce graphique mesure l'attention, pas l'approbation : une panne ou une controverse génère autant de discussions qu'un lancement réussi. L'intérêt tient surtout à l'évolution d'une semaine à l'autre et aux sujets qui dominent.",
+  "tr": "This chart measures attention, not approval: an outage or a controversy generates as much discussion as a successful launch. The interest lies mainly in the week-to-week evolution and the topics that dominate."
+ },
+ "cabfab36eb04ba73": {
+  "fr": "AI Pro 19,99 $",
+  "tr": "AI Pro $19.99"
+ },
+ "cb006b33eb9f3702": {
+  "fr": "YouTube est le premier lieu où le grand public découvre et compare les assistants ; les éditeurs y lancent leurs modèles, les créateurs les testent.",
+  "tr": "YouTube is the primary place where the general public discovers and compares assistants; developers launch their models there, and creators test them."
+ },
+ "cb962e45d943dc97": {
+  "fr": "La vitesse est une médiane mesurée par Artificial Analysis ; elle varie selon l'hébergeur et la charge.",
+  "tr": "Speed is a median measured by Artificial Analysis; it varies by host and load."
+ },
+ "cbc7ca03c3198f85": {
+  "fr": "Une ordonnance de conservation dans le procès du New York Times a suspendu la suppression à 30 jours chez OpenAI pour les données d'avril à septembre 2025 [[s75]].",
+  "tr": "A retention order in the New York Times lawsuit suspended deletion at 30 days for OpenAI for data from April to September 2025 [[s75]]."
+ },
+ "cbe2be489bd15ae4": {
+  "fr": "Prix et offres",
+  "tr": "Pricing and plans"
+ },
+ "cc1285833dfb0560": {
+  "fr": "Abonnement, agents sponsorisés [[s40]]",
+  "tr": "Subscription, sponsored agents [[s40]]"
+ },
+ "cc8333a953440353": {
+  "fr": "Pour un usage critique, les engagements de disponibilité contractuels (SLA) des offres entreprise comptent davantage que l'historique public.",
+  "tr": "For critical use, the contractual availability commitments (SLAs) of enterprise plans matter more than the public track record."
+ },
+ "cd368a50d2f2aa9e": {
+  "fr": "[Grok 4.7 Intelligence, Performance and Price Analysis](https://news.ycombinator.com/item?id=49789558)",
+  "tr": "[Grok 4.7 Intelligence, Performance and Price Analysis](https://news.ycombinator.com/item?id=49789558)"
+ },
+ "cd7668c3d36b0c2e": {
+  "fr": "août",
+  "tr": "August"
+ },
+ "ce19c523bf0ecf13": {
+  "fr": "OpenAI utilise incident.io, dont l'interface compatible renvoie un historique tronqué.",
+  "tr": "OpenAI uses incident.io, whose compatible interface returns a truncated history."
+ },
+ "ce48bde0b3390377": {
+  "fr": "2,1 M",
+  "tr": "2.1 M"
+ },
+ "ce6c8c9c1e62c747": {
+  "fr": "Données de X. Musk a admis une distillation partielle à partir des modèles GPT [[s35]].",
+  "tr": "Data from X. Musk admitted partial distillation from GPT models [[s35]]."
+ },
+ "ce91ab1055e608f3": {
+  "fr": "Anthropic détecte une campagne d'espionnage attribuée avec une forte confiance à un groupe étatique chinois. Claude Code a été manipulé pour tenter d'infiltrer une trentaine de cibles, avec quelques succès [[s19]].",
+  "tr": "Anthropic detects an espionage campaign attributed with high confidence to a Chinese state-backed group. Claude Code was manipulated in an attempt to infiltrate around thirty targets, with some success [[s19]]."
+ },
+ "ceec0beef013238c": {
+  "fr": "Mistral publie une page Checkly : les incidents y sont ouverts automatiquement par des sondes, parfois pour moins d'une minute, et aucun flux public documenté ne permet de les collecter.",
+  "tr": "Mistral publishes a Checkly page: incidents are opened there automatically by probes, sometimes for less than a minute, and no documented public feed allows them to be collected."
+ },
+ "cf0dee2b9fc6f41b": {
+  "fr": "Muse",
+  "tr": "Muse"
+ },
+ "cf1c85adba548e8d": {
+  "fr": "Position",
+  "tr": "Position"
+ },
+ "cf959af72d025b1e": {
+  "fr": "Mistral Large 3",
+  "tr": "Mistral Large 3"
+ },
+ "cfa2596aaf6cca66": {
+  "fr": "Le risque juridique se concentre sur les éditeurs, mais les contrats prévoient des clauses de garantie à vérifier.",
+  "tr": "Legal risk is concentrated on developers, but contracts include warranty clauses that should be checked."
+ },
+ "cfe21feabf16e7ed": {
+  "fr": "Terrain d'action",
+  "tr": "Field of action"
+ },
+ "d1b7697456e1dab8": {
+  "fr": "Pas de désactivation simple ; droit d'opposition RGPD possible [[s80]]",
+  "tr": "No simple opt-out; GDPR right to object possible [[s80]]"
+ },
+ "d1e2a78cf17a2df3": {
+  "fr": "Graphiques des centres de données et des hallucinations désormais alimentés directement par Epoch AI et Vectara.",
+  "tr": "Data center and hallucination charts now fed directly by Epoch AI and Vectara."
+ },
+ "d1ef2a7a09b6c008": {
+  "fr": "Hacker News",
+  "tr": "Hacker News"
+ },
+ "d1f52e5a133d0705": {
+  "fr": "Les usages déclarés par les éditeurs portent chacun sur leur propre produit, avec leur propre méthode. Aucune étude indépendante ne compare les six assistants avec un protocole commun.",
+  "tr": "The usage figures disclosed by publishers each cover their own product, with their own method. No independent study compares the six assistants with a common protocol."
+ },
+ "d2a825f081f06828": {
+  "fr": "[【AIヴィーガン】ChatGPTをあえて使わない？「喜びも達成感もない」生成AIとの付き合い方をひろゆきらと議論｜アベプラ](https://www.youtube.com/watch?v=U5TEeaeyH-I), 611 k vues (ABEMA Prime #アベプラ【公式】)",
+  "tr": "[【AIヴィーガン】ChatGPTをあえて使わない？「喜びも達成感もない」生成AIとの付き合い方をひろゆきらと議論｜アベプラ](https://www.youtube.com/watch?v=U5TEeaeyH-I), 611k views (ABEMA Prime #アベプラ【公式】)"
+ },
+ "d2ccd8109361016c": {
+  "fr": "Conservation",
+  "tr": "Conservation"
+ },
+ "d325cebfb9f32842": {
+  "fr": "partiel, depuis le 22/7/2026 [[s87]]",
+  "tr": "partial, since July 22, 2026 [[s87]]"
+ },
+ "d39b03ae5f6cc77c": {
+  "fr": "[U.S. appeals court upholds designation of Anthropic as supply chain risk](https://news.ycombinator.com/item?id=49845977)",
+  "tr": "[U.S. appeals court upholds designation of Anthropic as supply chain risk](https://news.ycombinator.com/item?id=49845977)"
+ },
+ "d4061caa5fa63e03": {
+  "fr": "Modèles de 8 et 70 milliards de paramètres, loin de la frontière technologique",
+  "tr": "Models of 8 and 70 billion parameters, far from the technological frontier"
+ },
+ "d47ededba1e0870a": {
+  "fr": "Qwen (Alibaba)",
+  "tr": "Qwen (Alibaba)"
+ },
+ "d49c68000eeb4c3c": {
+  "fr": "30 jours, ou 5 ans si l'entraînement est accepté [[s77]]",
+  "tr": "30 days, or 5 years if training is accepted [[s77]]"
+ },
+ "d4ba88476775edbf": {
+  "fr": "Études d'usage publiées par OpenAI",
+  "tr": "Usage studies published by OpenAI"
+ },
+ "d4dd5df980880cea": {
+  "fr": "Team, dès 50 $ par mois [[s54]]",
+  "tr": "Team, from $50 per month [[s54]]"
+ },
+ "d50307ea55d68033": {
+  "fr": "Volet entraînement écarté au titre du fair use, volet torrent actif.",
+  "tr": "Training aspect dismissed under fair use, torrent aspect still active."
+ },
+ "d531cbb1ddafa223": {
+  "fr": "Talkory, test sur 5 modèles",
+  "tr": "Talkory, test on 5 models"
+ },
+ "d53da70a33bd1f30": {
+  "fr": "tau-bench",
+  "tr": "tau-bench"
+ },
+ "d6597f43614807eb": {
+  "fr": "Pew Research Center",
+  "tr": "Pew Research Center"
+ },
+ "d6ada5638ef4b213": {
+  "fr": "Agents : ce qui les distingue vraiment",
+  "tr": "Agents: what really sets them apart"
+ },
+ "d6bf99f3a76621fe": {
+  "fr": "Work mode, déploiement sur site",
+  "tr": "Work mode, on-premises deployment"
+ },
+ "d70389c74e229716": {
+  "fr": "oct.",
+  "tr": "Oct."
+ },
+ "d71d649d992d053c": {
+  "fr": "Vidéo la plus vue de la semaine, tous créateurs",
+  "tr": "Most-viewed video of the week, all creators"
+ },
+ "d7a2b850dabb0158": {
+  "fr": "Accords de licence presse et IA",
+  "tr": "Press and AI licensing agreements"
+ },
+ "d7b6461815275268": {
+  "fr": "Google DeepMind",
+  "tr": "Google DeepMind"
+ },
+ "d7db301edabfbf7e": {
+  "fr": "Selon l'étude d'OpenAI publiée en 2025, plus de 70 % des messages envoyés à ChatGPT n'ont pas de lien avec le travail ; conseils pratiques, rédaction et recherche d'information en représentent près de 78 % [[s59]]. L'Economic Index d'Anthropic attribue 36 % des conversations avec Claude au code, 12,4 % à l'éducation et 7,2 % aux tâches scientifiques [[s60]].",
+  "tr": "According to the study published by OpenAI in 2025, more than 70% of messages sent to ChatGPT are unrelated to work; practical advice, writing, and information seeking account for nearly 78% of them [[s59]]. Anthropic's Economic Index attributes 36% of conversations with Claude to coding, 12.4% to education, and 7.2% to scientific tasks [[s60]]."
+ },
+ "d852ee7d7cb3258c": {
+  "fr": "Cartes de modèles des éditeurs",
+  "tr": "Vendors' model cards"
+ },
+ "d93d10ff0fbef1b4": {
+  "fr": "API",
+  "tr": "API"
+ },
+ "d980dc710bac9742": {
+  "fr": "Incidents déclarés par mois, moyenne récente",
+  "tr": "Incidents reported per month, recent average"
+ },
+ "d98ea0884ec29310": {
+  "fr": "Les vidéos de test comparent souvent les assistants sur des cas concrets ; leur date compte, car les modèles changent vite.",
+  "tr": "Test videos often compare assistants on concrete cases; their date matters, as models change fast."
+ },
+ "d9f24e56691ea020": {
+  "fr": "Model Context Protocol : standard ouvert créé par Anthropic pour connecter un assistant à des outils et des données.",
+  "tr": "Model Context Protocol: open standard created by Anthropic to connect an assistant to tools and data."
+ },
+ "da92c66bdee49baf": {
+  "fr": "Rétention dans l'écosystème Google",
+  "tr": "Retention within the Google ecosystem"
+ },
+ "daa5b6e0813c3b7e": {
+  "fr": "Accord de 1,5 Md$, approuvé le 20 juillet 2026 [[s31]]. Plainte d'éditeurs musicaux en cours.",
+  "tr": "$1.5 billion settlement, approved on July 20, 2026 [[s31]]. Lawsuit from music publishers ongoing."
+ },
+ "dabb096d1667ca3d": {
+  "fr": "Nouvelle section Disponibilité, alimentée chaque semaine par les pages de statut officielles des éditeurs.",
+  "tr": "New Availability section, updated weekly from the official status pages of the providers."
+ },
+ "db6d6ed5cabaeca0": {
+  "fr": "Le rapport de menace d'Anthropic décrit des acteurs utilisant Claude comme chef d'orchestre sur toute la chaîne d'attaque [[s22]].",
+  "tr": "Anthropic's threat report describes actors using Claude as an orchestrator across the entire attack chain [[s22]]."
+ },
+ "db93830c55ee7483": {
+  "fr": "Colossus, propriétaire",
+  "tr": "Colossus, owner"
+ },
+ "dbbe3d6f1f45da0a": {
+  "fr": "Pour aller plus loin : l'effet des modèles de raisonnement",
+  "tr": "To go further: the effect of reasoning models"
+ },
+ "dbdeccaf80ad1b4b": {
+  "fr": "Commentaires",
+  "tr": "Comments"
+ },
+ "dc6ee5acbea9595d": {
+  "fr": "Loue (Amazon, Google, xAI)",
+  "tr": "Rents (Amazon, Google, xAI)"
+ },
+ "dcb9f80847d07b55": {
+  "fr": "Les contrats entreprise sont négociés au cas par cas ; les conditions de traitement des données priment sur le prix.",
+  "tr": "Enterprise contracts are negotiated on a case-by-case basis; data processing terms take precedence over price."
+ },
+ "dce7e1fc36e00294": {
+  "fr": "Meta (Muse)",
+  "tr": "Meta (Muse)"
+ },
+ "dd252226bd0179e6": {
+  "fr": "Page de statut OpenAI",
+  "tr": "OpenAI status page"
+ },
+ "dd27c242ee0af68c": {
+  "fr": "Business 25 $ par utilisateur",
+  "tr": "Business $25 per user"
+ },
+ "dd76efcd45440a07": {
+  "fr": "Google contrôle ses puces TPU de bout en bout ; OpenAI et Anthropic louent l'essentiel de leur calcul [[s12]].",
+  "tr": "Google controls its TPU chips end to end; OpenAI and Anthropic rent most of their compute [[s12]]."
+ },
+ "dd935e528544ab42": {
+  "fr": "13 k",
+  "tr": "13k"
+ },
+ "ddb1fb0d388a2705": {
+  "fr": "Future of Life Institute, AI Safety Index Summer 2026",
+  "tr": "Future of Life Institute, AI Safety Index Summer 2026"
+ },
+ "ddba2c9277cd909b": {
+  "fr": "Gemini",
+  "tr": "Gemini"
+ },
+ "ddd17f5dfb9c56bb": {
+  "fr": "Le choix se joue sur le terrain d'action, les droits accordés et l'incitation économique de l'éditeur.",
+  "tr": "The choice hinges on the field of action, the rights granted, and the publisher's economic incentive."
+ },
+ "dde9c6e597483efb": {
+  "fr": "Tarifs relevés par Tech Insider [[s66]] et Kingy AI pour DeepSeek [[s74]]. Ces modèles n'appartiennent pas à la même catégorie : le coût par tâche dépend aussi du nombre de tokens consommés, qui varie fortement avec le raisonnement.",
+  "tr": "Prices recorded by Tech Insider [[s66]] and Kingy AI for DeepSeek [[s74]]. These models do not belong to the same category: the cost per task also depends on the number of tokens consumed, which varies significantly with reasoning."
+ },
+ "ddee1aaed70287aa": {
+  "fr": "Sécurité informatique et engagements des éditeurs.",
+  "tr": "IT security and developer commitments."
+ },
+ "de6f6002fd86c6a0": {
+  "fr": "Un agent connecté à la messagerie ou au paiement agit avec vos droits ; la validation des actions sensibles reste manuelle.",
+  "tr": "An agent connected to email or payment acts with your rights; validation of sensitive actions remains manual."
+ },
+ "de96ceb4d8384638": {
+  "fr": "[GLM 5.3 Hosted by Mistral](https://news.ycombinator.com/item?id=49791496)",
+  "tr": "[GLM 5.3 Hosted by Mistral](https://news.ycombinator.com/item?id=49791496)"
+ },
+ "dedd3277dba70a89": {
+  "fr": "Une estimation externe évoque plus de 18 Wh pour GPT-5 [[s25]]",
+  "tr": "An external estimate cites more than 18 Wh for GPT-5 [[s25]]"
+ },
+ "df32aae159812f9b": {
+  "fr": "Selon Menlo Ventures, Anthropic détient 40 % des dépenses d'API en entreprise, OpenAI 27 % et Google 21 % ; sur le code, Anthropic atteint 54 % [[s62]]. Menlo Ventures est investisseur dans Anthropic : ses données restent utilisables, mais la méthode compte davantage qu'un chiffre isolé [[s63]].",
+  "tr": "According to Menlo Ventures, Anthropic holds 40% of enterprise API spending, OpenAI 27%, and Google 21%; for code, Anthropic reaches 54% [[s62]]. Menlo Ventures is an investor in Anthropic: its data remains usable, but the methodology matters more than a single figure [[s63]]."
+ },
+ "df9c51559ff8b8e8": {
+  "fr": "avr.",
+  "tr": "Apr."
+ },
+ "dfabc238416c9291": {
+  "fr": "Test de Vectara qui mesure la part de résumés contenant une information absente du document source.",
+  "tr": "Vectara test measuring the share of summaries containing information absent from the source document."
+ },
+ "e006785ae23a4d0a": {
+  "fr": "Market-based / location-based",
+  "tr": "Market-based / location-based"
+ },
+ "e0094aab8c0239d5": {
+  "fr": "Aucune entreprise ne dépasse C+. Anthropic mène dans cinq domaines sur six ; OpenAI mène en évaluation des risques [[s1]].",
+  "tr": "No company exceeds C+. Anthropic leads in five out of six areas; OpenAI leads in risk assessment [[s1]]."
+ },
+ "e093a8eca565a131": {
+  "fr": "Mistral Vibe",
+  "tr": "Mistral Vibe"
+ },
+ "e0de8fc8d884190f": {
+  "fr": "Fenêtre de contexte",
+  "tr": "Context window"
+ },
+ "e1064b790c6b5154": {
+  "fr": "Go 8 $, Plus 20 $",
+  "tr": "Go $8, Plus $20"
+ },
+ "e1b0715fb2c28e8b": {
+  "fr": "Pro 20 $",
+  "tr": "Pro $20"
+ },
+ "e1d12c269d6cafa3": {
+  "fr": "7 h",
+  "tr": "7 h"
+ },
+ "e2027f7f707e3c52": {
+  "fr": "[CEO of Mistral: AI is software. It can be controlled](https://news.ycombinator.com/item?id=49856034)",
+  "tr": "[CEO of Mistral: AI is software. It can be controlled](https://news.ycombinator.com/item?id=49856034)"
+ },
+ "e297640d75f0410c": {
+  "fr": "Alibaba (Qwen)",
+  "tr": "Alibaba (Qwen)"
+ },
+ "e2a142fd9dddf178": {
+  "fr": "Offre payante d'entrée",
+  "tr": "Entry-level paid plan"
+ },
+ "e2dccb983651fac5": {
+  "fr": "Wikipedia, Mistral AI",
+  "tr": "Wikipedia, Mistral AI"
+ },
+ "e33a30432e901a20": {
+  "fr": "Un agent agit à votre place : il lit, écrit, clique et envoie, avec les droits que vous lui accordez.",
+  "tr": "An agent acts on your behalf: it reads, writes, clicks and sends, with the rights you grant it."
+ },
+ "e3b6cf6bd4480715": {
+  "fr": "[AI뉴스 - Jev 열풍, OpenAI 해킹, Astra for Law, 구글도 드디어 해킹, Gemini 4 Pro 소문, RSI 등](https://www.youtube.com/watch?v=vrIBLHcqPRs), 250 k vues (조코딩 JoCoding)",
+  "tr": "[AI뉴스 - Jev 열풍, OpenAI 해킹, Astra for Law, 구글도 드디어 해킹, Gemini 4 Pro 소문, RSI 등](https://www.youtube.com/watch?v=vrIBLHcqPRs), 250k views (조코딩 JoCoding)"
+ },
+ "e3f0b09167252d6f": {
+  "fr": "Pas d'offre équipe distincte",
+  "tr": "No separate team plan"
+ },
+ "e45b7ba3bbf8c118": {
+  "fr": "Vectara Hallucination Leaderboard",
+  "tr": "Vectara Hallucination Leaderboard"
+ },
+ "e475bfa51764be7a": {
+  "fr": "Accusé d'avoir retiré les métadonnées de droits d'auteur pour masquer les œuvres utilisées [[s32]].",
+  "tr": "Accused of stripping copyright metadata to conceal the works used [[s32]]."
+ },
+ "e47da9ffb9ce1f63": {
+  "fr": "Meta, Muse Spark 1.1",
+  "tr": "Meta, Muse Spark 1.1"
+ },
+ "e4ad159fe94788aa": {
+  "fr": "Visé par des plaintes d'auteurs.",
+  "tr": "Targeted by authors' lawsuits."
+ },
+ "e545ace0228e8c8e": {
+  "fr": "Pas de page de statut publique",
+  "tr": "No public status page"
+ },
+ "e5582c4ecf0ec210": {
+  "fr": "Grok 4.1 Fast",
+  "tr": "Grok 4.1 Fast"
+ },
+ "e56f8e3b30cc61fd": {
+  "fr": "Abonnement et usage API",
+  "tr": "Subscription and API usage"
+ },
+ "e5d561fecb19466c": {
+  "fr": "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)",
+  "tr": "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)"
+ },
+ "e6484dae5e5edb77": {
+  "fr": "Rapports de menace OpenAI",
+  "tr": "OpenAI threat reports"
+ },
+ "e69f20e9f683920d": {
+  "fr": "F",
+  "tr": "F"
+ },
+ "e7a416b4d861a82b": {
+  "fr": "Data Protection Report, Mythos et la suite",
+  "tr": "Data Protection Report, Mythos and beyond"
+ },
+ "e7da73064b45bf22": {
+  "fr": "Schéma de principe. Adossé à Google Search, Gemini descend à environ 3 à 4 % d'hallucinations sur l'actualité [[s49]].",
+  "tr": "Schematic diagram. Backed by Google Search, Gemini drops to about 3 to 4% hallucinations on current events [[s49]]."
+ },
+ "e8017bde827f5a37": {
+  "fr": "Côté Grok, Meta et Mistral",
+  "tr": "On the Grok, Meta and Mistral side"
+ },
+ "e8770478b8fe755e": {
+  "fr": "Une information récente donnée par un assistant mérite un clic vers la source citée.",
+  "tr": "Recent information given by an assistant deserves a click through to the cited source."
+ },
+ "e8897acc9f7bda5b": {
+  "fr": "Juridiction de l'éditeur",
+  "tr": "Vendor's jurisdiction"
+ },
+ "e8ccd96d8cab402e": {
+  "fr": "Via des intermédiaires comme Poe, une conversation passe par au moins deux politiques de confidentialité [[s75]].",
+  "tr": "Through intermediaries such as Poe, a conversation goes through at least two privacy policies [[s75]]."
+ },
+ "e9041104e25956ee": {
+  "fr": "53 h",
+  "tr": "53 h"
+ },
+ "e960f1ac8ea0ed9c": {
+  "fr": "Oui par défaut, désactivable",
+  "tr": "Yes by default, can be disabled"
+ },
+ "e978ab742f839b17": {
+  "fr": "Apertus (Suisse)",
+  "tr": "Apertus (Switzerland)"
+ },
+ "e9a143e9d9bb3fe5": {
+  "fr": "Les modèles ouverts permettent l'hébergement interne ; la licence exacte de chaque version conditionne l'usage commercial.",
+  "tr": "Open models allow internal hosting; the exact license of each version determines commercial use."
+ },
+ "ea31a84e72bc1edd": {
+  "fr": "juin",
+  "tr": "June"
+ },
+ "ea4440bd94714e4e": {
+  "fr": "mai",
+  "tr": "May"
+ },
+ "ea61db4b05b4500b": {
+  "fr": "Artificial Analysis Intelligence Index : score composite sur une série de tests de raisonnement, de connaissances, de mathématiques et de code, mesurés de façon indépendante [[s93]]. Pour chaque éditeur, le modèle le mieux noté ; un éditeur absent n'a aucun modèle évalué.",
+  "tr": "Artificial Analysis Intelligence Index: composite score across a series of reasoning, knowledge, mathematics and code tests, measured independently [[s93]]. For each publisher, the highest-rated model; a publisher not listed has no evaluated model."
+ },
+ "eaa02f3f3362312d": {
+  "fr": "Oui",
+  "tr": "Yes"
+ },
+ "eb4509fb3c409d0c": {
+  "fr": "Muse non évalué ; Llama 4 à 8 %",
+  "tr": "Muse not evaluated; Llama 4 at 8%"
+ },
+ "eba5a32ac8ddbd7e": {
+  "fr": "Les versions évoluent chaque mois ; plusieurs mesures portent sur des modèles déjà remplacés.",
+  "tr": "Versions change every month; several measurements concern models that have already been replaced."
+ },
+ "ebec76f3a0bab493": {
+  "fr": "Tous les modèles ont tendance à abonder dans le sens de l'utilisateur. Une étude sur 1 324 échanges réels place Gemini en tête des réponses affirmées puis contredites (51,4 %), avec une amélioration quasi nulle sur les sujets à fort enjeu [[s50]]. Cette étude unique provient d'un éditeur de logiciel.",
+  "tr": "All models tend to agree with the user. A study of 1,324 real exchanges ranks Gemini first for responses that were affirmed and then contradicted (51.4%), with almost no improvement on high-stakes topics [[s50]]. This single study comes from a software publisher."
+ },
+ "ec8ea0a381a2d2a2": {
+  "fr": "Aucune preuve trouvée ; l'absence de litige reste à confirmer.",
+  "tr": "No evidence found; the absence of litigation remains to be confirmed."
+ },
+ "ec918d363a2ccff6": {
+  "fr": "[ESA and Mistral strengthen cooperation on AI](https://news.ycombinator.com/item?id=49839390)",
+  "tr": "[ESA and Mistral strengthen cooperation on AI](https://news.ycombinator.com/item?id=49839390)"
+ },
+ "ed561842766691a3": {
+  "fr": "50 incidents sur 67 jours, historique partiel",
+  "tr": "50 incidents over 67 days, partial history"
+ },
+ "ed8482036a357381": {
+  "fr": "Réputés pour les tâches longues d'agent et le code [[s68]]",
+  "tr": "Noted for long agent tasks and code [[s68]]"
+ },
+ "ee8221dd954bee09": {
+  "fr": "Les capacités offensives en cybersécurité émergent chez tous les laboratoires de pointe, et aucun ne dépasse la note C+ en gouvernance de la sécurité selon le FLI [[s17]] [[s1]].",
+  "tr": "Offensive cybersecurity capabilities are emerging across all frontier labs, and none exceeds a C+ grade in safety governance according to FLI [[s17]] [[s1]]."
+ },
+ "eec858f434f92185": {
+  "fr": "Des filtres écartent les homonymes courants (protocole Gemini, cryptomonnaie Gemini, Claude Shannon).",
+  "tr": "Filters exclude common homonyms (Gemini protocol, Gemini cryptocurrency, Claude Shannon)."
+ },
+ "ef259b04e3db21c9": {
+  "fr": "Les incidents de cybersécurité connus dépendent de ce que chaque éditeur choisit de publier.",
+  "tr": "Known cybersecurity incidents depend on what each vendor chooses to publish."
+ },
+ "ef385973a49c35cb": {
+  "fr": "Usages et adoption",
+  "tr": "Usage and adoption"
+ },
+ "ef514fd09849390e": {
+  "fr": "Choix demandé, défaut contesté",
+  "tr": "Choice requested, default contested"
+ },
+ "ef6acecb8dc2b8f5": {
+  "fr": "5,2 M",
+  "tr": "5.2 M"
+ },
+ "ef7575021c8aa0c8": {
+  "fr": "Code, poste de travail, navigateur, Excel",
+  "tr": "Code, workstation, browser, Excel"
+ },
+ "efcce4d8759438a1": {
+  "fr": "Mistral Medium 3.5",
+  "tr": "Mistral Medium 3.5"
+ },
+ "eff5ff22d371f876": {
+  "fr": "Qwen3.8 Max (0902)",
+  "tr": "Qwen3.8 Max (0902)"
+ },
+ "f068483fde4673c1": {
+  "fr": "Non documenté",
+  "tr": "Not documented"
+ },
+ "f0d918b5feaaac2d": {
+  "fr": "946 k",
+  "tr": "946k"
+ },
+ "f10e65f6a5844317": {
+  "fr": "Vectara, Hallucination Leaderboard (HHEM)",
+  "tr": "Vectara, Hallucination Leaderboard (HHEM)"
+ },
+ "f13e3bb1a90966c6": {
+  "fr": "3 B",
+  "tr": "3B"
+ },
+ "f1e115d5b1d6c88b": {
+  "fr": "21 k",
+  "tr": "21K"
+ },
+ "f20449e3f7d546f2": {
+  "fr": "Distillation",
+  "tr": "Distillation"
+ },
+ "f2069c661b74d29d": {
+  "fr": "[Revealing the details of how OpenAI agents hacked Hugging Face](https://news.ycombinator.com/item?id=49849985)",
+  "tr": "[Revealing the details of how OpenAI agents hacked Hugging Face](https://news.ycombinator.com/item?id=49849985)"
+ },
+ "f227210ebb69612e": {
+  "fr": "Pages de statut officielles des éditeurs",
+  "tr": "Official status pages of the publishers"
+ },
+ "f22f50569d0851d2": {
+  "fr": "Apertus offre une option entièrement transparente et suisse ; les modèles ouverts réduisent la dépendance, au prix d'une infrastructure à opérer.",
+  "tr": "Apertus offers a fully transparent, Swiss-based option; open models reduce dependency, at the cost of infrastructure to operate."
+ },
+ "f2d76701d74a2d19": {
+  "fr": "Les chiffres de YouTube portent sur un public mondial ; ils ne renseignent pas sur l'usage en Suisse ou en Europe.",
+  "tr": "YouTube figures cover a global audience; they do not indicate usage in Switzerland or Europe."
+ },
+ "f346247145cd03cf": {
+  "fr": "Couverture et source",
+  "tr": "Coverage and source"
+ },
+ "f3631fccd77db2f4": {
+  "fr": "L'accès restreint aux modèles les plus capables concentre l'avantage défensif chez les organisations déjà les mieux équipées [[s17]].",
+  "tr": "Restricted access to the most capable models concentrates the defensive advantage among organizations that are already best equipped [[s17]]."
+ },
+ "f3c0929aa7b77758": {
+  "fr": "C (DeepMind)",
+  "tr": "C (DeepMind)"
+ },
+ "f43afa860d9ad9fb": {
+  "fr": "Blog Nouvelles Technologies, Mistral AI 2026",
+  "tr": "New Technologies Blog, Mistral AI 2026"
+ },
+ "f48b1162d489486f": {
+  "fr": "Rien trouvé",
+  "tr": "Nothing found"
+ },
+ "f60dab43e963e0bf": {
+  "fr": "Claude",
+  "tr": "Claude"
+ },
+ "f6445ac5eb7a2ea8": {
+  "fr": "9 k",
+  "tr": "9 k"
+ },
+ "f656f054ce714b19": {
+  "fr": "Pour aller plus loin : chaînes officielles et vidéo la plus vue de la semaine",
+  "tr": "To learn more: official channels and the most-viewed video of the week"
+ },
+ "f67805a916ba09bc": {
+  "fr": "Indice d'intelligence Artificial Analysis, meilleur modèle de chaque éditeur",
+  "tr": "Artificial Analysis intelligence index, best model from each provider"
+ },
+ "f718a53a6fa9950e": {
+  "fr": "Statistiques des procès sur les données d'entraînement 2026",
+  "tr": "Statistics on training data lawsuits 2026"
+ },
+ "f88ca8dfb8d80ebe": {
+  "fr": "Tom's Guide, rapport Resemble AI sur les deepfakes",
+  "tr": "Tom's Guide, Resemble AI deepfake report"
+ },
+ "f8ae8317ac196c9c": {
+  "fr": "Aucun assistant n'est fiable à 100 % : en résumé de documents, les taux d'hallucination vont d'environ 6 à 19 % selon le modèle, et la méthode de mesure change le classement [[s55]].",
+  "tr": "No assistant is 100% reliable: in document summarization, hallucination rates range from about 6 to 19% depending on the model, and the measurement method changes the ranking [[s55]]."
+ },
+ "f8cb48d4ada19536": {
+  "fr": "Page Checkly sans flux public exploitable ; incidents générés automatiquement par des sondes",
+  "tr": "Checkly page with no usable public feed; incidents automatically generated by probes"
+ },
+ "f8e0babe79417cde": {
+  "fr": "Muse et Mistral Vibe sont les moins documentés : leur place dans la matrice reflète autant ce manque que leurs performances.",
+  "tr": "Muse and Mistral Vibe are the least documented: their position in the matrix reflects this gap as much as their performance."
+ },
+ "f9f82d1aa428b9e9": {
+  "fr": "[Google confirms Gemini models hacked three companies in May 2026](https://news.ycombinator.com/item?id=49795129)",
+  "tr": "[Google confirms Gemini models hacked three companies in May 2026](https://news.ycombinator.com/item?id=49795129)"
+ },
+ "fa19e49015520136": {
+  "fr": "Licences variables selon la taille du modèle [[s67]]",
+  "tr": "Licenses vary by model size [[s67]]"
+ },
+ "fa75b9d9f232df48": {
+  "fr": "Abonnés",
+  "tr": "Subscribers"
+ },
+ "fa97a7aeb6908b73": {
+  "fr": "Audience grand public en recul, base entreprise et revenus en hausse [[s65]]",
+  "tr": "Consumer audience declining, enterprise base and revenue rising [[s65]]"
+ },
+ "fac36780bcbef16d": {
+  "fr": "Aucun éditeur ne publie la composition exacte de son corpus. Les contentieux américains et européens en donnent la meilleure image disponible. Selon un décompte, les plaintes pour droit d'auteur visant des entreprises d'IA aux États-Unis sont passées de 45 fin juin 2025 à 140 au 1er septembre 2026 [[s31]].",
+  "tr": "No publisher discloses the exact composition of its corpus. US and European litigation provides the best available picture. According to one count, copyright lawsuits against AI companies in the United States rose from 45 at the end of June 2025 to 140 by September 1, 2026 [[s31]]."
+ },
+ "faef0c2436197531": {
+  "fr": "Dataslayer, conversations Meta AI et publicité",
+  "tr": "Dataslayer, Meta AI conversations and advertising"
+ },
+ "fb5b46a267a4f3a0": {
+  "fr": "Six assistants IA, lus comme des machines",
+  "tr": "Six AI assistants, read as machines"
+ },
+ "fb750aef8b7e5fe0": {
+  "fr": "Pas de désactivation simple",
+  "tr": "No simple opt-out"
+ },
+ "fbd00e76b7576ec1": {
+  "fr": "Sortie",
+  "tr": "Release"
+ },
+ "fbd8c3c33be6a84a": {
+  "fr": "Les biais idéologiques et linguistiques touchent l'information publique et l'égalité d'accès.",
+  "tr": "Ideological and linguistic biases affect public information and equal access."
+ },
+ "fbf136e8c33a54a6": {
+  "fr": "Comité européen de la protection des données",
+  "tr": "European Data Protection Board"
+ },
+ "fc2f5e3c542bcb37": {
+  "fr": "Capacités mesurées : l'indice composite",
+  "tr": "Measured capabilities: the composite index"
+ },
+ "fc4b2f322def0753": {
+  "fr": "Activé par défaut, y compris sur l'offre AI Pro payante [[s76]]",
+  "tr": "Enabled by default, including on the paid AI Pro plan [[s76]]"
+ },
+ "fc8400dd05908cdf": {
+  "fr": "Gouvernance de la sécurité",
+  "tr": "Security governance"
+ },
+ "fd89478ff248410a": {
+  "fr": "Aucun de ces modèles n'apprend en continu. Leurs connaissances s'arrêtent à une date de coupure. Le « temps réel » désigne une recherche lancée au moment de la question, dont le résultat est inséré dans le contexte du modèle. La fraîcheur et la fiabilité dépendent donc de la source interrogée.",
+  "tr": "None of these models learns continuously. Their knowledge stops at a cutoff date. \"Real-time\" refers to a search launched at the moment of the question, whose result is inserted into the model's context. Freshness and reliability therefore depend on the source queried."
+ },
+ "fe823e6fca7e9c53": {
+  "fr": "Oracle ; utilisé par OpenAI",
+  "tr": "Oracle; used by OpenAI"
+ },
+ "fea87c6039e5e429": {
+  "fr": "arXiv 2605.09504, évaluer les systèmes et non les seuls modèles",
+  "tr": "arXiv 2605.09504, evaluating systems rather than models alone"
+ },
+ "feeeae2e435296e8": {
+  "fr": "Ordre malveillant caché dans une page, un email ou un fichier, qu'un agent risque d'exécuter.",
+  "tr": "A malicious instruction hidden in a page, an email, or a file, which an agent risks executing."
+ },
+ "fefb4bee4b459803": {
+  "fr": "Transparence énergie",
+  "tr": "Energy transparency"
+ },
+ "ff7e19bcee4baafa": {
+  "fr": "Plan de 1 GW en Europe",
+  "tr": "1 GW plan in Europe"
+ },
+ "ff8b5bc4a4796bae": {
+  "fr": "Nombre moyen d'incidents déclarés par mois sur les pages de statut officielles, calculé sur les 90 derniers jours ou sur la période disponible quand l'historique publié est plus court ; relevé du 27/9/2026. Chaque éditeur choisit ce qu'il déclare et avec quelle granularité : un nombre élevé peut refléter une transparence plus grande autant qu'une fiabilité moindre. Google : incidents Google Cloud liés à Gemini et Vertex AI, sans l'application grand public.",
+  "tr": "Average number of incidents reported per month on official status pages, calculated over the last 90 days or over the available period when the published history is shorter; recorded 27/9/2026. Each publisher chooses what to report and at what level of detail: a high number can reflect greater transparency as much as lower reliability. Google: Google Cloud incidents related to Gemini and Vertex AI, excluding the consumer app."
+ },
+ "ff91a09a18e7d74c": {
+  "fr": "0,34 Wh par requête moyenne",
+  "tr": "0.34 Wh per average request"
+ },
+ "ffcf42282240a253": {
+  "fr": "Epoch AI, plus grands centres de données par puissance",
+  "tr": "Epoch AI, largest data centers by power"
+ },
+ "ffd907476dbbe031": {
+  "fr": "Konabayev, parts de marché LLM et méthodes",
+  "tr": "Konabayev, LLM market share and methods"
+ }
+}

@@ -549,28 +549,28 @@
           "bars": [
             {
               "label": "ChatGPT",
-              "sublabel": "730 articles, 18 038 commentaires",
+              "sublabel": "730 articles, 18 150 commentaires",
               "value": 78,
               "display": "78",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
-              "sublabel": "760 articles, 13 163 commentaires",
+              "sublabel": "759 articles, 13 166 commentaires",
               "value": 59,
               "display": "59",
               "vendor": "claude"
             },
             {
               "label": "Gemini",
-              "sublabel": "76 articles, 1 449 commentaires",
+              "sublabel": "75 articles, 1 449 commentaires",
               "value": 8,
               "display": "8",
               "vendor": "gemini"
             },
             {
               "label": "Grok",
-              "sublabel": "59 articles, 1 432 commentaires",
+              "sublabel": "62 articles, 1 453 commentaires",
               "value": 4,
               "display": "4",
               "vendor": "grok"
@@ -584,13 +584,206 @@
             },
             {
               "label": "Mistral",
-              "sublabel": "13 articles, 978 commentaires",
+              "sublabel": "13 articles, 979 commentaires",
               "value": 3,
               "display": "3",
               "vendor": "mistral"
             }
           ],
           "caption": "Articles publiés sur Hacker News au cours des 30 derniers jours dont le titre mentionne l'assistant ou son éditeur, et ayant dépassé 50 points ; relevé du 27/9/2026 via l'API Algolia [[s92]]. Hacker News reflète l'attention d'un public de développeurs, surtout anglophone ; un article critique compte autant qu'un article élogieux."
+        },
+        {
+          "type": "line_chart",
+          "auto": "hn_trend",
+          "title": "Articles marquants sur Hacker News, par mois",
+          "max": 100,
+          "ticks": [
+            0,
+            20,
+            40,
+            60,
+            80,
+            100
+          ],
+          "series": [
+            {
+              "key": "claude",
+              "label": "Claude",
+              "vendor": "claude"
+            },
+            {
+              "key": "gpt",
+              "label": "ChatGPT",
+              "vendor": "gpt"
+            },
+            {
+              "key": "gemini",
+              "label": "Gemini",
+              "vendor": "gemini"
+            },
+            {
+              "key": "grok",
+              "label": "Grok",
+              "vendor": "grok"
+            },
+            {
+              "key": "meta",
+              "label": "Meta (Muse, Llama)",
+              "vendor": "meta"
+            },
+            {
+              "key": "mistral",
+              "label": "Mistral",
+              "vendor": "mistral"
+            }
+          ],
+          "points": [
+            {
+              "m": -12,
+              "label": "sept. 25",
+              "values": {
+                "claude": 25,
+                "gpt": 21,
+                "gemini": 7,
+                "grok": 2,
+                "meta": 0,
+                "mistral": 2
+              }
+            },
+            {
+              "m": -11,
+              "label": "oct.",
+              "values": {
+                "claude": 22,
+                "gpt": 33,
+                "gemini": 5,
+                "grok": 2,
+                "meta": 0,
+                "mistral": 0
+              }
+            },
+            {
+              "m": -10,
+              "label": "nov.",
+              "values": {
+                "claude": 17,
+                "gpt": 22,
+                "gemini": 15,
+                "grok": 2,
+                "meta": 0,
+                "mistral": 0
+              }
+            },
+            {
+              "m": -9,
+              "label": "déc.",
+              "values": {
+                "claude": 21,
+                "gpt": 23,
+                "gemini": 7,
+                "grok": 2,
+                "meta": 1,
+                "mistral": 3
+              }
+            },
+            {
+              "m": -8,
+              "label": "janv. 26",
+              "values": {
+                "claude": 53,
+                "gpt": 27,
+                "gemini": 6,
+                "grok": 12,
+                "meta": 0,
+                "mistral": 0
+              }
+            },
+            {
+              "m": -7,
+              "label": "févr.",
+              "values": {
+                "claude": 71,
+                "gpt": 30,
+                "gemini": 7,
+                "grok": 7,
+                "meta": 2,
+                "mistral": 2
+              }
+            },
+            {
+              "m": -6,
+              "label": "mars",
+              "values": {
+                "claude": 73,
+                "gpt": 21,
+                "gemini": 4,
+                "grok": 2,
+                "meta": 0,
+                "mistral": 2
+              }
+            },
+            {
+              "m": -5,
+              "label": "avr.",
+              "values": {
+                "claude": 88,
+                "gpt": 38,
+                "gemini": 7,
+                "grok": 2,
+                "meta": 2,
+                "mistral": 2
+              }
+            },
+            {
+              "m": -4,
+              "label": "mai",
+              "values": {
+                "claude": 48,
+                "gpt": 25,
+                "gemini": 10,
+                "grok": 2,
+                "meta": 0,
+                "mistral": 3
+              }
+            },
+            {
+              "m": -3,
+              "label": "juin",
+              "values": {
+                "claude": 69,
+                "gpt": 22,
+                "gemini": 3,
+                "grok": 5,
+                "meta": 0,
+                "mistral": 1
+              }
+            },
+            {
+              "m": -2,
+              "label": "juil.",
+              "values": {
+                "claude": 52,
+                "gpt": 25,
+                "gemini": 8,
+                "grok": 10,
+                "meta": 2,
+                "mistral": 1
+              }
+            },
+            {
+              "m": -1,
+              "label": "août",
+              "values": {
+                "claude": 44,
+                "gpt": 32,
+                "gemini": 3,
+                "grok": 5,
+                "meta": 4,
+                "mistral": 3
+              }
+            }
+          ],
+          "caption": "Articles ayant dépassé 50 points et dont le titre mentionne l'assistant ou son éditeur, par mois complet, via l'API Algolia [[s92]]. Les points d'un article se stabilisent en quelques jours : les mois passés sont figés."
         },
         {
           "type": "reading",
@@ -624,15 +817,15 @@
                 ],
                 [
                   "",
-                  "[ChatGPT now knows what you do on other websites via ad collector](https://news.ycombinator.com/item?id=49776729)",
-                  "764",
-                  "395"
+                  "[OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005](https://news.ycombinator.com/item?id=49801324)",
+                  "735",
+                  "446"
                 ],
                 [
                   "",
-                  "[OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005](https://news.ycombinator.com/item?id=49801324)",
-                  "735",
-                  "444"
+                  "[Revealing the details of how OpenAI agents hacked Hugging Face](https://news.ycombinator.com/item?id=49849985)",
+                  "728",
+                  "460"
                 ],
                 [
                   "Claude",
@@ -650,7 +843,7 @@
                   "",
                   "[U.S. appeals court upholds designation of Anthropic as supply chain risk](https://news.ycombinator.com/item?id=49845977)",
                   "492",
-                  "871"
+                  "872"
                 ],
                 [
                   "Gemini",
@@ -697,7 +890,7 @@
                 [
                   "",
                   "[42x faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)",
-                  "12",
+                  "13",
                   "2"
                 ],
                 [
@@ -710,7 +903,7 @@
                   "Mistral",
                   "[CEO of Mistral: AI is software. It can be controlled](https://news.ycombinator.com/item?id=49856034)",
                   "96",
-                  "164"
+                  "165"
                 ],
                 [
                   "",
@@ -772,36 +965,36 @@
             {
               "label": "ChatGPT",
               "sublabel": "25 vidéos retenues",
-              "value": 6.62,
-              "display": "6,6 M",
+              "value": 5.04,
+              "display": "5,0 M",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
               "sublabel": "25 vidéos retenues",
-              "value": 5.04,
-              "display": "5,0 M",
+              "value": 4.74,
+              "display": "4,7 M",
               "vendor": "claude"
             },
             {
               "label": "Grok",
               "sublabel": "25 vidéos retenues",
-              "value": 1.75,
-              "display": "1,7 M",
+              "value": 1.79,
+              "display": "1,8 M",
               "vendor": "grok"
             },
             {
               "label": "Gemini",
               "sublabel": "25 vidéos retenues",
-              "value": 1.45,
-              "display": "1,5 M",
+              "value": 1.44,
+              "display": "1,4 M",
               "vendor": "gemini"
             },
             {
               "label": "Meta (Muse)",
               "sublabel": "5 vidéos retenues",
-              "value": 0.79,
-              "display": "791 k",
+              "value": 0.8,
+              "display": "802 k",
               "vendor": "meta"
             },
             {
@@ -846,30 +1039,30 @@
                   "2,1 M",
                   "50",
                   "5,2 M",
-                  "[ChatGPT'ye Anlattıklarını Bir İnsan Okuyor](https://www.youtube.com/watch?v=zbUurdDEPqM), 1,4 M vues (Barış Özcan)"
+                  "[【AIヴィーガン】ChatGPTをあえて使わない？「喜びも達成感もない」生成AIとの付き合い方をひろゆきらと議論｜アベプラ](https://www.youtube.com/watch?v=U5TEeaeyH-I), 611 k vues (ABEMA Prime #アベプラ【公式】)"
                 ],
                 [
                   "Claude",
                   "[Anthropic](https://www.youtube.com/@anthropic-ai)",
                   "806 k",
                   "3",
-                  "945 k",
-                  "[Jev will 10x your Claude Code (Here's How)](https://www.youtube.com/watch?v=tTnUcSj-QPA), 636 k vues (Jay E | RoboNuggets)"
+                  "946 k",
+                  "[Jev will 10x your Claude Code (Here's How)](https://www.youtube.com/watch?v=tTnUcSj-QPA), 639 k vues (Jay E | RoboNuggets)"
                 ],
                 [
                   "Grok",
                   "[Grok](https://www.youtube.com/@grok)",
                   "21 k",
                   "2",
-                  "12 k",
-                  "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 185 k vues (AI Search)"
+                  "13 k",
+                  "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 209 k vues (AI Search)"
                 ],
                 [
                   "Gemini",
                   "[Google Gemini](https://www.youtube.com/@googlegemini)",
                   "24 k",
                   "20",
-                  "59,9 M",
+                  "60,3 M",
                   "[AI뉴스 - Jev 열풍, OpenAI 해킹, Astra for Law, 구글도 드디어 해킹, Gemini 4 Pro 소문, RSI 등](https://www.youtube.com/watch?v=vrIBLHcqPRs), 250 k vues (조코딩 JoCoding)"
                 ],
                 [
@@ -878,14 +1071,14 @@
                   "40 k",
                   "0",
                   "0",
-                  "[Meta AI賭對了！Muse Agent能幫你賺錢、殺價、砍帳單？股價大漲背後的秘密｜哈佛姐夢遊矽谷](https://www.youtube.com/watch?v=MpiAqsEgWDo), 286 k vues (哈佛姐夢遊矽谷 AliceInSiliconWonderla)"
+                  "[Meta AI賭對了！Muse Agent能幫你賺錢、殺價、砍帳單？股價大漲背後的秘密｜哈佛姐夢遊矽谷](https://www.youtube.com/watch?v=MpiAqsEgWDo), 288 k vues (哈佛姐夢遊矽谷 AliceInSiliconWonderla)"
                 ],
                 [
                   "Mistral",
                   "[Mistral](https://www.youtube.com/@MistralAIofficial)",
                   "16 k",
-                  "3",
-                  "12 k",
+                  "2",
+                  "9 k",
                   "[The Local AI Tier List (Qwen, Deepseek, Mistral, Llama)](https://www.youtube.com/watch?v=wobPalPV3uY), 12 k vues (Coding Horizon)"
                 ]
               ]
@@ -1098,7 +1291,7 @@
                   "Claude Opus 5.5 (Adaptive Reasoning, Max Effort,",
                   "57,6",
                   "4,00 $ / 20,00 $",
-                  "99"
+                  "97"
                 ],
                 [
                   "OpenAI",
@@ -1112,7 +1305,7 @@
                   "Muse Spark 1.3 (max)",
                   "48,1",
                   "1,25 $ / 4,25 $",
-                  "164"
+                  "158"
                 ],
                 [
                   "xAI",
@@ -1126,21 +1319,21 @@
                   "Qwen3.8 Max (0902)",
                   "45,4",
                   "2,00 $ / 6,00 $",
-                  "38"
+                  "37"
                 ],
                 [
                   "Z.ai (GLM)",
                   "GLM-5.3 (max)",
                   "44,8",
                   "1,40 $ / 4,40 $",
-                  "86"
+                  "84"
                 ],
                 [
                   "Google",
                   "Gemini 3.8 Flash (high)",
                   "40,9",
                   "0,75 $ / 3,75 $",
-                  "311"
+                  "303"
                 ],
                 [
                   "DeepSeek",
@@ -1154,7 +1347,7 @@
                   "Mistral Medium 3.5",
                   "14,2",
                   "1,50 $ / 7,50 $",
-                  "166"
+                  "168"
                 ]
               ]
             },
@@ -1625,6 +1818,157 @@
           }
         },
         {
+          "type": "details",
+          "summary": "Pour aller plus loin : évolution sur douze mois",
+          "blocks": [
+            {
+              "type": "line_chart",
+              "auto": "vectara_trend",
+              "title": "Meilleur taux d'hallucination de chaque éditeur, fin de mois, en %",
+              "max": 10,
+              "ticks": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10
+              ],
+              "series": [
+                {
+                  "key": "gpt",
+                  "label": "ChatGPT",
+                  "vendor": "gpt"
+                },
+                {
+                  "key": "gemini",
+                  "label": "Gemini",
+                  "vendor": "gemini"
+                },
+                {
+                  "key": "claude",
+                  "label": "Claude",
+                  "vendor": "claude"
+                },
+                {
+                  "key": "grok",
+                  "label": "Grok",
+                  "vendor": "grok"
+                },
+                {
+                  "key": "mistral",
+                  "label": "Mistral",
+                  "vendor": "mistral"
+                },
+                {
+                  "key": "meta",
+                  "label": "Meta",
+                  "vendor": "meta"
+                }
+              ],
+              "points": [
+                {
+                  "m": -10,
+                  "label": "nov. 25",
+                  "values": {
+                    "gpt": 5.6,
+                    "gemini": 3.3,
+                    "claude": 9.8,
+                    "grok": 5.8,
+                    "mistral": 4.5,
+                    "meta": 4.1
+                  }
+                },
+                {
+                  "m": -9,
+                  "label": "déc.",
+                  "values": {
+                    "gpt": 5.6,
+                    "gemini": 3.3,
+                    "claude": 9.8,
+                    "grok": 5.8,
+                    "mistral": 4.5,
+                    "meta": 4.1
+                  }
+                },
+                {
+                  "m": -8,
+                  "label": "janv. 26",
+                  "values": {
+                    "gpt": 5.6,
+                    "gemini": 3.3,
+                    "claude": 9.8,
+                    "grok": 5.8,
+                    "mistral": 4.5,
+                    "meta": 4.1
+                  }
+                },
+                {
+                  "m": -7,
+                  "label": "févr.",
+                  "values": {
+                    "gpt": 5.6,
+                    "gemini": 3.3,
+                    "claude": 9.8,
+                    "grok": 5.8,
+                    "mistral": 4.5,
+                    "meta": 4.1
+                  }
+                },
+                {
+                  "m": -6,
+                  "label": "mars",
+                  "values": {
+                    "gpt": 3.1,
+                    "gemini": 3.3,
+                    "claude": 9.8,
+                    "grok": 5.8,
+                    "mistral": 4.5,
+                    "meta": 4.1
+                  }
+                },
+                {
+                  "m": -5,
+                  "label": "avr.",
+                  "values": {
+                    "gpt": 3.1,
+                    "gemini": 3.3,
+                    "claude": 9.8,
+                    "grok": 5.8,
+                    "mistral": 4.5,
+                    "meta": 4.1
+                  }
+                },
+                {
+                  "m": -4,
+                  "label": "mai",
+                  "values": {
+                    "gpt": 3.1,
+                    "gemini": 3.3,
+                    "claude": 9.8,
+                    "grok": 5.8,
+                    "mistral": 4.5,
+                    "meta": 4.1
+                  }
+                },
+                {
+                  "m": 0,
+                  "label": "sept.",
+                  "values": {
+                    "gpt": 3.1,
+                    "gemini": 3.3,
+                    "claude": 9.8,
+                    "grok": 5.8,
+                    "mistral": 4.5,
+                    "meta": 4.1
+                  }
+                }
+              ],
+              "caption": "Taux d'hallucination du meilleur modèle de chaque éditeur présent au classement Vectara, en %, à la fin de chaque mois ; 8 mois établis avec la méthode actuelle [[s55]]. Le meilleur modèle d'un éditeur est souvent un petit modèle, plus fidèle en résumé que ses modèles phares. Les mois antérieurs à un changement d'évaluateur ou de jeu de documents sont écartés : leurs chiffres ne sont pas comparables."
+            }
+          ]
+        },
+        {
           "type": "para",
           "text": "Sur ce classement public, les modèles Claude testés se situent entre 10 et 12 %, derrière GPT-6 et Gemini 3.1 Pro [[s55]]. Plusieurs comparatifs commerciaux affirment au contraire que Claude mène ce classement [[s48]] [[s49]] : la source primaire ne le confirme pas. Le classement a toutefois un temps de retard : Claude Opus 5.5, Grok 4.7, Mistral Medium 3.5 et Muse Spark n'y figurent pas, et Grok 4.1 Fast a été retiré par xAI en mai 2026 [[s83]]."
         },
@@ -1698,8 +2042,8 @@
             {
               "label": "ChatGPT",
               "sublabel": "25 incidents sur 17 jours, historique partiel",
-              "value": 44.8,
-              "display": "44,8",
+              "value": 44.6,
+              "display": "44,6",
               "vendor": "gpt"
             },
             {
@@ -1749,7 +2093,7 @@
             [
               "ChatGPT",
               "25",
-              "44,8",
+              "44,6",
               "3",
               "53 h",
               "partiel, depuis le 10/9/2026 [[s88]]"
@@ -2785,6 +3129,13 @@
       "items": [
         "Usages : évolution des parts de visites web sur douze mois, d'après la série publiée par Similarweb [[s96]] ; la tendance récente nuance le recul de ChatGPT."
       ]
+    },
+    {
+      "date": "2026-09-27",
+      "items": [
+        "Historique sur douze mois pour Hacker News et le classement Vectara, reconstitué à partir des sources d'origine.",
+        "Le dossier est désormais disponible en français, anglais, espagnol, allemand et italien ; les traductions sont produites par Claude et relues avec chaque mise à jour."
+      ]
     }
   ],
   "sources": {
@@ -3314,5 +3665,8 @@
       "Market-based / location-based",
       "Deux façons de compter les émissions liées à l'électricité : selon les contrats d'achat d'énergie, ou selon le mix réel du réseau local."
     ]
+  ],
+  "migrations": [
+    "2026-09-history"
   ]
 }
