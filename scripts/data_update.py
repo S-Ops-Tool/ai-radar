@@ -12,6 +12,8 @@ import io
 import json
 import re
 import urllib.request
+
+import status_update
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -181,6 +183,12 @@ def main():
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     notes, errors = [], []
     for sec in data["sections"]:
+        cfg = next((b for b in sec["blocks"] if b.get("auto") == "status_table"), None)
+        if cfg:
+            try:
+                status_update.update_status(sec["blocks"], state, notes, cfg)
+            except Exception as e:
+                errors.append(f"statuts : {e}")
         for block in sec["blocks"]:
             auto = block.get("auto")
             try:

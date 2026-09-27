@@ -1052,6 +1052,125 @@
       ]
     },
     {
+      "id": "disponibilite",
+      "title": "Disponibilité : les pannes déclarées",
+      "for": [
+        "public",
+        "entreprises"
+      ],
+      "watch": [
+        "Pages de statut officielles des éditeurs",
+        "Signalements d'utilisateurs (StatusGator, Downdetector)"
+      ],
+      "blocks": [
+        {
+          "type": "why",
+          "text": "Un assistant indisponible bloque le travail qui en dépend ; les pages de statut officielles en gardent la trace."
+        },
+        {
+          "type": "bar_chart",
+          "auto": "status_chart",
+          "title": "Incidents déclarés sur 90 jours",
+          "max": 10,
+          "ticks": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10
+          ],
+          "bars": [],
+          "caption": "Premier relevé à la prochaine exécution hebdomadaire."
+        },
+        {
+          "type": "table",
+          "auto": "status_table",
+          "headers": [
+            "Assistant",
+            "Incidents (90 jours)",
+            "Majeurs ou critiques",
+            "Durée cumulée",
+            "Couverture et source"
+          ],
+          "rows": [],
+          "vendors": [
+            {
+              "id": "claude",
+              "label": "Claude",
+              "kind": "statuspage",
+              "url": "https://status.claude.com",
+              "src_ref": "[[s87]]"
+            },
+            {
+              "id": "gpt",
+              "label": "ChatGPT",
+              "kind": "statuspage",
+              "url": "https://status.openai.com",
+              "src_ref": "[[s88]]"
+            },
+            {
+              "id": "gemini",
+              "label": "Gemini",
+              "kind": "gcp",
+              "url": "https://status.cloud.google.com/incidents.json",
+              "keywords": [
+                "Gemini",
+                "Vertex AI"
+              ],
+              "src_ref": "[[s89]]"
+            },
+            {
+              "id": "grok",
+              "label": "Grok",
+              "kind": "statuspage",
+              "url": "https://status.x.ai",
+              "src_ref": "[[s91]]"
+            },
+            {
+              "id": "meta",
+              "label": "Muse (Meta)",
+              "kind": "none",
+              "url": "",
+              "src_ref": ""
+            },
+            {
+              "id": "mistral",
+              "label": "Mistral Vibe",
+              "kind": "statuspage",
+              "url": "https://status.mistral.ai",
+              "src_ref": "[[s90]]"
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "text": "Ces chiffres mesurent ce que les éditeurs déclarent. Anthropic publie des incidents détaillés par composant ; d'autres regroupent ou déclarent moins. La comparaison la plus fiable porte sur l'évolution d'un même éditeur dans le temps."
+        },
+        {
+          "type": "audiences",
+          "public": "Une panne se vérifie d'abord sur la page de statut de l'éditeur avant d'incriminer sa connexion.",
+          "entreprises": "Pour un usage critique, les engagements de disponibilité contractuels (SLA) des offres entreprise comptent davantage que l'historique public.",
+          "institutions": "Aucune obligation de déclaration harmonisée n'existe ; la transparence varie d'un éditeur à l'autre."
+        },
+        {
+          "type": "details",
+          "summary": "Pour aller plus loin : méthode de calcul",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Les pages Statuspage exposent les 50 derniers incidents environ ; le pipeline les accumule chaque semaine pour allonger l'historique.",
+                "OpenAI utilise incident.io, dont l'interface compatible renvoie un historique tronqué.",
+                "La durée cumulée additionne la durée de chaque incident, de son ouverture à sa résolution ; des incidents simultanés sont comptés deux fois.",
+                "Meta ne publie pas de page de statut pour Meta AI ou Muse."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "tempsreel",
       "title": "Ce que « temps réel » recouvre",
       "blocks": [
@@ -1938,6 +2057,12 @@
       "items": [
         "Graphique des hallucinations : tous les modèles testés de chaque éditeur, date de sortie du modèle mis en avant, et écart avec le dernier modèle phare de l'éditeur."
       ]
+    },
+    {
+      "date": "2026-09-27",
+      "items": [
+        "Nouvelle section Disponibilité, alimentée chaque semaine par les pages de statut officielles des éditeurs."
+      ]
     }
   ],
   "sources": {
@@ -2264,6 +2389,26 @@
     "s86": {
       "title": "Meta, annonce de Muse Spark",
       "url": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/"
+    },
+    "s87": {
+      "title": "Page de statut Claude (Anthropic)",
+      "url": "https://status.claude.com"
+    },
+    "s88": {
+      "title": "Page de statut OpenAI",
+      "url": "https://status.openai.com"
+    },
+    "s89": {
+      "title": "Google Cloud Service Health (incidents)",
+      "url": "https://status.cloud.google.com"
+    },
+    "s90": {
+      "title": "Page de statut Mistral AI",
+      "url": "https://status.mistral.ai"
+    },
+    "s91": {
+      "title": "Page de statut xAI",
+      "url": "https://status.x.ai"
     }
   },
   "keypoints": [
@@ -2328,6 +2473,7 @@
       "intro": "Fiabilité des réponses, accès à l'actualité, capacité à agir, et prix.",
       "sections": [
         "precision",
+        "disponibilite",
         "tempsreel",
         "agents",
         "prix"

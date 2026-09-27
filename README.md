@@ -23,6 +23,7 @@ Dossier comparatif public (Claude, ChatGPT, Gemini, Grok, Muse, Mistral Vibe), m
 
 - `content/dossier.json` : tout le contenu (matrice, sections, graphiques, sources, journal).
 - `scripts/data_update.py` : données chiffrées depuis les jeux de données d'origine.
+- `scripts/status_update.py` : incidents déclarés sur les pages de statut des éditeurs, accumulés dans `content/data_state.json`.
 - `content/data_state.json` : modèles déjà vus au classement Vectara, pour signaler les nouveaux.
 - `scripts/update.py` : mise à jour rédactionnelle via l'API Claude.
 - `scripts/build.py` : génère `site/index.html`, sans dépendance externe.
@@ -36,7 +37,7 @@ Neuf sections, au plus six recherches chacune, plus un appel pour la matrice. Le
 
 Onglet Actions > Mise à jour hebdomadaire > Run workflow. Le champ facultatif limite la mise à jour à certaines sections, par exemple `cyber,calcul`.
 
-Identifiants de sections : `usages`, `acteurs`, `precision`, `tempsreel`, `agents`, `prix`, `confidentialite`, `donnees`, `biais`, `cyber`, `gouvernance`, `calcul`, `energie`.
+Identifiants de sections : `usages`, `acteurs`, `precision`, `disponibilite`, `tempsreel`, `agents`, `prix`, `confidentialite`, `donnees`, `biais`, `cyber`, `gouvernance`, `calcul`, `energie`.
 
 ## Graphique Vectara : modèles testés et derniers modèles phares
 
