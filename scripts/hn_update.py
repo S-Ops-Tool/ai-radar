@@ -51,6 +51,89 @@ def stories_since(query, since_ts):
     return hits
 
 
+MONTHS_SHORT = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+
+
+def month_bounds(y, m):
+    start = dt.datetime(y, m, 1, tzinfo=dt.timezone.utc)
+    end = dt.datetime(y + (m == 12), m % 12 + 1, 1, tzinfo=dt.timezone.utc)
+    return int(start.timestamp()), int(end.timestamp())
+
+
+def notable_in_month(cfg, y, m):
+    a, b = month_bounds(y, m)
+    inc, exc = re.compile(cfg["include"], re.I), re.compile(cfg["exclude"], re.I)
+    seen = set()
+    for q in cfg["queries"]:
+        page = 0
+        while True:
+            data = fetch({"query": q, "tags": "story", "restrictSearchableAttributes": "title",
+                          "numericFilters": f"created_at_i>={a},created_at_i<{b},points>={NOTABLE}",
+                          "hitsPerPage": 1000, "page": page})
+            for h in data.get("hits", []):
+                t = h.get("title") or ""
+                if inc.search(t) and not exc.search(t):
+                    seen.add(h["objectID"])
+            page += 1
+            if page >= data.get("nbPages", 0) or page >= 5:
+                break
+        time.sleep(0.3)
+    return len(seen)
+
+
+def update_hn_history(blocks, state, notes):
+    """Notable stories per complete month over the last 12 months; past months are fetched once."""
+    now = dt.datetime.now(dt.timezone.utc)
+    months = []
+    y, m = now.year, now.month
+    for _ in range(12):
+        m -= 1
+        if m == 0:
+            y, m = y - 1, 12
+        months.append((y, m))
+    months.reverse()
+    hist = state.setdefault("hn_monthly", {})
+    fetched = 0
+    for y, m in months:
+        k = f"{y}-{m:02d}"
+        row = hist.setdefault(k, {})
+        for vid, cfg in VENDORS.items():
+            if vid in row:
+                continue
+            try:
+                row[vid] = notable_in_month(cfg, y, m)
+                fetched += 1
+            except Exception as e:
+                notes.append(f"Hacker News, historique {k} {cfg['label']} : {e}")
+    if fetched:
+        notes.append(f"Hacker News : {fetched} valeurs mensuelles ajoutées à l'historique.")
+    for k in sorted(hist)[:-24]:
+        del hist[k]
+
+    def walk(bs):
+        for x in bs:
+            yield x
+            if x.get("type") == "details":
+                yield from walk(x.get("blocks", []))
+
+    for b in walk(blocks):
+        if b.get("auto") != "hn_trend":
+            continue
+        pts = []
+        for i, (y, m) in enumerate(months):
+            k = f"{y}-{m:02d}"
+            label = f"{MONTHS_SHORT[m - 1]} {str(y)[2:]}" if (i == 0 or m == 1) else MONTHS_SHORT[m - 1]
+            pts.append({"m": i - len(months), "label": label, "values": dict(hist.get(k, {}))})
+        b["points"] = pts
+        b["series"] = [{"key": v, "label": VENDORS[v]["label"], "vendor": v} for v in VENDORS]
+        top = max([v for p in pts for v in p["values"].values()] + [10])
+        step = next(s for s in (2, 5, 10, 20, 25, 50, 100) if s * 5 >= top)
+        b["max"] = step * 5
+        b["ticks"] = [i * step for i in range(6)]
+        b["caption"] = (f"Articles ayant dépassé {NOTABLE} points et dont le titre mentionne l'assistant ou son éditeur, par mois complet, "
+                        "via l'API Algolia [[s92]]. Les points d'un article se stabilisent en quelques jours : les mois passés sont figés.")
+
+
 def fr(x):
     return f"{x:,}".replace(",", " ")
 

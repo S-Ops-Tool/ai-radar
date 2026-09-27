@@ -10,6 +10,7 @@ import csv
 import datetime as dt
 import io
 import json
+import os
 import re
 import urllib.request
 
@@ -181,6 +182,102 @@ def update_vectara(block, state, notes):
     state["vectara_seen"] = sorted(relevant)
 
 
+GH_API = "https://api.github.com/repos/vectara/hallucination-leaderboard/commits"
+RAW_AT = "https://raw.githubusercontent.com/vectara/hallucination-leaderboard/{sha}/README.md"
+MONTHS_SHORT = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+
+
+def gh_json(url):
+    headers = {"User-Agent": "ai-radar/1.0", "Accept": "application/vnd.github+json"}
+    if os.environ.get("GITHUB_TOKEN"):
+        headers["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
+    with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def vectara_table(md):
+    table = {}
+    for line in md.splitlines():
+        mm = re.match(r"^\|([^|]+)\|\s*([\d.]+)\s*%\|", line)
+        if mm:
+            table[mm.group(1).strip()] = float(mm.group(2))
+    return table
+
+
+def vectara_signature(md):
+    """Evaluator version and dataset generation: points with a different signature are not comparable."""
+    ev = re.search(r"HHEM-(\d+\.\d+), Vectara's commercial", md)
+    return [ev.group(1) if ev else None, "old-dataset" in md.lower()]
+
+
+def update_vectara_history(blocks, vendors_cfg, state, notes):
+    now = dt.date.today()
+    months = []
+    y, m = now.year, now.month
+    for _ in range(12):
+        months.append((y, m))
+        m -= 1
+        if m == 0:
+            y, m = y - 1, 12
+    months.reverse()
+    since = f"{months[0][0]}-{months[0][1]:02d}-01T00:00:00Z"
+    commits = []
+    for page in (1, 2, 3):
+        batch = gh_json(f"{GH_API}?path=README.md&per_page=100&page={page}&since={since}")
+        commits += batch
+        if len(batch) < 100:
+            break
+    last_per_month = {}
+    for c in commits:
+        date = c["commit"]["committer"]["date"]
+        k = date[:7]
+        if k not in last_per_month or date > last_per_month[k][0]:
+            last_per_month[k] = (date, c["sha"])
+    hist = state.setdefault("vectara_monthly", {})
+    current = f"{now.year}-{now.month:02d}"
+    for k, (date, sha) in last_per_month.items():
+        if k in hist and k != current and hist[k].get("sha") == sha:
+            continue
+        md = fetch(RAW_AT.format(sha=sha))
+        table = vectara_table(md)
+        vals = {}
+        for v, cfg in vendors_cfg.items():
+            rates = [r for name, r in table.items() if name.startswith(cfg["prefix"])]
+            if rates:
+                vals[v] = min(rates)
+        hist[k] = {"sha": sha, "sig": vectara_signature(md), "vals": vals}
+    cur_sig = vectara_signature(fetch(VECTARA_MD))
+    kept = [(y, m) for (y, m) in months if hist.get(f"{y}-{m:02d}", {}).get("sig") == cur_sig]
+    dropped = [f"{y}-{m:02d}" for (y, m) in months if f"{y}-{m:02d}" in hist and (y, m) not in kept]
+    if dropped:
+        notes.append("Vectara, historique : mois écartés car établis avec une autre méthode : " + ", ".join(dropped) + ".")
+
+    def walk(bs):
+        for x in bs:
+            yield x
+            if x.get("type") == "details":
+                yield from walk(x.get("blocks", []))
+
+    for b in walk(blocks):
+        if b.get("auto") != "vectara_trend":
+            continue
+        pts = []
+        for i, (y, m) in enumerate(kept):
+            label = f"{MONTHS_SHORT[m - 1]} {str(y)[2:]}" if (i == 0 or m == 1) else MONTHS_SHORT[m - 1]
+            off = (y - now.year) * 12 + (m - now.month)
+            pts.append({"m": off, "label": label, "values": hist[f"{y}-{m:02d}"]["vals"]})
+        b["points"] = pts
+        b["series"] = [{"key": v, "label": c["label"], "vendor": v} for v, c in vendors_cfg.items()]
+        top = max([v for p in pts for v in p["values"].values()] + [5])
+        b["max"] = int(top // 5 + 1) * 5
+        b["ticks"] = list(range(0, b["max"] + 1, max(1, b["max"] // 5)))
+        n = len(pts)
+        b["caption"] = (f"Taux d'hallucination du meilleur modèle de chaque éditeur présent au classement Vectara, en %, "
+                        f"à la fin de chaque mois ; {n} mois établis avec la méthode actuelle [[s55]]. "
+                        "Le meilleur modèle d'un éditeur est souvent un petit modèle, plus fidèle en résumé que ses modèles phares. "
+                        "Les mois antérieurs à un changement d'évaluateur ou de jeu de documents sont écartés : leurs chiffres ne sont pas comparables.")
+
+
 def main():
     data = json.loads(CONTENT.read_text(encoding="utf-8"))
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
@@ -207,6 +304,10 @@ def main():
                 hn_update.update_hn(sec["blocks"], state, notes)
             except Exception as e:
                 errors.append(f"hacker news : {e}")
+            try:
+                hn_update.update_hn_history(sec["blocks"], state, notes)
+            except Exception as e:
+                errors.append(f"hacker news, historique : {e}")
         for block in sec["blocks"]:
             auto = block.get("auto")
             try:
@@ -214,6 +315,10 @@ def main():
                     update_epoch(block, notes)
                 elif auto == "vectara_hhem":
                     update_vectara(block, state, notes)
+                    try:
+                        update_vectara_history(sec["blocks"], block["vendors"], state, notes)
+                    except Exception as e:
+                        errors.append(f"vectara, historique : {e}")
             except Exception as e:
                 errors.append(f"{auto} : {e}")
     CONTENT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

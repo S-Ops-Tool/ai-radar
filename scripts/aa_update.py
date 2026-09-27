@@ -104,6 +104,11 @@ def update_aa(blocks, state, notes):
         raise RuntimeError("aucun modèle des éditeurs suivis dans la réponse")
     version = head.get("intelligence_index_version")
     state["aa_last"] = {k: {x: v[x] for x in ("name", "intel", "pin", "pout", "speed")} for k, v in best.items()}
+    import datetime as _dt
+    weekly = state.setdefault("aa_weekly", {})
+    weekly[_dt.date.today().isoformat()] = {"version": version, "best": {k: [v["name"], v["intel"]] for k, v in best.items()}}
+    for k in sorted(weekly)[:-104]:
+        del weekly[k]
 
     def walk(bs):
         for x in bs:

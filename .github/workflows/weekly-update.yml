@@ -35,10 +35,14 @@ jobs:
       - name: Dépendances
         run: pip install anthropic
 
+      - name: Migrations du contenu
+        run: python scripts/migrate.py
+
       - name: Données chiffrées (Epoch AI, Vectara, statuts, Hacker News, Artificial Analysis, YouTube)
         env:
           ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/data_update.py
 
       - name: Recherche et mise à jour du contenu
@@ -48,6 +52,12 @@ jobs:
           MAX_SEARCHES_PER_SECTION: ${{ vars.MAX_SEARCHES_PER_SECTION || '6' }}
           ONLY_SECTIONS: ${{ github.event.inputs.only_sections }}
         run: python scripts/update.py
+
+      - name: Traductions (en, es, de, it)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TRANSLATE_MODEL: ${{ vars.TRANSLATE_MODEL || 'claude-sonnet-5' }}
+        run: python scripts/translate.py
 
       - name: Test de construction du site
         run: python scripts/build.py

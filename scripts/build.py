@@ -12,13 +12,50 @@ STATIC = {"pipeline": (ROOT / "scripts" / "pipeline.svg").read_text(encoding="ut
 
 LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
 REF = re.compile(r"\s*\[\[(s\d+[a-z]?)\]\]")
-MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
-          "août", "septembre", "octobre", "novembre", "décembre"]
+I18N = ROOT / "content" / "i18n"
+UI_ALL = json.loads((I18N / "ui.json").read_text(encoding="utf-8"))
+LANGS = ["fr", "en", "es", "de", "it"]
+U = UI_ALL["fr"]
+LANG = "fr"
+BASE_URL = "https://s-ops-tool.github.io/ai-radar/"
+DEC = re.compile(r"(?<=\d),(?=\d)")
+SKIP_KEYS = {"id", "type", "auto", "vendor", "key", "url", "src", "date", "for", "name", "kind", "prefix",
+             "src_ref", "handles", "names", "include", "exclude", "queries", "keywords", "updated", "display",
+             "model", "m", "textonly", "band", "migrations"}
+
+
+def set_lang(lang):
+    global U, LANG
+    LANG, U = lang, UI_ALL[lang]
+
+
+def num(x, d=None):
+    s = str(x) if d is None else f"{x:.{d}f}"
+    return s if U["decimal"] == "." else s.replace(".", ",")
+
+
+def loc_display(s):
+    return DEC.sub(".", s) if U["decimal"] == "." else s
 
 
 def fr_date(iso):
     y, m, d = iso.split("-")
-    return f"{int(d)} {MONTHS[int(m) - 1]} {y}"
+    return U["date_fmt"].format(d=int(d), m=U["months"][int(m) - 1], y=y)
+
+
+def translate_tree(obj, table, key=None):
+    """Replace every translatable string by its translation (falls back to French)."""
+    if isinstance(obj, str):
+        if key in SKIP_KEYS:
+            return obj
+        return table.get(obj, obj)
+    if isinstance(obj, list):
+        if key == "sections" and all(isinstance(x, str) for x in obj):
+            return obj
+        return [translate_tree(x, table, key) for x in obj]
+    if isinstance(obj, dict):
+        return {k: translate_tree(v, table, k) for k, v in obj.items()}
+    return obj
 
 
 def src_num(sid):
@@ -54,17 +91,15 @@ def render_matrix(d):
     for row in d["matrix"]:
         cells = []
         for v in vendors:
-            c = row["cells"].get(v["id"], {"band": None, "text": "n.d."})
+            c = row["cells"].get(v["id"], {"band": None, "text": U["nd"]})
             if c.get("textonly"):
                 cells.append(f'<td class="cell">{html.escape(c["text"])}</td>')
             else:
                 cells.append(f'<td>{band_html(c.get("band"))}<div class="cell">{html.escape(c["text"])}</div></td>')
         rows.append(f'<tr><th scope="row">{html.escape(row["label"])}</th>{"".join(cells)}</tr>')
     return (
-        '<section id="matrice"><h2>Matrice de lecture</h2>'
-        "<p>Les bandes indiquent un niveau relatif entre les six acteurs, établi à partir des sources citées plus bas. "
-        "Une bande en pointillés signale une absence de donnée publique : elle ne vaut pas un score faible.</p>"
-        f'<div class="scroll"><table class="matrix"><thead><tr><th scope="col">Dimension</th>{head}</tr></thead>'
+        f'<section id="matrice"><h2>{U["matrix_title"]}</h2><p>{html.escape(U["matrix_intro"])}</p>'
+        f'<div class="scroll"><table class="matrix"><thead><tr><th scope="col">{U["dimension"]}</th>{head}</tr></thead>'
         f'<tbody>{"".join(rows)}</tbody></table></div></section>')
 
 
@@ -79,7 +114,7 @@ def render_bar_chart(b, sources):
     h = bottom + 40
     parts = [f'<svg viewBox="0 0 640 {h}" role="img" aria-label="{html.escape(b["title"])}">']
     ticks = b.get("ticks", [0, mx])
-    labels = b.get("ticklabels") or [f"{t:g}".replace(".", ",") for t in ticks]
+    labels = b.get("ticklabels") or [num(f"{t:g}") for t in ticks]
     parts.append('<g class="grid">')
     for t in ticks:
         x = x0 + t * scale
@@ -97,7 +132,7 @@ def render_bar_chart(b, sources):
         if bar.get("sublabel"):
             parts.append(f'<text x="0" y="{y + 27}" font-size="11" class="muted">{html.escape(bar["sublabel"])}</text>')
         parts.append(f'<rect x="{x0}" y="{y}" width="{w:.1f}" height="22" class="{cls}"/>')
-        parts.append(f'<text x="{x0 + w + 6:.1f}" y="{y + 16}" font-size="12">{html.escape(bar.get("display", str(bar["value"])))}</text>')
+        parts.append(f'<text x="{x0 + w + 6:.1f}" y="{y + 16}" font-size="12">{html.escape(loc_display(bar.get("display", str(bar["value"]))))}</text>')
     ref = b.get("refline")
     if ref:
         x = x0 + ref["value"] * scale
@@ -109,14 +144,11 @@ def render_bar_chart(b, sources):
             f'<div class="scroll" style="margin:0">{"".join(parts)}</div>{cap}</figure>')
 
 
-MONTHS_SHORT = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
-
-
 def short_date(x):
     if not x:
-        return "date non vérifiée"
+        return U["date_unverified"]
     parts = x.split("-")
-    return f"{MONTHS_SHORT[int(parts[1]) - 1]} {parts[0]}"
+    return f"{U['months_short'][int(parts[1]) - 1]} {parts[0]}"
 
 
 def render_dot_chart(b, sources):
@@ -135,7 +167,7 @@ def render_dot_chart(b, sources):
     for t in b["ticks"]:
         out.append(f'<text x="{x0 + t * sc:.1f}" y="{top + step * len(rows)}" class="muted">{t}</text>')
     out.append("</g>")
-    out.append(f'<text x="455" y="{top - 22}" font-size="11" font-weight="600">Dernier modèle phare de l\'éditeur</text>')
+    out.append(f'<text x="455" y="{top - 22}" font-size="11" font-weight="600">{html.escape(U["dot_latest"])}</text>')
     for i, r in enumerate(rows):
         y = top + i * step
         v = r["vendor"]
@@ -143,26 +175,26 @@ def render_dot_chart(b, sources):
         out.append(f'<line x1="{x0}" y1="{y}" x2="{x1}" y2="{y}" class="axis"/>')
         for dtt in r["dots"]:
             out.append(f'<circle cx="{x0 + dtt["value"] * sc:.1f}" cy="{y}" r="4" fill="var(--ink2)" opacity=".35">'
-                       f'<title>{html.escape(dtt["model"])} : {str(dtt["value"]).replace(".", ",")} %</title></circle>')
+                       f'<title>{html.escape(dtt["model"])} : {num(dtt["value"])} %</title></circle>')
         t = r["tested"]
         if t.get("value") is not None:
             cx = x0 + t["value"] * sc
             out.append(f'<circle cx="{cx:.1f}" cy="{y}" r="7" class="f-{v}"/>')
-            lab = f'{t["label"]}, {str(t["value"]).replace(".", ",")} % ({short_date(t.get("date"))})'
+            lab = f'{t["label"]}, {num(t["value"])} % ({short_date(t.get("date"))})'
             anchor = "end" if cx > x0 + 0.3 * (x1 - x0) else "start"
             tx = cx - 10 if anchor == "end" else cx + 10
             out.append(f'<text x="{tx:.1f}" y="{y + 20}" font-size="11" text-anchor="{anchor}">{html.escape(lab)}</text>')
         lt = r["latest"]
         out.append(f'<text x="455" y="{y - 2}" font-size="12">{html.escape(lt["label"])} ({short_date(lt.get("date"))})</text>')
         if lt.get("evaluated"):
-            out.append(f'<text x="455" y="{y + 14}" font-size="11" class="muted">Évalué ci-contre</text>')
+            out.append(f'<text x="455" y="{y + 14}" font-size="11" class="muted">{html.escape(U["dot_evaluated"])}</text>')
         else:
             gap = r.get("gap_months")
             w = 0 if gap is None else min(gap, 12) / 12 * 160
             out.append(f'<rect x="455" y="{y + 6}" width="160" height="7" fill="var(--faint)"/>')
             if gap is not None:
                 out.append(f'<rect x="455" y="{y + 6}" width="{w:.1f}" height="7" fill="var(--warn)"/>')
-            msg = "non évalué" + (f", {gap} mois d'écart" if gap is not None else ", écart inconnu")
+            msg = U["dot_not_evaluated"] + ", " + (U["dot_gap"].format(n=gap) if gap is not None else U["dot_gap_unknown"])
             out.append(f'<text x="455" y="{y + 28}" font-size="11" class="muted">{html.escape(msg)}</text>')
     out.append("</svg>")
     cap = f'<figcaption>{txt(b["caption"], sources)}</figcaption>' if b.get("caption") else ""
@@ -171,6 +203,9 @@ def render_dot_chart(b, sources):
 
 
 def render_line_chart(b, sources):
+    if not b.get("points"):
+        cap = f'<figcaption>{txt(b.get("caption") or "", sources)}</figcaption>' if b.get("caption") else ""
+        return f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>{cap}</figure>'
     x0, x1, y0, y1 = 70, 560, 250, 30
     months = [pt["m"] for pt in b["points"]]
     mmin, mmax = min(months), max(months)
@@ -195,14 +230,14 @@ def render_line_chart(b, sources):
         color = f'var(--{se["vendor"]})'
         out.append(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="2.5"/>')
         for m, v in vals:
-            out.append(f'<circle cx="{X(m):.1f}" cy="{Y(v):.1f}" r="3.5" fill="{color}"><title>{html.escape(se["label"])} : {str(v).replace(".", ",")} %</title></circle>')
+            out.append(f'<circle cx="{X(m):.1f}" cy="{Y(v):.1f}" r="3.5" fill="{color}"><title>{html.escape(se["label"])} : {num(v)} %</title></circle>')
         ends.append([Y(vals[-1][1]), se["label"], vals[-1][1], color])
     ends.sort()
     last = -99
     for e in ends:
         e[0] = max(e[0], last + 15)
         last = e[0]
-        out.append(f'<text x="{x1 + 12}" y="{e[0] + 4:.1f}" font-size="12" style="fill:{e[3]}">{html.escape(e[1])} {str(e[2]).replace(".", ",")}</text>')
+        out.append(f'<text x="{x1 + 12}" y="{e[0] + 4:.1f}" font-size="12" style="fill:{e[3]}">{html.escape(e[1])} {num(e[2])}</text>')
     out.append("</svg>")
     cap = f'<figcaption>{txt(b["caption"], sources)}</figcaption>' if b.get("caption") else ""
     return (f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>'
@@ -218,14 +253,14 @@ def render_block(b, sources):
     if t == "why":
         return f'<p class="why">{txt(b["text"], sources)}</p>'
     if t == "audiences":
-        labels = [("public", "Grand public"), ("entreprises", "Entreprises"), ("institutions", "Institutions")]
+        labels = [(k, U["aud_" + k]) for k in ("public", "entreprises", "institutions")]
         return '<div class="aud">' + "".join(
             f'<div class="a-{k}"><strong>{n}</strong>{txt(b.get(k, ""), sources)}</div>' for k, n in labels) + "</div>"
     if t == "details":
         inner = "".join(render_block(x, sources) for x in b["blocks"])
         return f'<details class="deep"><summary>{html.escape(b["summary"])}</summary><div class="inner">{inner}</div></details>'
     if t == "reading":
-        return f'<div class="reading"><p><strong>Lecture.</strong> {txt(b["text"], sources)}</p></div>'
+        return f'<div class="reading"><p><strong>{U["reading"]}</strong> {txt(b["text"], sources)}</p></div>'
     if t == "list":
         return "<ul>" + "".join(f"<li>{txt(i, sources)}</li>" for i in b["items"]) + "</ul>"
     if t == "table":
@@ -244,21 +279,26 @@ def render_block(b, sources):
         return render_dot_chart(b, sources)
     if t == "static":
         svg = STATIC.get(b["name"], "")
+        for fr_t, tr in U.get("pipeline", {}).items():
+            svg = svg.replace(">" + fr_t + "<", ">" + html.escape(tr, quote=False) + "<")
         cap = f'<figcaption>{txt(b["caption"], sources)}</figcaption>' if b.get("caption") else ""
         return f'<figure class="chart"><div class="scroll" style="margin:0">{svg}</div>{cap}</figure>'
     return ""
 
 
-AUD_NAMES = {"public": "Grand public", "entreprises": "Entreprises", "institutions": "Institutions"}
-
-
 def render_section(s, sources):
-    tags = "".join(f'<span class="tag">{AUD_NAMES[a]}</span>' for a in s.get("for", []) if a in AUD_NAMES)
+    tags = "".join(f'<span class="tag">{U["aud_" + a]}</span>' for a in s.get("for", []) if "aud_" + a in U)
     body = "".join(render_block(b, sources) for b in s["blocks"])
-    watch = (f'<p class="watch">Sources suivies chaque semaine : {html.escape(", ".join(s["watch"]))}.</p>'
+    watch = (f'<p class="watch">{U["watch"]} {html.escape(", ".join(s["watch"]))}.</p>'
              if s.get("watch") else "")
     return (f'<section class="sec" id="{s["id"]}" data-for="{" ".join(s.get("for", []))}">'
             f'<h3>{html.escape(s["title"])}</h3><div class="tags">{tags}</div>{body}{watch}</section>')
+
+
+def lang_prefix(target):
+    """Relative link from the current language page to the target language page."""
+    up = "" if LANG == "fr" else "../"
+    return up + ("" if target == "fr" else target + "/")
 
 
 def render(d):
@@ -269,15 +309,20 @@ def render(d):
     placed = {sid for p in parts for sid in p["sections"]}
     orphans = [sid for sid in secs if sid not in placed]
     if orphans:
-        parts = parts + [{"id": "autres", "title": "Autres sujets", "intro": "", "sections": orphans}]
+        parts = parts + [{"id": "autres", "title": "+", "intro": "", "sections": orphans}]
 
-    toc = ['<div class="tg"><span class="grp">Synthèse</span><a href="#bref">En bref</a><a href="#matrice">Matrice</a></div>']
+    toc = [f'<div class="tg"><span class="grp">{U["toc_synth"]}</span><a href="#bref">{U["brief"]}</a><a href="#matrice">{U["matrix"]}</a></div>']
     for p in parts:
-        links = "".join(f'<a href="#{sid}" data-sec="{sid}">{html.escape(secs[sid]["title"].split(" :")[0])}</a>'
+        links = "".join(f'<a href="#{sid}" data-sec="{sid}">{html.escape(secs[sid]["title"].split(":")[0].strip())}</a>'
                         for sid in p["sections"] if sid in secs)
         toc.append(f'<div class="tg"><span class="grp">{html.escape(p["title"])}</span>{links}</div>')
-    toc.append('<div class="tg"><span class="grp">Références</span><a href="#glossaire">Glossaire</a>'
-               '<a href="#journal">Journal</a><a href="#angles">Angles morts</a><a href="#sources">Sources</a></div>')
+    toc.append(f'<div class="tg"><span class="grp">{U["toc_refs"]}</span><a href="#glossaire">{U["glossary"]}</a>'
+               f'<a href="#journal">{U["journal"]}</a><a href="#angles">{U["blind"]}</a><a href="#sources">{U["sources"]}</a></div>')
+    switch = "".join(
+        (f'<span aria-current="page">{l.upper()}</span>' if l == LANG else
+         f'<a href="{lang_prefix(l)}" hreflang="{l}" lang="{l}" title="{UI_ALL[l]["lang_name"]}">{l.upper()}</a>')
+        for l in LANGS)
+    alternates = "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE_URL}{"" if l == "fr" else l + "/"}">' for l in LANGS)
 
     brief = "".join(f"<li>{txt(k, sources)}</li>" for k in d.get("keypoints", []))
     profiles = "".join(
@@ -301,12 +346,13 @@ def render(d):
         for sid, s in sorted(sources.items(), key=lambda kv: int(src_num(kv[0]) or 0)))
 
     return f"""<!DOCTYPE html>
-<html lang="fr">
+<html lang="{LANG}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{html.escape(meta["title"])}</title>
 <meta name="description" content="{html.escape(meta["lede"])}">
+{alternates}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -315,30 +361,35 @@ ol.log{{list-style:none;padding:0;max-width:76ch}}
 ol.log>li{{margin-bottom:14px}}
 .watch{{font-size:.85rem;color:var(--ink2);margin-top:18px;max-width:76ch}}
 .sources{{list-style:none}}
+.langs{{display:flex;gap:10px;font-size:.85rem;margin-top:10px}}
+.langs span{{font-weight:700}}
+.langs a{{text-decoration:none;color:var(--ink2)}}
+.langs a:hover{{color:var(--accent)}}
 .sources .num{{display:inline-block;min-width:2.2em;font-variant-numeric:tabular-nums}}
 ol.log time{{font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;font-weight:600}}
 </style>
 </head>
 <body>
-<button class="themebtn" id="themebtn" type="button">Thème</button>
+<button class="themebtn" id="themebtn" type="button">{U["theme"]}</button>
 <div class="wrap">
 <header class="top">
 <h1>{html.escape(meta["title"])}</h1>
 <p class="lede">{html.escape(meta["lede"])}</p>
-<p class="meta">Mis à jour le {fr_date(meta["updated"])}. {html.escape(meta["note"])}</p>
-<nav class="toc" aria-label="Sommaire">{"".join(toc)}</nav>
+<p class="meta">{U["updated"]} {fr_date(meta["updated"])}. {html.escape(meta["note"])}</p>
+<nav class="langs" aria-label="{U["languages"]}">{switch}</nav>
+<nav class="toc" aria-label="{U["toc_synth"]}">{"".join(toc)}</nav>
 </header>
-<section id="bref"><h2>En bref</h2><ol class="brief">{brief}</ol>
-<h4>Lire selon votre profil</h4>
+<section id="bref"><h2>{U["brief"]}</h2><ol class="brief">{brief}</ol>
+<h4>{U["read_by_profile"]}</h4>
 <div class="profiles">{profiles}</div>
 <p class="filterstate" id="filterstate" aria-live="polite"></p>
 </section>
 {render_matrix(d)}
 {parts_html}
-<section id="glossaire"><h2>Glossaire</h2><dl class="gloss">{gloss}</dl></section>
-<section id="journal"><h2>Journal des mises à jour</h2><ol class="log">{log}</ol></section>
-<section id="angles"><h2>Ce que ce dossier ne voit pas</h2><ul>{blind}</ul></section>
-<section id="sources"><h2>Sources</h2><ul class="sources">{srcs}</ul></section>
+<section id="glossaire"><h2>{U["glossary"]}</h2><dl class="gloss">{gloss}</dl></section>
+<section id="journal"><h2>{U["journal_title"]}</h2><ol class="log">{log}</ol></section>
+<section id="angles"><h2>{U["blind_title"]}</h2><ul>{blind}</ul></section>
+<section id="sources"><h2>{U["sources"]}</h2><ul class="sources">{srcs}</ul></section>
 </div>
 <script>
 (function(){{
@@ -352,7 +403,8 @@ ol.log time{{font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;fon
     root.setAttribute('data-theme',next);
     try{{localStorage.setItem('theme',next);}}catch(e){{}}
   }});
-  var names={{public:'Grand public',entreprises:'Entreprises',institutions:'Institutions'}};
+  var names={json.dumps({k: U["aud_" + k] for k in ("public", "entreprises", "institutions")}, ensure_ascii=False)};
+  var FSTATE={json.dumps(U["filter_state"], ensure_ascii=False)}, SHOWALL={json.dumps(U["show_all"], ensure_ascii=False)};
   var btns=[].slice.call(document.querySelectorAll('.profile'));
   var state=document.getElementById('filterstate');
   function apply(aud){{
@@ -370,7 +422,8 @@ ol.log time{{font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;fon
       p.style.display=any?'':'none';
     }});
     if(aud){{
-      state.innerHTML='Lecture « '+names[aud]+' » : '+hidden+' section(s) masquée(s). <button type="button" id="showall">Tout afficher</button>';
+      state.textContent=FSTATE.replace('{{name}}',names[aud]).replace('{{n}}',hidden)+' ';
+      var sb=document.createElement('button');sb.type='button';sb.id='showall';sb.textContent=SHOWALL;state.appendChild(sb);
       document.getElementById('showall').addEventListener('click',function(){{apply(null);}});
     }}else{{state.textContent='';}}
     try{{if(aud){{localStorage.setItem('aud',aud);}}else{{localStorage.removeItem('aud');}}}}catch(e){{}}
@@ -387,12 +440,28 @@ ol.log time{{font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;fon
 """
 
 
+def load_table(lang):
+    path = I18N / f"{lang}.json"
+    if lang == "fr" or not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {e["fr"]: e["tr"] for e in data.values() if e.get("tr")}
+
+
 def main():
     d = json.loads(CONTENT.read_text(encoding="utf-8"))
     OUT_DIR.mkdir(exist_ok=True)
-    (OUT_DIR / "index.html").write_text(render(d), encoding="utf-8")
     (OUT_DIR / ".nojekyll").write_text("", encoding="utf-8")
-    print(f"site/index.html écrit ({len(d['sources'])} sources, {len(d['sections'])} sections)")
+    for lang in LANGS:
+        set_lang(lang)
+        table = load_table(lang)
+        doc = translate_tree(d, table) if table else d
+        out = OUT_DIR if lang == "fr" else OUT_DIR / lang
+        out.mkdir(parents=True, exist_ok=True)
+        (out / "index.html").write_text(render(doc), encoding="utf-8")
+        print(f"{lang} : {len(table)} traductions disponibles")
+    set_lang("fr")
+    print(f"site écrit en {len(LANGS)} langues ({len(d['sources'])} sources, {len(d['sections'])} sections)")
 
 
 if __name__ == "__main__":

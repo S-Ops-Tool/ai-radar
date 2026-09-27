@@ -59,3 +59,19 @@ Le script de données calcule l'écart en mois et signale les nouveaux modèles 
 - `parts` : les cinq parties et l'ordre des sections.
 - Blocs : `why` (pourquoi le sujet compte), `audiences` (une phrase par public), `details` (approfondissement dépliable, un seul niveau).
 - `glossary` : le glossaire, maintenu à la main.
+
+## Langues
+
+Le français est la langue source. Chaque semaine, `scripts/translate.py` traduit en anglais, espagnol, allemand et italien les seuls textes nouveaux ou modifiés, avec Claude (variable `TRANSLATE_MODEL`, par défaut `claude-sonnet-5`). Les traductions sont conservées dans `content/i18n/<langue>.json`, indexées par l'empreinte du texte français. Une traduction qui perd un renvoi de source ou un lien est rejetée : le texte s'affiche alors en français. Les textes fixes de l'interface sont dans `content/i18n/ui.json`.
+
+Le site est publié à la racine en français, et sous `/en/`, `/es/`, `/de/`, `/it/`.
+
+## Migrations
+
+`scripts/migrate.py` ajoute la structure nouvelle (sections, graphiques) au fichier de contenu sans toucher aux données relevées. Chaque migration ne s'exécute qu'une fois ; le workflow la lance avant l'étape de données.
+
+## Historiques
+
+- Hacker News : articles marquants par mois sur 12 mois, reconstitués une fois puis complétés chaque mois.
+- Vectara : meilleur taux de chaque éditeur en fin de mois, reconstitué depuis l'historique Git du classement ; les mois établis avec une autre méthode sont écartés.
+- Artificial Analysis, disponibilité, YouTube : relevés hebdomadaires accumulés dans `content/data_state.json` à partir de maintenant.
