@@ -52,5 +52,773 @@
     "xai-org/grok-4-1-fast-reasoning",
     "xai-org/grok-4-fast-non-reasoning",
     "xai-org/grok-4-fast-reasoning"
-  ]
+  ],
+  "status_incidents": {
+    "claude": {
+      "7g1qpkyz5gxh": {
+        "name": "Elevated errors for multiple models",
+        "impact": "major",
+        "start": "2026-09-22T00:57:26.117000+00:00",
+        "end": "2026-09-22T02:35:23.836000+00:00"
+      },
+      "t8fpw9vcshl9": {
+        "name": "Issues with Google Play subscriptions",
+        "impact": "none",
+        "start": "2026-09-16T16:18:10.728000+00:00",
+        "end": "2026-09-16T16:51:09.019000+00:00"
+      },
+      "6304r9jjhj34": {
+        "name": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
+        "impact": "major",
+        "start": "2026-09-15T09:48:23.066000+00:00",
+        "end": "2026-09-15T11:14:44.380000+00:00"
+      },
+      "r1pqn1kb4hvk": {
+        "name": "Degraded functionality for Claude Cowork on Windows",
+        "impact": "major",
+        "start": "2026-09-10T15:54:10+00:00",
+        "end": "2026-09-14T19:14:45.969000+00:00"
+      },
+      "t33dncr5ydvl": {
+        "name": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+        "impact": "major",
+        "start": "2026-09-11T14:19:51.466000+00:00",
+        "end": "2026-09-11T14:37:11.146000+00:00"
+      },
+      "2pt83vlkk7x7": {
+        "name": "Elevated latency on the Claude API for some users",
+        "impact": "minor",
+        "start": "2026-09-10T21:43:40.209000+00:00",
+        "end": "2026-09-10T23:24:22.978000+00:00"
+      },
+      "461yvfrzpwtt": {
+        "name": "Elevated errors for multiple models",
+        "impact": "major",
+        "start": "2026-09-03T13:26:04.191000+00:00",
+        "end": "2026-09-03T16:23:12.052000+00:00"
+      },
+      "288w7p4hk1l1": {
+        "name": "Elevated errors for Claude Sonnet 5",
+        "impact": "major",
+        "start": "2026-09-03T12:37:31.757000+00:00",
+        "end": "2026-09-03T12:56:26.632000+00:00"
+      },
+      "ls6bn1x81m0w": {
+        "name": "Elevated errors for Claude Sonnet 5",
+        "impact": "major",
+        "start": "2026-09-02T21:17:58.696000+00:00",
+        "end": "2026-09-02T21:44:28.095000+00:00"
+      },
+      "620swtqyn24k": {
+        "name": "Delays in credit purchases",
+        "impact": "minor",
+        "start": "2026-09-01T23:26:48.984000+00:00",
+        "end": "2026-09-02T01:24:22.251000+00:00"
+      },
+      "3g3d55q6vk3h": {
+        "name": "Degraded performance on platform.claude.com and Claude for Microsoft Office 365",
+        "impact": "minor",
+        "start": "2026-09-01T17:05:11.451000+00:00",
+        "end": "2026-09-01T18:07:03.372000+00:00"
+      },
+      "nr3h7bw8b3k3": {
+        "name": "Degraded performance on Claude for Microsoft Office 365",
+        "impact": "minor",
+        "start": "2026-09-01T16:02:48.673000+00:00",
+        "end": "2026-09-01T16:22:19.479000+00:00"
+      },
+      "r82kdk0m7vqh": {
+        "name": "Degraded performance on claude.ai and Claude Code",
+        "impact": "minor",
+        "start": "2026-08-31T19:21:32.131000+00:00",
+        "end": "2026-08-31T20:36:00.297000+00:00"
+      },
+      "9jrp5rtyzrf6": {
+        "name": "Degraded performance on claude.ai",
+        "impact": "minor",
+        "start": "2026-08-31T17:23:06.231000+00:00",
+        "end": "2026-08-31T17:52:26.026000+00:00"
+      },
+      "vr9tpk8w7zr8": {
+        "name": "Elevated errors on Claude Code and Claude Cowork",
+        "impact": "major",
+        "start": "2026-08-28T17:22:02.368000+00:00",
+        "end": "2026-08-28T20:21:18.448000+00:00"
+      },
+      "n0rlp126qf8g": {
+        "name": "Issues logging into Claude.ai",
+        "impact": "minor",
+        "start": "2026-08-24T20:11:23.924000+00:00",
+        "end": "2026-08-24T20:26:21.577000+00:00"
+      },
+      "w43j3xmngxgj": {
+        "name": "Errors logging into Claude.ai",
+        "impact": "minor",
+        "start": "2026-08-24T17:12:42.191000+00:00",
+        "end": "2026-08-24T17:16:02.904000+00:00"
+      },
+      "vgz5psbjmt1h": {
+        "name": "Elevated errors for multiple models",
+        "impact": "major",
+        "start": "2026-08-24T05:06:39.483000+00:00",
+        "end": "2026-08-24T08:30:47.615000+00:00"
+      },
+      "c0ncxxm2wd9r": {
+        "name": "Elevated errors on requests to multiple models",
+        "impact": "major",
+        "start": "2026-08-20T19:16:24.923000+00:00",
+        "end": "2026-08-20T19:42:38.692000+00:00"
+      },
+      "6xskhw7rn4tf": {
+        "name": "Elevated errors on Google connectors",
+        "impact": "minor",
+        "start": "2026-08-20T18:32:13.285000+00:00",
+        "end": "2026-08-20T19:01:03.844000+00:00"
+      },
+      "hkcw95k7r0f4": {
+        "name": "Degraded performance for Claude Opus 5 and Claude Haiku 4.5",
+        "impact": "minor",
+        "start": "2026-08-19T09:42:37.402000+00:00",
+        "end": "2026-08-19T11:02:18.264000+00:00"
+      },
+      "q7txxvbsftgq": {
+        "name": "Degraded performance for multiple models",
+        "impact": "minor",
+        "start": "2026-08-18T16:20:22.231000+00:00",
+        "end": "2026-08-18T19:01:45.447000+00:00"
+      },
+      "zhk4v3yv1lsf": {
+        "name": "Degraded performance for Claude Opus 5, Claude Sonnet 5",
+        "impact": "minor",
+        "start": "2026-08-17T13:56:41.046000+00:00",
+        "end": "2026-08-17T15:29:25.545000+00:00"
+      },
+      "qt14v73myyy5": {
+        "name": "Service disruption on Claude services",
+        "impact": "critical",
+        "start": "2026-08-16T21:58:56.939000+00:00",
+        "end": "2026-08-16T22:34:39.037000+00:00"
+      },
+      "hdynq1pc0fn8": {
+        "name": "Elevated errors for Claude Fable 5",
+        "impact": "major",
+        "start": "2026-08-14T23:57:16.560000+00:00",
+        "end": "2026-08-15T00:27:36.893000+00:00"
+      },
+      "005ym4vzrq2w": {
+        "name": "Service disruption on Claude services",
+        "impact": "major",
+        "start": "2026-08-14T20:30:36.280000+00:00",
+        "end": "2026-08-14T21:58:12.691000+00:00"
+      },
+      "kmbpgrsszf72": {
+        "name": "Issues reaching status.claude.com",
+        "impact": "none",
+        "start": "2026-08-14T07:58:11.612000+00:00",
+        "end": "2026-08-14T10:53:22.898000+00:00"
+      },
+      "whnd2z49x3xf": {
+        "name": "Service disruption on Claude Code on the web and related services",
+        "impact": "minor",
+        "start": "2026-08-14T00:36:42.416000+00:00",
+        "end": "2026-08-14T00:51:24.100000+00:00"
+      },
+      "j160kkjmm2n1": {
+        "name": "Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5",
+        "impact": "major",
+        "start": "2026-08-13T14:33:45.150000+00:00",
+        "end": "2026-08-13T16:08:35.730000+00:00"
+      },
+      "rk6gkg2gwfny": {
+        "name": "Degraded performance for multiple models",
+        "impact": "minor",
+        "start": "2026-08-12T13:50:28.450000+00:00",
+        "end": "2026-08-12T18:07:11.547000+00:00"
+      },
+      "mgp99sn4ynd4": {
+        "name": "Degraded performance for Claude Opus 5",
+        "impact": "minor",
+        "start": "2026-08-05T13:51:30.277000+00:00",
+        "end": "2026-08-05T14:34:15.264000+00:00"
+      },
+      "f6gkkq6txl7z": {
+        "name": "Degraded performance of multiple models",
+        "impact": "minor",
+        "start": "2026-08-05T07:05:54+00:00",
+        "end": "2026-08-05T14:14:36.006000+00:00"
+      },
+      "bdr3fq2rkchr": {
+        "name": "Elevated errors across many models",
+        "impact": "major",
+        "start": "2026-08-04T20:48:20.764000+00:00",
+        "end": "2026-08-04T21:59:29.385000+00:00"
+      },
+      "nlg5hjdfphmb": {
+        "name": "Elevated errors on Claude Sonnet 5",
+        "impact": "minor",
+        "start": "2026-08-04T11:27:20.681000+00:00",
+        "end": "2026-08-04T11:52:10.820000+00:00"
+      },
+      "8k9mjhq7wmv3": {
+        "name": "Elevated errors on Claude Sonnet 5",
+        "impact": "minor",
+        "start": "2026-08-04T06:16:33.835000+00:00",
+        "end": "2026-08-04T06:55:43.194000+00:00"
+      },
+      "dnl3q35xkn3s": {
+        "name": "Degraded performance on Claude Sonnet 5",
+        "impact": "minor",
+        "start": "2026-08-03T15:13:45.852000+00:00",
+        "end": "2026-08-03T15:29:01.564000+00:00"
+      },
+      "ch7k4vh9fr1y": {
+        "name": "Error rates across multiple models",
+        "impact": "minor",
+        "start": "2026-08-03T12:52:52.841000+00:00",
+        "end": "2026-08-03T14:17:14.797000+00:00"
+      },
+      "jq4x54h69z76": {
+        "name": "Degraded performance on Claude Sonnet 5",
+        "impact": "minor",
+        "start": "2026-07-31T06:18:08.059000+00:00",
+        "end": "2026-07-31T07:04:49.691000+00:00"
+      },
+      "kqjy03gs895j": {
+        "name": "Degraded performance on Claude Opus 4.8",
+        "impact": "minor",
+        "start": "2026-07-30T13:43:19.838000+00:00",
+        "end": "2026-07-30T14:24:12.155000+00:00"
+      },
+      "fsh2zzzl2c4l": {
+        "name": "Elevated errors across many models",
+        "impact": "major",
+        "start": "2026-07-30T05:57:43.516000+00:00",
+        "end": "2026-07-30T10:48:56.631000+00:00"
+      },
+      "q2kg8n613kr3": {
+        "name": "Elevated errors across all models",
+        "impact": "critical",
+        "start": "2026-07-29T19:49:45.378000+00:00",
+        "end": "2026-07-29T22:36:20.701000+00:00"
+      },
+      "rkk5x44tndw9": {
+        "name": "Elevated errors on Claude Opus 5 and Haiku 4.5",
+        "impact": "minor",
+        "start": "2026-07-27T13:39:52.254000+00:00",
+        "end": "2026-07-27T14:36:43.730000+00:00"
+      },
+      "mfdtrknpxghq": {
+        "name": "Elevated errors on Claude Opus 5",
+        "impact": "minor",
+        "start": "2026-07-27T11:27:38.060000+00:00",
+        "end": "2026-07-27T12:30:22.946000+00:00"
+      },
+      "lhqp09kxq7pb": {
+        "name": "Elevated errors on Claude Opus 5",
+        "impact": "minor",
+        "start": "2026-07-27T08:16:57.579000+00:00",
+        "end": "2026-07-27T09:05:24.911000+00:00"
+      },
+      "zftg3gqkmv18": {
+        "name": "Elevated errors for Opus 5",
+        "impact": "major",
+        "start": "2026-07-26T09:17:12.688000+00:00",
+        "end": "2026-07-26T10:44:14.944000+00:00"
+      },
+      "j6gv862066n7": {
+        "name": "Elevated errors for Claude Fable 5, Claude Sonnet 5, Claude Haiku 4.5, and other models",
+        "impact": "major",
+        "start": "2026-07-25T21:34:51.163000+00:00",
+        "end": "2026-07-25T22:08:41.677000+00:00"
+      },
+      "f1q2wvw4qj4j": {
+        "name": "Elevated errors for Mythos 5, Fable 5, Opus 5 and Claude Haiku 4.5",
+        "impact": "major",
+        "start": "2026-07-25T18:40:31.858000+00:00",
+        "end": "2026-07-25T19:44:32.851000+00:00"
+      },
+      "1019wwb67615": {
+        "name": "Sonnet 4.6 and Sonnet 5 errors elevated",
+        "impact": "none",
+        "start": "2026-07-25T18:14:56.438000+00:00",
+        "end": "2026-07-25T18:13:01+00:00"
+      },
+      "yc7mr2gvl914": {
+        "name": "Microsoft Office add-in availability",
+        "impact": "none",
+        "start": "2026-07-22T17:56:10.080000+00:00",
+        "end": "2026-07-24T15:36:54.682000+00:00"
+      },
+      "0lbk5m7mbqk5": {
+        "name": "Elevated error rate on Opus 4.8",
+        "impact": "minor",
+        "start": "2026-07-24T09:09:56.933000+00:00",
+        "end": "2026-07-24T10:22:06.541000+00:00"
+      }
+    },
+    "gpt": {
+      "01M3DCNWMW57HYK8FJ5FBFPA39": {
+        "name": "Issues with Codex ",
+        "impact": "critical",
+        "start": "2026-09-25T22:58:48+00:00",
+        "end": "2026-09-25T23:54:41+00:00"
+      },
+      "01M3ACKDE4GYY67FXXNRRSC0CE": {
+        "name": "Elevated Error Rates on GPT-6 Astra Pro",
+        "impact": "none",
+        "start": "2026-09-24T18:59:44+00:00",
+        "end": "2026-09-24T19:46:28+00:00"
+      },
+      "01M389CDQ97B11QPMSRAAYSE5S": {
+        "name": "Mobile users unable to see Work Mode and the Model Picker",
+        "impact": "minor",
+        "start": "2026-09-23T23:25:00+00:00",
+        "end": "2026-09-23T23:49:06+00:00"
+      },
+      "01M36RMC01ZFWQ861WYJKC4XE1": {
+        "name": "Elevated Error Rates for ChatGPT across Plus and Pro plans.",
+        "impact": "minor",
+        "start": "2026-09-23T09:13:00+00:00",
+        "end": "2026-09-23T09:54:16+00:00"
+      },
+      "01M34TAFM9WBGEBE3G1GBH4SE8": {
+        "name": "Elevated Error Rates for ChatGPT Work, across Plus, Pro, Business, Enterprise and Education plans.",
+        "impact": "minor",
+        "start": "2026-09-22T15:04:05+00:00",
+        "end": "2026-09-22T15:58:32+00:00"
+      },
+      "01M348TX2DX7KPM9X857N4APNV": {
+        "name": "Increased error rate for Plus and Pro users.",
+        "impact": "minor",
+        "start": "2026-09-22T09:58:28+00:00",
+        "end": "2026-09-22T10:37:42+00:00"
+      },
+      "01M2VA7X37P1ASADSNZ1CG4N4D": {
+        "name": "Overbilling for OpenAI-hosted containers in the Agent API",
+        "impact": "none",
+        "start": "2026-09-18T22:29:53+00:00",
+        "end": "2026-09-19T07:52:40+00:00"
+      },
+      "01M2V76GEPJB0HQGRA0QERRZ3T": {
+        "name": "Delayed support responses",
+        "impact": "none",
+        "start": "2026-09-18T21:36:41+00:00",
+        "end": "2026-09-19T01:10:40+00:00"
+      },
+      "01M2VBZB1RYSMXHZNRA25ZJ36X": {
+        "name": "SSO sign-in and SCIM provisioning issues",
+        "impact": "none",
+        "start": "2026-09-18T23:00:09+00:00",
+        "end": "2026-09-18T23:18:55+00:00"
+      },
+      "01M2RMCS2HVBXGBFKEZ9RZR4FA": {
+        "name": "We are seeing elevated error rates across API models",
+        "impact": "minor",
+        "start": "2026-09-17T21:29:35+00:00",
+        "end": "2026-09-17T21:50:36+00:00"
+      },
+      "01M2RC0WHGTX8EHDH7D60JJ7FC": {
+        "name": "Elevated errors affecting ChatGPT Work mode",
+        "impact": "major",
+        "start": "2026-09-17T19:03:17+00:00",
+        "end": "2026-09-17T20:24:45+00:00"
+      },
+      "01M2NRHTYAM3K3M93X1D068MCY": {
+        "name": "Elevated errors in ChatGPT Work",
+        "impact": "minor",
+        "start": "2026-09-16T18:44:32+00:00",
+        "end": "2026-09-16T19:34:36+00:00"
+      },
+      "01M2KQNE5C42NEZPX6V01NHH5W": {
+        "name": "Elevated errors with gpt-image-2.5-flare",
+        "impact": "major",
+        "start": "2026-09-15T23:50:32+00:00",
+        "end": "2026-09-16T00:30:48+00:00"
+      },
+      "01M2JZR57HRQTKQGTCWG31M3AS": {
+        "name": "Ads Manager login issues",
+        "impact": "minor",
+        "start": "2026-09-15T16:52:36+00:00",
+        "end": "2026-09-15T16:54:01+00:00"
+      },
+      "01M2HYH64J2CZMZ63HEV2FCQFA": {
+        "name": "Elevated errors from GPT-5.6 and GPT-5.6 Instant on paid plans",
+        "impact": "minor",
+        "start": "2026-09-15T07:12:04+00:00",
+        "end": "2026-09-15T07:53:36+00:00"
+      },
+      "01M2GA8XTS6VB3QCDEGZ0HNAQ5": {
+        "name": "Elevated errors affecting Work Mode in ChatGPT",
+        "impact": "minor",
+        "start": "2026-09-14T15:58:48+00:00",
+        "end": "2026-09-15T03:11:36+00:00"
+      },
+      "01M2H3J1D6Y7RHAP49GRWGJAY0": {
+        "name": "Degraded Performance affecting Agents API",
+        "impact": "none",
+        "start": "2026-09-14T23:20:41+00:00",
+        "end": "2026-09-14T23:39:21+00:00"
+      },
+      "01M2EWYR55J47M2BPG9WC76VEG": {
+        "name": "Elevated error rates for Codex and ChatGPT Work",
+        "impact": "none",
+        "start": "2026-09-14T02:46:48+00:00",
+        "end": "2026-09-14T03:57:19+00:00"
+      },
+      "01M2DV6788RRSDZ5K98S5HN0A8": {
+        "name": "Elevated errors for ChatGPT users in Europe",
+        "impact": "minor",
+        "start": "2026-09-13T16:56:41+00:00",
+        "end": "2026-09-13T17:47:55+00:00"
+      },
+      "01M2D1CZG0862JB4JHVW56QF89": {
+        "name": "Codex GitHub Review and Pull Request Failures",
+        "impact": "minor",
+        "start": "2026-09-13T09:26:00+00:00",
+        "end": "2026-09-13T09:53:42+00:00"
+      },
+      "01M28MEQWTQJDRCRPFD9FWQ0H3": {
+        "name": "1% of ChatGPT Work (mobile/web) turns are failing for existing threads",
+        "impact": "minor",
+        "start": "2026-09-11T16:22:49+00:00",
+        "end": "2026-09-12T01:57:37+00:00"
+      },
+      "01M27VK1VN54RQJGJEHB5JTQJJ": {
+        "name": "Elevated errors for GPT-5.6 Sol on the API",
+        "impact": "minor",
+        "start": "2026-09-11T09:08:15+00:00",
+        "end": "2026-09-11T11:21:43+00:00"
+      },
+      "01M27Q9GH7WVKNA61ZR3RDMSY5": {
+        "name": "Elevated errors for ChatGPT users in Europe",
+        "impact": "minor",
+        "start": "2026-09-11T07:53:08+00:00",
+        "end": "2026-09-11T10:16:31+00:00"
+      },
+      "01M26E3PPAYJMMRHX2MZJCTHMF": {
+        "name": "Delays in customer support responses",
+        "impact": "none",
+        "start": "2026-09-10T19:53:26+00:00",
+        "end": "2026-09-10T21:48:32+00:00"
+      },
+      "01M26DX2PP1AFHGJK5E4M6S2J6": {
+        "name": "Elevated errors affecting ChatGPT Work",
+        "impact": "minor",
+        "start": "2026-09-10T19:49:49+00:00",
+        "end": "2026-09-10T21:30:02+00:00"
+      }
+    },
+    "gemini": {
+      "41E5S3mkTGDfkZuJZH5k": {
+        "name": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
+        "impact": "minor",
+        "start": "2026-02-27T12:37:00+00:00",
+        "end": "2026-02-27T14:35:00+00:00"
+      }
+    },
+    "grok": {
+      "INC578e0bc8": {
+        "name": "Outages across API, Grok.com, and Grok Build",
+        "impact": "major",
+        "start": "2026-09-22T01:02:42+00:00",
+        "end": "2026-09-22T01:28:30+00:00"
+      },
+      "INC698e276c": {
+        "name": "Enterprise Voice Degraded",
+        "impact": "minor",
+        "start": "2026-09-10T07:03:52+00:00",
+        "end": "2026-09-10T07:15:52+00:00"
+      },
+      "INCc33a8af": {
+        "name": "Models outage",
+        "impact": "major",
+        "start": "2026-09-03T13:30:00+00:00",
+        "end": "2026-09-03T17:09:14+00:00"
+      },
+      "INC5a3245c3": {
+        "name": "grok-4.6 and grok-4.5 high error rate",
+        "impact": "minor",
+        "start": "2026-08-17T21:57:27+00:00",
+        "end": "2026-08-17T23:28:05+00:00"
+      },
+      "INC548339c6": {
+        "name": "Imagine Video 1.5 is experiencing lower success rate and higher latency",
+        "impact": "minor",
+        "start": "2026-07-07T15:40:26+00:00",
+        "end": "2026-07-07T16:38:07+00:00"
+      },
+      "INC5bb72a4a": {
+        "name": "Grok Build 0.1 unavailable",
+        "impact": "major",
+        "start": "2026-07-02T00:44:20+00:00",
+        "end": "2026-07-02T01:10:01+00:00"
+      },
+      "INC7392b4a1": {
+        "name": "Increased Error rate on Image Generation Endpoint",
+        "impact": "minor",
+        "start": "2026-06-17T12:13:15+00:00",
+        "end": "2026-06-17T12:36:00+00:00"
+      },
+      "INC305af888": {
+        "name": "Increased Failure Rate of Image Generation and Editing",
+        "impact": "minor",
+        "start": "2026-06-03T10:16:29+00:00",
+        "end": "2026-06-03T10:46:42+00:00"
+      },
+      "INC62431056": {
+        "name": "Grok Build Caching broken",
+        "impact": "minor",
+        "start": "2026-05-26T15:10:45+00:00",
+        "end": "2026-05-26T16:55:00+00:00"
+      },
+      "INC702624e4": {
+        "name": "Console not loading",
+        "impact": "minor",
+        "start": "2026-05-18T01:58:00+00:00",
+        "end": null
+      },
+      "INC78c0aac0": {
+        "name": "Requests Using grok-imagine Models have Reduced Success Rate",
+        "impact": "minor",
+        "start": "2026-05-13T15:50:00+00:00",
+        "end": "2026-05-13T16:37:00+00:00"
+      },
+      "INC7c527912": {
+        "name": "4.3 losing conversation context",
+        "impact": "minor",
+        "start": "2026-05-10T22:05:21+00:00",
+        "end": "2026-05-10T23:55:00+00:00"
+      },
+      "INC31772712": {
+        "name": "Grok in X is Temporarily Unavailable",
+        "impact": "major",
+        "start": "2026-03-10T20:09:38+00:00",
+        "end": "2026-03-10T22:33:04+00:00"
+      },
+      "INC7532db86": {
+        "name": "Grok on iOS  is Temporarily Unavailable",
+        "impact": "major",
+        "start": "2026-03-10T20:06:42+00:00",
+        "end": "2026-03-10T22:31:46+00:00"
+      },
+      "INC3ae226c": {
+        "name": "Grok is Temporarily Unavailable",
+        "impact": "major",
+        "start": "2026-03-10T20:05:52+00:00",
+        "end": "2026-03-10T22:30:01+00:00"
+      },
+      "INC2f830b63": {
+        "name": "Grok-iOS is Temporarily Unavailable.",
+        "impact": "major",
+        "start": "2026-03-02T22:59:40+00:00",
+        "end": "2026-03-02T23:41:29+00:00"
+      },
+      "INC35f142b7": {
+        "name": "Grok is Temporarily Unavailable.",
+        "impact": "major",
+        "start": "2026-03-02T22:59:02+00:00",
+        "end": "2026-03-02T23:39:15+00:00"
+      },
+      "INC3695bcb1": {
+        "name": "Grok on Android is Temporarily Unavailable.",
+        "impact": "major",
+        "start": "2026-03-02T22:58:47+00:00",
+        "end": "2026-03-02T23:40:36+00:00"
+      },
+      "INC3676524a": {
+        "name": "embedding small collections failing to embed",
+        "impact": "minor",
+        "start": "2026-02-20T00:00:00+00:00",
+        "end": "2026-02-20T01:04:00+00:00"
+      },
+      "INC3ded1559": {
+        "name": "Grok is Temporarily Unavailable.",
+        "impact": "major",
+        "start": "2026-02-12T19:42:21+00:00",
+        "end": "2026-02-12T20:33:48+00:00"
+      },
+      "INC2e7a54d4": {
+        "name": "grok-code-fast-1 outage",
+        "impact": "major",
+        "start": "2026-02-05T13:44:30+00:00",
+        "end": "2026-02-05T14:19:31+00:00"
+      },
+      "INC66505d02": {
+        "name": "grok-4-1-fast unstable",
+        "impact": "minor",
+        "start": "2026-02-05T13:33:18+00:00",
+        "end": "2026-02-05T14:20:32+00:00"
+      },
+      "INC686ffa19": {
+        "name": "grok-4-fast-reasoning and grok-4-fast-non-reasoning context size limitation",
+        "impact": "minor",
+        "start": "2026-02-01T17:00:00+00:00",
+        "end": "2026-02-03T14:02:23+00:00"
+      },
+      "INC4c39b6e8": {
+        "name": "Grok is Temporarily Unavailable in X",
+        "impact": "major",
+        "start": "2026-01-27T15:05:32+00:00",
+        "end": "2026-01-27T21:37:50+00:00"
+      },
+      "INC1c66a98f": {
+        "name": "Increased error rates and latency",
+        "impact": "minor",
+        "start": "2026-01-27T14:12:28+00:00",
+        "end": "2026-01-27T21:39:21+00:00"
+      },
+      "INC7f850efd": {
+        "name": "grok-code-fast-1 unavailable",
+        "impact": "major",
+        "start": "2026-01-27T14:10:31+00:00",
+        "end": "2026-01-27T14:33:54+00:00"
+      },
+      "INC7c0d680": {
+        "name": "Grok is Temporarily Unavailable",
+        "impact": "major",
+        "start": "2026-01-27T14:10:00+00:00",
+        "end": "2026-01-27T21:36:24+00:00"
+      },
+      "INCf2f329f": {
+        "name": "Grok is Temporarily Unavailable",
+        "impact": "major",
+        "start": "2026-01-27T03:33:02+00:00",
+        "end": "2026-01-27T03:47:39+00:00"
+      },
+      "INC537d64a7": {
+        "name": "Grok.com is Temporarily Unavailable",
+        "impact": "major",
+        "start": "2026-01-27T03:30:19+00:00",
+        "end": "2026-01-27T03:48:16+00:00"
+      },
+      "INC7e6bb987": {
+        "name": "Grok is Temporarily Unavailable",
+        "impact": "major",
+        "start": "2026-01-26T19:59:39+00:00",
+        "end": "2026-01-26T22:59:26+00:00"
+      },
+      "INC5f61f6dc": {
+        "name": "Grok is Temporarily Unavailable in X",
+        "impact": "major",
+        "start": "2026-01-26T19:55:45+00:00",
+        "end": "2026-01-26T22:46:40+00:00"
+      },
+      "INC38a13908": {
+        "name": "Grok is Temporarily Unavailable.",
+        "impact": "major",
+        "start": "2026-01-26T19:54:55+00:00",
+        "end": "2026-01-26T23:00:13+00:00"
+      },
+      "INC2f635a97": {
+        "name": "grok-code-fast-1 unavailable",
+        "impact": "major",
+        "start": "2026-01-26T19:53:30+00:00",
+        "end": "2026-01-26T19:59:02+00:00"
+      },
+      "INCc77fa60": {
+        "name": "Grok is Temporarily Unavailable in X",
+        "impact": "major",
+        "start": "2026-01-24T00:14:06+00:00",
+        "end": "2026-01-24T02:37:01+00:00"
+      },
+      "INC13a2dec0": {
+        "name": "Grok is Temporarily Unavailable",
+        "impact": "major",
+        "start": "2026-01-24T00:01:13+00:00",
+        "end": "2026-01-24T02:37:36+00:00"
+      },
+      "INC59b3c9de": {
+        "name": "Grok is Temporarily Unavailable.",
+        "impact": "major",
+        "start": "2026-01-24T00:01:02+00:00",
+        "end": "2026-01-24T02:36:34+00:00"
+      },
+      "INC7e42bd9a": {
+        "name": "Grok is Temporarily Unavailable.",
+        "impact": "major",
+        "start": "2026-01-23T23:57:52+00:00",
+        "end": "2026-01-24T02:36:51+00:00"
+      },
+      "INC7c0fd2b1": {
+        "name": "Models unavailable",
+        "impact": "major",
+        "start": "2026-01-21T11:19:00+00:00",
+        "end": "2026-01-21T13:02:00+00:00"
+      },
+      "INC6af6cf60": {
+        "name": "Issue with using API keys",
+        "impact": "minor",
+        "start": "2026-01-19T06:58:00+00:00",
+        "end": "2026-01-19T19:00:00+00:00"
+      },
+      "INC10b35980": {
+        "name": "Models unavailable",
+        "impact": "major",
+        "start": "2026-01-14T18:53:15+00:00",
+        "end": "2026-01-14T21:19:48+00:00"
+      },
+      "INC73c456f": {
+        "name": "Grok.com incident",
+        "impact": "minor",
+        "start": "2025-11-01T14:35:54+00:00",
+        "end": "2025-11-01T15:07:09+00:00"
+      },
+      "INC46dbbd89": {
+        "name": "Model fails to process very long prompts",
+        "impact": "minor",
+        "start": "2025-10-29T18:05:00+00:00",
+        "end": "2025-10-29T19:16:17+00:00"
+      },
+      "INC3c8ce3f2": {
+        "name": "grok-3 degraded performance",
+        "impact": "minor",
+        "start": "2025-10-24T17:20:00+00:00",
+        "end": "2026-02-10T18:50:00+00:00"
+      },
+      "INC703f4956": {
+        "name": "Grok is Slow to Respond",
+        "impact": "minor",
+        "start": "2025-10-23T15:15:00+00:00",
+        "end": "2025-10-23T16:00:00+00:00"
+      },
+      "INC4295db12": {
+        "name": "EAPI us-east-1 incident",
+        "impact": "minor",
+        "start": "2025-10-20T15:33:44+00:00",
+        "end": "2025-10-20T23:08:06+00:00"
+      },
+      "INC73c92399": {
+        "name": "Grok.com availability issue",
+        "impact": "minor",
+        "start": "2025-10-16T15:31:05+00:00",
+        "end": "2025-10-16T16:58:34+00:00"
+      },
+      "INC4de6c5a": {
+        "name": "Grok responses are disrupted",
+        "impact": "minor",
+        "start": "2025-10-02T21:45:00+00:00",
+        "end": "2025-10-02T23:45:00+00:00"
+      },
+      "INC26c6bc66": {
+        "name": "API Console Unavailable",
+        "impact": "major",
+        "start": "2025-10-02T15:10:00+00:00",
+        "end": "2025-10-02T16:40:00+00:00"
+      },
+      "INC63bbb10b": {
+        "name": "API Credits Are Not Actively Reflected for Teams",
+        "impact": "minor",
+        "start": "2025-10-01T23:40:00+00:00",
+        "end": "2025-10-02T12:05:00+00:00"
+      },
+      "INCcb17e2": {
+        "name": "API Inference Incident",
+        "impact": "minor",
+        "start": "2025-09-19T19:24:00+00:00",
+        "end": "2025-09-19T19:42:00+00:00"
+      }
+    },
+    "meta": {},
+    "mistral": {}
+  }
 }
