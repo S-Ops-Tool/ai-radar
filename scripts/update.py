@@ -26,7 +26,7 @@ WEB_TOOL = os.environ.get("WEB_SEARCH_TOOL", "web_search_20250305")
 MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES_PER_SECTION", "6"))
 ONLY = [s for s in os.environ.get("ONLY_SECTIONS", "").split(",") if s]
 
-BLOCK_TYPES = {"para", "subhead", "reading", "list", "table", "timeline", "bar_chart", "static", "why", "audiences", "details", "dot_chart"}
+BLOCK_TYPES = {"para", "subhead", "reading", "list", "table", "timeline", "bar_chart", "static", "why", "audiences", "details", "dot_chart", "line_chart"}
 REF = re.compile(r"\[\[([sn]\d+[a-z]?)\]\]")
 
 SYSTEM = """Tu es analyste en veille technologique. Tu maintiens un dossier comparatif public, en français, sur six assistants IA : Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google), Grok (xAI), Muse (Meta) et Mistral Vibe (Mistral AI).
@@ -127,6 +127,12 @@ def validate_blocks(blocks, depth=0):
             float(b["max"])
             for bar in b["bars"]:
                 float(bar["value"])
+        if t == "line_chart":
+            for pt in b["points"]:
+                float(pt["m"])
+                for v in pt["values"].values():
+                    if v is not None:
+                        float(v)
         if t == "dot_chart" and not b.get("auto"):
             raise ValueError("dot_chart réservé aux données automatiques")
         if t == "audiences" and not all(isinstance(b.get(k), str) for k in ("public", "entreprises", "institutions")):

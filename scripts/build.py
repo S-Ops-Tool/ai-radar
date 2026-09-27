@@ -170,6 +170,45 @@ def render_dot_chart(b, sources):
             f'<div class="scroll" style="margin:0">{"".join(out)}</div>{cap}</figure>')
 
 
+def render_line_chart(b, sources):
+    x0, x1, y0, y1 = 70, 560, 250, 30
+    months = [pt["m"] for pt in b["points"]]
+    mmin, mmax = min(months), max(months)
+    ymax = float(b["max"])
+    X = lambda m: x0 + (m - mmin) / ((mmax - mmin) or 1) * (x1 - x0)
+    Y = lambda v: y0 - v / ymax * (y0 - y1)
+    out = [f'<svg viewBox="0 0 680 290" role="img" aria-label="{html.escape(b["title"])}"><g class="grid">']
+    for t in b["ticks"]:
+        out.append(f'<line x1="{x0}" y1="{Y(t):.1f}" x2="{x1}" y2="{Y(t):.1f}"/>')
+    out.append('</g><g font-size="12" class="muted">')
+    for t in b["ticks"]:
+        out.append(f'<text x="{x0 - 10}" y="{Y(t) + 4:.1f}" text-anchor="end" class="muted">{t}</text>')
+    for pt in b["points"]:
+        out.append(f'<text x="{X(pt["m"]):.1f}" y="{y0 + 22}" text-anchor="middle" class="muted">{html.escape(pt["label"])}</text>')
+    out.append("</g>")
+    ends = []
+    for se in b["series"]:
+        vals = [(pt["m"], pt["values"].get(se["key"])) for pt in b["points"] if pt["values"].get(se["key"]) is not None]
+        if not vals:
+            continue
+        d = " ".join(f'{"M" if i == 0 else "L"}{X(m):.1f},{Y(v):.1f}' for i, (m, v) in enumerate(vals))
+        color = f'var(--{se["vendor"]})'
+        out.append(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="2.5"/>')
+        for m, v in vals:
+            out.append(f'<circle cx="{X(m):.1f}" cy="{Y(v):.1f}" r="3.5" fill="{color}"><title>{html.escape(se["label"])} : {str(v).replace(".", ",")} %</title></circle>')
+        ends.append([Y(vals[-1][1]), se["label"], vals[-1][1], color])
+    ends.sort()
+    last = -99
+    for e in ends:
+        e[0] = max(e[0], last + 15)
+        last = e[0]
+        out.append(f'<text x="{x1 + 12}" y="{e[0] + 4:.1f}" font-size="12" style="fill:{e[3]}">{html.escape(e[1])} {str(e[2]).replace(".", ",")}</text>')
+    out.append("</svg>")
+    cap = f'<figcaption>{txt(b["caption"], sources)}</figcaption>' if b.get("caption") else ""
+    return (f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>'
+            f'<div class="scroll" style="margin:0">{"".join(out)}</div>{cap}</figure>')
+
+
 def render_block(b, sources):
     t = b["type"]
     if t == "para":
@@ -199,6 +238,8 @@ def render_block(b, sources):
         return f'<ol class="timeline">{items}</ol>'
     if t == "bar_chart":
         return render_bar_chart(b, sources)
+    if t == "line_chart":
+        return render_line_chart(b, sources)
     if t == "dot_chart":
         return render_dot_chart(b, sources)
     if t == "static":
