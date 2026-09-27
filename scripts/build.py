@@ -103,7 +103,7 @@ def render_bar_chart(b, sources):
         parts.append(f'<text x="{x - 4:.1f}" y="{top - 18}" font-size="11" text-anchor="end" style="fill:var(--warn)">{html.escape(ref["label"])}</text>')
     parts.append("</svg>")
     cap = f'<figcaption>{txt(b["caption"], sources)}</figcaption>' if b.get("caption") else ""
-    return (f'<figure class="chart"><h3>{html.escape(b["title"])}</h3>'
+    return (f'<figure class="chart"><h4>{html.escape(b["title"])}</h4>'
             f'<div class="scroll" style="margin:0">{"".join(parts)}</div>{cap}</figure>')
 
 
@@ -112,7 +112,16 @@ def render_block(b, sources):
     if t == "para":
         return f"<p>{txt(b['text'], sources)}</p>"
     if t == "subhead":
-        return f"<h3>{html.escape(b['text'])}</h3>"
+        return f"<h4>{html.escape(b['text'])}</h4>"
+    if t == "why":
+        return f'<p class="why">{txt(b["text"], sources)}</p>'
+    if t == "audiences":
+        labels = [("public", "Grand public"), ("entreprises", "Entreprises"), ("institutions", "Institutions")]
+        return '<div class="aud">' + "".join(
+            f'<div class="a-{k}"><strong>{n}</strong>{txt(b.get(k, ""), sources)}</div>' for k, n in labels) + "</div>"
+    if t == "details":
+        inner = "".join(render_block(x, sources) for x in b["blocks"])
+        return f'<details class="deep"><summary>{html.escape(b["summary"])}</summary><div class="inner">{inner}</div></details>'
     if t == "reading":
         return f'<div class="reading"><p><strong>Lecture.</strong> {txt(b["text"], sources)}</p></div>'
     if t == "list":
@@ -134,18 +143,49 @@ def render_block(b, sources):
     return ""
 
 
+AUD_NAMES = {"public": "Grand public", "entreprises": "Entreprises", "institutions": "Institutions"}
+
+
+def render_section(s, sources):
+    tags = "".join(f'<span class="tag">{AUD_NAMES[a]}</span>' for a in s.get("for", []) if a in AUD_NAMES)
+    body = "".join(render_block(b, sources) for b in s["blocks"])
+    watch = (f'<p class="watch">Sources suivies chaque semaine : {html.escape(", ".join(s["watch"]))}.</p>'
+             if s.get("watch") else "")
+    return (f'<section class="sec" id="{s["id"]}" data-for="{" ".join(s.get("for", []))}">'
+            f'<h3>{html.escape(s["title"])}</h3><div class="tags">{tags}</div>{body}{watch}</section>')
+
+
 def render(d):
     sources = d["sources"]
     meta = d["meta"]
-    toc = ['<a href="#matrice">Matrice</a>']
-    toc += [f'<a href="#{s["id"]}">{html.escape(s["title"].split(" :")[0])}</a>' for s in d["sections"]]
-    toc += ['<a href="#journal">Journal des mises à jour</a>', '<a href="#angles">Angles morts</a>', '<a href="#sources">Sources</a>']
-    sections = "".join(
-        f'<section id="{s["id"]}"><h2>{html.escape(s["title"])}</h2>'
-        + "".join(render_block(b, sources) for b in s["blocks"])
-        + (f'<p class="watch">Sources suivies chaque semaine : {html.escape(", ".join(s["watch"]))}.</p>' if s.get("watch") else "")
-        + "</section>"
-        for s in d["sections"])
+    secs = {s["id"]: s for s in d["sections"]}
+    parts = d.get("parts") or [{"id": "dossier", "title": "Dossier", "intro": "", "sections": list(secs)}]
+    placed = {sid for p in parts for sid in p["sections"]}
+    orphans = [sid for sid in secs if sid not in placed]
+    if orphans:
+        parts = parts + [{"id": "autres", "title": "Autres sujets", "intro": "", "sections": orphans}]
+
+    toc = ['<div class="tg"><span class="grp">Synthèse</span><a href="#bref">En bref</a><a href="#matrice">Matrice</a></div>']
+    for p in parts:
+        links = "".join(f'<a href="#{sid}" data-sec="{sid}">{html.escape(secs[sid]["title"].split(" :")[0])}</a>'
+                        for sid in p["sections"] if sid in secs)
+        toc.append(f'<div class="tg"><span class="grp">{html.escape(p["title"])}</span>{links}</div>')
+    toc.append('<div class="tg"><span class="grp">Références</span><a href="#glossaire">Glossaire</a>'
+               '<a href="#journal">Journal</a><a href="#angles">Angles morts</a><a href="#sources">Sources</a></div>')
+
+    brief = "".join(f"<li>{txt(k, sources)}</li>" for k in d.get("keypoints", []))
+    profiles = "".join(
+        f'<button type="button" class="profile" data-id="{p["id"]}" aria-pressed="false">'
+        f'<b>{html.escape(p["name"])}</b><span>{html.escape(p["questions"])}</span></button>'
+        for p in d.get("profiles", []))
+
+    parts_html = ""
+    for p in parts:
+        inner = "".join(render_section(secs[sid], sources) for sid in p["sections"] if sid in secs)
+        intro = f'<p class="part-intro">{html.escape(p["intro"])}</p>' if p.get("intro") else ""
+        parts_html += f'<div class="part" id="part-{p["id"]}"><h2>{html.escape(p["title"])}</h2>{intro}{inner}</div>'
+
+    gloss = "".join(f"<dt>{html.escape(t)}</dt><dd>{html.escape(x)}</dd>" for t, x in d.get("glossary", []))
     log = "".join(
         f"<li><time>{fr_date(c['date'])}</time><ul>" + "".join(f"<li>{txt(i, sources)}</li>" for i in c["items"]) + "</ul></li>"
         for c in sorted(d["changelog"], key=lambda c: c["date"], reverse=True)[:12])
@@ -153,6 +193,7 @@ def render(d):
     srcs = "".join(
         f'<li id="{sid}"><span class="num">{src_num(sid)}.</span> <a href="{html.escape(s["url"])}">{html.escape(s["title"])}</a></li>'
         for sid, s in sorted(sources.items(), key=lambda kv: int(src_num(kv[0]) or 0)))
+
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -166,7 +207,7 @@ def render(d):
 <style>{CSS}
 ol.log{{list-style:none;padding:0;max-width:76ch}}
 ol.log>li{{margin-bottom:14px}}
-.watch{{font-size:.85rem;color:var(--ink2);margin-top:22px;max-width:76ch}}
+.watch{{font-size:.85rem;color:var(--ink2);margin-top:18px;max-width:76ch}}
 .sources{{list-style:none}}
 .sources .num{{display:inline-block;min-width:2.2em;font-variant-numeric:tabular-nums}}
 ol.log time{{font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;font-weight:600}}
@@ -181,24 +222,58 @@ ol.log time{{font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;fon
 <p class="meta">Mis à jour le {fr_date(meta["updated"])}. {html.escape(meta["note"])}</p>
 <nav class="toc" aria-label="Sommaire">{"".join(toc)}</nav>
 </header>
+<section id="bref"><h2>En bref</h2><ol class="brief">{brief}</ol>
+<h4>Lire selon votre profil</h4>
+<div class="profiles">{profiles}</div>
+<p class="filterstate" id="filterstate" aria-live="polite"></p>
+</section>
 {render_matrix(d)}
-{sections}
+{parts_html}
+<section id="glossaire"><h2>Glossaire</h2><dl class="gloss">{gloss}</dl></section>
 <section id="journal"><h2>Journal des mises à jour</h2><ol class="log">{log}</ol></section>
 <section id="angles"><h2>Ce que ce dossier ne voit pas</h2><ul>{blind}</ul></section>
 <section id="sources"><h2>Sources</h2><ul class="sources">{srcs}</ul></section>
 </div>
 <script>
 (function(){{
-  var btn=document.getElementById('themebtn'),root=document.documentElement,saved=null;
+  var root=document.documentElement,body=document.body,saved=null;
   try{{saved=localStorage.getItem('theme');}}catch(e){{}}
   if(saved==='light'||saved==='dark'){{root.setAttribute('data-theme',saved);}}
-  btn.addEventListener('click',function(){{
+  document.getElementById('themebtn').addEventListener('click',function(){{
     var cur=root.getAttribute('data-theme');
     if(!cur){{cur=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}}
     var next=cur==='dark'?'light':'dark';
     root.setAttribute('data-theme',next);
     try{{localStorage.setItem('theme',next);}}catch(e){{}}
   }});
+  var names={{public:'Grand public',entreprises:'Entreprises',institutions:'Institutions'}};
+  var btns=[].slice.call(document.querySelectorAll('.profile'));
+  var state=document.getElementById('filterstate');
+  function apply(aud){{
+    if(aud){{body.setAttribute('data-aud',aud);}}else{{body.removeAttribute('data-aud');}}
+    btns.forEach(function(b){{b.setAttribute('aria-pressed',b.dataset.id===aud?'true':'false');}});
+    var hidden=0;
+    [].slice.call(document.querySelectorAll('section.sec')).forEach(function(s){{
+      var show=!aud||(' '+s.dataset.for+' ').indexOf(' '+aud+' ')>=0;
+      if(!show){{hidden++;}}
+      var link=document.querySelector('nav.toc a[data-sec="'+s.id+'"]');
+      if(link){{link.style.display=show?'':'none';}}
+    }});
+    [].slice.call(document.querySelectorAll('.part')).forEach(function(p){{
+      var any=[].slice.call(p.querySelectorAll('section.sec')).some(function(s){{return getComputedStyle(s).display!=='none';}});
+      p.style.display=any?'':'none';
+    }});
+    if(aud){{
+      state.innerHTML='Lecture « '+names[aud]+' » : '+hidden+' section(s) masquée(s). <button type="button" id="showall">Tout afficher</button>';
+      document.getElementById('showall').addEventListener('click',function(){{apply(null);}});
+    }}else{{state.textContent='';}}
+    try{{if(aud){{localStorage.setItem('aud',aud);}}else{{localStorage.removeItem('aud');}}}}catch(e){{}}
+  }}
+  btns.forEach(function(b){{b.addEventListener('click',function(){{
+    apply(body.getAttribute('data-aud')===b.dataset.id?null:b.dataset.id);
+  }});}});
+  var a=null;try{{a=localStorage.getItem('aud');}}catch(e){{}}
+  if(a&&names[a]){{apply(a);}}
 }})();
 </script>
 </body>

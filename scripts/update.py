@@ -26,14 +26,15 @@ WEB_TOOL = os.environ.get("WEB_SEARCH_TOOL", "web_search_20250305")
 MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES_PER_SECTION", "6"))
 ONLY = [s for s in os.environ.get("ONLY_SECTIONS", "").split(",") if s]
 
-BLOCK_TYPES = {"para", "subhead", "reading", "list", "table", "timeline", "bar_chart", "static"}
+BLOCK_TYPES = {"para", "subhead", "reading", "list", "table", "timeline", "bar_chart", "static", "why", "audiences", "details"}
 REF = re.compile(r"\[\[([sn]\d+[a-z]?)\]\]")
 
 SYSTEM = """Tu es analyste en veille technologique. Tu maintiens un dossier comparatif public, en français, sur six assistants IA : Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google), Grok (xAI), Muse (Meta) et Mistral Vibe (Mistral AI).
 
 Registre d'écriture :
 - observationnel : le fait d'abord, puis sa lecture éventuelle, clairement séparés ; aucune recommandation à l'impératif ;
-- phrases simples et directes ; n'utilise jamais la construction « c'est… ce n'est pas… » ni ses variantes ;
+- phrases simples et directes ; n'utilise jamais la construction « c'est… ce n'est pas… », ni les oppositions du type « X, pas Y » ;
+- le dossier s'adresse à trois publics : grand public, entreprises, institutions. Le bloc audiences donne une phrase par public ; les blocs details regroupent les approfondissements pour spécialistes ;
 - pas de superlatifs publicitaires ; les chiffres gardent leurs réserves (source unique, éditeur intéressé, méthode).
 
 Règles de mise à jour :
@@ -42,7 +43,8 @@ Règles de mise à jour :
 - chaque affirmation nouvelle ou modifiée porte une référence [[id]] ; pour une nouvelle source, utilise un identifiant temporaire [[n1]], [[n2]]… déclaré dans new_sources ;
 - privilégie les sources primaires (éditeurs, publications scientifiques, régulateurs, tribunaux, presse de référence) ; signale les sources commerciales comme telles ;
 - tu es toi-même Claude : applique un niveau de preuve au moins aussi exigeant aux informations favorables à Anthropic ;
-- conserve la structure JSON existante et les types de blocs autorisés : para, subhead, reading, list, table, timeline, bar_chart, static.
+- conserve la structure JSON existante et les types de blocs autorisés : why, para, subhead, reading, list, table, timeline, bar_chart, static, audiences, details (ce dernier contient une liste blocks) ;
+- l'essentiel reste visible ; un détail technique ou une donnée secondaire va dans un bloc details.
 
 Réponds uniquement par un objet JSON, sans texte autour ni balises de code, de la forme :
 {"section": {...section complète mise à jour...}, "new_sources": {"n1": {"title": "...", "url": "..."}}, "changes": ["phrase courte décrivant chaque changement, avec ses références [[id]]"]}
@@ -114,25 +116,38 @@ def remap(obj, mapping):
     return obj
 
 
+def validate_blocks(blocks, depth=0):
+    for b in blocks:
+        t = b.get("type")
+        if t not in BLOCK_TYPES:
+            raise ValueError(f"type de bloc inconnu : {t}")
+        if t == "static" and b.get("name") != "pipeline":
+            raise ValueError("bloc static inconnu")
+        if t == "bar_chart":
+            float(b["max"])
+            for bar in b["bars"]:
+                float(bar["value"])
+        if t == "audiences" and not all(isinstance(b.get(k), str) for k in ("public", "entreprises", "institutions")):
+            raise ValueError("bloc audiences incomplet")
+        if t == "details":
+            if depth > 0 or not isinstance(b.get("blocks"), list) or not b.get("summary"):
+                raise ValueError("bloc details invalide")
+            validate_blocks(b["blocks"], depth + 1)
+
+
 def validate_section(old, new):
     if not isinstance(new, dict) or new.get("id") != old["id"]:
         raise ValueError("identifiant de section modifié")
     if not isinstance(new.get("title"), str) or not isinstance(new.get("blocks"), list) or not new["blocks"]:
         raise ValueError("titre ou blocs manquants")
-    for b in new["blocks"]:
-        if b.get("type") not in BLOCK_TYPES:
-            raise ValueError(f"type de bloc inconnu : {b.get('type')}")
-        if b["type"] == "static" and b.get("name") != "pipeline":
-            raise ValueError("bloc static inconnu")
-        if b["type"] == "bar_chart":
-            float(b["max"])
-            for bar in b["bars"]:
-                float(bar["value"])
+    validate_blocks(new["blocks"])
 
 
 def protect(old, new):
     """Keep the watch list and data-driven blocks exactly as they were."""
     new["watch"] = old.get("watch", [])
+    if old.get("for"):
+        new["for"] = old["for"]
     autos = {b["auto"]: b for b in old["blocks"] if b.get("auto")}
     blocks, placed = [], set()
     for b in new["blocks"]:
@@ -197,10 +212,12 @@ def update_matrix(client, data, all_changes, today):
     prompt = (
         f"Date du jour : {today}. Voici la matrice de lecture du dossier et la liste des changements de la semaine.\n\n"
         f"Matrice :\n{json.dumps(data['matrix'], ensure_ascii=False, indent=1)}\n\n"
+        f"Constats clés en tête de page :\n{json.dumps(data.get('keypoints', []), ensure_ascii=False, indent=1)}\n\n"
         f"Changements :\n" + "\n".join(f"- {c}" for c in all_changes) + "\n\n"
         "Ajuste uniquement les cellules que ces changements justifient (band de 1 à 5, ou null si aucune donnée publique ; "
         "text de moins de 60 caractères). Ne touche pas aux cellules textonly sauf si un changement l'exige. "
-        'Réponds uniquement par {"matrix": [...], "changes": ["..."]}.'
+        "Ajuste de même les constats clés (3 à 6 phrases, chacune avec ses références [[id]] existantes) uniquement si les changements le justifient. "
+        'Réponds uniquement par {"matrix": [...], "keypoints": [...], "changes": ["..."]}.'
     )
     text, _ = call_claude(client, prompt, use_search=False)
     result = extract_json(text)
@@ -212,7 +229,14 @@ def update_matrix(client, data, all_changes, today):
             c = r["cells"][v["id"]]
             if c.get("band") is not None and int(c["band"]) not in range(1, 6):
                 raise ValueError("bande hors plage")
-    return matrix, [c for c in result.get("changes") or [] if isinstance(c, str)]
+    keypoints = result.get("keypoints") or data.get("keypoints", [])
+    if not (3 <= len(keypoints) <= 6) or not all(isinstance(k, str) for k in keypoints):
+        raise ValueError("constats clés invalides")
+    for k in keypoints:
+        for ref in REF.findall(k):
+            if ref not in data["sources"]:
+                raise ValueError(f"référence inconnue dans les constats : {ref}")
+    return matrix, keypoints, [c for c in result.get("changes") or [] if isinstance(c, str)]
 
 
 def main():
@@ -239,8 +263,9 @@ def main():
 
     if all_changes:
         try:
-            matrix, mchanges = update_matrix(client, data, all_changes, today)
+            matrix, keypoints, mchanges = update_matrix(client, data, all_changes, today)
             data["matrix"] = matrix
+            data["keypoints"] = keypoints
             all_changes += mchanges
         except Exception as e:
             errors.append(f"matrice : {e}")

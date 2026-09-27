@@ -141,7 +141,7 @@ def update_vectara(block, state, notes):
     block["ticks"] = [0, step, 2 * step, 3 * step, block["max"]]
     when = f"classement du {updated.day} {MONTHS[updated.month - 1]} {updated.year}" if updated else "dernier classement"
     block["caption"] = (f"Vectara HHEM, {when} : part des résumés contenant une information absente du document source [[s55]]. "
-                        "Ce test mesure la fidélité en résumé, pas les connaissances générales. "
+                        "Ce test mesure la fidélité en résumé ; les connaissances générales relèvent d'autres tests. "
                         "Muse n'y figure pas ; la barre Meta porte sur Llama 4.")
     seen = set(state.get("vectara_seen", []))
     relevant = {k for k in table if any(k.startswith(p) for p in VENDOR_PREFIX.values())}

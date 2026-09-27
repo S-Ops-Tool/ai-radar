@@ -36,8 +36,16 @@ Neuf sections, au plus six recherches chacune, plus un appel pour la matrice. Le
 
 Onglet Actions > Mise à jour hebdomadaire > Run workflow. Le champ facultatif limite la mise à jour à certaines sections, par exemple `cyber,calcul`.
 
-Identifiants de sections : `donnees`, `biais`, `precision`, `tempsreel`, `agents`, `cyber`, `calcul`, `energie`, `gouvernance`.
+Identifiants de sections : `usages`, `acteurs`, `precision`, `tempsreel`, `agents`, `prix`, `confidentialite`, `donnees`, `biais`, `cyber`, `gouvernance`, `calcul`, `energie`.
 
 ## Choisir les modèles du graphique Vectara
 
 Le bloc `vectara_hhem` de la section `precision` liste un modèle par éditeur (`models`). Quand un éditeur publie un nouveau modèle phare et qu'il entre au classement, le brief de données le signale ; il suffit alors de remplacer l'identifiant correspondant dans `content/dossier.json`.
+
+## Structure du contenu
+
+- `keypoints` : les constats clés en tête de page, révisés par l'étape matrice quand les changements de la semaine le justifient.
+- `profiles` : les trois profils de lecture (grand public, entreprises, institutions) ; chaque section porte un champ `for` qui détermine où elle apparaît quand un profil est sélectionné.
+- `parts` : les cinq parties et l'ordre des sections.
+- Blocs : `why` (pourquoi le sujet compte), `audiences` (une phrase par public), `details` (approfondissement dépliable, un seul niveau).
+- `glossary` : le glossaire, maintenu à la main.
