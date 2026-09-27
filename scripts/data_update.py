@@ -13,6 +13,7 @@ import json
 import re
 import urllib.request
 
+import aa_update
 import hn_update
 import status_update
 from pathlib import Path
@@ -190,6 +191,11 @@ def main():
                 status_update.update_status(sec["blocks"], state, notes, cfg)
             except Exception as e:
                 errors.append(f"statuts : {e}")
+        if any(b.get("auto") == "aa_chart" for b in sec["blocks"]):
+            try:
+                aa_update.update_aa(sec["blocks"], state, notes)
+            except Exception as e:
+                errors.append(f"artificial analysis : {e}")
         if any(b.get("auto") == "hn_chart" for b in sec["blocks"]):
             try:
                 hn_update.update_hn(sec["blocks"], state, notes)
