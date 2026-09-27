@@ -824,16 +824,16 @@
   "hn_weekly": {
     "2026-09-27": {
       "claude": {
-        "n": 759,
-        "notable": 59,
-        "comments": 13166,
-        "points": 19201
+        "n": 765,
+        "notable": 60,
+        "comments": 13201,
+        "points": 19332
       },
       "gpt": {
-        "n": 730,
-        "notable": 78,
-        "comments": 18150,
-        "points": 28843
+        "n": 744,
+        "notable": 80,
+        "comments": 18506,
+        "points": 29302
       },
       "gemini": {
         "n": 75,
@@ -842,21 +842,21 @@
         "points": 2684
       },
       "grok": {
-        "n": 62,
+        "n": 56,
         "notable": 4,
-        "comments": 1453,
-        "points": 1484
+        "comments": 1432,
+        "points": 1444
       },
       "meta": {
         "n": 25,
         "notable": 4,
-        "comments": 888,
-        "points": 1532
+        "comments": 891,
+        "points": 1550
       },
       "mistral": {
         "n": 13,
         "notable": 3,
-        "comments": 979,
+        "comments": 980,
         "points": 1562
       }
     }
@@ -867,7 +867,7 @@
       "intel": 57.6,
       "pin": 4.0,
       "pout": 20.0,
-      "speed": 96.788
+      "speed": 95.982
     },
     "OpenAI": {
       "name": "GPT-6 Astra (max)",
@@ -881,7 +881,7 @@
       "intel": 48.1,
       "pin": 1.25,
       "pout": 4.25,
-      "speed": 158.235
+      "speed": 160.139
     },
     "xAI": {
       "name": "Grok 4.7 (xhigh)",
@@ -929,32 +929,32 @@
   "youtube_weekly": {
     "2026-09-27": {
       "claude": {
-        "views7": 4744103,
+        "views7": 4681558,
         "subs": 806000,
         "n30": 3
       },
       "gpt": {
-        "views7": 5035772,
+        "views7": 5484011,
         "subs": 2070000,
         "n30": 50
       },
       "gemini": {
-        "views7": 1444387,
+        "views7": 1468813,
         "subs": 23800,
         "n30": 20
       },
       "grok": {
-        "views7": 1786977,
+        "views7": 1868596,
         "subs": 20700,
         "n30": 2
       },
       "meta": {
-        "views7": 802019,
+        "views7": 821940,
         "subs": 39700,
         "n30": 0
       },
       "mistral": {
-        "views7": 28895,
+        "views7": 29132,
         "subs": 16500,
         "n30": 2
       }
@@ -963,7 +963,7 @@
   "hn_monthly": {
     "2025-09": {
       "claude": 25,
-      "gpt": 21,
+      "gpt": 24,
       "gemini": 7,
       "grok": 2,
       "meta": 0,
@@ -971,7 +971,7 @@
     },
     "2025-10": {
       "claude": 22,
-      "gpt": 33,
+      "gpt": 35,
       "gemini": 5,
       "grok": 2,
       "meta": 0,
@@ -979,7 +979,7 @@
     },
     "2025-11": {
       "claude": 17,
-      "gpt": 22,
+      "gpt": 27,
       "gemini": 15,
       "grok": 2,
       "meta": 0,
@@ -987,7 +987,7 @@
     },
     "2025-12": {
       "claude": 21,
-      "gpt": 23,
+      "gpt": 27,
       "gemini": 7,
       "grok": 2,
       "meta": 1,
@@ -1003,7 +1003,7 @@
     },
     "2026-02": {
       "claude": 71,
-      "gpt": 30,
+      "gpt": 37,
       "gemini": 7,
       "grok": 7,
       "meta": 2,
@@ -1011,7 +1011,7 @@
     },
     "2026-03": {
       "claude": 73,
-      "gpt": 21,
+      "gpt": 26,
       "gemini": 4,
       "grok": 2,
       "meta": 0,
@@ -1019,7 +1019,7 @@
     },
     "2026-04": {
       "claude": 88,
-      "gpt": 38,
+      "gpt": 41,
       "gemini": 7,
       "grok": 2,
       "meta": 2,
@@ -1027,7 +1027,7 @@
     },
     "2026-05": {
       "claude": 48,
-      "gpt": 25,
+      "gpt": 27,
       "gemini": 10,
       "grok": 2,
       "meta": 0,
@@ -1035,7 +1035,7 @@
     },
     "2026-06": {
       "claude": 69,
-      "gpt": 22,
+      "gpt": 27,
       "gemini": 3,
       "grok": 5,
       "meta": 0,
@@ -1043,7 +1043,7 @@
     },
     "2026-07": {
       "claude": 52,
-      "gpt": 25,
+      "gpt": 39,
       "gemini": 8,
       "grok": 10,
       "meta": 2,
@@ -1051,7 +1051,7 @@
     },
     "2026-08": {
       "claude": 44,
-      "gpt": 32,
+      "gpt": 36,
       "gemini": 3,
       "grok": 5,
       "meta": 4,
@@ -1229,6 +1229,59 @@
         false
       ],
       "vals": {}
+    },
+    "2026-06": {
+      "sha": "11436628be96ebe6a6f0ddc21bb60eafeb85f24b",
+      "sig": [
+        "2.3",
+        true
+      ],
+      "vals": {
+        "gpt": 3.1,
+        "gemini": 3.3,
+        "claude": 9.8,
+        "grok": 5.8,
+        "mistral": 4.5,
+        "meta": 4.1
+      }
+    },
+    "2026-07": {
+      "sha": "11436628be96ebe6a6f0ddc21bb60eafeb85f24b",
+      "sig": [
+        "2.3",
+        true
+      ],
+      "vals": {
+        "gpt": 3.1,
+        "gemini": 3.3,
+        "claude": 9.8,
+        "grok": 5.8,
+        "mistral": 4.5,
+        "meta": 4.1
+      }
+    },
+    "2026-08": {
+      "sha": "11436628be96ebe6a6f0ddc21bb60eafeb85f24b",
+      "sig": [
+        "2.3",
+        true
+      ],
+      "vals": {
+        "gpt": 3.1,
+        "gemini": 3.3,
+        "claude": 9.8,
+        "grok": 5.8,
+        "mistral": 4.5,
+        "meta": 4.1
+      }
     }
+  },
+  "hn_query_sig": {
+    "claude": "[[\"Claude\", \"Anthropic\"], \"\\\\b(claude|anthropic)\\\\b\", \"\\\\bshannon\\\\b|\\\\bdebussy\\\\b|\\\\bmonet\\\\b\"]",
+    "gpt": "[[\"ChatGPT\", \"OpenAI\", \"GPT\"], \"\\\\b(chatgpt|openai|gpt-?\\\\d)\", \"^$\"]",
+    "gemini": "[[\"Gemini\"], \"\\\\bgemini\\\\b\", \"protocol|capsule|gemtext|exchange|crypto|winklevoss|nasa|apollo\"]",
+    "grok": "[[\"Grok\", \"xAI\"], \"\\\\b(grok|xai)\\\\b\", \"^$\"]",
+    "meta": "[[\"Meta AI\", \"Muse Spark\", \"Llama\"], \"\\\\b(meta ai|muse spark|llama ?\\\\d|llama\\\\.cpp|meta superintelligence)\\\\b\", \"^$\"]",
+    "mistral": "[[\"Mistral\"], \"\\\\bmistral\\\\b\", \"\\\\bwind\\\\b|\\\\bweather\\\\b\"]"
   }
 }
