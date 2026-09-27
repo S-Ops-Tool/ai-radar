@@ -173,7 +173,7 @@ def update_status(sec_blocks, state, notes, cfg):
             for r in results:
                 label = r["v"]["label"]
                 if r["ok"] is None:
-                    b["rows"].append([label, "Pas de page de statut publique", "", "", "", ""])
+                    b["rows"].append([label, r["v"].get("note", "Pas de page de statut publique"), "", "", "", r["v"].get("src_ref", "")])
                     continue
                 if r["ok"] is False:
                     b["rows"].append([label, "Lecture impossible cette semaine", "", "", "", r["v"]["src_ref"]])
