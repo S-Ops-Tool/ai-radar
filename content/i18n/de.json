@@ -71,10 +71,6 @@
   "fr": "GLM-5.3 (max)",
   "tr": "GLM-5.3 (max)"
  },
- "052b16350a49bd21": {
-  "fr": "769 articles, 13 233 commentaires",
-  "tr": "769 Artikel, 13'233 Kommentare"
- },
  "055feaf31f6523df": {
   "fr": "0 incident sur 90 jours",
   "tr": "0 Vorfälle in 90 Tagen"
@@ -238,6 +234,10 @@
  "11f3242118ff2add": {
   "fr": "Microsoft",
   "tr": "Microsoft"
+ },
+ "1217a82e5be25611": {
+  "fr": "745 articles, 18 560 commentaires",
+  "tr": "745 Artikel, 18'560 Kommentare"
  },
  "127c18c593295d99": {
   "fr": "MIT Sloan ME, scores de l'index 2026",
@@ -878,10 +878,6 @@
  "3ecc3514e91dd938": {
   "fr": "Pour aller plus loin : méthode de calcul",
   "tr": "Für vertiefte Informationen: Berechnungsmethode"
- },
- "3ed19dac9155e7eb": {
-  "fr": "745 articles, 18 559 commentaires",
-  "tr": "745 Artikel, 18'559 Kommentare"
  },
  "3f6e28e225ff38af": {
   "fr": "Data Gravity, les modèles ouverts chinois sur OpenRouter",
@@ -2878,6 +2874,10 @@
  "b9600462f04e5953": {
   "fr": "Pro, environ 15 €",
   "tr": "Pro, etwa 15 €"
+ },
+ "b986e5ad9464da5a": {
+  "fr": "770 articles, 13 234 commentaires",
+  "tr": "770 Artikel, 13'234 Kommentare"
  },
  "b98b935a9f0147fe": {
   "fr": "Modèle dont les paramètres sont téléchargeables et exécutables sur ses propres serveurs, sous une licence plus ou moins permissive.",

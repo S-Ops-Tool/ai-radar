@@ -549,14 +549,14 @@
           "bars": [
             {
               "label": "ChatGPT",
-              "sublabel": "745 articles, 18 559 commentaires",
+              "sublabel": "745 articles, 18 560 commentaires",
               "value": 81,
               "display": "81",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
-              "sublabel": "769 articles, 13 233 commentaires",
+              "sublabel": "770 articles, 13 234 commentaires",
               "value": 60,
               "display": "60",
               "vendor": "claude"
