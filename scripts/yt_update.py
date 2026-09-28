@@ -135,10 +135,9 @@ def official(key, cfg, since30, notes):
 DEFAULT_PANEL = {
     # Une entrée peut être un identifiant (@...), un identifiant de chaîne (UC...), ou plusieurs variantes séparées par |.
     "fr": ["UC0NCbj8CxzeCGIF6sODJ-7A", "@MonsieurPhi", "@ScienceEtonnante",
-           "@MachineLearnia", "@DefendIntelligence", "@MonsieurIA|@MonsieurIAofficiel", "@IAMania|@iamania_", "@AIBootcamp|@lebigdatafr",
+           "@MachineLearnia", "@DefendIntelligence", "@AIBootcamp|@lebigdatafr",
            "@Underscore_", "@Micode", "@HugoDecrypteActus|@hugodecrypte", "@monsieurbidouille",
-           "@BenjaminCode", "@Grafikart",
-           "@MaisondelIntelligenceArtificielle|@MaisonIA"],
+           "@BenjaminCode", "@Grafikart"],
     "en": ["@RobertMilesAI", "@RationalAnimations", "@HumaneTech_|@CenterforHumaneTechnology", "@aiexplained-official",
            "@TwoMinutePapers", "@YannicKilcher", "@MachineLearningStreetTalk", "@3blue1brown", "@Computerphile", "@AndrejKarpathy",
            "@lexfridman", "@DwarkeshPatel",
@@ -215,11 +214,15 @@ CATEGORIES = [
     ("ethics", "Éthique et responsabilité", "biais, vie privée, désinformation, droits, impact social, controverses éthiques"),
     ("risk", "Risques et sécurité", "incidents, agents incontrôlés, cybersécurité, sûreté des modèles, risques catastrophiques, appels à ralentir"),
     ("culture", "Divertissement et culture", "humour, fiction, art, musique, créations, divertissement"),
+    ("other", "Hors IA", "vidéo sans rapport direct avec l'intelligence artificielle"),
 ]
+SHOWN = [c for c in CATEGORIES if c[0] != "other"]
+TOPIC_HEX = {"news": "#2D66CF", "test": "#1C8468", "tutorial": "#D08000", "code": "#6E55C2",
+             "business": "#7C8B96", "ethics": "#C8407F", "risk": "#C2410C", "culture": "#0B9FB0"}
 CLASSIFY_SYSTEM = ("Tu classes des vidéos YouTube sur l'intelligence artificielle d'après leur titre, leur chaîne et le début de leur description, "
                    "dans toutes les langues. Catégories possibles (identifiant : définition) :\n"
                    + "\n".join(f"- {c[0]} : {c[2]}" for c in CATEGORIES)
-                   + "\nChoisis la catégorie dominante. Une vidéo qui traite surtout de biais, de vie privée, de droits ou d'impact social "
+                   + "\nChoisis la catégorie dominante ; utilise other pour une vidéo qui ne traite pas de l'IA. Une vidéo qui traite surtout de biais, de vie privée, de droits ou d'impact social "
                    "va dans ethics ; une vidéo qui traite surtout d'incidents, de sûreté, de cybersécurité ou de risques graves va dans risk. Réponds uniquement par un objet JSON {identifiant_video: identifiant_categorie}, sans texte autour.")
 
 
@@ -255,7 +258,7 @@ def update_youtube(blocks, state, notes):
         return
     now = dt.datetime.now(dt.timezone.utc)
     last = state.get("youtube_last_run")
-    if last:
+    if last and os.environ.get("FORCE_YOUTUBE", "").lower() not in ("1", "true", "yes"):
         age = (now - dt.datetime.fromisoformat(last)).total_seconds() / 3600
         if age < REUSE_HOURS:
             notes.append(f"YouTube : relevé de moins de {REUSE_HOURS} h réutilisé ({age:.0f} h), aucune requête envoyée.")
@@ -266,7 +269,8 @@ def update_youtube(blocks, state, notes):
     for b in blocks:
         if b.get("auto") == "yt_chart" and b.get("panel"):
             panel = b["panel"]
-    pool = collect_panel(key, panel, since7, notes)
+    panel_pool = collect_panel(key, panel, since7, notes)
+    pool = panel_pool
     res = {}
     for vid, cfg in VENDORS.items():
         r = {"off": None, "att": None}
@@ -278,7 +282,7 @@ def update_youtube(blocks, state, notes):
             notes.append(f"YouTube, chaîne {cfg['label']} : {e}")
         r["att"], r["by_lang"] = attention(cfg, pool)
         res[vid] = r
-    if not pool:
+    if not panel_pool:
         notes.append("YouTube : aucune vidéo récupérée dans le panel ; les chiffres précédents sont conservés.")
         return
     if any("429" in n or "quota" in n.lower() for n in notes):
@@ -303,11 +307,12 @@ def update_youtube(blocks, state, notes):
                 yield from walk(x.get("blocks", []))
 
     ranked = sorted(res.items(), key=lambda kv: -((kv[1]["att"] or {}).get("views") or 0))
-    pool = {vid: info for _, r in res.items() for vid, info in ((r["att"] or {}).get("top") or [])}
-    cats = classify(pool, notes)
+    cats = classify(panel_pool, notes)
+    ai_videos = {vid: info for vid, info in panel_pool.items() if cats.get(vid) and cats[vid] != "other"}
+    pool = panel_pool
     if cats:
         import random
-        sample = random.sample(sorted(cats), min(8, len(cats)))
+        sample = random.sample(sorted(cats), min(10, len(cats)))
         notes.append("YouTube, échantillon de classement à vérifier : "
                      + " ; ".join(f"« {pool[v]['title'][:60]} » → {cats[v]}" for v in sample) + ".")
     for b in walk(blocks):
@@ -326,34 +331,49 @@ def update_youtube(blocks, state, notes):
                             "consacrées à l'IA et à la tech, en millions [[s95]]. Le panel est défini dans le dossier et ajustable. "
                             "Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.")
         if b.get("auto") == "yt_topics":
-            b["categories"] = [{"id": c[0], "label": c[1]} for c in CATEGORIES]
+            b["categories"] = [{"id": c[0], "label": c[1]} for c in SHOWN]
             rows = []
             for v, r in ranked:
                 top = (r["att"] or {}).get("top") or []
                 tot = {}
+                n = 0
                 for vid, info in top:
                     c = cats.get(vid)
-                    if c:
+                    if c and c != "other":
                         tot[c] = tot.get(c, 0) + info["views"]
+                        n += 1
                 s_ = sum(tot.values())
                 if s_:
-                    rows.append({"vendor": v, "label": VENDORS[v]["label"],
+                    rows.append({"vendor": v, "label": VENDORS[v]["label"], "n": n,
                                  "shares": {c: round(x / s_ * 100, 1) for c, x in tot.items()}})
             b["rows"] = rows
             b["caption"] = (f"Répartition des vues des vidéos du panel publiées cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; "
                             f"relevé du {now.day}/{now.month}/{now.year} [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début "
                             "de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu.")
         if b.get("auto") == "yt_scatter":
-            b["categories"] = [{"id": c[0], "label": c[1]} for c in CATEGORIES]
-            pts = []
-            for v, r in ranked:
-                for vid, info in (r["att"] or {}).get("top") or []:
-                    if vid in cats:
-                        pts.append({"x": info["published"][:10], "views": info["views"], "cat": cats[vid], "vendor": v,
-                                    "vtitle": info["title"][:90], "url": WATCH.format(vid), "vchannel": info["channel"][:30]})
-            b["points"] = pts
-            b["caption"] = ("Chaque point est une vidéo de la semaine : date de publication en abscisse, vues en ordonnée (échelle logarithmique), "
-                            "couleur selon le thème. Un clic ouvre la vidéo. Une vidéo qui cite plusieurs assistants apparaît une fois par assistant.")
+            b["categories"] = [{"id": c[0], "label": c[1]} for c in SHOWN]
+            b["points"] = [{"x": info["published"][:10], "views": info["views"], "cat": cats[vid],
+                            "vtitle": info["title"][:90], "url": WATCH.format(vid), "vchannel": info["channel"][:30]}
+                           for vid, info in ai_videos.items()]
+            b["caption"] = ("Chaque point est une vidéo du panel consacrée à l'IA, publiée cette semaine : date de publication en abscisse, "
+                            "vues en ordonnée (échelle logarithmique), couleur selon le thème. Un clic ouvre la vidéo.")
+        if b.get("auto") == "yt_topics_all":
+            total = len(ai_videos)
+            counts, views = {}, {}
+            for vid, info in ai_videos.items():
+                c = cats[vid]
+                counts[c] = counts.get(c, 0) + 1
+                views[c] = views.get(c, 0) + info["views"]
+            labels = dict((c[0], c[1]) for c in SHOWN)
+            b["bars"] = [{"label": labels[c], "value": round(counts[c] / total * 100, 1), "display": f"{round(counts[c] / total * 100)} %",
+                          "sublabel": f"{counts[c]} vidéo{'s' if counts[c] > 1 else ''}, {short(views[c])} vues", "color": TOPIC_HEX[c]}
+                         for c in sorted(counts, key=lambda c: -counts[c])] if total else []
+            b["max"] = 100 if not total else max(20, int(max(counts.values()) / total * 100 // 10 + 1) * 10)
+            step = b["max"] // 5
+            b["ticks"] = [i * step for i in range(6)]
+            b["caption"] = (f"Part des {total} vidéos du panel consacrées à l'IA et publiées cette semaine, par thème, qu'elles citent un assistant ou non "
+                            f"[[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description ; "
+                            f"{len(panel_pool) - total} vidéos du panel sans rapport avec l'IA sont écartées.")
         if b.get("auto") == "yt_table":
             rows = []
             for v, r in ranked:

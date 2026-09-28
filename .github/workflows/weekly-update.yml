@@ -9,6 +9,11 @@ on:
         description: "Sections à mettre à jour, séparées par des virgules (vide = toutes)"
         required: false
         default: ""
+      force_youtube:
+        description: "Forcer le relevé YouTube même si le précédent date de moins de 20 heures"
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write
@@ -44,6 +49,7 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FORCE_YOUTUBE: ${{ github.event.inputs.force_youtube }}
         run: python scripts/data_update.py
 
       - name: Recherche et mise à jour du contenu

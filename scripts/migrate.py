@@ -306,13 +306,38 @@ def m_2026_09_panel_v2(d):
         "YouTube : panel élargi à 40 chaînes, dont 15 francophones, couvrant l'éthique, la sûreté, la recherche, l'actualité et le code."]})
 
 
+def m_2026_09_topics_all(d):
+    import yt_update
+    vid = section(d, "video")
+    if not vid:
+        return
+    blocks = vid["blocks"]
+    for b in blocks:
+        if b.get("auto") == "yt_chart":
+            b["panel"] = yt_update.DEFAULT_PANEL
+    i = next((k for k, b in enumerate(blocks) if b.get("auto") == "yt_topics"), None)
+    if i is not None:
+        per_vendor = blocks.pop(i)
+        per_vendor["title"] = "Thèmes des vidéos qui citent chaque assistant, part des vues (nombre de vidéos entre parenthèses)"
+        blocks.insert(i, {"type": "bar_chart", "auto": "yt_topics_all", "title": "De quoi parle l'IA sur YouTube cette semaine : part des vidéos par thème",
+                          "max": 100, "ticks": [0, 20, 40, 60, 80, 100], "bars": [],
+                          "caption": "Premier relevé à la prochaine exécution hebdomadaire."})
+        for b in blocks:
+            if b.get("type") == "details" and has_auto(b.get("blocks", []), "yt_scatter"):
+                b["summary"] = "Pour aller plus loin : thèmes par assistant et toutes les vidéos de la semaine"
+                b["blocks"].insert(0, per_vendor)
+    d["changelog"].append({"date": "2026-09-28", "items": [
+        "YouTube : nouveau graphique des thèmes de toutes les vidéos du panel consacrées à l'IA, qu'elles citent un assistant ou non ; la répartition par assistant passe en approfondissement."]})
+
+
 MIGRATIONS = [("2026-09-history", m_2026_09_history), ("2026-09-wording", m_2026_09_wording),
               ("2026-09-scatter-lang", m_2026_09_scatter_lang),
               ("2026-09-ethics-topics", m_2026_09_ethics_topics),
               ("2026-09-risks", m_2026_09_risks),
               ("2026-09-mistral-ethics", m_2026_09_mistral_ethics),
               ("2026-09-youtube-panel", m_2026_09_youtube_panel),
-              ("2026-09-panel-v2", m_2026_09_panel_v2)]
+              ("2026-09-panel-v2", m_2026_09_panel_v2),
+              ("2026-09-topics-all", m_2026_09_topics_all)]
 
 
 def main():

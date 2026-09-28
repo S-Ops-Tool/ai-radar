@@ -22,7 +22,7 @@ BASE_URL = "https://s-ops-tool.github.io/ai-radar/"
 DEC = re.compile(r"(?<=\d),(?=\d)")
 SKIP_KEYS = {"id", "type", "auto", "vendor", "key", "url", "src", "date", "for", "name", "kind", "prefix",
              "src_ref", "handles", "names", "include", "exclude", "queries", "keywords", "updated", "display",
-             "model", "m", "textonly", "band", "migrations", "by_lang", "row_vendors", "x", "y", "vtitle", "vchannel", "cat", "views", "panel"}
+             "model", "m", "textonly", "band", "migrations", "by_lang", "row_vendors", "x", "y", "vtitle", "vchannel", "cat", "views", "panel", "color"}
 
 
 UI_DEFAULTS = {"views": "vues", "no_video_lang": "Aucune vidéo de 4 minutes ou plus cette semaine", "in_english": ""}
@@ -139,7 +139,8 @@ def render_bar_chart(b, sources):
         parts.append(f'<text x="0" y="{y + 12}" font-size="13" font-weight="600">{html.escape(bar["label"])}</text>')
         if bar.get("sublabel"):
             parts.append(f'<text x="0" y="{y + 27}" font-size="11" class="muted">{html.escape(bar["sublabel"])}</text>')
-        parts.append(f'<rect x="{x0}" y="{y}" width="{w:.1f}" height="22" class="{cls}"/>')
+        fill = f' style="fill:{bar["color"]}"' if bar.get("color") else ""
+        parts.append(f'<rect x="{x0}" y="{y}" width="{w:.1f}" height="22" class="{cls}"{fill}/>')
         parts.append(f'<text x="{x0 + w + 6:.1f}" y="{y + 16}" font-size="12">{html.escape(loc_display(bar.get("display", str(bar["value"]))))}</text>')
     ref = b.get("refline")
     if ref:
@@ -312,7 +313,8 @@ def render_topic_bars(b, sources):
     out = [f'<svg viewBox="0 0 660 {h}" role="img" aria-label="{html.escape(b["title"])}">']
     for i, r in enumerate(rows):
         y = 10 + i * step
-        out.append(f'<text x="0" y="{y + 16}" font-size="13" font-weight="600">{html.escape(r["label"])}</text>')
+        out.append(f'<text x="0" y="{y + 16}" font-size="13" font-weight="600">{html.escape(r["label"])}'
+                   + (f' <tspan font-weight="400" class="muted" font-size="11">({r["n"]})</tspan>' if r.get("n") else "") + '</text>')
         x = x0
         for c in cats:
             share = r["shares"].get(c["id"], 0)
