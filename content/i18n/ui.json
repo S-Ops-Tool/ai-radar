@@ -64,7 +64,8 @@
     "languages": "Langues",
     "pipeline": {},
     "views": "vues",
-    "no_video_lang": "Aucune vidéo de 4 minutes ou plus cette semaine"
+    "no_video_lang": "Aucune vidéo de 4 minutes ou plus cette semaine",
+    "in_english": ""
   },
   "en": {
     "lang_name": "English",
@@ -145,7 +146,8 @@
       "il résume ce qu'on lui transmet.": "it summarises what it is given."
     },
     "views": "views",
-    "no_video_lang": "No video of 4 minutes or more this week"
+    "no_video_lang": "No video of 4 minutes or more this week",
+    "in_english": ""
   },
   "es": {
     "lang_name": "Español",
@@ -226,7 +228,8 @@
       "il résume ce qu'on lui transmet.": "resume lo que se le transmite."
     },
     "views": "visualizaciones",
-    "no_video_lang": "Ningún vídeo de 4 minutos o más esta semana"
+    "no_video_lang": "Ningún vídeo de 4 minutos o más esta semana",
+    "in_english": " (vídeo en inglés)"
   },
   "de": {
     "lang_name": "Deutsch",
@@ -307,7 +310,8 @@
       "il résume ce qu'on lui transmet.": "es fasst zusammen, was es erhält."
     },
     "views": "Aufrufe",
-    "no_video_lang": "Kein Video von mindestens 4 Minuten in dieser Woche"
+    "no_video_lang": "Kein Video von mindestens 4 Minuten in dieser Woche",
+    "in_english": " (Video auf Englisch)"
   },
   "it": {
     "lang_name": "Italiano",
@@ -388,6 +392,7 @@
       "il résume ce qu'on lui transmet.": "riassume ciò che riceve."
     },
     "views": "visualizzazioni",
-    "no_video_lang": "Nessun video di almeno 4 minuti questa settimana"
+    "no_video_lang": "Nessun video di almeno 4 minuti questa settimana",
+    "in_english": " (video in inglese)"
   }
 }

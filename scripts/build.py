@@ -25,7 +25,7 @@ SKIP_KEYS = {"id", "type", "auto", "vendor", "key", "url", "src", "date", "for",
              "model", "m", "textonly", "band", "migrations", "by_lang", "row_vendors", "x", "y", "vtitle", "vchannel", "cat", "views"}
 
 
-UI_DEFAULTS = {"views": "vues", "no_video_lang": "Aucune vidéo de 4 minutes ou plus cette semaine"}
+UI_DEFAULTS = {"views": "vues", "no_video_lang": "Aucune vidéo de 4 minutes ou plus cette semaine", "in_english": ""}
 RENDER_ERRORS = []
 
 
@@ -391,11 +391,15 @@ def render_block(b, sources):
         if b.get("by_lang") and b.get("row_vendors") and len(b["headers"]) > len(rows[0] if rows else []):
             extra = []
             for v in b["row_vendors"]:
-                e = (b["by_lang"].get(v) or {}).get(LANG)
+                langs = b["by_lang"].get(v) or {}
+                e = langs.get(LANG)
+                suffix = ""
+                if LANG not in langs and langs.get("en"):
+                    e, suffix = langs["en"], U.get("in_english", "")
                 if e:
                     t_ = e["title"].replace("[", "(").replace("]", ")")
-                    extra.append(f"[{t_}]({e['url']}), {num(round(e['views'] / 1000))} k {U['views']} ({e['channel']})"
-                                 if e["views"] >= 1000 else f"[{t_}]({e['url']}), {e['views']} {U['views']} ({e['channel']})")
+                    extra.append((f"[{t_}]({e['url']}), {num(round(e['views'] / 1000))} k {U['views']} ({e['channel']})"
+                                  if e["views"] >= 1000 else f"[{t_}]({e['url']}), {e['views']} {U['views']} ({e['channel']})") + suffix)
                 else:
                     extra.append(U["no_video_lang"])
             rows = [list(r) + [x] for r, x in zip(rows, extra)]

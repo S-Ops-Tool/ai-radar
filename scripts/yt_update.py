@@ -4,7 +4,7 @@ Two measures:
 - official channels: subscribers, uploads over 30 days and their views (quota: ~3 units per vendor);
 - public attention: views of the most viewed videos published in the last 7 days whose title
   mentions the assistant, all creators (search.list: 2 x 100 units per vendor, medium and long videos).
-Weekly total: about 4,300 units out of the 10,000 daily quota.
+Weekly total: about 2,500 units (French and English searches); a run less than 20 h after the previous one reuses it out of the 10,000 daily quota.
 """
 import datetime as dt
 import json
@@ -52,7 +52,8 @@ def short(n):
     return str(int(n))
 
 
-LANGS = ["fr", "en", "es", "de", "it"]
+LANGS = ["fr", "en"]  # recherches par langue ; les autres versions du site affichent la vidéo anglaise
+REUSE_HOURS = 20
 
 
 def iso_seconds(d):
@@ -154,9 +155,9 @@ CLASSIFY_SYSTEM = ("Tu classes des vidéos YouTube sur l'intelligence artificiel
 
 def classify(videos, notes):
     """Topic of each video via Claude (closed list); videos left unclassified are reported and excluded."""
-    import anthropic
     if not os.environ.get("ANTHROPIC_API_KEY") or not videos:
         return {}
+    import anthropic
     client = anthropic.Anthropic()
     model = os.environ.get("CLASSIFY_MODEL", "claude-haiku-4-5-20251001")
     valid = {c[0] for c in CATEGORIES}
@@ -183,6 +184,12 @@ def update_youtube(blocks, state, notes):
         notes.append("YouTube : clé absente, section non mise à jour.")
         return
     now = dt.datetime.now(dt.timezone.utc)
+    last = state.get("youtube_last_run")
+    if last:
+        age = (now - dt.datetime.fromisoformat(last)).total_seconds() / 3600
+        if age < REUSE_HOURS:
+            notes.append(f"YouTube : relevé de moins de {REUSE_HOURS} h réutilisé ({age:.0f} h), aucune requête envoyée.")
+            return
     since30 = (now - dt.timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
     since7 = (now - dt.timedelta(days=7)).strftime("%Y-%m-%dT%H:%M:%SZ")
     res = {}
@@ -216,7 +223,8 @@ def update_youtube(blocks, state, notes):
     snap[now.date().isoformat()] = {v: {"views7": (r["att"] or {}).get("views"),
                                         "subs": (r["off"] or {}).get("subs"),
                                         "n30": (r["off"] or {}).get("n30")} for v, r in res.items()}
-    for k in sorted(snap)[:-52]:
+    limit = (now - dt.timedelta(days=30)).date().isoformat()
+    for k in [k for k in snap if k < limit]:
         del snap[k]
 
     def walk(bs):
@@ -293,3 +301,4 @@ def update_youtube(blocks, state, notes):
             b["rows"] = rows
             b["row_vendors"] = [v for v, _ in ranked]
             b["by_lang"] = {v: r.get("by_lang", {}) for v, r in ranked}
+    state["youtube_last_run"] = now.isoformat()
