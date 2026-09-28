@@ -205,6 +205,9 @@ def update_youtube(blocks, state, notes):
             except Exception as e:
                 notes.append(f"YouTube, recherche {cfg['label']} en {lang} : {e}")
         res[vid] = r
+    if any("429" in n or "quota" in n.lower() for n in notes):
+        notes.append("YouTube : quota de l'API dépassé ; les chiffres de la semaine précédente sont conservés.")
+        return
     found = [f"{VENDORS[v]['label']} = {r['off']['handle']}" for v, r in res.items() if r["off"]]
     if found:
         notes.append("YouTube, chaînes officielles retenues : " + " ; ".join(found) + ".")
