@@ -233,6 +233,10 @@ def update_youtube(blocks, state, notes):
             except Exception as e:
                 notes.append(f"YouTube, recherche {cfg['label']} en {lang} : {e}")
         res[vid] = r
+    ok_vendors = sum(1 for r in res.values() if r.get("att"))
+    if ok_vendors < len(res) / 2:
+        notes.append(f"YouTube : seules {ok_vendors} recherches sur {len(res)} ont abouti ; les chiffres précédents sont conservés.")
+        return
     if any("429" in n or "quota" in n.lower() for n in notes):
         notes.append("YouTube : relevé incomplet (quota épuisé ou requêtes freinées malgré les nouvelles tentatives) ; les chiffres précédents sont conservés.")
         return
