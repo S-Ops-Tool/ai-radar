@@ -294,12 +294,25 @@ def m_2026_09_youtube_panel(d):
         "YouTube : la mesure d'attention s'appuie désormais sur un panel public de chaînes francophones et anglophones spécialisées, au lieu de la recherche sur tout YouTube."]})
 
 
+def m_2026_09_panel_v2(d):
+    import yt_update
+    vid = section(d, "video")
+    if not vid:
+        return
+    for b in vid["blocks"]:
+        if b.get("auto") == "yt_chart":
+            b["panel"] = yt_update.DEFAULT_PANEL
+    d["changelog"].append({"date": "2026-09-28", "items": [
+        "YouTube : panel élargi à 40 chaînes, dont 15 francophones, couvrant l'éthique, la sûreté, la recherche, l'actualité et le code."]})
+
+
 MIGRATIONS = [("2026-09-history", m_2026_09_history), ("2026-09-wording", m_2026_09_wording),
               ("2026-09-scatter-lang", m_2026_09_scatter_lang),
               ("2026-09-ethics-topics", m_2026_09_ethics_topics),
               ("2026-09-risks", m_2026_09_risks),
               ("2026-09-mistral-ethics", m_2026_09_mistral_ethics),
-              ("2026-09-youtube-panel", m_2026_09_youtube_panel)]
+              ("2026-09-youtube-panel", m_2026_09_youtube_panel),
+              ("2026-09-panel-v2", m_2026_09_panel_v2)]
 
 
 def main():

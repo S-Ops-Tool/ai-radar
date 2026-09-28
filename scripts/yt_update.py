@@ -100,13 +100,58 @@ def video_stats(key, ids):
     return out
 
 
+MIN_SUBS = 1000
+
+
+def official(key, cfg, since30, notes):
+    for h in cfg["handles"]:
+        try:
+            data = call("channels", key, part="snippet,statistics,contentDetails", forHandle=h)
+        except Exception:
+            continue
+        items = data.get("items") or []
+        if not items:
+            continue
+        ch = items[0]
+        title = ch["snippet"]["title"]
+        subs = int(ch["statistics"].get("subscriberCount", 0))
+        if not any(n in title.lower() for n in cfg["names"]) or subs < MIN_SUBS:
+            notes.append(f"YouTube : {h} écarté pour {cfg['label']} (chaîne « {title[:40]} », {subs} abonnés).")
+            continue
+        uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+        pl = call("playlistItems", key, part="contentDetails", playlistId=uploads, maxResults=50)
+        ids = [it["contentDetails"]["videoId"] for it in pl.get("items", [])
+               if it["contentDetails"].get("videoPublishedAt", "") >= since30]
+        stats = video_stats(key, ids) if ids else {}
+        return {"handle": h, "title": title, "subs": subs,
+                "n30": len(stats), "views30": sum(v["views"] for v in stats.values())}
+    return None
+
+
 DEFAULT_PANEL = {
-    "fr": ["@Underscore_", "@Micode", "@ScienceEtonnante", "@MonsieurPhi", "@DefendIntelligence", "@BenjaminCode",
-           "@Grafikart", "@HugoDecrypte", "@monsieurbidouille"],
-    "en": ["@TwoMinutePapers", "@mreflow", "@aiexplained-official", "@matthew_berman", "@WesRoth", "@DavidOndrej",
-           "@ColeMedin", "@Fireship", "@TheAIGRID", "@bycloudAI", "@IndyDevDan", "@samwitteveenai", "@YannicKilcher",
-           "@lexfridman", "@DwarkeshPatel", "@ycombinator", "@mkbhd", "@TheVerge"],
+    # Une entrée peut être un identifiant (@...), un identifiant de chaîne (UC...), ou plusieurs variantes séparées par |.
+    "fr": ["UC0NCbj8CxzeCGIF6sODJ-7A", "@MonsieurPhi", "@ScienceEtonnante",
+           "@MachineLearnia", "@DefendIntelligence", "@MonsieurIA|@MonsieurIAofficiel", "@IAMania|@iamania_", "@AIBootcamp|@lebigdatafr",
+           "@Underscore_", "@Micode", "@HugoDecrypteActus|@hugodecrypte", "@monsieurbidouille",
+           "@BenjaminCode", "@Grafikart",
+           "@MaisondelIntelligenceArtificielle|@MaisonIA"],
+    "en": ["@RobertMilesAI", "@RationalAnimations", "@HumaneTech_|@CenterforHumaneTechnology", "@aiexplained-official",
+           "@TwoMinutePapers", "@YannicKilcher", "@MachineLearningStreetTalk", "@3blue1brown", "@Computerphile", "@AndrejKarpathy",
+           "@lexfridman", "@DwarkeshPatel",
+           "@mreflow", "@matthew_berman", "@WesRoth", "@TheAIGRID", "@Fireship", "@mkbhd", "@TheVerge", "@ycombinator",
+           "@ColeMedin", "@IndyDevDan", "@samwitteveenai", "@DavidOndrej", "@bycloudAI"],
 }
+
+
+def find_channel(key, entry):
+    """Resolve a panel entry (handle, channel id, or alternatives separated by |)."""
+    for alt in entry.split("|"):
+        alt = alt.strip()
+        params = {"id": alt} if alt.startswith("UC") else {"forHandle": alt}
+        items = call("channels", key, part="contentDetails,snippet", **params).get("items") or []
+        if items:
+            return items[0]
+    return None
 
 
 def collect_panel(key, panel, since7, notes):
@@ -115,14 +160,14 @@ def collect_panel(key, panel, since7, notes):
     for lang, handles in panel.items():
         for h in handles:
             try:
-                items = call("channels", key, part="contentDetails,snippet", forHandle=h).get("items") or []
+                ch = find_channel(key, h)
             except Exception as e:
                 notes.append(f"YouTube, panel {h} : {e}")
                 continue
-            if not items:
+            if not ch:
                 missing.append(h)
                 continue
-            uploads = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+            uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
             pl = call("playlistItems", key, part="contentDetails", playlistId=uploads, maxResults=50)
             ids = [it["contentDetails"]["videoId"] for it in pl.get("items", [])
                    if it["contentDetails"].get("videoPublishedAt", "") >= since7]
