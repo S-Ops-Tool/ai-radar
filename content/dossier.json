@@ -549,16 +549,16 @@
           "bars": [
             {
               "label": "ChatGPT",
-              "sublabel": "745 articles, 18 560 commentaires",
+              "sublabel": "746 articles, 18 566 commentaires",
               "value": 81,
               "display": "81",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
-              "sublabel": "770 articles, 13 234 commentaires",
-              "value": 60,
-              "display": "60",
+              "sublabel": "768 articles, 13 295 commentaires",
+              "value": 61,
+              "display": "61",
               "vendor": "claude"
             },
             {
@@ -818,8 +818,8 @@
                 [
                   "",
                   "[Revealing the details of how OpenAI agents hacked Hugging Face](https://news.ycombinator.com/item?id=49849985)",
-                  "742",
-                  "463"
+                  "743",
+                  "465"
                 ],
                 [
                   "",
@@ -830,7 +830,7 @@
                 [
                   "Claude",
                   "[Claude Opus 5.5](https://news.ycombinator.com/item?id=49803892)",
-                  "1802",
+                  "1803",
                   "1129"
                 ],
                 [
@@ -854,7 +854,7 @@
                 [
                   "",
                   "[Hackers influence ChatGPT and Gemini to direct users to scam centers](https://news.ycombinator.com/item?id=49829387)",
-                  "142",
+                  "143",
                   "52"
                 ],
                 [
@@ -872,7 +872,7 @@
                 [
                   "",
                   "[Faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)",
-                  "76",
+                  "78",
                   "12"
                 ],
                 [
@@ -951,7 +951,7 @@
         {
           "type": "bar_chart",
           "auto": "yt_chart",
-          "title": "Vues des vidéos de la semaine citant l'assistant, monde entier, en millions",
+          "title": "Vues des vidéos de la semaine citant l'assistant, panel de chaînes IA et tech, en millions",
           "max": 5,
           "ticks": [
             0,
@@ -977,7 +977,53 @@
               "vendor": "grok"
             }
           ],
-          "caption": "Vues cumulées, au 27/9/2026, des vidéos publiées dans les 7 derniers jours dont le titre mentionne l'assistant, d'une durée de 4 minutes ou plus, tous créateurs et toutes langues confondus (jusqu'à 25 vidéos parmi les plus vues), en millions [[s95]]. Les formats courts (Shorts, montages viraux) sont exclus : ils citent souvent un assistant sans en parler. Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité."
+          "caption": "Vues cumulées, au 27/9/2026, des vidéos publiées dans les 7 derniers jours dont le titre mentionne l'assistant, d'une durée de 4 minutes ou plus, tous créateurs et toutes langues confondus (jusqu'à 25 vidéos parmi les plus vues), en millions [[s95]]. Les formats courts (Shorts, montages viraux) sont exclus : ils citent souvent un assistant sans en parler. Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.",
+          "panel": {
+            "fr": [
+              "UC0NCbj8CxzeCGIF6sODJ-7A",
+              "@MonsieurPhi",
+              "@ScienceEtonnante",
+              "@MachineLearnia",
+              "@DefendIntelligence",
+              "@MonsieurIA|@MonsieurIAofficiel",
+              "@IAMania|@iamania_",
+              "@AIBootcamp|@lebigdatafr",
+              "@Underscore_",
+              "@Micode",
+              "@HugoDecrypteActus|@hugodecrypte",
+              "@monsieurbidouille",
+              "@BenjaminCode",
+              "@Grafikart",
+              "@MaisondelIntelligenceArtificielle|@MaisonIA"
+            ],
+            "en": [
+              "@RobertMilesAI",
+              "@RationalAnimations",
+              "@HumaneTech_|@CenterforHumaneTechnology",
+              "@aiexplained-official",
+              "@TwoMinutePapers",
+              "@YannicKilcher",
+              "@MachineLearningStreetTalk",
+              "@3blue1brown",
+              "@Computerphile",
+              "@AndrejKarpathy",
+              "@lexfridman",
+              "@DwarkeshPatel",
+              "@mreflow",
+              "@matthew_berman",
+              "@WesRoth",
+              "@TheAIGRID",
+              "@Fireship",
+              "@mkbhd",
+              "@TheVerge",
+              "@ycombinator",
+              "@ColeMedin",
+              "@IndyDevDan",
+              "@samwitteveenai",
+              "@DavidOndrej",
+              "@bycloudAI"
+            ]
+          }
         },
         {
           "type": "topic_bars",
@@ -1544,7 +1590,7 @@
         },
         {
           "type": "reading",
-          "text": "Ce graphique mesure l'attention suscitée auprès du public, sans distinguer l'enthousiasme de la critique. Les chaînes de vulgarisation pèsent souvent davantage que les chaînes officielles des éditeurs."
+          "text": "Ce graphique mesure l'attention que suscite chaque assistant auprès d'un panel de chaînes francophones et anglophones spécialisées, sans distinguer l'enthousiasme de la critique. Le panel reflète les créateurs qui façonnent le débat chez les lecteurs du site ; il ne mesure pas YouTube dans son ensemble."
         },
         {
           "type": "audiences",
@@ -1565,8 +1611,8 @@
                 "Abonnés",
                 "Vidéos (30 jours)",
                 "Vues de ces vidéos",
-                "Vidéo la plus vue de la semaine, monde entier",
-                "Vidéo la plus vue dans la langue de cette page"
+                "Vidéo la plus vue du panel",
+                "Vidéo la plus vue du panel dans la langue de cette page"
               ],
               "rows": [
                 [
@@ -1671,13 +1717,12 @@
             {
               "type": "list",
               "items": [
-                "Sont retenues les vidéos de 4 minutes ou plus dont le titre mentionne l'assistant ; les Shorts et montages viraux, qui citent un assistant sans en parler, sont exclus.",
-                "Des filtres écartent les homonymes courants (astrologie pour Gemini, personnalités prénommées Claude).",
+                "Le panel réunit des chaînes francophones et anglophones consacrées à l'IA et à la tech : vulgarisation, tests, code, entretiens. Sa composition est publique et ajustable.",
+                "Sont retenues les vidéos de 4 minutes ou plus publiées dans la semaine dont le titre ou le début de la description mentionne l'assistant.",
                 "Une chaîne officielle n'est retenue que si son nom correspond à l'éditeur et qu'elle dépasse 1 000 abonnés : certains identifiants évidents appartiennent à des tiers.",
                 "Les vues des chaînes officielles incluent la promotion payante : une campagne publicitaire peut les multiplier sans refléter l'intérêt spontané.",
-                "Le nombre de vues est celui du jour du relevé ; une vidéo récente continue d'en accumuler.",
-                "Une vidéo de synthèse qui cite plusieurs assistants compte pour chacun d'eux.",
-                "La dernière colonne retient les vidéos dont la langue déclarée correspond à celle de la page, d'une durée de 4 minutes ou plus."
+                "Une vidéo qui cite plusieurs assistants compte pour chacun d'eux.",
+                "Conformément aux règles de l'API YouTube, ces données sont rafraîchies chaque semaine et ne sont pas conservées au-delà de 30 jours."
               ]
             }
           ]
@@ -1894,7 +1939,7 @@
                   "Claude Opus 5.5 (Adaptive Reasoning, Max Effort,",
                   "57,6",
                   "4,00 $ / 20,00 $",
-                  "95"
+                  "96"
                 ],
                 [
                   "OpenAI",
@@ -1908,14 +1953,14 @@
                   "Muse Spark 1.3 (max)",
                   "48,1",
                   "1,25 $ / 4,25 $",
-                  "160"
+                  "165"
                 ],
                 [
                   "xAI",
                   "Grok 4.7 (xhigh)",
                   "46,4",
                   "2,00 $ / 6,00 $",
-                  "72"
+                  "80"
                 ],
                 [
                   "Alibaba (Qwen)",
@@ -1929,7 +1974,7 @@
                   "GLM-5.3 (max)",
                   "44,8",
                   "1,40 $ / 4,40 $",
-                  "82"
+                  "83"
                 ],
                 [
                   "Google",
@@ -2860,9 +2905,9 @@
           "bars": [
             {
               "label": "ChatGPT",
-              "sublabel": "25 incidents sur 17 jours, historique partiel",
-              "value": 43.0,
-              "display": "43,0",
+              "sublabel": "25 incidents sur 18 jours, historique partiel",
+              "value": 42.7,
+              "display": "42,7",
               "vendor": "gpt"
             },
             {
@@ -2912,7 +2957,7 @@
             [
               "ChatGPT",
               "25",
-              "43,0",
+              "42,7",
               "3",
               "53 h",
               "partiel, depuis le 10/9/2026 [[s88]]"
@@ -4289,6 +4334,18 @@
         "Matrice inchangée : les corrections d'offres hautes (ChatGPT Pro, Gemini AI Ultra), les litiges Mistral et Anthropic, Copilot, OpenRouter, Perplexity et DeepSeek ne correspondent à aucune ligne de la matrice ; les offres d'entrée restent identiques [[s128]] [[s129]] [[s130]] [[s133]] [[s134]] [[s135]].",
         "Modèles phares inchangés : aucun changement de la semaine n'annonce de nouveau modèle phare pour les six éditeurs."
       ]
+    },
+    {
+      "date": "2026-09-28",
+      "items": [
+        "YouTube : la mesure d'attention s'appuie désormais sur un panel public de chaînes francophones et anglophones spécialisées, au lieu de la recherche sur tout YouTube."
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "items": [
+        "YouTube : panel élargi à 40 chaînes, dont 15 francophones, couvrant l'éthique, la sûreté, la recherche, l'actualité et le code."
+      ]
     }
   ],
   "sources": {
@@ -4991,8 +5048,10 @@
     "2026-09-ethics-topics",
     "2026-09-history",
     "2026-09-mistral-ethics",
+    "2026-09-panel-v2",
     "2026-09-risks",
     "2026-09-scatter-lang",
-    "2026-09-wording"
+    "2026-09-wording",
+    "2026-09-youtube-panel"
   ]
 }
