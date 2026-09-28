@@ -549,14 +549,14 @@
           "bars": [
             {
               "label": "ChatGPT",
-              "sublabel": "745 articles, 18 557 commentaires",
+              "sublabel": "745 articles, 18 559 commentaires",
               "value": 81,
               "display": "81",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
-              "sublabel": "769 articles, 13 229 commentaires",
+              "sublabel": "769 articles, 13 233 commentaires",
               "value": 60,
               "display": "60",
               "vendor": "claude"
@@ -818,7 +818,7 @@
                 [
                   "",
                   "[Revealing the details of how OpenAI agents hacked Hugging Face](https://news.ycombinator.com/item?id=49849985)",
-                  "741",
+                  "742",
                   "463"
                 ],
                 [
@@ -872,7 +872,7 @@
                 [
                   "",
                   "[Faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)",
-                  "75",
+                  "76",
                   "12"
                 ],
                 [
@@ -902,7 +902,7 @@
                 [
                   "Mistral",
                   "[CEO of Mistral: AI is software. It can be controlled](https://news.ycombinator.com/item?id=49856034)",
-                  "97",
+                  "98",
                   "168"
                 ],
                 [
@@ -1894,7 +1894,7 @@
                   "Claude Opus 5.5 (Adaptive Reasoning, Max Effort,",
                   "57,6",
                   "4,00 $ / 20,00 $",
-                  "96"
+                  "95"
                 ],
                 [
                   "OpenAI",
@@ -1908,7 +1908,7 @@
                   "Muse Spark 1.3 (max)",
                   "48,1",
                   "1,25 $ / 4,25 $",
-                  "158"
+                  "160"
                 ],
                 [
                   "xAI",
@@ -1929,14 +1929,14 @@
                   "GLM-5.3 (max)",
                   "44,8",
                   "1,40 $ / 4,40 $",
-                  "84"
+                  "82"
                 ],
                 [
                   "Google",
                   "Gemini 3.8 Flash (high)",
                   "40,9",
                   "0,75 $ / 3,75 $",
-                  "262"
+                  "291"
                 ],
                 [
                   "DeepSeek",
@@ -2861,13 +2861,13 @@
             {
               "label": "ChatGPT",
               "sublabel": "25 incidents sur 17 jours, historique partiel",
-              "value": 43.1,
-              "display": "43,1",
+              "value": 43.0,
+              "display": "43,0",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
-              "sublabel": "50 incidents sur 67 jours, historique partiel",
+              "sublabel": "50 incidents sur 68 jours, historique partiel",
               "value": 22.2,
               "display": "22,2",
               "vendor": "claude"
@@ -2912,7 +2912,7 @@
             [
               "ChatGPT",
               "25",
-              "43,1",
+              "43,0",
               "3",
               "53 h",
               "partiel, depuis le 10/9/2026 [[s88]]"
@@ -3564,7 +3564,7 @@
               "Plainte pour retrait de métadonnées de droits d'auteur [[s32]]",
               "Distillation partielle de modèles GPT admise [[s35]]",
               "Volet téléchargement par torrent toujours ouvert [[s34]]",
-              "Aucun litige majeur trouvé"
+              "Mise en cause par un éditeur français pour plus de 200 ouvrages, sans action en justice trouvée [[s133]]"
             ],
             [
               "Vie privée et consentement (UNESCO, OCDE)",
@@ -4990,6 +4990,7 @@
   "migrations": [
     "2026-09-ethics-topics",
     "2026-09-history",
+    "2026-09-mistral-ethics",
     "2026-09-risks",
     "2026-09-scatter-lang",
     "2026-09-wording"

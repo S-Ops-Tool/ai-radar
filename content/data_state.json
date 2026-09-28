@@ -864,14 +864,14 @@
       "claude": {
         "n": 769,
         "notable": 60,
-        "comments": 13229,
-        "points": 19362
+        "comments": 13233,
+        "points": 19365
       },
       "gpt": {
         "n": 745,
         "notable": 81,
-        "comments": 18557,
-        "points": 29349
+        "comments": 18559,
+        "points": 29353
       },
       "gemini": {
         "n": 75,
@@ -889,13 +889,13 @@
         "n": 25,
         "notable": 5,
         "comments": 900,
-        "points": 1594
+        "points": 1595
       },
       "mistral": {
         "n": 13,
         "notable": 3,
         "comments": 982,
-        "points": 1563
+        "points": 1564
       }
     }
   },
@@ -905,7 +905,7 @@
       "intel": 57.6,
       "pin": 4.0,
       "pout": 20.0,
-      "speed": 95.831
+      "speed": 95.177
     },
     "OpenAI": {
       "name": "GPT-6 Astra (max)",
@@ -919,14 +919,14 @@
       "intel": 48.1,
       "pin": 1.25,
       "pout": 4.25,
-      "speed": 158.389
+      "speed": 160.139
     },
     "xAI": {
       "name": "Grok 4.7 (xhigh)",
       "intel": 46.4,
       "pin": 2.0,
       "pout": 6.0,
-      "speed": 71.987
+      "speed": 72.266
     },
     "Alibaba (Qwen)": {
       "name": "Qwen3.8 Max (0902)",
@@ -940,14 +940,14 @@
       "intel": 44.8,
       "pin": 1.4,
       "pout": 4.4,
-      "speed": 84.314
+      "speed": 82.378
     },
     "Google": {
       "name": "Gemini 3.8 Flash (high)",
       "intel": 40.9,
       "pin": 0.75,
       "pout": 3.75,
-      "speed": 262.465
+      "speed": 290.58
     },
     "DeepSeek": {
       "name": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
