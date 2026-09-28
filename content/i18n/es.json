@@ -23,10 +23,6 @@
   "fr": "Entraînement sur les conversations (offre grand public)",
   "tr": "Entrenamiento con las conversaciones (oferta para consumidores)"
  },
- "01d107aeec4ba148": {
-  "fr": "25 articles, 900 commentaires",
-  "tr": "25 artículos, 900 comentarios"
- },
  "02578c9b4f197607": {
   "fr": "X Premium 8 $, SuperGrok 30 $",
   "tr": "X Premium 8 $, SuperGrok 30 $"
@@ -211,10 +207,6 @@
   "fr": "Signalements d'utilisateurs (StatusGator, Downdetector)",
   "tr": "Reportes de usuarios (StatusGator, Downdetector)"
  },
- "1067d7e6e728a811": {
-  "fr": "@MonsieurIA|@MonsieurIAofficiel",
-  "tr": "@MonsieurIA|@MonsieurIAofficiel"
- },
  "10a1f490a67fdc89": {
   "fr": "Oriente vers des modèles tiers sans liste publiée figée [[s66]]",
   "tr": "Redirige a modelos de terceros sin lista pública fija [[s66]]"
@@ -347,6 +339,10 @@
   "fr": "Pour Meta, le relevé inclut Llama : Muse Spark reste encore peu discuté sous son propre nom.",
   "tr": "Para Meta, el registro incluye Llama: Muse Spark todavía se comenta poco bajo su propio nombre."
  },
+ "17744615fecdf109": {
+  "fr": "56 articles, 1 453 commentaires",
+  "tr": "56 artículos, 1453 comentarios"
+ },
  "177530de114e3c2f": {
   "fr": "ChatGPT garde la plus large audience, mais sa part des visites web a perdu près de 18 points en un an au profit de Gemini et Claude ; depuis mai, elle remonte légèrement [[s96]].",
   "tr": "ChatGPT conserva la mayor audiencia, pero su cuota de visitas web ha perdido cerca de 18 puntos en un año en favor de Gemini y Claude; desde mayo, remonta ligeramente [[s96]]."
@@ -374,10 +370,6 @@
  "1888900e75c5a920": {
   "fr": "Divertissement et culture",
   "tr": "Entretenimiento y cultura"
- },
- "18e4e8872d0402b5": {
-  "fr": "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 325 k vues (Two Minute Papers)",
-  "tr": "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 325 mil vistas (Two Minute Papers)"
  },
  "1947a6c77280f455": {
   "fr": "ETH Zurich, lancement d'Apertus",
@@ -442,10 +434,6 @@
  "1c9fbd41925a6d18": {
   "fr": "Artificial Analysis, AA-Omniscience",
   "tr": "Artificial Analysis, AA-Omniscience"
- },
- "1d0b8361622f2527": {
-  "fr": "[Llama.cpp Under the Hood](https://news.ycombinator.com/item?id=49814172)",
-  "tr": "[Llama.cpp Under the Hood](https://news.ycombinator.com/item?id=49814172)"
  },
  "1d285ab90ccbf565": {
   "fr": "gpt-5.4-nano-2026-03-17",
@@ -622,10 +610,6 @@
  "276c911c3dca463d": {
   "fr": "@IndyDevDan",
   "tr": "@IndyDevDan"
- },
- "276f2d79ae7105b5": {
-  "fr": "769 articles, 13 320 commentaires",
-  "tr": "769 artículos, 13 320 comentarios"
  },
  "27705deaf195484c": {
   "fr": "Point d'attention",
@@ -974,6 +958,10 @@
  "40f8b1f5db7f0ffd": {
   "fr": "Les attaques par hameçonnage et deepfake deviennent plus crédibles ; la vérification par un second canal reste la parade simple.",
   "tr": "Los ataques de phishing y deepfake son cada vez más creíbles; la verificación por un segundo canal sigue siendo la solución sencilla."
+ },
+ "4101ca8a92f78054": {
+  "fr": "11 vidéos, 555 k vues",
+  "tr": "11 vídeos, 555 k visualizaciones"
  },
  "41a3e1a11bec04f5": {
   "fr": "[OpenAI](https://www.youtube.com/@OpenAI)",
@@ -1411,9 +1399,9 @@
   "fr": "Les taux d'hallucination publiés divergent d'un facteur dix selon le protocole. Pour les modèles de pointe, une étude sur 5 000 requêtes trouve entre 3,1 % et 19,1 % selon le modèle, la tâche et le niveau de raisonnement ; avec un protocole plus strict, Gemini 2.0 Flash passe de 0,7 % à environ 7,6 % [[s46]].",
   "tr": "Las tasas de alucinación publicadas divergen en un factor de diez según el protocolo. Para los modelos de vanguardia, un estudio sobre 5000 consultas encuentra entre el 3,1 % y el 19,1 % según el modelo, la tarea y el nivel de razonamiento; con un protocolo más estricto, Gemini 2.0 Flash pasa del 0,7 % a aproximadamente el 7,6 % [[s46]]."
  },
- "5a55d020ea8464ca": {
-  "fr": "@MaisondelIntelligenceArtificielle|@MaisonIA",
-  "tr": "@MaisondelIntelligenceArtificielle|@MaisonIA"
+ "59f63ce56f143517": {
+  "fr": "1 vidéo, 122 k vues",
+  "tr": "1 vídeo, 122 k visualizaciones"
  },
  "5a617761a05aac5a": {
   "fr": "Colossus 2",
@@ -1687,6 +1675,18 @@
   "fr": "Un assistant indisponible bloque le travail qui en dépend ; les pages de statut officielles en gardent la trace.",
   "tr": "Un asistente no disponible bloquea el trabajo que depende de él; las páginas de estado oficiales dejan constancia de ello."
  },
+ "69598e158d7d3be4": {
+  "fr": "De quoi parle l'IA sur YouTube cette semaine : part des vidéos par thème",
+  "tr": "De qué habla la IA en YouTube esta semana: proporción de vídeos por tema"
+ },
+ "695b16703f1f8161": {
+  "fr": "5 vidéos, 578 k vues",
+  "tr": "5 vídeos, 578 k visualizaciones"
+ },
+ "697561173237f4ef": {
+  "fr": "4 vidéos, 490 k vues",
+  "tr": "4 vídeos, 490 k visualizaciones"
+ },
  "69dc98f2ecec24bc": {
   "fr": "Grok Build, Grok Bot, récents",
   "tr": "Grok Build, Grok Bot, recientes"
@@ -1723,6 +1723,10 @@
   "fr": "Bloc why complété : OpenAI et Anthropic ont suspendu une partie de leurs entraînements [[s114]] [[s117]].",
   "tr": "Bloque why completado: OpenAI y Anthropic han suspendido parte de sus entrenamientos [[s114]] [[s117]]."
  },
+ "6c1e6debb4962e52": {
+  "fr": "15 vidéos, 7,3 M vues",
+  "tr": "15 vídeos, 7,3 M de visualizaciones"
+ },
  "6c69fb1c06ce7858": {
   "fr": "Nouvelle section « Éthique » : les pratiques des six éditeurs confrontées aux principes de l'UNESCO, de l'OCDE et de l'AI Act.",
   "tr": "Nueva sección «Ética»: las prácticas de los seis editores confrontadas con los principios de la UNESCO, la OCDE y el AI Act."
@@ -1750,6 +1754,10 @@
  "6d545048996fce37": {
   "fr": "C ; chapitre sécurité signé [[s1]] [[s97]]",
   "tr": "C; capítulo de seguridad firmado [[s1]] [[s97]]"
+ },
+ "6de3dc9ef7ddbd47": {
+  "fr": "749 articles, 18 577 commentaires",
+  "tr": "749 artículos, 18 577 comentarios"
  },
  "6e345dd17f967c98": {
   "fr": "Lequel utiliser au quotidien ? Puis-je me fier aux réponses ? Que deviennent mes conversations ?",
@@ -1826,6 +1834,10 @@
  "73b78403ae19d91f": {
   "fr": "Cybersécurité : le point de bascule de 2026",
   "tr": "Ciberseguridad: el punto de inflexión de 2026"
+ },
+ "73e6cff1d4198af8": {
+  "fr": "26 articles, 900 commentaires",
+  "tr": "26 artículos, 900 comentarios"
  },
  "73f56d60e5abbbdc": {
   "fr": "NPR, les dirigeants de l'IA appellent à ralentir (14 septembre 2026)",
@@ -2071,6 +2083,10 @@
   "fr": "complet sur 90 jours [[s91]]",
   "tr": "completo en 90 días [[s91]]"
  },
+ "82547efa254a14f1": {
+  "fr": "YouTube : nouveau graphique des thèmes de toutes les vidéos du panel consacrées à l'IA, qu'elles citent un assistant ou non ; la répartition par assistant passe en approfondissement.",
+  "tr": "YouTube: nuevo gráfico de los temas de todos los vídeos del panel dedicados a la IA, citen o no a un asistente; la distribución por asistente pasa a profundización."
+ },
  "827ee0928816418f": {
   "fr": "Les mêmes capacités qui aident à corriger les failles logicielles permettent aussi de les exploiter.",
   "tr": "Las mismas capacidades que ayudan a corregir los fallos de software también permiten explotarlos."
@@ -2202,6 +2218,14 @@
  "8a668237f034c537": {
   "fr": "OCDE, Principes sur l'intelligence artificielle",
   "tr": "OCDE, Principios sobre inteligencia artificial"
+ },
+ "8a79e6a0aae6adff": {
+  "fr": "Thèmes des vidéos qui citent chaque assistant, part des vues (nombre de vidéos entre parenthèses)",
+  "tr": "Temas de los vídeos que citan a cada asistente, proporción de visualizaciones (número de vídeos entre paréntesis)"
+ },
+ "8aa1dc037dbae5b5": {
+  "fr": "3 vidéos, 127 k vues",
+  "tr": "3 vídeos, 127 k visualizaciones"
  },
  "8aa38ebe6d961a21": {
   "fr": "Prix mensuels américains relevés fin septembre 2026 par un agrégateur à partir des pages des éditeurs [[s66]] ; les prix en francs suisses et en euros diffèrent et se vérifient sur chaque page officielle. xAI ne précise pas quelle offre donne accès à Grok 4.7 [[s66]]. Chez OpenAI, les deux offres Pro donnent accès aux mêmes fonctions et se distinguent par les limites d'usage ; chez Google, l'offre Ultra existe en deux niveaux depuis mai 2026, et le niveau à 199,99 $ offre des limites 20 fois plus élevées que AI Pro [[s128]] [[s130]]. Ces deux compléments proviennent de la page de Google et d'un agrégateur commercial [[s128]] [[s129]] [[s130]].",
@@ -2342,10 +2366,6 @@
  "9261e22345cdd8a1": {
   "fr": "Historique sur douze mois pour Hacker News et le classement Vectara, reconstitué à partir des sources d'origine.",
   "tr": "Histórico de doce meses para Hacker News y la clasificación Vectara, reconstruido a partir de las fuentes originales."
- },
- "92d9cd32b41cf38f": {
-  "fr": "13 articles, 982 commentaires",
-  "tr": "13 artículos, 982 comentarios"
  },
  "92db5009687dde95": {
   "fr": "gpt-5.2-low-2025-12-11",
@@ -2723,10 +2743,6 @@
   "fr": "Gemini 3.8 Flash (tarif de lancement)",
   "tr": "Gemini 3.8 Flash (tarifa de lanzamiento)"
  },
- "aaf3b2bd7df7582a": {
-  "fr": "Pour aller plus loin : toutes les vidéos de la semaine, par thème",
-  "tr": "Para saber más: todos los vídeos de la semana, por tema"
- },
  "ab16b8bb9565c621": {
   "fr": "Grok concentre 87 % des fichiers générés par IA liés à des attaques par deepfake au premier semestre 2026, sur les incidents rapportés publiquement [[s38]]. Aucun rapport public de menace comparable n'a été trouvé pour xAI, Meta ou Mistral.",
   "tr": "Grok concentra el 87 % de los archivos generados por IA vinculados a ataques de deepfake en el primer semestre de 2026, según los incidentes reportados públicamente [[s38]]. No se ha encontrado ningún informe público de amenazas comparable para xAI, Meta o Mistral."
@@ -2746,6 +2762,10 @@
  "ab8808b91f1b0648": {
   "fr": "gpt-4.1-2025-04-14",
   "tr": "gpt-4.1-2025-04-14"
+ },
+ "abd4a918726be4e3": {
+  "fr": "954 k",
+  "tr": "954 k"
  },
  "abea936c5af460d2": {
   "fr": "Les référentiels publics d'éthique de l'IA fixent des attentes communes ; les confronter aux pratiques documentées montre où chaque éditeur s'engage et où il se tient en retrait.",
@@ -2795,9 +2815,9 @@
   "fr": "Sur YouTube : communication des éditeurs et attention du public",
   "tr": "En YouTube: comunicación de los editores y atención del público"
  },
- "adf9288424a2b7b8": {
-  "fr": "@IAMania|@iamania_",
-  "tr": "@IAMania|@iamania_"
+ "adff1eb0050c6d93": {
+  "fr": "768 articles, 13 374 commentaires",
+  "tr": "768 artículos, 13 374 comentarios"
  },
  "ae03de13143c7343": {
   "fr": "New Carlisle",
@@ -2854,6 +2874,10 @@
  "b0e16ed9274578c6": {
   "fr": "La puissance de calcul derrière les assistants et son coût énergétique.",
   "tr": "La potencia de cálculo detrás de los asistentes y su coste energético."
+ },
+ "b10c84ea22fd5db9": {
+  "fr": "[I got 2.2x more tokens per second from llama.cpp on Intel Arc](https://news.ycombinator.com/item?id=49876817)",
+  "tr": "[I got 2.2x more tokens per second from llama.cpp on Intel Arc](https://news.ycombinator.com/item?id=49876817)"
  },
  "b179858c04b94136": {
   "fr": "Microsoft Copilot revendique environ 420 millions d'utilisateurs mensuels, dont plus de 30 millions de licences Microsoft 365 Copilot payantes [[s58]].",
@@ -3091,10 +3115,6 @@
   "fr": "Propriétaire, Hyperion prévu à 5 GW",
   "tr": "Propietario, Hyperion previsto a 5 GW"
  },
- "bf0be949919f3d20": {
-  "fr": "68,6 M",
-  "tr": "68,6 M"
- },
  "bf48c8822b23b121": {
   "fr": "Chaque section affiche les sources primaires suivies chaque semaine.",
   "tr": "Cada sección muestra las fuentes primarias seguidas cada semana."
@@ -3158,6 +3178,10 @@
  "c1819064f889cd91": {
   "fr": "Pour aller plus loin : les référentiels utilisés",
   "tr": "Para saber más: los marcos de referencia utilizados"
+ },
+ "c193ce006b557577": {
+  "fr": "Part des 39 vidéos du panel consacrées à l'IA et publiées cette semaine, par thème, qu'elles citent un assistant ou non [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description ; 13 vidéos du panel sans rapport avec l'IA sont écartées.",
+  "tr": "Proporción de los 39 vídeos del panel dedicados a la IA y publicados esta semana, por tema, citen o no a un asistente [[s95]]. Tema asignado por Claude a partir del título, el canal y el inicio de la descripción; se descartan 13 vídeos del panel sin relación con la IA."
  },
  "c1c0201437412e9f": {
   "fr": "Indice",
@@ -3447,6 +3471,10 @@
   "fr": "Conservation",
   "tr": "Conservación"
  },
+ "d3000b42459cf5de": {
+  "fr": "69,0 M",
+  "tr": "69,0 M"
+ },
  "d325cebfb9f32842": {
   "fr": "partiel, depuis le 22/7/2026 [[s87]]",
   "tr": "parcial, desde el 22/7/2026 [[s87]]"
@@ -3494,6 +3522,10 @@
  "d53da70a33bd1f30": {
   "fr": "tau-bench",
   "tr": "tau-bench"
+ },
+ "d53e92cdefc3ae26": {
+  "fr": "Pour aller plus loin : thèmes par assistant et toutes les vidéos de la semaine",
+  "tr": "Para saber más: temas por asistente y todos los vídeos de la semana"
  },
  "d5c78f6f5096bea6": {
   "fr": "gpt-5.2-high-2025-12-11",
@@ -3574,10 +3606,6 @@
  "d9f24e56691ea020": {
   "fr": "Model Context Protocol : standard ouvert créé par Anthropic pour connecter un assistant à des outils et des données.",
   "tr": "Model Context Protocol: estándar abierto creado por Anthropic para conectar un asistente con herramientas y datos."
- },
- "da915777fef9cfb4": {
-  "fr": "953 k",
-  "tr": "953 mil"
  },
  "da92c66bdee49baf": {
   "fr": "Rétention dans l'écosystème Google",
@@ -3743,10 +3771,6 @@
   "fr": "Offre payante d'entrée",
   "tr": "Oferta de pago de entrada"
  },
- "e2db3c4214b518e1": {
-  "fr": "Chaque point est une vidéo de la semaine : date de publication en abscisse, vues en ordonnée (échelle logarithmique), couleur selon le thème. Un clic ouvre la vidéo. Une vidéo qui cite plusieurs assistants apparaît une fois par assistant.",
-  "tr": "Cada punto es un vídeo de la semana: fecha de publicación en el eje de abscisas, visualizaciones en el eje de ordenadas (escala logarítmica), color según el tema. Un clic abre el vídeo. Un vídeo que cita a varios asistentes aparece una vez por asistente."
- },
  "e2dccb983651fac5": {
   "fr": "Wikipedia, Mistral AI",
   "tr": "Wikipedia, Mistral AI"
@@ -3819,13 +3843,13 @@
   "fr": "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)",
   "tr": "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)"
  },
+ "e5fd53b4ad6103ab": {
+  "fr": "13 articles, 983 commentaires",
+  "tr": "13 artículos, 983 comentarios"
+ },
  "e6484dae5e5edb77": {
   "fr": "Rapports de menace OpenAI",
   "tr": "Informes de amenazas de OpenAI"
- },
- "e667cbf399595166": {
-  "fr": "54 articles, 1 432 commentaires",
-  "tr": "54 artículos, 1.432 comentarios"
  },
  "e69f20e9f683920d": {
   "fr": "F",
@@ -3862,10 +3886,6 @@
  "e8ccd96d8cab402e": {
   "fr": "Via des intermédiaires comme Poe, une conversation passe par au moins deux politiques de confidentialité [[s75]].",
   "tr": "A través de intermediarios como Poe, una conversación pasa por al menos dos políticas de privacidad [[s75]]."
- },
- "e8d7ad6038fbd137": {
-  "fr": "747 articles, 18 568 commentaires",
-  "tr": "747 artículos, 18 568 comentarios"
  },
  "e90189fa29dc159f": {
   "fr": "Selon Axios, le total des incidents examinés par OpenAI et Anthropic pourrait dépasser largement les dizaines de milliers. Ce décompte comprend des tentatives réussies et des tentatives échouées de contournement des garde-fous [[s136]].",
@@ -3942,10 +3962,6 @@
  "ec918d363a2ccff6": {
   "fr": "[ESA and Mistral strengthen cooperation on AI](https://news.ycombinator.com/item?id=49839390)",
   "tr": "[ESA and Mistral strengthen cooperation on AI](https://news.ycombinator.com/item?id=49839390)"
- },
- "ed26e0f320466bb2": {
-  "fr": "De quoi parlent les vidéos : part des vues par thème",
-  "tr": "De qué hablan los vídeos: proporción de visualizaciones por tema"
  },
  "ed8482036a357381": {
   "fr": "Réputés pour les tâches longues d'agent et le code [[s68]]",
@@ -4078,6 +4094,10 @@
  "f48b1162d489486f": {
   "fr": "Rien trouvé",
   "tr": "No se ha encontrado nada"
+ },
+ "f4b50cd78b1ad08d": {
+  "fr": "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 326 k vues (Two Minute Papers)",
+  "tr": "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 326 k visualizaciones (Two Minute Papers)"
  },
  "f4ba3ace9edac88a": {
   "fr": "Tableau : les lignes Anthropic et OpenAI mentionnent désormais les pauses d'entraînement [[s114]] [[s117]].",
@@ -4242,6 +4262,10 @@
  "fd89478ff248410a": {
   "fr": "Aucun de ces modèles n'apprend en continu. Leurs connaissances s'arrêtent à une date de coupure. Le « temps réel » désigne une recherche lancée au moment de la question, dont le résultat est inséré dans le contexte du modèle. La fraîcheur et la fiabilité dépendent donc de la source interrogée.",
   "tr": "Ninguno de estos modelos aprende de forma continua. Sus conocimientos se detienen en una fecha de corte. El «tiempo real» designa una búsqueda lanzada en el momento de la pregunta, cuyo resultado se inserta en el contexto del modelo. La actualidad y la fiabilidad dependen, por tanto, de la fuente consultada."
+ },
+ "fdbcd7f8eaa02473": {
+  "fr": "Chaque point est une vidéo du panel consacrée à l'IA, publiée cette semaine : date de publication en abscisse, vues en ordonnée (échelle logarithmique), couleur selon le thème. Un clic ouvre la vidéo.",
+  "tr": "Cada punto es un vídeo del panel dedicado a la IA, publicado esta semana: fecha de publicación en abscisas, visualizaciones en ordenadas (escala logarítmica), color según el tema. Un clic abre el vídeo."
  },
  "fdfbadcbf1d8d09f": {
   "fr": "UNESCO, Recommandation sur l'éthique de l'intelligence artificielle",
