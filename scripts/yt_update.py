@@ -118,11 +118,15 @@ def official(key, cfg, since30, notes):
         if not any(n in title.lower() for n in cfg["names"]) or subs < MIN_SUBS:
             notes.append(f"YouTube : {h} écarté pour {cfg['label']} (chaîne « {title[:40]} », {subs} abonnés).")
             continue
-        uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
-        pl = call("playlistItems", key, part="contentDetails", playlistId=uploads, maxResults=50)
-        ids = [it["contentDetails"]["videoId"] for it in pl.get("items", [])
-               if it["contentDetails"].get("videoPublishedAt", "") >= since30]
-        stats = video_stats(key, ids) if ids else {}
+        try:
+            uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+            pl = call("playlistItems", key, part="contentDetails", playlistId=uploads, maxResults=50)
+            ids = [it["contentDetails"]["videoId"] for it in pl.get("items", [])
+                   if it["contentDetails"].get("videoPublishedAt", "") >= since30]
+            stats = video_stats(key, ids) if ids else {}
+        except Exception as e:
+            notes.append(f"YouTube : vidéos de {h} illisibles ({str(e)[:80]}).")
+            stats = {}
         return {"handle": h, "title": title, "subs": subs,
                 "n30": len(stats), "views30": sum(v["views"] for v in stats.values())}
     return None
@@ -167,11 +171,16 @@ def collect_panel(key, panel, since7, notes):
             if not ch:
                 missing.append(h)
                 continue
-            uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
-            pl = call("playlistItems", key, part="contentDetails", playlistId=uploads, maxResults=50)
-            ids = [it["contentDetails"]["videoId"] for it in pl.get("items", [])
-                   if it["contentDetails"].get("videoPublishedAt", "") >= since7]
-            for vid, info in (video_stats(key, ids) if ids else {}).items():
+            try:
+                uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+                pl = call("playlistItems", key, part="contentDetails", playlistId=uploads, maxResults=50)
+                ids = [it["contentDetails"]["videoId"] for it in pl.get("items", [])
+                       if it["contentDetails"].get("videoPublishedAt", "") >= since7]
+                stats = video_stats(key, ids) if ids else {}
+            except Exception as e:
+                notes.append(f"YouTube, panel {h} ({ch['snippet']['title'][:30]}) ignorée : {str(e)[:80]}")
+                continue
+            for vid, info in stats.items():
                 if info["seconds"] >= 240 and not re.search(r"#shorts?\b", info["title"], re.I):
                     pool[vid] = dict(info, panel_lang=lang)
     if missing:
