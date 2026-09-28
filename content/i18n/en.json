@@ -71,6 +71,10 @@
   "fr": "GLM-5.3 (max)",
   "tr": "GLM-5.3 (max)"
  },
+ "052b16350a49bd21": {
+  "fr": "769 articles, 13 233 commentaires",
+  "tr": "769 articles, 13,233 comments"
+ },
  "055feaf31f6523df": {
   "fr": "0 incident sur 90 jours",
   "tr": "0 incidents over 90 days"
@@ -583,6 +587,10 @@
   "fr": "Risques et sécurité",
   "tr": "Risks and safety"
  },
+ "292344461436cfde": {
+  "fr": "50 incidents sur 68 jours, historique partiel",
+  "tr": "50 incidents over 68 days, partial history"
+ },
  "29c2ce0641945460": {
   "fr": "Aucune obligation de déclaration harmonisée n'existe ; la transparence varie d'un éditeur à l'autre.",
   "tr": "No harmonized reporting obligation exists; transparency varies from one vendor to another."
@@ -871,6 +879,10 @@
   "fr": "Pour aller plus loin : méthode de calcul",
   "tr": "To go further: calculation method"
  },
+ "3ed19dac9155e7eb": {
+  "fr": "745 articles, 18 559 commentaires",
+  "tr": "745 articles, 18,559 comments"
+ },
  "3f6e28e225ff38af": {
   "fr": "Data Gravity, les modèles ouverts chinois sur OpenRouter",
   "tr": "Data Gravity, Chinese open models on OpenRouter"
@@ -942,10 +954,6 @@
  "44d9b4d388e1bc43": {
   "fr": "La dépendance aux accords avec les agences de presse pose la question du pluralisme des sources.",
   "tr": "Reliance on agreements with news agencies raises the question of source pluralism."
- },
- "452f33341ac41761": {
-  "fr": "745 articles, 18 557 commentaires",
-  "tr": "745 articles, 18,557 comments"
  },
  "461d352615e628f0": {
   "fr": "Les textes publiés en ligne, y compris par des particuliers, entrent dans les corpus d'entraînement.",
@@ -1835,6 +1843,10 @@
   "fr": "Reuters Institute, Digital News Report",
   "tr": "Reuters Institute, Digital News Report"
  },
+ "7bf71f7e72267bce": {
+  "fr": "Mise en cause par un éditeur français pour plus de 200 ouvrages, sans action en justice trouvée [[s133]]",
+  "tr": "Implicated by a French publisher over more than 200 books, no legal action found [[s133]]"
+ },
  "7c4218f786870b2a": {
   "fr": "OpenAI publie GPT-5.4-Cyber puis GPT-5.5-Cyber, réservés à des partenaires agréés [[s14]]. Le Trésor américain et la Fed réunissent en urgence les patrons des grandes banques [[s17]].",
   "tr": "OpenAI releases GPT-5.4-Cyber then GPT-5.5-Cyber, reserved for approved partners [[s14]]. The US Treasury and the Fed urgently convene the heads of major banks [[s17]]."
@@ -2027,6 +2039,10 @@
   "fr": "Tableau : les lignes Meta et Mistral, jusqu'ici sans position, sont remplies avec les déclarations de Mark Zuckerberg et d'Arthur Mensch/Mistral. Ces sources datent des 15 à 24 septembre et comblent une lacune du dossier [[s118]] [[s119]] [[s120]].",
   "tr": "Table: the Meta and Mistral rows, previously without a position, are filled in with statements from Mark Zuckerberg and Arthur Mensch/Mistral. These sources date from 15 to 24 September and fill a gap in the dossier [[s118]] [[s119]] [[s120]]."
  },
+ "8774d4552d8c7be4": {
+  "fr": "Microsoft, Introducing the new Copilot with Home, Code and Autopilot (25 septembre 2026)",
+  "tr": "Microsoft, Introducing the new Copilot with Home, Code and Autopilot (September 25, 2026)"
+ },
  "87da014afaf760d8": {
   "fr": "Les écarts entre éditeurs sur ces principes éclairent les critères d'achat public et le suivi de l'AI Act.",
   "tr": "The gaps between publishers on these principles shed light on public procurement criteria and AI Act monitoring."
@@ -2214,6 +2230,10 @@
  "916a60b8615f4921": {
   "fr": "Pour aller plus loin : les nouveaux modèles hallucinent-ils moins ?",
   "tr": "To go further: do the new models hallucinate less?"
+ },
+ "917ac60426f7a28d": {
+  "fr": "AI Pricing Guru (source commerciale, liens d'affiliation), prix des abonnements ChatGPT (données du 27 septembre 2026)",
+  "tr": "AI Pricing Guru (commercial source, affiliate links), ChatGPT subscription prices (data from September 27, 2026)"
  },
  "924bc21fe5b8e0e8": {
   "fr": "Le critère juridique qui se dessine porte sur la provenance (licence, collecte sur le web ou piratage) plus que sur l'entraînement lui-même. Le montant payé par Anthropic reflète le premier jugement sur le fond ; les autres dossiers restent ouverts.",
@@ -2407,10 +2427,6 @@
   "fr": "Plainte déposée en 2026.",
   "tr": "Complaint filed in 2026."
  },
- "9f66d9c60ec99c0b": {
-  "fr": "769 articles, 13 229 commentaires",
-  "tr": "769 articles, 13,229 comments"
- },
  "9f82c226338db7f3": {
   "fr": "Les versions les plus récentes de DeepSeek utilisent la licence MIT ; Qwen publie certains modèles sous Apache 2.0 et d'autres sous licence propre [[s67]].",
   "tr": "The most recent versions of DeepSeek use the MIT license; Qwen releases some models under Apache 2.0 and others under its own license [[s67]]."
@@ -2514,6 +2530,10 @@
  "a60737ee7c28b3b7": {
   "fr": "Index Google",
   "tr": "Google Index"
+ },
+ "a61bf5f71aef8ca7": {
+  "fr": "OPB (dépêche Associated Press), Anthropic et OpenAI sonnent l'alarme sur la sécurité de l'IA et cherchent à peser sur son encadrement (28 septembre 2026)",
+  "tr": "OPB (Associated Press dispatch), Anthropic and OpenAI sound the alarm on AI safety and seek to influence its regulation (September 28, 2026)"
  },
  "a64ffd12fce827e1": {
   "fr": "L'écart entre la communication officielle d'un éditeur et l'attention qu'il obtient renseigne sur la force de sa marque.",
@@ -3006,6 +3026,10 @@
  "c1c0201437412e9f": {
   "fr": "Indice",
   "tr": "Index"
+ },
+ "c1d8342c0e4cdff6": {
+  "fr": "Clubic, Mistral AI accusée par un éditeur français d'avoir piraté une partie de son catalogue (2 février 2026)",
+  "tr": "Clubic, Mistral AI accused by a French publisher of having pirated part of its catalog (February 2, 2026)"
  },
  "c21dddb73952d782": {
   "fr": "ministral-3-14b-2512",
@@ -3631,10 +3655,6 @@
   "fr": "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)",
   "tr": "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)"
  },
- "e618b272e35bb6d5": {
-  "fr": "Aucun litige majeur trouvé",
-  "tr": "No major litigation found"
- },
  "e6484dae5e5edb77": {
   "fr": "Rapports de menace OpenAI",
   "tr": "OpenAI threat reports"
@@ -3670,6 +3690,10 @@
  "e8897acc9f7bda5b": {
   "fr": "Juridiction de l'éditeur",
   "tr": "Vendor's jurisdiction"
+ },
+ "e8b745c778225744": {
+  "fr": "BenchLM (source commerciale), tarifs de l'API DeepSeek, septembre 2026",
+  "tr": "BenchLM (commercial source), DeepSeek API pricing, September 2026"
  },
  "e8ccd96d8cab402e": {
   "fr": "Via des intermédiaires comme Poe, une conversation passe par au moins deux politiques de confidentialité [[s75]].",
@@ -3746,10 +3770,6 @@
  "ed26e0f320466bb2": {
   "fr": "De quoi parlent les vidéos : part des vues par thème",
   "tr": "What the videos are about: share of views by topic"
- },
- "ed561842766691a3": {
-  "fr": "50 incidents sur 67 jours, historique partiel",
-  "tr": "50 incidents over 67 days, partial history"
  },
  "ed8482036a357381": {
   "fr": "Réputés pour les tâches longues d'agent et le code [[s68]]",
@@ -3851,6 +3871,10 @@
   "fr": "Couverture et source",
   "tr": "Coverage and source"
  },
+ "f352d7d575552c0d": {
+  "fr": "Music Business Worldwide, les éditeurs musicaux déposent une plainte amendée contre Anthropic (23 juillet 2026)",
+  "tr": "Music Business Worldwide, music publishers file amended complaint against Anthropic (July 23, 2026)"
+ },
  "f3631fccd77db2f4": {
   "fr": "L'accès restreint aux modèles les plus capables concentre l'avantage défensif chez les organisations déjà les mieux équipées [[s17]].",
   "tr": "Restricted access to the most capable models concentrates the defensive advantage among organizations that are already best equipped [[s17]]."
@@ -3906,6 +3930,10 @@
  "f685a0845049a0ea": {
   "fr": "La Recommandation de l'UNESCO sur l'éthique de l'intelligence artificielle, adoptée en 2021 par les États membres, pose notamment les principes de sécurité, de vie privée, de transparence, de responsabilité, d'équité et de durabilité [[s99]].",
   "tr": "The UNESCO Recommendation on the Ethics of Artificial Intelligence, adopted in 2021 by member states, sets out in particular the principles of security, privacy, transparency, accountability, fairness and sustainability [[s99]]."
+ },
+ "f7069c10df51cf08": {
+  "fr": "News Entreprises (site d'actualité secondaire), plainte de Nouveau Monde Éditions contre Mistral AI (1er février 2026)",
+  "tr": "News Entreprises (secondary news site), Nouveau Monde Éditions lawsuit against Mistral AI (February 1, 2026)"
  },
  "f718a53a6fa9950e": {
   "fr": "Statistiques des procès sur les données d'entraînement 2026",

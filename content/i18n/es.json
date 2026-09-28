@@ -71,6 +71,10 @@
   "fr": "GLM-5.3 (max)",
   "tr": "GLM-5.3 (max)"
  },
+ "052b16350a49bd21": {
+  "fr": "769 articles, 13 233 commentaires",
+  "tr": "769 artículos, 13 233 comentarios"
+ },
  "055feaf31f6523df": {
   "fr": "0 incident sur 90 jours",
   "tr": "0 incidentes en 90 días"
@@ -583,6 +587,10 @@
   "fr": "Risques et sécurité",
   "tr": "Riesgos y seguridad"
  },
+ "292344461436cfde": {
+  "fr": "50 incidents sur 68 jours, historique partiel",
+  "tr": "50 incidentes en 68 días, historial parcial"
+ },
  "29c2ce0641945460": {
   "fr": "Aucune obligation de déclaration harmonisée n'existe ; la transparence varie d'un éditeur à l'autre.",
   "tr": "No existe ninguna obligación de notificación armonizada; la transparencia varía de un editor a otro."
@@ -871,6 +879,10 @@
   "fr": "Pour aller plus loin : méthode de calcul",
   "tr": "Para saber más: método de cálculo"
  },
+ "3ed19dac9155e7eb": {
+  "fr": "745 articles, 18 559 commentaires",
+  "tr": "745 artículos, 18 559 comentarios"
+ },
  "3f6e28e225ff38af": {
   "fr": "Data Gravity, les modèles ouverts chinois sur OpenRouter",
   "tr": "Data Gravity, los modelos abiertos chinos en OpenRouter"
@@ -942,10 +954,6 @@
  "44d9b4d388e1bc43": {
   "fr": "La dépendance aux accords avec les agences de presse pose la question du pluralisme des sources.",
   "tr": "La dependencia de los acuerdos con las agencias de prensa plantea la cuestión del pluralismo de las fuentes."
- },
- "452f33341ac41761": {
-  "fr": "745 articles, 18 557 commentaires",
-  "tr": "745 artículos, 18.557 comentarios"
  },
  "461d352615e628f0": {
   "fr": "Les textes publiés en ligne, y compris par des particuliers, entrent dans les corpus d'entraînement.",
@@ -1835,6 +1843,10 @@
   "fr": "Reuters Institute, Digital News Report",
   "tr": "Reuters Institute, Digital News Report"
  },
+ "7bf71f7e72267bce": {
+  "fr": "Mise en cause par un éditeur français pour plus de 200 ouvrages, sans action en justice trouvée [[s133]]",
+  "tr": "Denunciada por una editorial francesa por más de 200 obras, sin acción judicial encontrada [[s133]]"
+ },
  "7c4218f786870b2a": {
   "fr": "OpenAI publie GPT-5.4-Cyber puis GPT-5.5-Cyber, réservés à des partenaires agréés [[s14]]. Le Trésor américain et la Fed réunissent en urgence les patrons des grandes banques [[s17]].",
   "tr": "OpenAI publica GPT-5.4-Cyber y después GPT-5.5-Cyber, reservados a socios autorizados [[s14]]. El Tesoro estadounidense y la Fed reúnen con urgencia a los directivos de los grandes bancos [[s17]]."
@@ -2414,10 +2426,6 @@
  "9f401972566b0389": {
   "fr": "Plainte déposée en 2026.",
   "tr": "Denuncia presentada en 2026."
- },
- "9f66d9c60ec99c0b": {
-  "fr": "769 articles, 13 229 commentaires",
-  "tr": "769 artículos, 13 229 comentarios"
  },
  "9f82c226338db7f3": {
   "fr": "Les versions les plus récentes de DeepSeek utilisent la licence MIT ; Qwen publie certains modèles sous Apache 2.0 et d'autres sous licence propre [[s67]].",
@@ -3647,10 +3655,6 @@
   "fr": "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)",
   "tr": "[Meta takes down a critical video about meta AI Glasses after filming at Meta](https://news.ycombinator.com/item?id=49827794)"
  },
- "e618b272e35bb6d5": {
-  "fr": "Aucun litige majeur trouvé",
-  "tr": "No se ha encontrado ningún litigio importante"
- },
  "e6484dae5e5edb77": {
   "fr": "Rapports de menace OpenAI",
   "tr": "Informes de amenazas de OpenAI"
@@ -3766,10 +3770,6 @@
  "ed26e0f320466bb2": {
   "fr": "De quoi parlent les vidéos : part des vues par thème",
   "tr": "De qué hablan los vídeos: proporción de visualizaciones por tema"
- },
- "ed561842766691a3": {
-  "fr": "50 incidents sur 67 jours, historique partiel",
-  "tr": "50 incidentes en 67 días, historial parcial"
  },
  "ed8482036a357381": {
   "fr": "Réputés pour les tâches longues d'agent et le code [[s68]]",
