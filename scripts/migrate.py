@@ -4,9 +4,11 @@ Each migration adds structure to content/dossier.json without touching data alre
 and records its name in data["migrations"] so it never runs twice.
 """
 import json
+import sys
 from pathlib import Path
 
 CONTENT = Path(__file__).resolve().parent.parent / "content" / "dossier.json"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 
 def section(d, sid):
@@ -262,11 +264,42 @@ def m_2026_09_mistral_ethics(d):
                     row[-1] = "Mise en cause par un éditeur français pour plus de 200 ouvrages, sans action en justice trouvée [[s133]]"
 
 
+def m_2026_09_youtube_panel(d):
+    vid = section(d, "video")
+    if not vid:
+        return
+    import yt_update
+    for b in vid["blocks"]:
+        if b.get("auto") == "yt_chart":
+            b["title"] = "Vues des vidéos de la semaine citant l'assistant, panel de chaînes IA et tech, en millions"
+            b.setdefault("panel", yt_update.DEFAULT_PANEL)
+        if b.get("type") == "reading":
+            b["text"] = ("Ce graphique mesure l'attention que suscite chaque assistant auprès d'un panel de chaînes francophones et anglophones "
+                         "spécialisées, sans distinguer l'enthousiasme de la critique. Le panel reflète les créateurs qui façonnent le débat "
+                         "chez les lecteurs du site ; il ne mesure pas YouTube dans son ensemble.")
+        if b.get("type") == "details":
+            for x in b.get("blocks", []):
+                if x.get("auto") == "yt_table":
+                    x["headers"] = ["Assistant", "Chaîne officielle", "Abonnés", "Vidéos (30 jours)", "Vues de ces vidéos",
+                                    "Vidéo la plus vue du panel", "Vidéo la plus vue du panel dans la langue de cette page"]
+                if x.get("type") == "list":
+                    x["items"] = [
+                        "Le panel réunit des chaînes francophones et anglophones consacrées à l'IA et à la tech : vulgarisation, tests, code, entretiens. Sa composition est publique et ajustable.",
+                        "Sont retenues les vidéos de 4 minutes ou plus publiées dans la semaine dont le titre ou le début de la description mentionne l'assistant.",
+                        "Une chaîne officielle n'est retenue que si son nom correspond à l'éditeur et qu'elle dépasse 1 000 abonnés : certains identifiants évidents appartiennent à des tiers.",
+                        "Les vues des chaînes officielles incluent la promotion payante : une campagne publicitaire peut les multiplier sans refléter l'intérêt spontané.",
+                        "Une vidéo qui cite plusieurs assistants compte pour chacun d'eux.",
+                        "Conformément aux règles de l'API YouTube, ces données sont rafraîchies chaque semaine et ne sont pas conservées au-delà de 30 jours."]
+    d["changelog"].append({"date": "2026-09-28", "items": [
+        "YouTube : la mesure d'attention s'appuie désormais sur un panel public de chaînes francophones et anglophones spécialisées, au lieu de la recherche sur tout YouTube."]})
+
+
 MIGRATIONS = [("2026-09-history", m_2026_09_history), ("2026-09-wording", m_2026_09_wording),
               ("2026-09-scatter-lang", m_2026_09_scatter_lang),
               ("2026-09-ethics-topics", m_2026_09_ethics_topics),
               ("2026-09-risks", m_2026_09_risks),
-              ("2026-09-mistral-ethics", m_2026_09_mistral_ethics)]
+              ("2026-09-mistral-ethics", m_2026_09_mistral_ethics),
+              ("2026-09-youtube-panel", m_2026_09_youtube_panel)]
 
 
 def main():

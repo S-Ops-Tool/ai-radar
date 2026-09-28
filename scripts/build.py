@@ -22,7 +22,7 @@ BASE_URL = "https://s-ops-tool.github.io/ai-radar/"
 DEC = re.compile(r"(?<=\d),(?=\d)")
 SKIP_KEYS = {"id", "type", "auto", "vendor", "key", "url", "src", "date", "for", "name", "kind", "prefix",
              "src_ref", "handles", "names", "include", "exclude", "queries", "keywords", "updated", "display",
-             "model", "m", "textonly", "band", "migrations", "by_lang", "row_vendors", "x", "y", "vtitle", "vchannel", "cat", "views"}
+             "model", "m", "textonly", "band", "migrations", "by_lang", "row_vendors", "x", "y", "vtitle", "vchannel", "cat", "views", "panel"}
 
 
 UI_DEFAULTS = {"views": "vues", "no_video_lang": "Aucune vidéo de 4 minutes ou plus cette semaine", "in_english": ""}

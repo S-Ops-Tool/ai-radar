@@ -100,61 +100,56 @@ def video_stats(key, ids):
     return out
 
 
-def best_in_language(key, cfg, since7, lang):
-    """Most viewed video of the week, 4 minutes or more, whose declared language matches the page language."""
-    data = call("search", key, part="snippet", q=cfg["query"], type="video", order="viewCount",
-                publishedAfter=since7, relevanceLanguage=lang, maxResults=50)
-    inc, exc = re.compile(cfg["include"], re.I), re.compile(cfg["exclude"] + r"|#shorts?\b", re.I)
-    ids = [it["id"]["videoId"] for it in data.get("items", [])
-           if inc.search(it["snippet"]["title"]) and not exc.search(it["snippet"]["title"])]
-    stats = video_stats(key, ids) if ids else {}
-    ok = [(vid, v) for vid, v in stats.items() if v["lang"].startswith(lang) and v["seconds"] >= 240]
-    if not ok:
-        return None
-    vid, v = max(ok, key=lambda kv: kv[1]["views"])
-    return {"title": v["title"][:90], "url": WATCH.format(vid), "views": v["views"], "channel": v["channel"][:30]}
+DEFAULT_PANEL = {
+    "fr": ["@Underscore_", "@Micode", "@ScienceEtonnante", "@MonsieurPhi", "@DefendIntelligence", "@BenjaminCode",
+           "@Grafikart", "@HugoDecrypte", "@monsieurbidouille"],
+    "en": ["@TwoMinutePapers", "@mreflow", "@aiexplained-official", "@matthew_berman", "@WesRoth", "@DavidOndrej",
+           "@ColeMedin", "@Fireship", "@TheAIGRID", "@bycloudAI", "@IndyDevDan", "@samwitteveenai", "@YannicKilcher",
+           "@lexfridman", "@DwarkeshPatel", "@ycombinator", "@mkbhd", "@TheVerge"],
+}
 
 
-MIN_SUBS = 1000
+def collect_panel(key, panel, since7, notes):
+    """Latest uploads of the panel channels (about 3 quota units per channel, no search)."""
+    pool, missing = {}, []
+    for lang, handles in panel.items():
+        for h in handles:
+            try:
+                items = call("channels", key, part="contentDetails,snippet", forHandle=h).get("items") or []
+            except Exception as e:
+                notes.append(f"YouTube, panel {h} : {e}")
+                continue
+            if not items:
+                missing.append(h)
+                continue
+            uploads = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+            pl = call("playlistItems", key, part="contentDetails", playlistId=uploads, maxResults=50)
+            ids = [it["contentDetails"]["videoId"] for it in pl.get("items", [])
+                   if it["contentDetails"].get("videoPublishedAt", "") >= since7]
+            for vid, info in (video_stats(key, ids) if ids else {}).items():
+                if info["seconds"] >= 240 and not re.search(r"#shorts?\b", info["title"], re.I):
+                    pool[vid] = dict(info, panel_lang=lang)
+    if missing:
+        notes.append("YouTube, chaînes du panel introuvables (identifiant à corriger) : " + ", ".join(missing) + ".")
+    n = sum(len(v) for v in panel.values())
+    notes.append(f"YouTube, panel : {len(pool)} vidéos de 4 minutes ou plus publiées cette semaine par {n - len(missing)} chaînes sur {n}.")
+    return pool
 
 
-def official(key, cfg, since30, notes):
-    for h in cfg["handles"]:
-        try:
-            data = call("channels", key, part="snippet,statistics,contentDetails", forHandle=h)
-        except Exception:
-            continue
-        items = data.get("items") or []
-        if not items:
-            continue
-        ch = items[0]
-        title = ch["snippet"]["title"]
-        subs = int(ch["statistics"].get("subscriberCount", 0))
-        if not any(n in title.lower() for n in cfg["names"]) or subs < MIN_SUBS:
-            notes.append(f"YouTube : {h} écarté pour {cfg['label']} (chaîne « {title[:40]} », {subs} abonnés).")
-            continue
-        uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
-        pl = call("playlistItems", key, part="contentDetails", playlistId=uploads, maxResults=50)
-        ids = [it["contentDetails"]["videoId"] for it in pl.get("items", [])
-               if it["contentDetails"].get("videoPublishedAt", "") >= since30]
-        stats = video_stats(key, ids) if ids else {}
-        return {"handle": h, "title": title, "subs": subs,
-                "n30": len(stats), "views30": sum(v["views"] for v in stats.values())}
-    return None
-
-
-def attention(key, cfg, since7):
-    """Videos of 4 minutes or more (medium and long), to leave out viral shorts and edits."""
-    inc, exc = re.compile(cfg["include"], re.I), re.compile(cfg["exclude"] + r"|#shorts?\b", re.I)
-    ids = set()
-    for duration in ("medium", "long"):
-        data = call("search", key, part="snippet", q=cfg["query"], type="video", order="viewCount",
-                    publishedAfter=since7, videoDuration=duration, maxResults=50)
-        ids |= {it["id"]["videoId"] for it in data.get("items", [])
-                if inc.search(it["snippet"]["title"]) and not exc.search(it["snippet"]["title"])}
-    stats = video_stats(key, sorted(ids)) if ids else {}
-    top = sorted(stats.items(), key=lambda kv: -kv[1]["views"])[:25]
-    return {"views": sum(v["views"] for _, v in top), "n": len(top), "best": top[0] if top else None, "top": top}
+def attention(cfg, pool):
+    inc, exc = re.compile(cfg["include"], re.I), re.compile(cfg["exclude"], re.I)
+    matched = [(vid, v) for vid, v in pool.items()
+               if (inc.search(v["title"]) or inc.search(v.get("description", "")[:120])) and not exc.search(v["title"])]
+    top = sorted(matched, key=lambda kv: -kv[1]["views"])[:25]
+    by_lang = {}
+    for lang in LANGS:
+        cand = [(vid, v) for vid, v in matched if v["panel_lang"] == lang]
+        if cand:
+            vid, v = max(cand, key=lambda kv: kv[1]["views"])
+            by_lang[lang] = {"title": v["title"][:90], "url": WATCH.format(vid), "views": v["views"], "channel": v["channel"][:30]}
+        else:
+            by_lang[lang] = None
+    return {"views": sum(v["views"] for _, v in top), "n": len(top), "best": top[0] if top else None, "top": top}, by_lang
 
 
 CATEGORIES = [
@@ -213,6 +208,11 @@ def update_youtube(blocks, state, notes):
             return
     since30 = (now - dt.timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
     since7 = (now - dt.timedelta(days=7)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    panel = DEFAULT_PANEL
+    for b in blocks:
+        if b.get("auto") == "yt_chart" and b.get("panel"):
+            panel = b["panel"]
+    pool = collect_panel(key, panel, since7, notes)
     res = {}
     for vid, cfg in VENDORS.items():
         r = {"off": None, "att": None}
@@ -222,20 +222,10 @@ def update_youtube(blocks, state, notes):
                 notes.append(f"YouTube : aucune chaîne officielle trouvée pour {cfg['label']} ({', '.join(cfg['handles'])}).")
         except Exception as e:
             notes.append(f"YouTube, chaîne {cfg['label']} : {e}")
-        try:
-            r["att"] = attention(key, cfg, since7)
-        except Exception as e:
-            notes.append(f"YouTube, recherche {cfg['label']} : {e}")
-        r["by_lang"] = {}
-        for lang in LANGS:
-            try:
-                r["by_lang"][lang] = best_in_language(key, cfg, since7, lang)
-            except Exception as e:
-                notes.append(f"YouTube, recherche {cfg['label']} en {lang} : {e}")
+        r["att"], r["by_lang"] = attention(cfg, pool)
         res[vid] = r
-    ok_vendors = sum(1 for r in res.values() if r.get("att"))
-    if ok_vendors < len(res) / 2:
-        notes.append(f"YouTube : seules {ok_vendors} recherches sur {len(res)} ont abouti ; les chiffres précédents sont conservés.")
+    if not pool:
+        notes.append("YouTube : aucune vidéo récupérée dans le panel ; les chiffres précédents sont conservés.")
         return
     if any("429" in n or "quota" in n.lower() for n in notes):
         notes.append("YouTube : relevé incomplet (quota épuisé ou requêtes freinées malgré les nouvelles tentatives) ; les chiffres précédents sont conservés.")
@@ -269,17 +259,17 @@ def update_youtube(blocks, state, notes):
     for b in walk(blocks):
         if b.get("auto") == "yt_chart":
             bars = [{"label": VENDORS[v]["label"],
-                     "sublabel": f"{r['att']['n']} vidéos retenues",
+                     "sublabel": f"{r['att']['n']} vidéo{'s' if r['att']['n'] > 1 else ''} du panel",
                      "value": round(r["att"]["views"] / 1e6, 2), "display": short(r["att"]["views"]), "vendor": v}
-                    for v, r in ranked if r["att"]]
+                    for v, r in ranked if r["att"] and r["att"]["n"]]
             b["bars"] = bars
             top = max([x["value"] for x in bars] + [0.1])
             step = next(s for s in (0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100, 200, 500) if s * 5 >= top)
             b["max"] = step * 5
             b["ticks"] = [round(i * step, 1) for i in range(6)]
             b["caption"] = (f"Vues cumulées, au {now.day}/{now.month}/{now.year}, des vidéos publiées dans les 7 derniers jours dont le titre "
-                            "mentionne l'assistant, d'une durée de 4 minutes ou plus, tous créateurs et toutes langues confondus (jusqu'à 25 vidéos parmi les plus vues), en millions [[s95]]. "
-                            "Les formats courts (Shorts, montages viraux) sont exclus : ils citent souvent un assistant sans en parler. "
+                            "mentionne l'assistant, d'une durée de 4 minutes ou plus, publiées par un panel de chaînes francophones et anglophones "
+                            "consacrées à l'IA et à la tech, en millions [[s95]]. Le panel est défini dans le dossier et ajustable. "
                             "Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.")
         if b.get("auto") == "yt_topics":
             b["categories"] = [{"id": c[0], "label": c[1]} for c in CATEGORIES]
@@ -296,7 +286,7 @@ def update_youtube(blocks, state, notes):
                     rows.append({"vendor": v, "label": VENDORS[v]["label"],
                                  "shares": {c: round(x / s_ * 100, 1) for c, x in tot.items()}})
             b["rows"] = rows
-            b["caption"] = (f"Répartition des vues des vidéos retenues cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; "
+            b["caption"] = (f"Répartition des vues des vidéos du panel publiées cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; "
                             f"relevé du {now.day}/{now.month}/{now.year} [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début "
                             "de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu.")
         if b.get("auto") == "yt_scatter":
