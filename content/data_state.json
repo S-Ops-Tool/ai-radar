@@ -862,16 +862,16 @@
     },
     "2026-09-28": {
       "claude": {
-        "n": 768,
+        "n": 769,
         "notable": 61,
-        "comments": 13295,
-        "points": 19433
+        "comments": 13320,
+        "points": 19460
       },
       "gpt": {
-        "n": 746,
+        "n": 747,
         "notable": 81,
-        "comments": 18566,
-        "points": 29372
+        "comments": 18568,
+        "points": 29381
       },
       "gemini": {
         "n": 75,
@@ -993,6 +993,38 @@
       },
       "mistral": {
         "views7": null,
+        "subs": 16500,
+        "n30": 2
+      }
+    },
+    "2026-09-28": {
+      "claude": {
+        "views7": 839727,
+        "subs": 807000,
+        "n30": 3
+      },
+      "gpt": {
+        "views7": 3860592,
+        "subs": 2070000,
+        "n30": 50
+      },
+      "gemini": {
+        "views7": 78818,
+        "subs": 23900,
+        "n30": 19
+      },
+      "grok": {
+        "views7": 119792,
+        "subs": 20900,
+        "n30": 2
+      },
+      "meta": {
+        "views7": 0,
+        "subs": 39800,
+        "n30": 0
+      },
+      "mistral": {
+        "views7": 0,
         "subs": 16500,
         "n30": 2
       }
@@ -1798,5 +1830,6 @@
     "fe56d10de4af4b6bd9055fb3553486e162865a63",
     "fe944bacd6a243d0a1542d8b3ab35e3fe818412f",
     "ff0077f9daf06f7ed2520abf5a36584c1d6d86d5"
-  ]
+  ],
+  "youtube_last_run": "2026-09-28T10:31:43.339872+00:00"
 }

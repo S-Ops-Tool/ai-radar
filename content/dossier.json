@@ -549,14 +549,14 @@
           "bars": [
             {
               "label": "ChatGPT",
-              "sublabel": "746 articles, 18 566 commentaires",
+              "sublabel": "747 articles, 18 568 commentaires",
               "value": 81,
               "display": "81",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
-              "sublabel": "768 articles, 13 295 commentaires",
+              "sublabel": "769 articles, 13 320 commentaires",
               "value": 61,
               "display": "61",
               "vendor": "claude"
@@ -963,21 +963,35 @@
           ],
           "bars": [
             {
+              "label": "ChatGPT",
+              "sublabel": "7 vidéos du panel",
+              "value": 3.86,
+              "display": "3,9 M",
+              "vendor": "gpt"
+            },
+            {
               "label": "Claude",
-              "sublabel": "25 vidéos retenues",
-              "value": 4.72,
-              "display": "4,7 M",
+              "sublabel": "5 vidéos du panel",
+              "value": 0.84,
+              "display": "840 k",
               "vendor": "claude"
             },
             {
               "label": "Grok",
-              "sublabel": "25 vidéos retenues",
-              "value": 1.92,
-              "display": "1,9 M",
+              "sublabel": "2 vidéos du panel",
+              "value": 0.12,
+              "display": "120 k",
               "vendor": "grok"
+            },
+            {
+              "label": "Gemini",
+              "sublabel": "2 vidéos du panel",
+              "value": 0.08,
+              "display": "79 k",
+              "vendor": "gemini"
             }
           ],
-          "caption": "Vues cumulées, au 27/9/2026, des vidéos publiées dans les 7 derniers jours dont le titre mentionne l'assistant, d'une durée de 4 minutes ou plus, tous créateurs et toutes langues confondus (jusqu'à 25 vidéos parmi les plus vues), en millions [[s95]]. Les formats courts (Shorts, montages viraux) sont exclus : ils citent souvent un assistant sans en parler. Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.",
+          "caption": "Vues cumulées, au 28/9/2026, des vidéos publiées dans les 7 derniers jours dont le titre mentionne l'assistant, d'une durée de 4 minutes ou plus, publiées par un panel de chaînes francophones et anglophones consacrées à l'IA et à la tech, en millions [[s95]]. Le panel est défini dans le dossier et ajustable. Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.",
           "panel": {
             "fr": [
               "UC0NCbj8CxzeCGIF6sODJ-7A",
@@ -1031,26 +1045,33 @@
           "title": "De quoi parlent les vidéos : part des vues par thème",
           "rows": [
             {
+              "vendor": "gpt",
+              "label": "ChatGPT",
+              "shares": {
+                "news": 96.4,
+                "risk": 3.6
+              }
+            },
+            {
               "vendor": "claude",
               "label": "Claude",
               "shares": {
-                "news": 49.7,
-                "tutorial": 21.3,
-                "test": 11.2,
-                "code": 9.4,
-                "culture": 3.1,
-                "risk": 2.9,
-                "business": 2.4
+                "news": 95.7,
+                "code": 4.3
               }
             },
             {
               "vendor": "grok",
               "label": "Grok",
               "shares": {
-                "news": 21.9,
-                "culture": 51.5,
-                "test": 24.9,
-                "tutorial": 1.6
+                "news": 100.0
+              }
+            },
+            {
+              "vendor": "gemini",
+              "label": "Gemini",
+              "shares": {
+                "news": 100.0
               }
             }
           ],
@@ -1088,7 +1109,7 @@
               "label": "Divertissement et culture"
             }
           ],
-          "caption": "Répartition des vues des vidéos retenues cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; relevé du 27/9/2026 [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu."
+          "caption": "Répartition des vues des vidéos du panel publiées cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; relevé du 28/9/2026 [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu."
         },
         {
           "type": "details",
@@ -1100,26 +1121,71 @@
               "title": "Vidéos de la semaine citant un assistant, par thème",
               "points": [
                 {
-                  "x": "2026-09-24",
-                  "views": 654701,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "Claude Opus 5.5 is ridiculous",
-                  "url": "https://www.youtube.com/watch?v=gX0L0aFA2xg",
-                  "vchannel": "AI Search"
-                },
-                {
                   "x": "2026-09-21",
-                  "views": 649862,
-                  "cat": "tutorial",
-                  "vendor": "claude",
-                  "vtitle": "Jev will 10x your Claude Code (Here's How)",
-                  "url": "https://www.youtube.com/watch?v=tTnUcSj-QPA",
-                  "vchannel": "Jay E | RoboNuggets"
+                  "views": 2788677,
+                  "cat": "news",
+                  "vendor": "gpt",
+                  "vtitle": "An ex-OpenAI researcher just deleted language from the LLM...",
+                  "url": "https://www.youtube.com/watch?v=TbkUKCm3CHQ",
+                  "vchannel": "Fireship"
                 },
                 {
                   "x": "2026-09-24",
-                  "views": 315739,
+                  "views": 403152,
+                  "cat": "news",
+                  "vendor": "gpt",
+                  "vtitle": "OpenAI pirate un gouvernement, Trump refuse de ralentir",
+                  "url": "https://www.youtube.com/watch?v=XSwkfJcMjCg",
+                  "vchannel": "HugoDécrypte - Actus du jour"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 213829,
+                  "cat": "news",
+                  "vendor": "gpt",
+                  "vtitle": "Claude Opus 5.5 Didn’t Need to Go This Hard",
+                  "url": "https://www.youtube.com/watch?v=0t-eWrGFZyA",
+                  "vchannel": "Matt Wolfe"
+                },
+                {
+                  "x": "2026-09-26",
+                  "views": 158578,
+                  "cat": "news",
+                  "vendor": "gpt",
+                  "vtitle": "AI News: Opus 5.5, GPT-6 Sol, Jev, Muse and More!",
+                  "url": "https://www.youtube.com/watch?v=aDpIra7NFuE",
+                  "vchannel": "Matt Wolfe"
+                },
+                {
+                  "x": "2026-09-26",
+                  "views": 139754,
+                  "cat": "risk",
+                  "vendor": "gpt",
+                  "vtitle": "OpenAI paused all training runs... ALIGNMENT FAILURE",
+                  "url": "https://www.youtube.com/watch?v=V3KeMw2nIDA",
+                  "vchannel": "Wes Roth"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 95858,
+                  "cat": "news",
+                  "vendor": "gpt",
+                  "vtitle": "GPT-6 SOL AND LUNA ARE OUT!!!",
+                  "url": "https://www.youtube.com/watch?v=5MFORiebZks",
+                  "vchannel": "Matthew Berman"
+                },
+                {
+                  "x": "2026-09-23",
+                  "views": 60744,
+                  "cat": "news",
+                  "vendor": "gpt",
+                  "vtitle": "GPT-6 Sol and Luna Are HERE!",
+                  "url": "https://www.youtube.com/watch?v=Ima_AVPyQ9E",
+                  "vchannel": "Matthew Berman"
+                },
+                {
+                  "x": "2026-09-24",
+                  "views": 324895,
                   "cat": "news",
                   "vendor": "claude",
                   "vtitle": "Claude Opus 5.5 AI: An Incredible Leap Forward",
@@ -1128,25 +1194,7 @@
                 },
                 {
                   "x": "2026-09-24",
-                  "views": 300405,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "CLAUDE OPUS 5.5 es TODA UNA REVOLUCIÓN AUDIOVISUAL (...sorry Astra)",
-                  "url": "https://www.youtube.com/watch?v=j906Pf7n7Sg",
-                  "vchannel": "Dot CSV Lab "
-                },
-                {
-                  "x": "2026-09-24",
-                  "views": 222154,
-                  "cat": "test",
-                  "vendor": "claude",
-                  "vtitle": "AI Video Is Having Its Claude Code Moment - Flova AI Review",
-                  "url": "https://www.youtube.com/watch?v=mo4m3-aDnFI",
-                  "vchannel": "Shark Numbers"
-                },
-                {
-                  "x": "2026-09-24",
-                  "views": 217488,
+                  "views": 233685,
                   "cat": "news",
                   "vendor": "claude",
                   "vtitle": "Claude JUST found hidden DNA...",
@@ -1154,400 +1202,67 @@
                   "vchannel": "Wes Roth"
                 },
                 {
-                  "x": "2026-09-24",
-                  "views": 201231,
+                  "x": "2026-09-22",
+                  "views": 213829,
                   "cat": "news",
                   "vendor": "claude",
-                  "vtitle": "Anthropic says Claude discovered new gene-editing tool as debate over AI in healthcare gro",
-                  "url": "https://www.youtube.com/watch?v=3rKPF3EaK5Q",
-                  "vchannel": "CBS News"
+                  "vtitle": "Claude Opus 5.5 Didn’t Need to Go This Hard",
+                  "url": "https://www.youtube.com/watch?v=0t-eWrGFZyA",
+                  "vchannel": "Matt Wolfe"
                 },
                 {
                   "x": "2026-09-21",
-                  "views": 177717,
+                  "views": 36064,
                   "cat": "code",
                   "vendor": "claude",
-                  "vtitle": "Claude Certified Developer Foundations (CCDV-F) Certification Course",
-                  "url": "https://www.youtube.com/watch?v=C_1QKZAcJjk",
-                  "vchannel": "freeCodeCamp.org"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 174333,
-                  "cat": "code",
-                  "vendor": "claude",
-                  "vtitle": "Making a Open World RPG w/ Claude Opus 5.5 [1]",
-                  "url": "https://www.youtube.com/watch?v=bm67BRQHn_I",
-                  "vchannel": "tef"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 153384,
-                  "cat": "tutorial",
-                  "vendor": "claude",
-                  "vtitle": "Así conseguí CLAUDE GRATIS + ILIMITADO",
-                  "url": "https://www.youtube.com/watch?v=dKCifr4f6u8",
-                  "vchannel": "💀 SALVAJE 💀"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 145016,
-                  "cat": "culture",
-                  "vendor": "claude",
-                  "vtitle": "What Happens When AI Runs Society? (ChatGPT vs. Claude vs. Grok) | Jimmy Carr",
-                  "url": "https://www.youtube.com/watch?v=HvocOHg3WaY",
-                  "vchannel": "What Now? with Trevor Noah"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 136521,
-                  "cat": "risk",
-                  "vendor": "claude",
-                  "vtitle": "How 3 Indian Researchers Used Claude To Breach OpenAI & Win $6,500 Bug Bounty | FP Explain",
-                  "url": "https://www.youtube.com/watch?v=Ccrz7LNjHGk",
-                  "vchannel": "Firstpost"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 135641,
-                  "cat": "test",
-                  "vendor": "claude",
-                  "vtitle": "Claude Opus 5.5 Is INSANE – Hands-On With the BEST Model Yet!",
-                  "url": "https://www.youtube.com/watch?v=ux6Lafw7en0",
-                  "vchannel": "Bijan Bowen"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 133670,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "Vibe Coding With Claude Opus 5.5 AND GPT 6 Sol",
-                  "url": "https://www.youtube.com/watch?v=80EHH-kaa8g",
-                  "vchannel": "BridgeMind"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 132279,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "Claude Opus 5.5 Is Insane… But Muse is EVEN Bigger",
-                  "url": "https://www.youtube.com/watch?v=_NRuT_d1PZE",
-                  "vchannel": "Riley Brown"
+                  "vtitle": "Self-Compact Pi Agent: ZERO HYPE Agentic Coding Devlog",
+                  "url": "https://www.youtube.com/watch?v=3b0U4_02bAE",
+                  "vchannel": "IndyDevDan"
                 },
                 {
                   "x": "2026-09-24",
-                  "views": 114193,
-                  "cat": "business",
+                  "views": 31254,
+                  "cat": "news",
                   "vendor": "claude",
-                  "vtitle": "How I'd Replace My 9–5 Income With Claude AI (Realistic 90-Day Plan)",
-                  "url": "https://www.youtube.com/watch?v=f2YdbWKXdMs",
-                  "vchannel": "Shane Hummus"
+                  "vtitle": "Claude Opus 5.5 Just Did Something That Looks Like AGI",
+                  "url": "https://www.youtube.com/watch?v=ky_T22Lw5rM",
+                  "vchannel": "TheAIGRID"
                 },
                 {
                   "x": "2026-09-22",
-                  "views": 113361,
+                  "views": 95223,
                   "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "Opus 5.5 Is Here - Claude Is So Back!",
-                  "url": "https://www.youtube.com/watch?v=xY5E1AY4hJA",
-                  "vchannel": "Paul J Lipsky"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 102449,
-                  "cat": "tutorial",
-                  "vendor": "claude",
-                  "vtitle": "This NEW Jev + Claude OS Just Changed Every AI Workflow",
-                  "url": "https://www.youtube.com/watch?v=EOdXR6lU5ZA",
-                  "vchannel": "Chase AI"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 102134,
-                  "cat": "tutorial",
-                  "vendor": "claude",
-                  "vtitle": "JEV vai melhorar seu Claude Code em 10x (Veja como)",
-                  "url": "https://www.youtube.com/watch?v=hp6kG1bLMc4",
-                  "vchannel": "Rafa Voss | IA na Prática"
-                },
-                {
-                  "x": "2026-09-21",
-                  "views": 100292,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "NEW Claude Projects Changes Everything (with Opus 5.5)",
-                  "url": "https://www.youtube.com/watch?v=NDTbUObZTlM",
-                  "vchannel": "Riley Brown"
-                },
-                {
-                  "x": "2026-09-24",
-                  "views": 92967,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "HUGE GPT-6 Astra Minor LEAK, Claude HUGE Discovery, Mimo V3.0, Sonnet 5.5, & Muse Spark 1.",
-                  "url": "https://www.youtube.com/watch?v=zPbbOaX5yJ8",
-                  "vchannel": "WorldofAI"
-                },
-                {
-                  "x": "2026-09-20",
-                  "views": 91307,
-                  "cat": "code",
-                  "vendor": "claude",
-                  "vtitle": "Claude Code: The Complete AI-Native SDLC Guide",
-                  "url": "https://www.youtube.com/watch?v=6CaQ9ZFuuKI",
-                  "vchannel": "Eric Tech"
-                },
-                {
-                  "x": "2026-09-23",
-                  "views": 86554,
-                  "cat": "test",
-                  "vendor": "claude",
-                  "vtitle": "I Tested Mammouth - GPT, Claude, Gemini & More AI Models in One Place",
-                  "url": "https://www.youtube.com/watch?v=wblqvQ2O5Ms",
-                  "vchannel": "BMF MEDIA"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 85867,
-                  "cat": "test",
-                  "vendor": "claude",
-                  "vtitle": "Claude Opus 5.5 IS THE Greatest AI Model EVER! Cheaper, Fast, & Powerful! (FULLY TESTED)",
-                  "url": "https://www.youtube.com/watch?v=rFCaGc7owT8",
-                  "vchannel": "WorldofAI"
-                },
-                {
-                  "x": "2026-09-21",
-                  "views": 85467,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "Claude Limits Got Brutal. Here's Where to Take Your $200",
-                  "url": "https://www.youtube.com/watch?v=KaA6yipX_kU",
-                  "vchannel": "Devsplainers"
-                },
-                {
-                  "x": "2026-09-27",
-                  "views": 261261,
-                  "cat": "news",
-                  "vendor": "grok",
-                  "vtitle": "Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI NEWS",
-                  "url": "https://www.youtube.com/watch?v=nX0fgBL3sIM",
-                  "vchannel": "AI Search"
-                },
-                {
-                  "x": "2026-09-21",
-                  "views": 155314,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Учёные Спросили Grok AI Как Египтяне Резали Гранит — Ответ ШОКИРОВАЛ Всех",
-                  "url": "https://www.youtube.com/watch?v=rC7rvBCLnEk",
-                  "vchannel": "Искатели Скрытой Правды"
-                },
-                {
-                  "x": "2026-09-23",
-                  "views": 153791,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Elon Musk's Grok AI Analyzed Jesus' Resurrection in the Ethiopian Bible — The Answer Was C",
-                  "url": "https://www.youtube.com/watch?v=sY5Y0Qf-fkg",
-                  "vchannel": "Curious Explorer"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 150817,
-                  "cat": "test",
-                  "vendor": "grok",
-                  "vtitle": "Grok Bot just launched in Tesla. I'm blown away",
-                  "url": "https://www.youtube.com/watch?v=PH1EVP5rOKA",
-                  "vchannel": "Alex Finn"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 145016,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "What Happens When AI Runs Society? (ChatGPT vs. Claude vs. Grok) | Jimmy Carr",
-                  "url": "https://www.youtube.com/watch?v=HvocOHg3WaY",
-                  "vchannel": "What Now? with Trevor Noah"
-                },
-                {
-                  "x": "2026-09-26",
-                  "views": 121918,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Grok AI Was Asked Who Built the Sphinx — Its Answer Astonished Egyptologists",
-                  "url": "https://www.youtube.com/watch?v=BrNIHIEyWXw",
-                  "vchannel": "Ambrose Discovery"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 94701,
-                  "cat": "test",
                   "vendor": "grok",
                   "vtitle": "Did Elon catch up? (Grok 4.7 is here)",
                   "url": "https://www.youtube.com/watch?v=MJllZbpvrAc",
                   "vchannel": "Matthew Berman"
                 },
                 {
-                  "x": "2026-09-26",
-                  "views": 93575,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Le Preguntaron a Grok AI Quién Construyó la Esfinge — Su Respuesta Dejó Atónitos a los Cie",
-                  "url": "https://www.youtube.com/watch?v=OLNd9HiMz6E",
-                  "vchannel": "Mind of a Ruler"
-                },
-                {
                   "x": "2026-09-22",
-                  "views": 92400,
-                  "cat": "test",
-                  "vendor": "grok",
-                  "vtitle": "Grok 4.7 inside Grok Bot is INCREDIBLE",
-                  "url": "https://www.youtube.com/watch?v=ajuOF7vclCM",
-                  "vchannel": "Alex Finn"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 76494,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Expertos Preguntaron a Grok AI Sobre Jesús — Su Respuesta Sorprendió a Todos",
-                  "url": "https://www.youtube.com/watch?v=nZuyceH0_z8",
-                  "vchannel": "Abiertamente"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 57889,
-                  "cat": "test",
-                  "vendor": "grok",
-                  "vtitle": "You Can Now Control Grok Bot from your Tesla!",
-                  "url": "https://www.youtube.com/watch?v=8ZG_6OwHh6w",
-                  "vchannel": "ChrisBTech"
-                },
-                {
-                  "x": "2026-09-21",
-                  "views": 54857,
-                  "cat": "test",
-                  "vendor": "grok",
-                  "vtitle": "Grok 4.7 Is HERE – Is THIS the CHEAPEST Frontier Model?",
-                  "url": "https://www.youtube.com/watch?v=HAi7twQBKlY",
-                  "vchannel": "Bijan Bowen"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 54239,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Grok AI Was Asked Who Built the Sphinx - The Answer Stunned Everyone",
-                  "url": "https://www.youtube.com/watch?v=8xl_yRR5DjI",
-                  "vchannel": "Beyond Polaris"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 47786,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Grok AI Was Asked Why Christianity Survived for 2000 Years —The Truth It Admitted Stunned ",
-                  "url": "https://www.youtube.com/watch?v=bR-liQbKaSg",
-                  "vchannel": "Curious Explorer"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 44159,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Tesla Cybercab Gets a Flat Tire, and Grok Builds FSD!",
-                  "url": "https://www.youtube.com/watch?v=HKJFKXJcK4k",
-                  "vchannel": "Dirty Tesla"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 43646,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "A Scientist Asked Elon Musk’s Grok AI About Jesus… What It Said Changes Everything!",
-                  "url": "https://www.youtube.com/watch?v=QWnSI_cTs0k",
-                  "vchannel": "The Mind"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 37569,
+                  "views": 24569,
                   "cat": "news",
                   "vendor": "grok",
-                  "vtitle": "O Grok 4.7 Mostrou Por Que a Corrida da IA Saiu do Controle",
-                  "url": "https://www.youtube.com/watch?v=xhcfSzkZYxc",
-                  "vchannel": "Paula Bernardes"
+                  "vtitle": "Elon Musk Just Released Grok 4.7 — And It’s NOT What We Expected",
+                  "url": "https://www.youtube.com/watch?v=wB5eMyhFfRQ",
+                  "vchannel": "TheAIGRID"
                 },
                 {
-                  "x": "2026-09-22",
-                  "views": 32112,
+                  "x": "2026-09-24",
+                  "views": 70589,
                   "cat": "news",
-                  "vendor": "grok",
-                  "vtitle": "OpenAI's GPT Bel Is Unstoppable But Grok 4.7 Is Something Else",
-                  "url": "https://www.youtube.com/watch?v=ZoGHD-pe5D8",
-                  "vchannel": "Universe of AI"
-                },
-                {
-                  "x": "2026-09-25",
-                  "views": 31825,
-                  "cat": "news",
-                  "vendor": "grok",
-                  "vtitle": "AI Price War EXPLODES: Claude Opus 5.5 vs GPT-6 vs Grok 4.7",
-                  "url": "https://www.youtube.com/watch?v=PlioCBBcJow",
-                  "vchannel": "Ben Bradshaw"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 31606,
-                  "cat": "tutorial",
-                  "vendor": "grok",
-                  "vtitle": "Comment utiliser TOUTES les IA payantes GRATUITEMENT (GPT-5, Claude, Gemini, Grok, Veo 3)",
-                  "url": "https://www.youtube.com/watch?v=ZaeXbwdc49o",
-                  "vchannel": "Jospin Non Code IA"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 29075,
-                  "cat": "news",
-                  "vendor": "grok",
-                  "vtitle": "Grok 4.7 System Card + Jev: 13 Things xAI and TypeSafe Actually Wrote Down (Vaundros Newsr",
-                  "url": "https://www.youtube.com/watch?v=KoeNXuV8rEI",
-                  "vchannel": "Vaundros"
+                  "vendor": "gemini",
+                  "vtitle": "Gemini 3.8 Flash TTS  with Voice Cloning",
+                  "url": "https://www.youtube.com/watch?v=GDUBXR-ql78",
+                  "vchannel": "Sam Witteveen"
                 },
                 {
                   "x": "2026-09-27",
-                  "views": 28982,
+                  "views": 8229,
                   "cat": "news",
-                  "vendor": "grok",
-                  "vtitle": "IT뉴스 - Opus 5.5, OpenAI DevDay o, GPT-6 Sol, Muse & Meta Connect, Grok 4.7, Qwen-Image-2.1",
-                  "url": "https://www.youtube.com/watch?v=nZbxgWmgo6M",
-                  "vchannel": "조코딩 JoCoding"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 27722,
-                  "cat": "test",
-                  "vendor": "grok",
-                  "vtitle": "Grok 4.7: No-Hype Full Review & Testing",
-                  "url": "https://www.youtube.com/watch?v=x48xbDO6fKo",
-                  "vchannel": "Pat Simmons"
-                },
-                {
-                  "x": "2026-09-23",
-                  "views": 26760,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Científicos en shock: Grok descifró el secreto sumerio sobre el origen de la humanidad",
-                  "url": "https://www.youtube.com/watch?v=DHET6eNChvU",
-                  "vchannel": "Psico Enigma"
-                },
-                {
-                  "x": "2026-09-21",
-                  "views": 25738,
-                  "cat": "culture",
-                  "vendor": "grok",
-                  "vtitle": "Vědci se Zeptali Grok AI, Jak Egypťané Řezali Granit — Odpověď ŠOKOVALA Celý Svět",
-                  "url": "https://www.youtube.com/watch?v=R4Stu3hcQnM",
-                  "vchannel": "Svět Nových Objevů"
+                  "vendor": "gemini",
+                  "vtitle": "Gemini Live Avatars",
+                  "url": "https://www.youtube.com/watch?v=U236OfO-spI",
+                  "vchannel": "Sam Witteveen"
                 }
               ],
               "categories": [
@@ -1616,12 +1331,20 @@
               ],
               "rows": [
                 [
+                  "ChatGPT",
+                  "[OpenAI](https://www.youtube.com/@OpenAI)",
+                  "2,1 M",
+                  "50",
+                  "5,2 M",
+                  "[An ex-OpenAI researcher just deleted language from the LLM...](https://www.youtube.com/watch?v=TbkUKCm3CHQ), 2,8 M vues (Fireship)"
+                ],
+                [
                   "Claude",
                   "[Anthropic](https://www.youtube.com/@anthropic-ai)",
-                  "806 k",
+                  "807 k",
                   "3",
-                  "948 k",
-                  "[Claude Opus 5.5 is ridiculous](https://www.youtube.com/watch?v=gX0L0aFA2xg), 655 k vues (AI Search)"
+                  "953 k",
+                  "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 325 k vues (Two Minute Papers)"
                 ],
                 [
                   "Grok",
@@ -1629,23 +1352,15 @@
                   "21 k",
                   "2",
                   "13 k",
-                  "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 261 k vues (AI Search)"
-                ],
-                [
-                  "ChatGPT",
-                  "[OpenAI](https://www.youtube.com/@OpenAI)",
-                  "2,1 M",
-                  "50",
-                  "5,2 M",
-                  ""
+                  "[Did Elon catch up? (Grok 4.7 is here)](https://www.youtube.com/watch?v=MJllZbpvrAc), 95 k vues (Matthew Berman)"
                 ],
                 [
                   "Gemini",
                   "[Google Gemini](https://www.youtube.com/@googlegemini)",
                   "24 k",
                   "19",
-                  "61,5 M",
-                  ""
+                  "68,6 M",
+                  "[Gemini 3.8 Flash TTS  with Voice Cloning](https://www.youtube.com/watch?v=GDUBXR-ql78), 71 k vues (Sam Witteveen)"
                 ],
                 [
                   "Meta (Muse)",
@@ -1665,52 +1380,62 @@
                 ]
               ],
               "row_vendors": [
+                "gpt",
                 "claude",
                 "grok",
-                "gpt",
                 "gemini",
                 "meta",
                 "mistral"
               ],
               "by_lang": {
+                "gpt": {
+                  "fr": {
+                    "title": "OpenAI pirate un gouvernement, Trump refuse de ralentir",
+                    "url": "https://www.youtube.com/watch?v=XSwkfJcMjCg",
+                    "views": 403152,
+                    "channel": "HugoDécrypte - Actus du jour"
+                  },
+                  "en": {
+                    "title": "An ex-OpenAI researcher just deleted language from the LLM...",
+                    "url": "https://www.youtube.com/watch?v=TbkUKCm3CHQ",
+                    "views": 2788677,
+                    "channel": "Fireship"
+                  }
+                },
                 "claude": {
                   "fr": null,
                   "en": {
-                    "title": "Jev will 10x your Claude Code (Here's How)",
-                    "url": "https://www.youtube.com/watch?v=tTnUcSj-QPA",
-                    "views": 649862,
-                    "channel": "Jay E | RoboNuggets"
-                  },
-                  "es": {
-                    "title": "Así conseguí CLAUDE GRATIS + ILIMITADO",
-                    "url": "https://www.youtube.com/watch?v=dKCifr4f6u8",
-                    "views": 153384,
-                    "channel": "💀 SALVAJE 💀"
-                  },
-                  "de": null,
-                  "it": null
+                    "title": "Claude Opus 5.5 AI: An Incredible Leap Forward",
+                    "url": "https://www.youtube.com/watch?v=SA9kdAX2Zj0",
+                    "views": 324895,
+                    "channel": "Two Minute Papers"
+                  }
                 },
                 "grok": {
-                  "en": {
-                    "title": "Elon Musk's Grok AI Analyzed Jesus' Resurrection in the Ethiopian Bible — The Answer Was C",
-                    "url": "https://www.youtube.com/watch?v=sY5Y0Qf-fkg",
-                    "views": 153791,
-                    "channel": "Curious Explorer"
-                  },
-                  "it": null
-                },
-                "gpt": {
                   "fr": null,
-                  "it": null
+                  "en": {
+                    "title": "Did Elon catch up? (Grok 4.7 is here)",
+                    "url": "https://www.youtube.com/watch?v=MJllZbpvrAc",
+                    "views": 95223,
+                    "channel": "Matthew Berman"
+                  }
                 },
                 "gemini": {
-                  "fr": null
+                  "fr": null,
+                  "en": {
+                    "title": "Gemini 3.8 Flash TTS  with Voice Cloning",
+                    "url": "https://www.youtube.com/watch?v=GDUBXR-ql78",
+                    "views": 70589,
+                    "channel": "Sam Witteveen"
+                  }
                 },
                 "meta": {
-                  "fr": null
+                  "fr": null,
+                  "en": null
                 },
                 "mistral": {
-                  "it": null
+                  "fr": null,
+                  "en": null
                 }
               }
             },
@@ -2906,8 +2631,8 @@
             {
               "label": "ChatGPT",
               "sublabel": "25 incidents sur 18 jours, historique partiel",
-              "value": 42.7,
-              "display": "42,7",
+              "value": 42.6,
+              "display": "42,6",
               "vendor": "gpt"
             },
             {
@@ -2957,7 +2682,7 @@
             [
               "ChatGPT",
               "25",
-              "42,7",
+              "42,6",
               "3",
               "53 h",
               "partiel, depuis le 10/9/2026 [[s88]]"

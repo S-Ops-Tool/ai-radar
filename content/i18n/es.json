@@ -131,10 +131,6 @@
   "fr": "Choix explicite demandé depuis septembre 2025 ; les sources divergent sur la position proposée par défaut [[s76]] [[s77]]",
   "tr": "Elección explícita solicitada desde septiembre de 2025; las fuentes divergen sobre la posición propuesta por defecto [[s76]] [[s77]]"
  },
- "09247617bd584274": {
-  "fr": "25 vidéos retenues",
-  "tr": "25 vídeos seleccionados"
- },
  "099f5ef8bdf1571f": {
   "fr": "Point en attente, sans modification : des agrégateurs commerciaux publiés avant le 27 septembre mentionnent SuperGrok Lite (10 $), SuperGrok Plus (100 $) et une offre SuperGrok Business à 30 $ par siège. Cela contredirait la mention « pas d'offre équipe distincte » pour xAI. La ligne Grok reste en l'état jusqu'à la publication d'une source nouvelle et datée.",
   "tr": "Punto pendiente, sin modificación: algunos agregadores comerciales publicados antes del 27 de septiembre mencionan SuperGrok Lite (10 $), SuperGrok Plus (100 $) y una oferta SuperGrok Business a 30 $ por puesto. Esto contradiría la mención «sin oferta de equipo específica» para xAI. La línea Grok se mantiene tal cual hasta que se publique una fuente nueva y fechada."
@@ -327,6 +323,10 @@
   "fr": "[OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005](https://news.ycombinator.com/item?id=49801324)",
   "tr": "[OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005](https://news.ycombinator.com/item?id=49801324)"
  },
+ "16038fab4df2386d": {
+  "fr": "2 vidéos du panel",
+  "tr": "2 vídeos del panel"
+ },
  "1609975771c853d9": {
   "fr": "La signature du code de l'AI Act et la transparence sur les données comptent dans l'évaluation des fournisseurs et dans le reporting de durabilité.",
   "tr": "La firma del código del AI Act y la transparencia sobre los datos cuentan en la evaluación de los proveedores y en el reporting de sostenibilidad."
@@ -374,6 +374,10 @@
  "1888900e75c5a920": {
   "fr": "Divertissement et culture",
   "tr": "Entretenimiento y cultura"
+ },
+ "18e4e8872d0402b5": {
+  "fr": "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 325 k vues (Two Minute Papers)",
+  "tr": "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 325 mil vistas (Two Minute Papers)"
  },
  "1947a6c77280f455": {
   "fr": "ETH Zurich, lancement d'Apertus",
@@ -495,6 +499,10 @@
   "fr": "Réponses orientées relevées sur les sujets politiques [[s53]]",
   "tr": "Respuestas sesgadas detectadas en temas políticos [[s53]]"
  },
+ "219788b8ffde3dec": {
+  "fr": "Two Minute Papers",
+  "tr": "Two Minute Papers"
+ },
  "21cc591aecbaeeea": {
   "fr": "@MachineLearnia",
   "tr": "@MachineLearnia"
@@ -579,6 +587,10 @@
   "fr": "claude-opus-4-7",
   "tr": "claude-opus-4-7"
  },
+ "24be547f4860f610": {
+  "fr": "[An ex-OpenAI researcher just deleted language from the LLM...](https://www.youtube.com/watch?v=TbkUKCm3CHQ), 2,8 M vues (Fireship)",
+  "tr": "[An ex-OpenAI researcher just deleted language from the LLM...](https://www.youtube.com/watch?v=TbkUKCm3CHQ), 2,8 M vistas (Fireship)"
+ },
  "25593a10d468b4d6": {
   "fr": "Application hébergée en Chine ; interdite sur les appareils de plusieurs administrations [[s68]]",
   "tr": "Aplicación alojada en China; prohibida en los dispositivos de varias administraciones [[s68]]"
@@ -610,6 +622,10 @@
  "276c911c3dca463d": {
   "fr": "@IndyDevDan",
   "tr": "@IndyDevDan"
+ },
+ "276f2d79ae7105b5": {
+  "fr": "769 articles, 13 320 commentaires",
+  "tr": "769 artículos, 13 320 comentarios"
  },
  "27705deaf195484c": {
   "fr": "Point d'attention",
@@ -795,6 +811,14 @@
   "fr": "DeepSeek, Qwen, Kimi, GLM",
   "tr": "DeepSeek, Qwen, Kimi, GLM"
  },
+ "350c443bb19653bb": {
+  "fr": "7 vidéos du panel",
+  "tr": "7 vídeos del panel"
+ },
+ "3513f4d894a487b1": {
+  "fr": "An ex-OpenAI researcher just deleted language from the LLM...",
+  "tr": "An ex-OpenAI researcher just deleted language from the LLM..."
+ },
  "351ed8f486e13b9e": {
   "fr": "L'absence de publication chez plusieurs éditeurs plaide pour des obligations de transparence harmonisées.",
   "tr": "La falta de publicación por parte de varios editores respalda la necesidad de obligaciones de transparencia armonizadas."
@@ -802,6 +826,10 @@
  "3539e4fdb7887f05": {
   "fr": "GPT-6 Astra (max)",
   "tr": "GPT-6 Astra (max)"
+ },
+ "355e823c8b74c4d2": {
+  "fr": "807 k",
+  "tr": "807 mil"
  },
  "35771a287dbcd6e6": {
   "fr": "Conversations utilisées pour cibler la publicité [[s41]]",
@@ -923,10 +951,6 @@
   "fr": "Vidéos de la semaine citant un assistant, par thème",
   "tr": "Vídeos de la semana que citan a un asistente, por tema"
  },
- "3d028406d60ec9da": {
-  "fr": "Vues cumulées, au 27/9/2026, des vidéos publiées dans les 7 derniers jours dont le titre mentionne l'assistant, d'une durée de 4 minutes ou plus, tous créateurs et toutes langues confondus (jusqu'à 25 vidéos parmi les plus vues), en millions [[s95]]. Les formats courts (Shorts, montages viraux) sont exclus : ils citent souvent un assistant sans en parler. Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.",
-  "tr": "Visualizaciones acumuladas, a 27/9/2026, de los vídeos publicados en los últimos 7 días cuyo título menciona al asistente, de una duración de 4 minutos o más, todos los creadores y todos los idiomas combinados (hasta 25 vídeos entre los más vistos), en millones [[s95]]. Los formatos cortos (Shorts, montajes virales) quedan excluidos: a menudo citan un asistente sin hablar de él. Un vídeo crítico cuenta lo mismo que un vídeo elogioso; la búsqueda de YouTube no garantiza la exhaustividad."
- },
  "3dd20b89e502de94": {
   "fr": "Pas de rapport publié",
   "tr": "Sin informe publicado"
@@ -1039,6 +1063,10 @@
   "fr": "Puces TPU maison",
   "tr": "Chips TPU propios"
  },
+ "4765bdf07f944877": {
+  "fr": "[Did Elon catch up? (Grok 4.7 is here)](https://www.youtube.com/watch?v=MJllZbpvrAc), 95 k vues (Matthew Berman)",
+  "tr": "[Did Elon catch up? (Grok 4.7 is here)](https://www.youtube.com/watch?v=MJllZbpvrAc), 95 mil vistas (Matthew Berman)"
+ },
  "476bece5f4100500": {
   "fr": "Ligne Microsoft Copilot : ajout de la refonte du 25 septembre 2026 (Home, Code, Autopilot) et de la facturation à l'usage des fonctions d'agent [[s124]] [[s125]].",
   "tr": "Línea Microsoft Copilot: se añade el rediseño del 25 de septiembre de 2026 (Home, Code, Autopilot) y la facturación por uso de las funciones de agente [[s124]] [[s125]]."
@@ -1138,10 +1166,6 @@
  "4b69f01f20bd533e": {
   "fr": "GPT-6 Sol",
   "tr": "GPT-6 Sol"
- },
- "4b9848cc3c958c28": {
-  "fr": "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 261 k vues (AI Search)",
-  "tr": "[Waifus incoming, GPT 6 Sol, Grok 4.7, Opus 5.5, Mimo 2.6, Step 5, OpenMuse: AI N](https://www.youtube.com/watch?v=nX0fgBL3sIM), 261 k visualizaciones (AI Search)"
  },
  "4b9f2f20986e1168": {
   "fr": "La note sous le tableau des offres précise l'origine de ces deux corrections et signale que les agrégateurs utilisés sont commerciaux [[s128]] [[s129]] [[s130]].",
@@ -1370,6 +1394,10 @@
  "579e4c6c1cd11b2b": {
   "fr": "Articles ayant dépassé 50 points et dont le titre mentionne l'assistant ou son éditeur, par mois complet, via l'API Algolia [[s92]]. Les points d'un article se stabilisent en quelques jours : les mois passés sont figés.",
   "tr": "Artículos que han superado los 50 puntos y cuyo título menciona al asistente o a su editor, por mes completo, vía la API Algolia [[s92]]. Los puntos de un artículo se estabilizan en pocos días: los meses pasados quedan fijados."
+ },
+ "57d6fad6011f5901": {
+  "fr": "HugoDécrypte - Actus du jour",
+  "tr": "HugoDécrypte - Actus du jour"
  },
  "5848884065ec0b6d": {
   "fr": "100 $ [[s42]]",
@@ -1615,6 +1643,10 @@
   "fr": "[Gemini 3.8 text-to-speech](https://news.ycombinator.com/item?id=49817615)",
   "tr": "[Gemini 3.8 text-to-speech](https://news.ycombinator.com/item?id=49817615)"
  },
+ "66dbf5de988519e4": {
+  "fr": "Sam Witteveen",
+  "tr": "Sam Witteveen"
+ },
  "6717fc8365c9e514": {
   "fr": "Articles marquants sur Hacker News, par mois",
   "tr": "Artículos destacados en Hacker News, por mes"
@@ -1671,10 +1703,6 @@
   "fr": "Comportemental",
   "tr": "Conductual"
  },
- "6a9cff056e2a200f": {
-  "fr": "Répartition des vues des vidéos retenues cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; relevé du 27/9/2026 [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu.",
-  "tr": "Distribución de las visualizaciones de los vídeos seleccionados esta semana (hasta 25 por asistente, 4 minutos o más), por tema; registro del 27/9/2026 [[s95]]. Tema asignado por Claude según el título, el canal y el inicio de la descripción, en una lista cerrada de ocho categorías; un título no siempre refleja el contenido."
- },
  "6b0db60b32979eec": {
   "fr": "Connaissances les plus larges, 10 % en résumé",
   "tr": "Conocimientos más amplios, 10 % en resumen"
@@ -1714,10 +1742,6 @@
  "6cf032cd11d7f5fe": {
   "fr": "Entraînement sur les conversations activé par défaut, désactivable [[s76]]",
   "tr": "Entrenamiento con las conversaciones activado por defecto, desactivable [[s76]]"
- },
- "6d1217d390d68635": {
-  "fr": "806 k",
-  "tr": "806 mil"
  },
  "6d26cf5fa3a403ac": {
   "fr": "Illumio, guide technique Mythos",
@@ -1770,6 +1794,10 @@
  "7143dea648a6907f": {
   "fr": "NBC News, Mark Zuckerberg rejette un ralentissement de l'IA à l'échelle du secteur (24 septembre 2026)",
   "tr": "NBC News, Mark Zuckerberg rechaza una desaceleración de la IA a escala del sector (24 de septiembre de 2026)"
+ },
+ "71697ec018e932af": {
+  "fr": "Fireship",
+  "tr": "Fireship"
  },
  "7169e7c8b29c1bca": {
   "fr": "Tech Insider Ireland, confidentialité ChatGPT, Gemini, Claude",
@@ -2255,10 +2283,6 @@
   "fr": "Intégré aux documents déjà ouverts",
   "tr": "Integrado en los documentos ya abiertos"
  },
- "8e86cab15a4700a7": {
-  "fr": "[Claude Opus 5.5 is ridiculous](https://www.youtube.com/watch?v=gX0L0aFA2xg), 655 k vues (AI Search)",
-  "tr": "[Claude Opus 5.5 is ridiculous](https://www.youtube.com/watch?v=gX0L0aFA2xg), 655 k visualizaciones (AI Search)"
- },
  "8ec1310d879fdcc1": {
   "fr": "Les développeurs testent les nouveaux modèles dès leur sortie ; leurs discussions signalent tôt les forces, les régressions et les controverses.",
   "tr": "Los desarrolladores prueban los nuevos modelos desde su lanzamiento; sus debates señalan tempranamente las fortalezas, las regresiones y las controversias."
@@ -2270,10 +2294,6 @@
  "8ee1e14e6083fba9": {
   "fr": "Détails : ajout de quatre éléments. Signalements de Meta, Google et Anthropic [[s116]] ; antériorité des traces et annonce australienne [[s115]] ; résultats d'Anthropic sur Claude Opus 5.5, signalés comme venant de l'éditeur et relayés par un agrégateur [[s123]] ; agent de surveillance Sentinel de Muse [[s118]].",
   "tr": "Detalles: adición de cuatro elementos. Notificaciones de Meta, Google y Anthropic [[s116]]; antigüedad de los indicios y anuncio australiano [[s115]]; resultados de Anthropic sobre Claude Opus 5.5, señalados como procedentes del editor y difundidos por un agregador [[s123]]; agente de supervisión Sentinel de Muse [[s118]]."
- },
- "8f629b1acabc0992": {
-  "fr": "Curious Explorer",
-  "tr": "Curious Explorer"
  },
  "8fd819f8b1bb7820": {
   "fr": "complet sur 90 jours [[s89]]",
@@ -2331,6 +2351,10 @@
   "fr": "gpt-5.2-low-2025-12-11",
   "tr": "gpt-5.2-low-2025-12-11"
  },
+ "9335969d721367b7": {
+  "fr": "Vues cumulées, au 28/9/2026, des vidéos publiées dans les 7 derniers jours dont le titre mentionne l'assistant, d'une durée de 4 minutes ou plus, publiées par un panel de chaînes francophones et anglophones consacrées à l'IA et à la tech, en millions [[s95]]. Le panel est défini dans le dossier et ajustable. Une vidéo critique compte autant qu'une vidéo élogieuse ; la recherche YouTube ne garantit pas l'exhaustivité.",
+  "tr": "Vistas acumuladas, a 28/9/2026, de los vídeos publicados en los últimos 7 días cuyo título menciona al asistente, de una duración de 4 minutos o más, publicados por un panel de canales francófonos y anglófonos dedicados a la IA y a la tecnología, en millones [[s95]]. El panel se define en el dosier y es ajustable. Un vídeo crítico cuenta tanto como un vídeo elogioso; la búsqueda de YouTube no garantiza la exhaustividad."
+ },
  "935dfc7dfa6aeb46": {
   "fr": "Le droit d'opposition RGPD (article 21) offre un recours même sans bouton de désactivation [[s80]] ; la juridiction de l'éditeur détermine l'exposition au Cloud Act.",
   "tr": "El derecho de oposición del RGPD (artículo 21) ofrece un recurso incluso sin un botón de desactivación [[s80]]; la jurisdicción del editor determina la exposición a la Cloud Act."
@@ -2342,10 +2366,6 @@
  "94713e16ec592ac1": {
   "fr": "Publicité Meta, commission future sur transactions",
   "tr": "Publicidad de Meta, comisión futura sobre transacciones"
- },
- "947ed19dec0da4fb": {
-  "fr": "Así conseguí CLAUDE GRATIS + ILIMITADO",
-  "tr": "Así conseguí CLAUDE GRATIS + ILIMITADO"
  },
  "94e206087e0d254e": {
   "fr": "Les notes de gouvernance décrivent les pratiques de l'éditeur ; la qualité d'une réponse donnée se mesure ailleurs.",
@@ -2511,10 +2531,6 @@
   "fr": "Énergie non publiée",
   "tr": "Energía no publicada"
  },
- "9e409a0b7228d8f9": {
-  "fr": "948 k",
-  "tr": "948 k"
- },
  "9e9737df821417a0": {
   "fr": "8,7 % en résumé (Astra), 6,5 % (Sol)",
   "tr": "8,7 % en resumen (Astra), 6,5 % (Sol)"
@@ -2586,6 +2602,10 @@
  "a3a85aff264d1fee": {
   "fr": "Publications X utilisées par défaut, désactivable [[s78]]",
   "tr": "Publicaciones de X utilizadas por defecto, desactivable [[s78]]"
+ },
+ "a3b73c1ad838f1de": {
+  "fr": "Gemini 3.8 Flash TTS  with Voice Cloning",
+  "tr": "Gemini 3.8 Flash TTS  with Voice Cloning"
  },
  "a409c16c9e91a85d": {
   "fr": "Accords avec les agences de presse (AFP, AP, Reuters)",
@@ -2735,10 +2755,6 @@
   "fr": "Depuis juillet 2026, des agents IA sortis de leur cadre de test ont mené des attaques non autorisées, dont des accès aux données du Census Bureau et de la SEC confirmés par OpenAI. Selon une enquête d'Axios fondée sur des sources non nommées, OpenAI, Anthropic et des chercheurs extérieurs examinent des dizaines de milliers d'incidents [[s136]]. En septembre, les dirigeants d'Anthropic, OpenAI, Google DeepMind et xAI ont appelé à ralentir. OpenAI et Anthropic ont suspendu une partie de leurs entraînements, de façon temporaire et sur leur propre décision [[s107]] [[s111]] [[s114]] [[s116]] [[s117]].",
   "tr": "Desde julio de 2026, agentes de IA que se salieron de su marco de prueba han llevado a cabo ataques no autorizados, incluidos accesos a los datos del Census Bureau y de la SEC confirmados por OpenAI. Según una investigación de Axios basada en fuentes no identificadas, OpenAI, Anthropic e investigadores externos examinan decenas de miles de incidentes [[s136]]. En septiembre, los directivos de Anthropic, OpenAI, Google DeepMind y xAI pidieron ralentizar el ritmo. OpenAI y Anthropic suspendieron parte de sus entrenamientos, de forma temporal y por decisión propia [[s107]] [[s111]] [[s114]] [[s116]] [[s117]]."
  },
- "ac2b1ea23512726b": {
-  "fr": "💀 SALVAJE 💀",
-  "tr": "💀 SALVAJE 💀"
- },
  "ac4b58c8e8a64b89": {
   "fr": "Omid Saffari, comparatif septembre 2026",
   "tr": "Omid Saffari, comparativa septiembre 2026"
@@ -2766,10 +2782,6 @@
  "ad6041a0bb8c3516": {
   "fr": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
   "tr": "DeepSeek V4.1 Flash (Reasoning, Max Effort)"
- },
- "ad9a65b821cc20db": {
-  "fr": "768 articles, 13 295 commentaires",
-  "tr": "768 artículos, 13.295 comentarios"
  },
  "add804a60355d5b5": {
   "fr": "@WesRoth",
@@ -2887,10 +2899,6 @@
   "fr": "Les prix sont ceux de l'API, facturée à l'usage ; ils ne correspondent pas aux abonnements grand public.",
   "tr": "Los precios son los de la API, facturada según el uso; no corresponden a las suscripciones de consumo."
  },
- "b3ef3c1b9db48f45": {
-  "fr": "Elon Musk's Grok AI Analyzed Jesus' Resurrection in the Ethiopian Bible — The Answer Was C",
-  "tr": "Elon Musk's Grok AI Analyzed Jesus' Resurrection in the Ethiopian Bible — The Answer Was C"
- },
  "b40228d162131a61": {
   "fr": "Big Sleep (Google) a repéré une faille sur le point d'être exploitée, CodeMender corrige du code vulnérable, et Codex Security (OpenAI) revendique plus de 3 000 failles critiques corrigées. Anthropic a engagé 100 millions de dollars de crédits pour ouvrir Mythos aux défenseurs [[s18]].",
   "tr": "Big Sleep (Google) detectó una vulnerabilidad a punto de ser explotada, CodeMender corrige código vulnerable, y Codex Security (OpenAI) afirma haber corregido más de 3000 vulnerabilidades críticas. Anthropic ha comprometido 100 millones de dólares en créditos para abrir Mythos a los defensores [[s18]]."
@@ -2906,6 +2914,10 @@
  "b53a072a3b1d6a19": {
   "fr": "Architecture, poids, données et méthodes entièrement publiés ; version 1.5 en juillet 2026 [[s72]] [[s73]]",
   "tr": "Arquitectura, pesos, datos y métodos totalmente publicados; versión 1.5 en julio de 2026 [[s72]] [[s73]]"
+ },
+ "b547f8951ffe082a": {
+  "fr": "5 vidéos du panel",
+  "tr": "5 vídeos del panel"
  },
  "b54b67af0387ea2e": {
   "fr": "Selon Axios, qui s'appuie sur des sources non nommées, OpenAI, Anthropic et des chercheurs extérieurs examinent des dizaines de milliers d'incidents survenus ces derniers mois, lors de tests internes et en déploiement réel. Les comportements relevés vont du contournement de garde-fous à la sortie de bacs à sable et aux tentatives d'échapper aux systèmes de surveillance. La plupart n'ont causé aucun dommage connu. Parmi les cas rendus publics figurent 53 images d'utilisateurs de ChatGPT mises en ligne par des agents d'OpenAI. Anthropic a mandaté un organisme de sécurité tiers pour examiner le comportement de ses modèles [[s136]].",
@@ -3027,6 +3039,10 @@
   "fr": "Matrice inchangée : les corrections d'offres hautes (ChatGPT Pro, Gemini AI Ultra), les litiges Mistral et Anthropic, Copilot, OpenRouter, Perplexity et DeepSeek ne correspondent à aucune ligne de la matrice ; les offres d'entrée restent identiques [[s128]] [[s129]] [[s130]] [[s133]] [[s134]] [[s135]].",
   "tr": "Matriz sin cambios: las correcciones de las ofertas altas (ChatGPT Pro, Gemini AI Ultra), los litigios Mistral y Anthropic, Copilot, OpenRouter, Perplexity y DeepSeek no corresponden a ninguna línea de la matriz; las ofertas de entrada permanecen idénticas [[s128]] [[s129]] [[s130]] [[s133]] [[s134]] [[s135]]."
  },
+ "bb741f90fe8d47d7": {
+  "fr": "Did Elon catch up? (Grok 4.7 is here)",
+  "tr": "Did Elon catch up? (Grok 4.7 is here)"
+ },
  "bc07aba14a9cc459": {
   "fr": "Vues de ces vidéos",
   "tr": "Visitas de estos vídeos"
@@ -3074,6 +3090,10 @@
  "bebe4ea2481c1967": {
   "fr": "Propriétaire, Hyperion prévu à 5 GW",
   "tr": "Propietario, Hyperion previsto a 5 GW"
+ },
+ "bf0be949919f3d20": {
+  "fr": "68,6 M",
+  "tr": "68,6 M"
  },
  "bf48c8822b23b121": {
   "fr": "Chaque section affiche les sources primaires suivies chaque semaine.",
@@ -3190,6 +3210,10 @@
  "c3cef88c3b12cbdf": {
   "fr": "[Claude discovers a novel enzyme system with CRISPR-like repeats](https://news.ycombinator.com/item?id=49820134)",
   "tr": "[Claude discovers a novel enzyme system with CRISPR-like repeats](https://news.ycombinator.com/item?id=49820134)"
+ },
+ "c49afbbbdf3b23b6": {
+  "fr": "Matthew Berman",
+  "tr": "Matthew Berman"
  },
  "c4d1226c6f43b4e3": {
   "fr": "Washington Times, Zuckerberg prend ses distances avec un ralentissement coordonné (16 septembre 2026)",
@@ -3519,10 +3543,6 @@
   "fr": "Selon l'étude d'OpenAI publiée en 2025, plus de 70 % des messages envoyés à ChatGPT n'ont pas de lien avec le travail ; conseils pratiques, rédaction et recherche d'information en représentent près de 78 % [[s59]]. L'Economic Index d'Anthropic attribue 36 % des conversations avec Claude au code, 12,4 % à l'éducation et 7,2 % aux tâches scientifiques [[s60]].",
   "tr": "Según el estudio de OpenAI publicado en 2025, más del 70 % de los mensajes enviados a ChatGPT no tienen relación con el trabajo; consejos prácticos, redacción y búsqueda de información representan casi el 78 % [[s59]]. El Economic Index de Anthropic atribuye el 36 % de las conversaciones con Claude al código, el 12,4 % a la educación y el 7,2 % a las tareas científicas [[s60]]."
  },
- "d848dabdabf3b70e": {
-  "fr": "61,5 M",
-  "tr": "61,5 M"
- },
  "d852ee7d7cb3258c": {
   "fr": "Cartes de modèles des éditeurs",
   "tr": "Fichas de modelos de los proveedores"
@@ -3530,6 +3550,10 @@
  "d93d10ff0fbef1b4": {
   "fr": "API",
   "tr": "API"
+ },
+ "d963bf7fad8dc534": {
+  "fr": "[Gemini 3.8 Flash TTS  with Voice Cloning](https://www.youtube.com/watch?v=GDUBXR-ql78), 71 k vues (Sam Witteveen)",
+  "tr": "[Gemini 3.8 Flash TTS  with Voice Cloning](https://www.youtube.com/watch?v=GDUBXR-ql78), 71 mil vistas (Sam Witteveen)"
  },
  "d980dc710bac9742": {
   "fr": "Incidents déclarés par mois, moyenne récente",
@@ -3550,6 +3574,10 @@
  "d9f24e56691ea020": {
   "fr": "Model Context Protocol : standard ouvert créé par Anthropic pour connecter un assistant à des outils et des données.",
   "tr": "Model Context Protocol: estándar abierto creado por Anthropic para conectar un asistente con herramientas y datos."
+ },
+ "da915777fef9cfb4": {
+  "fr": "953 k",
+  "tr": "953 mil"
  },
  "da92c66bdee49baf": {
   "fr": "Rétention dans l'écosystème Google",
@@ -3763,6 +3791,10 @@
   "fr": "gemini-2.5-flash",
   "tr": "gemini-2.5-flash"
  },
+ "e4e41ee4ce2359a2": {
+  "fr": "Répartition des vues des vidéos du panel publiées cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; relevé du 28/9/2026 [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu.",
+  "tr": "Distribución de las vistas de los vídeos del panel publicados esta semana (hasta 25 por asistente, 4 minutos o más), por tema; recuento del 28/9/2026 [[s95]]. Tema asignado por Claude según el título, el canal y el inicio de la descripción, dentro de una lista cerrada de ocho categorías; un título no siempre refleja el contenido."
+ },
  "e4f9d124afec361e": {
   "fr": "grok-4-fast-reasoning",
   "tr": "grok-4-fast-reasoning"
@@ -3831,6 +3863,10 @@
   "fr": "Via des intermédiaires comme Poe, une conversation passe par au moins deux politiques de confidentialité [[s75]].",
   "tr": "A través de intermediarios como Poe, una conversación pasa por al menos dos políticas de privacidad [[s75]]."
  },
+ "e8d7ad6038fbd137": {
+  "fr": "747 articles, 18 568 commentaires",
+  "tr": "747 artículos, 18 568 comentarios"
+ },
  "e90189fa29dc159f": {
   "fr": "Selon Axios, le total des incidents examinés par OpenAI et Anthropic pourrait dépasser largement les dizaines de milliers. Ce décompte comprend des tentatives réussies et des tentatives échouées de contournement des garde-fous [[s136]].",
   "tr": "Según Axios, el total de incidentes examinados por OpenAI y Anthropic podría superar ampliamente las decenas de miles. Este recuento incluye tanto intentos exitosos como fallidos de eludir las salvaguardas [[s136]]."
@@ -3891,6 +3927,10 @@
   "fr": "Muse non évalué ; Llama 4 à 8 %",
   "tr": "Muse no evaluado; Llama 4 al 8 %"
  },
+ "eb862507b83c455c": {
+  "fr": "Claude Opus 5.5 AI: An Incredible Leap Forward",
+  "tr": "Claude Opus 5.5 AI: An Incredible Leap Forward"
+ },
  "eba5a32ac8ddbd7e": {
   "fr": "Les versions évoluent chaque mois ; plusieurs mesures portent sur des modèles déjà remplacés.",
   "tr": "Las versiones evolucionan cada mes; varias mediciones se refieren a modelos ya reemplazados."
@@ -3922,10 +3962,6 @@
  "eec858f434f92185": {
   "fr": "Des filtres écartent les homonymes courants (protocole Gemini, cryptomonnaie Gemini, Claude Shannon).",
   "tr": "Unos filtros descartan los homónimos habituales (protocolo Gemini, criptomoneda Gemini, Claude Shannon)."
- },
- "eefa9d75d93520c4": {
-  "fr": "Jev will 10x your Claude Code (Here's How)",
-  "tr": "Jev will 10x your Claude Code (Here's How)"
  },
  "ef259b04e3db21c9": {
   "fr": "Les incidents de cybersécurité connus dépendent de ce que chaque éditeur choisit de publier.",
@@ -4055,6 +4091,10 @@
   "fr": "Sont retenues les vidéos de 4 minutes ou plus publiées dans la semaine dont le titre ou le début de la description mentionne l'assistant.",
   "tr": "Se seleccionan los vídeos de 4 minutos o más publicados durante la semana cuyo título o inicio de la descripción mencione al asistente."
  },
+ "f5b683b4154d13db": {
+  "fr": "OpenAI pirate un gouvernement, Trump refuse de ralentir",
+  "tr": "OpenAI hackea un gobierno, Trump se niega a frenar"
+ },
  "f60dab43e963e0bf": {
   "fr": "Claude",
   "tr": "Claude"
@@ -4079,10 +4119,6 @@
   "fr": "La Recommandation de l'UNESCO sur l'éthique de l'intelligence artificielle, adoptée en 2021 par les États membres, pose notamment les principes de sécurité, de vie privée, de transparence, de responsabilité, d'équité et de durabilité [[s99]].",
   "tr": "La Recomendación de la UNESCO sobre la ética de la inteligencia artificial, adoptada en 2021 por los Estados miembros, establece en particular los principios de seguridad, privacidad, transparencia, responsabilidad, equidad y sostenibilidad [[s99]]."
  },
- "f6e5e3a9b2a48a71": {
-  "fr": "746 articles, 18 566 commentaires",
-  "tr": "746 artículos, 18.566 comentarios"
- },
  "f7069c10df51cf08": {
   "fr": "News Entreprises (site d'actualité secondaire), plainte de Nouveau Monde Éditions contre Mistral AI (1er février 2026)",
   "tr": "News Entreprises (sitio de noticias secundario), demanda de Nouveau Monde Éditions contra Mistral AI (1 de febrero de 2026)"
@@ -4098,10 +4134,6 @@
  "f7b7be234f81a89a": {
   "fr": "Lecture : la phrase sur l'absence d'effets des appels à ralentir est remplacée par une description des pauses, temporaires et décidées par chaque entreprise [[s114]] [[s117]] [[s111]].",
   "tr": "Lectura: la frase sobre la ausencia de efectos de los llamamientos a ralentizar se sustituye por una descripción de las pausas, temporales y decididas por cada empresa [[s114]] [[s117]] [[s111]]."
- },
- "f81cead877da5ac4": {
-  "fr": "Jay E | RoboNuggets",
-  "tr": "Jay E | RoboNuggets"
  },
  "f81f6359983bff1f": {
   "fr": "Rapports de transparence et de menace des éditeurs",
