@@ -862,22 +862,22 @@
     },
     "2026-09-28": {
       "claude": {
-        "n": 770,
-        "notable": 60,
-        "comments": 13234,
-        "points": 19367
+        "n": 768,
+        "notable": 61,
+        "comments": 13295,
+        "points": 19433
       },
       "gpt": {
-        "n": 745,
+        "n": 746,
         "notable": 81,
-        "comments": 18560,
-        "points": 29356
+        "comments": 18566,
+        "points": 29372
       },
       "gemini": {
         "n": 75,
         "notable": 8,
         "comments": 1450,
-        "points": 2684
+        "points": 2685
       },
       "grok": {
         "n": 54,
@@ -889,7 +889,7 @@
         "n": 25,
         "notable": 5,
         "comments": 900,
-        "points": 1595
+        "points": 1597
       },
       "mistral": {
         "n": 13,
@@ -905,7 +905,7 @@
       "intel": 57.6,
       "pin": 4.0,
       "pout": 20.0,
-      "speed": 95.177
+      "speed": 95.504
     },
     "OpenAI": {
       "name": "GPT-6 Astra (max)",
@@ -919,28 +919,28 @@
       "intel": 48.1,
       "pin": 1.25,
       "pout": 4.25,
-      "speed": 160.139
+      "speed": 164.982
     },
     "xAI": {
       "name": "Grok 4.7 (xhigh)",
       "intel": 46.4,
       "pin": 2.0,
       "pout": 6.0,
-      "speed": 72.266
+      "speed": 79.968
     },
     "Alibaba (Qwen)": {
       "name": "Qwen3.8 Max (0902)",
       "intel": 45.4,
       "pin": 2.0,
       "pout": 6.0,
-      "speed": 37.728
+      "speed": 37.963
     },
     "Z.ai (GLM)": {
       "name": "GLM-5.3 (max)",
       "intel": 44.8,
       "pin": 1.4,
       "pout": 4.4,
-      "speed": 82.378
+      "speed": 83.141
     },
     "Google": {
       "name": "Gemini 3.8 Flash (high)",
