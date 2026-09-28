@@ -549,14 +549,14 @@
           "bars": [
             {
               "label": "ChatGPT",
-              "sublabel": "747 articles, 18 568 commentaires",
+              "sublabel": "749 articles, 18 577 commentaires",
               "value": 81,
               "display": "81",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
-              "sublabel": "769 articles, 13 320 commentaires",
+              "sublabel": "768 articles, 13 374 commentaires",
               "value": 61,
               "display": "61",
               "vendor": "claude"
@@ -570,21 +570,21 @@
             },
             {
               "label": "Meta (Muse, Llama)",
-              "sublabel": "25 articles, 900 commentaires",
+              "sublabel": "26 articles, 900 commentaires",
               "value": 5,
               "display": "5",
               "vendor": "meta"
             },
             {
               "label": "Grok",
-              "sublabel": "54 articles, 1 432 commentaires",
+              "sublabel": "56 articles, 1 453 commentaires",
               "value": 4,
               "display": "4",
               "vendor": "grok"
             },
             {
               "label": "Mistral",
-              "sublabel": "13 articles, 982 commentaires",
+              "sublabel": "13 articles, 983 commentaires",
               "value": 3,
               "display": "3",
               "vendor": "mistral"
@@ -818,7 +818,7 @@
                 [
                   "",
                   "[Revealing the details of how OpenAI agents hacked Hugging Face](https://news.ycombinator.com/item?id=49849985)",
-                  "743",
+                  "745",
                   "465"
                 ],
                 [
@@ -872,12 +872,12 @@
                 [
                   "",
                   "[Faster prompt lookup drafting in llama.cpp](https://news.ycombinator.com/item?id=49859982)",
-                  "78",
+                  "81",
                   "12"
                 ],
                 [
                   "",
-                  "[Llama.cpp Under the Hood](https://news.ycombinator.com/item?id=49814172)",
+                  "[I got 2.2x more tokens per second from llama.cpp on Intel Arc](https://news.ycombinator.com/item?id=49876817)",
                   "4",
                   "0"
                 ],
@@ -903,7 +903,7 @@
                   "Mistral",
                   "[CEO of Mistral: AI is software. It can be controlled](https://news.ycombinator.com/item?id=49856034)",
                   "98",
-                  "168"
+                  "169"
                 ],
                 [
                   "",
@@ -965,7 +965,7 @@
             {
               "label": "ChatGPT",
               "sublabel": "7 vidéos du panel",
-              "value": 3.86,
+              "value": 3.87,
               "display": "3,9 M",
               "vendor": "gpt"
             },
@@ -973,7 +973,7 @@
               "label": "Claude",
               "sublabel": "5 vidéos du panel",
               "value": 0.84,
-              "display": "840 k",
+              "display": "844 k",
               "vendor": "claude"
             },
             {
@@ -987,7 +987,7 @@
               "label": "Gemini",
               "sublabel": "2 vidéos du panel",
               "value": 0.08,
-              "display": "79 k",
+              "display": "80 k",
               "vendor": "gemini"
             }
           ],
@@ -999,16 +999,13 @@
               "@ScienceEtonnante",
               "@MachineLearnia",
               "@DefendIntelligence",
-              "@MonsieurIA|@MonsieurIAofficiel",
-              "@IAMania|@iamania_",
               "@AIBootcamp|@lebigdatafr",
               "@Underscore_",
               "@Micode",
               "@HugoDecrypteActus|@hugodecrypte",
               "@monsieurbidouille",
               "@BenjaminCode",
-              "@Grafikart",
-              "@MaisondelIntelligenceArtificielle|@MaisonIA"
+              "@Grafikart"
             ],
             "en": [
               "@RobertMilesAI",
@@ -1040,229 +1037,107 @@
           }
         },
         {
-          "type": "topic_bars",
-          "auto": "yt_topics",
-          "title": "De quoi parlent les vidéos : part des vues par thème",
-          "rows": [
+          "type": "bar_chart",
+          "auto": "yt_topics_all",
+          "title": "De quoi parle l'IA sur YouTube cette semaine : part des vidéos par thème",
+          "max": 40,
+          "ticks": [
+            0,
+            8,
+            16,
+            24,
+            32,
+            40
+          ],
+          "bars": [
             {
-              "vendor": "gpt",
-              "label": "ChatGPT",
-              "shares": {
-                "news": 96.4,
-                "risk": 3.6
-              }
+              "label": "Lancement et actualité",
+              "value": 38.5,
+              "display": "38 %",
+              "sublabel": "15 vidéos, 7,3 M vues",
+              "color": "#2D66CF"
             },
             {
-              "vendor": "claude",
-              "label": "Claude",
-              "shares": {
-                "news": 95.7,
-                "code": 4.3
-              }
+              "label": "Code et développement",
+              "value": 28.2,
+              "display": "28 %",
+              "sublabel": "11 vidéos, 555 k vues",
+              "color": "#6E55C2"
             },
             {
-              "vendor": "grok",
-              "label": "Grok",
-              "shares": {
-                "news": 100.0
-              }
+              "label": "Test et comparatif",
+              "value": 12.8,
+              "display": "13 %",
+              "sublabel": "5 vidéos, 578 k vues",
+              "color": "#1C8468"
             },
             {
-              "vendor": "gemini",
-              "label": "Gemini",
-              "shares": {
-                "news": 100.0
-              }
+              "label": "Risques et sécurité",
+              "value": 10.3,
+              "display": "10 %",
+              "sublabel": "4 vidéos, 490 k vues",
+              "color": "#C2410C"
+            },
+            {
+              "label": "Tutoriel et usage quotidien",
+              "value": 7.7,
+              "display": "8 %",
+              "sublabel": "3 vidéos, 127 k vues",
+              "color": "#D08000"
+            },
+            {
+              "label": "Travail, emploi et business",
+              "value": 2.6,
+              "display": "3 %",
+              "sublabel": "1 vidéo, 122 k vues",
+              "color": "#7C8B96"
             }
           ],
-          "categories": [
-            {
-              "id": "news",
-              "label": "Lancement et actualité"
-            },
-            {
-              "id": "test",
-              "label": "Test et comparatif"
-            },
-            {
-              "id": "tutorial",
-              "label": "Tutoriel et usage quotidien"
-            },
-            {
-              "id": "code",
-              "label": "Code et développement"
-            },
-            {
-              "id": "business",
-              "label": "Travail, emploi et business"
-            },
-            {
-              "id": "ethics",
-              "label": "Éthique et responsabilité"
-            },
-            {
-              "id": "risk",
-              "label": "Risques et sécurité"
-            },
-            {
-              "id": "culture",
-              "label": "Divertissement et culture"
-            }
-          ],
-          "caption": "Répartition des vues des vidéos du panel publiées cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; relevé du 28/9/2026 [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu."
+          "caption": "Part des 39 vidéos du panel consacrées à l'IA et publiées cette semaine, par thème, qu'elles citent un assistant ou non [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description ; 13 vidéos du panel sans rapport avec l'IA sont écartées."
         },
         {
           "type": "details",
-          "summary": "Pour aller plus loin : toutes les vidéos de la semaine, par thème",
+          "summary": "Pour aller plus loin : thèmes par assistant et toutes les vidéos de la semaine",
           "blocks": [
             {
-              "type": "video_scatter",
-              "auto": "yt_scatter",
-              "title": "Vidéos de la semaine citant un assistant, par thème",
-              "points": [
+              "type": "topic_bars",
+              "auto": "yt_topics",
+              "title": "Thèmes des vidéos qui citent chaque assistant, part des vues (nombre de vidéos entre parenthèses)",
+              "rows": [
                 {
-                  "x": "2026-09-21",
-                  "views": 2788677,
-                  "cat": "news",
                   "vendor": "gpt",
-                  "vtitle": "An ex-OpenAI researcher just deleted language from the LLM...",
-                  "url": "https://www.youtube.com/watch?v=TbkUKCm3CHQ",
-                  "vchannel": "Fireship"
+                  "label": "ChatGPT",
+                  "n": 7,
+                  "shares": {
+                    "news": 96.4,
+                    "risk": 3.6
+                  }
                 },
                 {
-                  "x": "2026-09-24",
-                  "views": 403152,
-                  "cat": "news",
-                  "vendor": "gpt",
-                  "vtitle": "OpenAI pirate un gouvernement, Trump refuse de ralentir",
-                  "url": "https://www.youtube.com/watch?v=XSwkfJcMjCg",
-                  "vchannel": "HugoDécrypte - Actus du jour"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 213829,
-                  "cat": "news",
-                  "vendor": "gpt",
-                  "vtitle": "Claude Opus 5.5 Didn’t Need to Go This Hard",
-                  "url": "https://www.youtube.com/watch?v=0t-eWrGFZyA",
-                  "vchannel": "Matt Wolfe"
-                },
-                {
-                  "x": "2026-09-26",
-                  "views": 158578,
-                  "cat": "news",
-                  "vendor": "gpt",
-                  "vtitle": "AI News: Opus 5.5, GPT-6 Sol, Jev, Muse and More!",
-                  "url": "https://www.youtube.com/watch?v=aDpIra7NFuE",
-                  "vchannel": "Matt Wolfe"
-                },
-                {
-                  "x": "2026-09-26",
-                  "views": 139754,
-                  "cat": "risk",
-                  "vendor": "gpt",
-                  "vtitle": "OpenAI paused all training runs... ALIGNMENT FAILURE",
-                  "url": "https://www.youtube.com/watch?v=V3KeMw2nIDA",
-                  "vchannel": "Wes Roth"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 95858,
-                  "cat": "news",
-                  "vendor": "gpt",
-                  "vtitle": "GPT-6 SOL AND LUNA ARE OUT!!!",
-                  "url": "https://www.youtube.com/watch?v=5MFORiebZks",
-                  "vchannel": "Matthew Berman"
-                },
-                {
-                  "x": "2026-09-23",
-                  "views": 60744,
-                  "cat": "news",
-                  "vendor": "gpt",
-                  "vtitle": "GPT-6 Sol and Luna Are HERE!",
-                  "url": "https://www.youtube.com/watch?v=Ima_AVPyQ9E",
-                  "vchannel": "Matthew Berman"
-                },
-                {
-                  "x": "2026-09-24",
-                  "views": 324895,
-                  "cat": "news",
                   "vendor": "claude",
-                  "vtitle": "Claude Opus 5.5 AI: An Incredible Leap Forward",
-                  "url": "https://www.youtube.com/watch?v=SA9kdAX2Zj0",
-                  "vchannel": "Two Minute Papers"
+                  "label": "Claude",
+                  "n": 5,
+                  "shares": {
+                    "news": 95.7,
+                    "code": 4.3
+                  }
                 },
                 {
-                  "x": "2026-09-24",
-                  "views": 233685,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "Claude JUST found hidden DNA...",
-                  "url": "https://www.youtube.com/watch?v=H7KruLVX2Rk",
-                  "vchannel": "Wes Roth"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 213829,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "Claude Opus 5.5 Didn’t Need to Go This Hard",
-                  "url": "https://www.youtube.com/watch?v=0t-eWrGFZyA",
-                  "vchannel": "Matt Wolfe"
-                },
-                {
-                  "x": "2026-09-21",
-                  "views": 36064,
-                  "cat": "code",
-                  "vendor": "claude",
-                  "vtitle": "Self-Compact Pi Agent: ZERO HYPE Agentic Coding Devlog",
-                  "url": "https://www.youtube.com/watch?v=3b0U4_02bAE",
-                  "vchannel": "IndyDevDan"
-                },
-                {
-                  "x": "2026-09-24",
-                  "views": 31254,
-                  "cat": "news",
-                  "vendor": "claude",
-                  "vtitle": "Claude Opus 5.5 Just Did Something That Looks Like AGI",
-                  "url": "https://www.youtube.com/watch?v=ky_T22Lw5rM",
-                  "vchannel": "TheAIGRID"
-                },
-                {
-                  "x": "2026-09-22",
-                  "views": 95223,
-                  "cat": "news",
                   "vendor": "grok",
-                  "vtitle": "Did Elon catch up? (Grok 4.7 is here)",
-                  "url": "https://www.youtube.com/watch?v=MJllZbpvrAc",
-                  "vchannel": "Matthew Berman"
+                  "label": "Grok",
+                  "n": 2,
+                  "shares": {
+                    "test": 79.5,
+                    "news": 20.5
+                  }
                 },
                 {
-                  "x": "2026-09-22",
-                  "views": 24569,
-                  "cat": "news",
-                  "vendor": "grok",
-                  "vtitle": "Elon Musk Just Released Grok 4.7 — And It’s NOT What We Expected",
-                  "url": "https://www.youtube.com/watch?v=wB5eMyhFfRQ",
-                  "vchannel": "TheAIGRID"
-                },
-                {
-                  "x": "2026-09-24",
-                  "views": 70589,
-                  "cat": "news",
                   "vendor": "gemini",
-                  "vtitle": "Gemini 3.8 Flash TTS  with Voice Cloning",
-                  "url": "https://www.youtube.com/watch?v=GDUBXR-ql78",
-                  "vchannel": "Sam Witteveen"
-                },
-                {
-                  "x": "2026-09-27",
-                  "views": 8229,
-                  "cat": "news",
-                  "vendor": "gemini",
-                  "vtitle": "Gemini Live Avatars",
-                  "url": "https://www.youtube.com/watch?v=U236OfO-spI",
-                  "vchannel": "Sam Witteveen"
+                  "label": "Gemini",
+                  "n": 2,
+                  "shares": {
+                    "tutorial": 100.0
+                  }
                 }
               ],
               "categories": [
@@ -1299,7 +1174,361 @@
                   "label": "Divertissement et culture"
                 }
               ],
-              "caption": "Chaque point est une vidéo de la semaine : date de publication en abscisse, vues en ordonnée (échelle logarithmique), couleur selon le thème. Un clic ouvre la vidéo. Une vidéo qui cite plusieurs assistants apparaît une fois par assistant."
+              "caption": "Répartition des vues des vidéos du panel publiées cette semaine (jusqu'à 25 par assistant, 4 minutes ou plus), par thème ; relevé du 28/9/2026 [[s95]]. Thème attribué par Claude d'après le titre, la chaîne et le début de la description, dans une liste fermée de huit catégories ; un titre ne reflète pas toujours le contenu."
+            },
+            {
+              "type": "video_scatter",
+              "auto": "yt_scatter",
+              "title": "Vidéos de la semaine citant un assistant, par thème",
+              "points": [
+                {
+                  "x": "2026-09-24",
+                  "views": 406449,
+                  "cat": "news",
+                  "vtitle": "OpenAI pirate un gouvernement, Trump refuse de ralentir",
+                  "url": "https://www.youtube.com/watch?v=XSwkfJcMjCg",
+                  "vchannel": "HugoDécrypte - Actus du jour"
+                },
+                {
+                  "x": "2026-09-21",
+                  "views": 122031,
+                  "cat": "business",
+                  "vtitle": "Trouver un emploi de développeur en 2026. (Une recruteuse nous explique..)",
+                  "url": "https://www.youtube.com/watch?v=9pPfsFDN6l0",
+                  "vchannel": "Benjamin Code"
+                },
+                {
+                  "x": "2026-09-24",
+                  "views": 248640,
+                  "cat": "news",
+                  "vtitle": "Opus 5.5: How Close Are We to Automated AI Research?",
+                  "url": "https://www.youtube.com/watch?v=R9momwXV9w4",
+                  "vchannel": "AI Explained"
+                },
+                {
+                  "x": "2026-09-24",
+                  "views": 326029,
+                  "cat": "news",
+                  "vtitle": "Claude Opus 5.5 AI: An Incredible Leap Forward",
+                  "url": "https://www.youtube.com/watch?v=SA9kdAX2Zj0",
+                  "vchannel": "Two Minute Papers"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 264219,
+                  "cat": "news",
+                  "vtitle": "Yes, Jev Is Insane, But There's A Catch",
+                  "url": "https://www.youtube.com/watch?v=qBBRRsH0rQc",
+                  "vchannel": "Two Minute Papers"
+                },
+                {
+                  "x": "2026-09-26",
+                  "views": 18333,
+                  "cat": "code",
+                  "vtitle": "Can Rewriting an AI Agent Bend the Intelligence Curve? - Zhengyao Jiang",
+                  "url": "https://www.youtube.com/watch?v=yB6_iFGTq9k",
+                  "vchannel": "Machine Learning Street Talk"
+                },
+                {
+                  "x": "2026-09-23",
+                  "views": 22099,
+                  "cat": "code",
+                  "vtitle": "The AI That Replaces Hours of Model Tuning - Frank Hutter",
+                  "url": "https://www.youtube.com/watch?v=72Im-Mm5JKs",
+                  "vchannel": "Machine Learning Street Talk"
+                },
+                {
+                  "x": "2026-09-21",
+                  "views": 22181,
+                  "cat": "code",
+                  "vtitle": "Why More Data Cannot Replace Prior Structure - Alexander Mattick",
+                  "url": "https://www.youtube.com/watch?v=1S1B4XkFCD8",
+                  "vchannel": "Machine Learning Street Talk"
+                },
+                {
+                  "x": "2026-09-23",
+                  "views": 162804,
+                  "cat": "risk",
+                  "vtitle": "What the Labs Kept Secret: The German Wiki & RubyGems Hacks - Computerphile",
+                  "url": "https://www.youtube.com/watch?v=giTmBaNGaHw",
+                  "vchannel": "Computerphile"
+                },
+                {
+                  "x": "2026-09-26",
+                  "views": 160017,
+                  "cat": "news",
+                  "vtitle": "AI News: Opus 5.5, GPT-6 Sol, Jev, Muse and More!",
+                  "url": "https://www.youtube.com/watch?v=aDpIra7NFuE",
+                  "vchannel": "Matt Wolfe"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 214078,
+                  "cat": "news",
+                  "vtitle": "Claude Opus 5.5 Didn’t Need to Go This Hard",
+                  "url": "https://www.youtube.com/watch?v=0t-eWrGFZyA",
+                  "vchannel": "Matt Wolfe"
+                },
+                {
+                  "x": "2026-09-24",
+                  "views": 194554,
+                  "cat": "test",
+                  "vtitle": "8 Jev Use Cases That Feel Like Cheating",
+                  "url": "https://www.youtube.com/watch?v=jGD_UR4wMJc",
+                  "vchannel": "Matthew Berman"
+                },
+                {
+                  "x": "2026-09-23",
+                  "views": 60779,
+                  "cat": "news",
+                  "vtitle": "GPT-6 Sol and Luna Are HERE!",
+                  "url": "https://www.youtube.com/watch?v=Ima_AVPyQ9E",
+                  "vchannel": "Matthew Berman"
+                },
+                {
+                  "x": "2026-09-23",
+                  "views": 171311,
+                  "cat": "test",
+                  "vtitle": "Anthropic went CRAZY (Opus 5.5)",
+                  "url": "https://www.youtube.com/watch?v=OWu2kjKrRTA",
+                  "vchannel": "Matthew Berman"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 95897,
+                  "cat": "news",
+                  "vtitle": "GPT-6 SOL AND LUNA ARE OUT!!!",
+                  "url": "https://www.youtube.com/watch?v=5MFORiebZks",
+                  "vchannel": "Matthew Berman"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 95329,
+                  "cat": "test",
+                  "vtitle": "Did Elon catch up? (Grok 4.7 is here)",
+                  "url": "https://www.youtube.com/watch?v=MJllZbpvrAc",
+                  "vchannel": "Matthew Berman"
+                },
+                {
+                  "x": "2026-09-26",
+                  "views": 140978,
+                  "cat": "risk",
+                  "vtitle": "OpenAI paused all training runs... ALIGNMENT FAILURE",
+                  "url": "https://www.youtube.com/watch?v=V3KeMw2nIDA",
+                  "vchannel": "Wes Roth"
+                },
+                {
+                  "x": "2026-09-25",
+                  "views": 74231,
+                  "cat": "risk",
+                  "vtitle": "THE END IS NEAR... and more AI doom",
+                  "url": "https://www.youtube.com/watch?v=LYNSHecA2Ks",
+                  "vchannel": "Wes Roth"
+                },
+                {
+                  "x": "2026-09-24",
+                  "views": 236358,
+                  "cat": "news",
+                  "vtitle": "Claude JUST found hidden DNA...",
+                  "url": "https://www.youtube.com/watch?v=H7KruLVX2Rk",
+                  "vchannel": "Wes Roth"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 112013,
+                  "cat": "risk",
+                  "vtitle": "AI labs may be hiding their biggest breakthroughs",
+                  "url": "https://www.youtube.com/watch?v=p2i-fcx0G0M",
+                  "vchannel": "Wes Roth"
+                },
+                {
+                  "x": "2026-09-26",
+                  "views": 19510,
+                  "cat": "news",
+                  "vtitle": "Google Just Took  A Massive Step Towards AGI",
+                  "url": "https://www.youtube.com/watch?v=s3WB5SSJc8w",
+                  "vchannel": "TheAIGRID"
+                },
+                {
+                  "x": "2026-09-24",
+                  "views": 31300,
+                  "cat": "news",
+                  "vtitle": "Claude Opus 5.5 Just Did Something That Looks Like AGI",
+                  "url": "https://www.youtube.com/watch?v=ky_T22Lw5rM",
+                  "vchannel": "TheAIGRID"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 24569,
+                  "cat": "news",
+                  "vtitle": "Elon Musk Just Released Grok 4.7 — And It’s NOT What We Expected",
+                  "url": "https://www.youtube.com/watch?v=wB5eMyhFfRQ",
+                  "vchannel": "TheAIGRID"
+                },
+                {
+                  "x": "2026-09-25",
+                  "views": 1331913,
+                  "cat": "news",
+                  "vtitle": "Meta is pivoting again... everything you missed from Connect 2026",
+                  "url": "https://www.youtube.com/watch?v=c1rPlzxSZ8E",
+                  "vchannel": "Fireship"
+                },
+                {
+                  "x": "2026-09-23",
+                  "views": 1132672,
+                  "cat": "news",
+                  "vtitle": "The most expensive 33 hours in WordPress history...",
+                  "url": "https://www.youtube.com/watch?v=ylO0DQeVEBQ",
+                  "vchannel": "Fireship"
+                },
+                {
+                  "x": "2026-09-21",
+                  "views": 2792977,
+                  "cat": "news",
+                  "vtitle": "An ex-OpenAI researcher just deleted language from the LLM...",
+                  "url": "https://www.youtube.com/watch?v=TbkUKCm3CHQ",
+                  "vchannel": "Fireship"
+                },
+                {
+                  "x": "2026-09-25",
+                  "views": 60386,
+                  "cat": "test",
+                  "vtitle": "Meta’s Muse actually does the thing | The Vergecast",
+                  "url": "https://www.youtube.com/watch?v=2SyX3sudRrY",
+                  "vchannel": "The Verge"
+                },
+                {
+                  "x": "2026-09-22",
+                  "views": 56218,
+                  "cat": "test",
+                  "vtitle": "DLSS 5 explained, with Linus Tech Tips | The Vergecast",
+                  "url": "https://www.youtube.com/watch?v=1NdPr8nQkWg",
+                  "vchannel": "The Verge"
+                },
+                {
+                  "x": "2026-09-26",
+                  "views": 45104,
+                  "cat": "code",
+                  "vtitle": "Robot-Use Agents: Why General-Purpose Models May Win in Robotics",
+                  "url": "https://www.youtube.com/watch?v=Jv5B5CEaPJI",
+                  "vchannel": "Y Combinator"
+                },
+                {
+                  "x": "2026-09-25",
+                  "views": 21011,
+                  "cat": "code",
+                  "vtitle": "The Biggest AI Coding Agent Upgrade Is Already on Your Machine?!",
+                  "url": "https://www.youtube.com/watch?v=td52e2tQFIU",
+                  "vchannel": "Cole Medin"
+                },
+                {
+                  "x": "2026-09-24",
+                  "views": 19860,
+                  "cat": "code",
+                  "vtitle": "AI Coding Rate Limits are RIDICULOUS Now - Here's How You Keep Scaling Anyway",
+                  "url": "https://www.youtube.com/watch?v=NZq88JAJSag",
+                  "vchannel": "Cole Medin"
+                },
+                {
+                  "x": "2026-09-21",
+                  "views": 39314,
+                  "cat": "code",
+                  "vtitle": "Jev is the FIRST of a Whole New Class of AI Models (Here's How to Actually Use It)",
+                  "url": "https://www.youtube.com/watch?v=bA8WeHYmJko",
+                  "vchannel": "Cole Medin"
+                },
+                {
+                  "x": "2026-09-21",
+                  "views": 36211,
+                  "cat": "code",
+                  "vtitle": "Self-Compact Pi Agent: ZERO HYPE Agentic Coding Devlog",
+                  "url": "https://www.youtube.com/watch?v=3b0U4_02bAE",
+                  "vchannel": "IndyDevDan"
+                },
+                {
+                  "x": "2026-09-27",
+                  "views": 8538,
+                  "cat": "tutorial",
+                  "vtitle": "Gemini Live Avatars",
+                  "url": "https://www.youtube.com/watch?v=U236OfO-spI",
+                  "vchannel": "Sam Witteveen"
+                },
+                {
+                  "x": "2026-09-24",
+                  "views": 71382,
+                  "cat": "tutorial",
+                  "vtitle": "Gemini 3.8 Flash TTS  with Voice Cloning",
+                  "url": "https://www.youtube.com/watch?v=GDUBXR-ql78",
+                  "vchannel": "Sam Witteveen"
+                },
+                {
+                  "x": "2026-09-23",
+                  "views": 46593,
+                  "cat": "tutorial",
+                  "vtitle": "Nemotron 3 Diarization - Who Said That?",
+                  "url": "https://www.youtube.com/watch?v=PZuuOXNB3Vw",
+                  "vchannel": "Sam Witteveen"
+                },
+                {
+                  "x": "2026-09-21",
+                  "views": 65458,
+                  "cat": "code",
+                  "vtitle": "How to Build Things with Jev & OpenJevs",
+                  "url": "https://www.youtube.com/watch?v=ZR7anrL50xs",
+                  "vchannel": "Sam Witteveen"
+                },
+                {
+                  "x": "2026-09-27",
+                  "views": 36399,
+                  "cat": "code",
+                  "vtitle": "Ex-Apple dev reveals his Agentic Engineering Workflow",
+                  "url": "https://www.youtube.com/watch?v=A-JBaNvv3Tk",
+                  "vchannel": "David Ondrej"
+                },
+                {
+                  "x": "2026-09-21",
+                  "views": 228550,
+                  "cat": "code",
+                  "vtitle": "NVIDIA Made 4-Bit AI Work. It’s a Nightmare.",
+                  "url": "https://www.youtube.com/watch?v=mTd3tBpfYmw",
+                  "vchannel": "bycloud"
+                }
+              ],
+              "categories": [
+                {
+                  "id": "news",
+                  "label": "Lancement et actualité"
+                },
+                {
+                  "id": "test",
+                  "label": "Test et comparatif"
+                },
+                {
+                  "id": "tutorial",
+                  "label": "Tutoriel et usage quotidien"
+                },
+                {
+                  "id": "code",
+                  "label": "Code et développement"
+                },
+                {
+                  "id": "business",
+                  "label": "Travail, emploi et business"
+                },
+                {
+                  "id": "ethics",
+                  "label": "Éthique et responsabilité"
+                },
+                {
+                  "id": "risk",
+                  "label": "Risques et sécurité"
+                },
+                {
+                  "id": "culture",
+                  "label": "Divertissement et culture"
+                }
+              ],
+              "caption": "Chaque point est une vidéo du panel consacrée à l'IA, publiée cette semaine : date de publication en abscisse, vues en ordonnée (échelle logarithmique), couleur selon le thème. Un clic ouvre la vidéo."
             }
           ]
         },
@@ -1343,8 +1572,8 @@
                   "[Anthropic](https://www.youtube.com/@anthropic-ai)",
                   "807 k",
                   "3",
-                  "953 k",
-                  "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 325 k vues (Two Minute Papers)"
+                  "954 k",
+                  "[Claude Opus 5.5 AI: An Incredible Leap Forward](https://www.youtube.com/watch?v=SA9kdAX2Zj0), 326 k vues (Two Minute Papers)"
                 ],
                 [
                   "Grok",
@@ -1359,7 +1588,7 @@
                   "[Google Gemini](https://www.youtube.com/@googlegemini)",
                   "24 k",
                   "19",
-                  "68,6 M",
+                  "69,0 M",
                   "[Gemini 3.8 Flash TTS  with Voice Cloning](https://www.youtube.com/watch?v=GDUBXR-ql78), 71 k vues (Sam Witteveen)"
                 ],
                 [
@@ -1392,13 +1621,13 @@
                   "fr": {
                     "title": "OpenAI pirate un gouvernement, Trump refuse de ralentir",
                     "url": "https://www.youtube.com/watch?v=XSwkfJcMjCg",
-                    "views": 403152,
+                    "views": 406449,
                     "channel": "HugoDécrypte - Actus du jour"
                   },
                   "en": {
                     "title": "An ex-OpenAI researcher just deleted language from the LLM...",
                     "url": "https://www.youtube.com/watch?v=TbkUKCm3CHQ",
-                    "views": 2788677,
+                    "views": 2792977,
                     "channel": "Fireship"
                   }
                 },
@@ -1407,7 +1636,7 @@
                   "en": {
                     "title": "Claude Opus 5.5 AI: An Incredible Leap Forward",
                     "url": "https://www.youtube.com/watch?v=SA9kdAX2Zj0",
-                    "views": 324895,
+                    "views": 326029,
                     "channel": "Two Minute Papers"
                   }
                 },
@@ -1416,7 +1645,7 @@
                   "en": {
                     "title": "Did Elon catch up? (Grok 4.7 is here)",
                     "url": "https://www.youtube.com/watch?v=MJllZbpvrAc",
-                    "views": 95223,
+                    "views": 95329,
                     "channel": "Matthew Berman"
                   }
                 },
@@ -1425,7 +1654,7 @@
                   "en": {
                     "title": "Gemini 3.8 Flash TTS  with Voice Cloning",
                     "url": "https://www.youtube.com/watch?v=GDUBXR-ql78",
-                    "views": 70589,
+                    "views": 71382,
                     "channel": "Sam Witteveen"
                   }
                 },
@@ -1699,7 +1928,7 @@
                   "GLM-5.3 (max)",
                   "44,8",
                   "1,40 $ / 4,40 $",
-                  "83"
+                  "82"
                 ],
                 [
                   "Google",
@@ -2631,15 +2860,15 @@
             {
               "label": "ChatGPT",
               "sublabel": "25 incidents sur 18 jours, historique partiel",
-              "value": 42.6,
-              "display": "42,6",
+              "value": 42.4,
+              "display": "42,4",
               "vendor": "gpt"
             },
             {
               "label": "Claude",
               "sublabel": "50 incidents sur 68 jours, historique partiel",
-              "value": 22.2,
-              "display": "22,2",
+              "value": 22.1,
+              "display": "22,1",
               "vendor": "claude"
             },
             {
@@ -2674,7 +2903,7 @@
             [
               "Claude",
               "50",
-              "22,2",
+              "22,1",
               "20",
               "212 h",
               "partiel, depuis le 22/7/2026 [[s87]]"
@@ -2682,7 +2911,7 @@
             [
               "ChatGPT",
               "25",
-              "42,6",
+              "42,4",
               "3",
               "53 h",
               "partiel, depuis le 10/9/2026 [[s88]]"
@@ -4071,6 +4300,12 @@
       "items": [
         "YouTube : panel élargi à 40 chaînes, dont 15 francophones, couvrant l'éthique, la sûreté, la recherche, l'actualité et le code."
       ]
+    },
+    {
+      "date": "2026-09-28",
+      "items": [
+        "YouTube : nouveau graphique des thèmes de toutes les vidéos du panel consacrées à l'IA, qu'elles citent un assistant ou non ; la répartition par assistant passe en approfondissement."
+      ]
     }
   ],
   "sources": {
@@ -4776,6 +5011,7 @@
     "2026-09-panel-v2",
     "2026-09-risks",
     "2026-09-scatter-lang",
+    "2026-09-topics-all",
     "2026-09-wording",
     "2026-09-youtube-panel"
   ]
