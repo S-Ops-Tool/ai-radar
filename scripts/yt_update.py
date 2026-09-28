@@ -55,7 +55,9 @@ def call(endpoint, key, **params):
             if e.code == 429 and attempt < 3:
                 time.sleep(2 ** (attempt + 1))
                 continue
-            raise
+            reason = re.search(r'"reason":\s*"([^"]+)"', body)
+            message = re.search(r'"message":\s*"([^"]+)"', body)
+            raise RuntimeError(f"HTTP {e.code} {reason.group(1) if reason else ''} {message.group(1)[:120] if message else ''}".strip())
 
 
 def fr(x):
