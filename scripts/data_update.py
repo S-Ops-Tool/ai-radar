@@ -12,6 +12,7 @@ import io
 import json
 import os
 import re
+import time
 import urllib.request
 
 import aa_update
@@ -271,26 +272,36 @@ def main():
     data = json.loads(CONTENT.read_text(encoding="utf-8"))
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     notes, errors = [], []
+    timings = []
+    t_start = time.time()
     for sec in data["sections"]:
         cfg = next((b for b in sec["blocks"] if b.get("auto") == "status_table"), None)
         if cfg:
             try:
+                t0 = time.time()
                 status_update.update_status(sec["blocks"], state, notes, cfg)
+                timings.append(f"Durée Statuts : {time.time() - t0:.0f} s.")
             except Exception as e:
                 errors.append(f"statuts : {e}")
         if any(b.get("auto") == "aa_chart" for b in sec["blocks"]):
             try:
+                t0 = time.time()
                 aa_update.update_aa(sec["blocks"], state, notes)
+                timings.append(f"Durée Artificial Analysis : {time.time() - t0:.0f} s.")
             except Exception as e:
                 errors.append(f"artificial analysis : {e}")
         if any(b.get("auto") == "yt_chart" for b in sec["blocks"]):
             try:
+                t0 = time.time()
                 yt_update.update_youtube(sec["blocks"], state, notes)
+                timings.append(f"Durée YouTube : {time.time() - t0:.0f} s.")
             except Exception as e:
                 errors.append(f"youtube : {e}")
         if any(b.get("auto") == "hn_chart" for b in sec["blocks"]):
             try:
+                t0 = time.time()
                 hn_update.update_hn(sec["blocks"], state, notes)
+                timings.append(f"Durée Hacker News : {time.time() - t0:.0f} s.")
             except Exception as e:
                 errors.append(f"hacker news : {e}")
             try:
@@ -310,6 +321,8 @@ def main():
                         errors.append(f"vectara, historique : {e}")
             except Exception as e:
                 errors.append(f"{auto} : {e}")
+    timings.append(f"Durée totale de l'étape de données : {time.time() - t_start:.0f} s.")
+    notes += timings
     CONTENT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     today = dt.date.today().isoformat()

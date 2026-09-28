@@ -248,10 +248,25 @@ def m_2026_09_risks(d):
         "Vidéos : une huitième catégorie, « Risques et sécurité », distincte de « Éthique et responsabilité »."]})
 
 
+def m_2026_09_mistral_ethics(d):
+    """Align the ethics table with the litigation found by the weekly research (Nouveau Monde Éditions)."""
+    if "s133" not in d["sources"]:
+        return
+    eth = section(d, "ethique")
+    if not eth:
+        return
+    for b in eth["blocks"]:
+        if b.get("type") == "table":
+            for row in b["rows"]:
+                if row and row[0].startswith("Respect du droit d'auteur") and row[-1] == "Aucun litige majeur trouvé":
+                    row[-1] = "Mise en cause par un éditeur français pour plus de 200 ouvrages, sans action en justice trouvée [[s133]]"
+
+
 MIGRATIONS = [("2026-09-history", m_2026_09_history), ("2026-09-wording", m_2026_09_wording),
               ("2026-09-scatter-lang", m_2026_09_scatter_lang),
               ("2026-09-ethics-topics", m_2026_09_ethics_topics),
-              ("2026-09-risks", m_2026_09_risks)]
+              ("2026-09-risks", m_2026_09_risks),
+              ("2026-09-mistral-ethics", m_2026_09_mistral_ethics)]
 
 
 def main():

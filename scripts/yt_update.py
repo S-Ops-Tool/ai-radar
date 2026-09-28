@@ -32,11 +32,30 @@ VENDORS = {
 }
 
 
+class QuotaExceeded(Exception):
+    pass
+
+
 def call(endpoint, key, **params):
+    """GET with pacing on searches and retries on 429 (rate limiting); a 403 quotaExceeded stops the collection."""
+    import time
+    import urllib.error
     params["key"] = key
     url = API + endpoint + "?" + urllib.parse.urlencode(params)
-    with urllib.request.urlopen(urllib.request.Request(url, headers={"Accept": "application/json"}), timeout=60) as r:
-        return json.loads(r.read().decode("utf-8"))
+    for attempt in range(4):
+        if endpoint == "search":
+            time.sleep(1)
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"Accept": "application/json"}), timeout=60) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", "ignore") if hasattr(e, "read") else ""
+            if e.code == 403 and "quotaExceeded" in body:
+                raise QuotaExceeded("quota quotidien de l'API YouTube épuisé")
+            if e.code == 429 and attempt < 3:
+                time.sleep(2 ** (attempt + 1))
+                continue
+            raise
 
 
 def fr(x):
@@ -213,7 +232,7 @@ def update_youtube(blocks, state, notes):
                 notes.append(f"YouTube, recherche {cfg['label']} en {lang} : {e}")
         res[vid] = r
     if any("429" in n or "quota" in n.lower() for n in notes):
-        notes.append("YouTube : quota de l'API dépassé ; les chiffres de la semaine précédente sont conservés.")
+        notes.append("YouTube : relevé incomplet (quota épuisé ou requêtes freinées malgré les nouvelles tentatives) ; les chiffres précédents sont conservés.")
         return
     found = [f"{VENDORS[v]['label']} = {r['off']['handle']}" for v, r in res.items() if r["off"]]
     if found:
