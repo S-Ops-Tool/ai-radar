@@ -6,6 +6,7 @@
     "anthropic/claude-opus-4-5-20251101",
     "anthropic/claude-opus-4-6",
     "anthropic/claude-opus-4-7",
+    "anthropic/claude-opus-5-5",
     "anthropic/claude-sonnet-4-20250514",
     "anthropic/claude-sonnet-4-5-20250929",
     "anthropic/claude-sonnet-4-6",
@@ -16,6 +17,7 @@
     "google/gemini-3-pro-preview",
     "google/gemini-3.1-flash-lite-preview",
     "google/gemini-3.1-pro-preview",
+    "google/gemini-4-argon",
     "meta-llama/Llama-3.3-70B-Instruct-Turbo",
     "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
     "meta-llama/Llama-4-Scout-17B-16E-Instruct",
@@ -354,6 +356,90 @@
         "impact": "minor",
         "start": "2026-07-24T09:09:56.933000+00:00",
         "end": "2026-07-24T10:22:06.541000+00:00"
+      },
+      "vx06kp8wfpq2": {
+        "name": "Elevated errors for Claude Fable 5.1",
+        "impact": "major",
+        "start": "2026-10-25T08:17:08.277000+00:00",
+        "end": "2026-10-25T08:49:29.501000+00:00"
+      },
+      "334jvgbrc4ff": {
+        "name": "Elevated errors for Claude Sonnet 5.5 and other models",
+        "impact": "major",
+        "start": "2026-10-25T06:14:18.088000+00:00",
+        "end": "2026-10-25T07:53:39.004000+00:00"
+      },
+      "0ns5clsk8p2x": {
+        "name": "Elevated errors for Claude Fable 5 and Claude Fable 5.1",
+        "impact": "major",
+        "start": "2026-10-24T05:16:50.579000+00:00",
+        "end": "2026-10-24T05:53:30.600000+00:00"
+      },
+      "3cqf3pmlnr96": {
+        "name": "Elevated errors for Claude Opus 5.5",
+        "impact": "major",
+        "start": "2026-10-24T00:31:37.594000+00:00",
+        "end": "2026-10-24T00:37:17.808000+00:00"
+      },
+      "h101vcmhnfky": {
+        "name": "Elevated errors for Claude Fable 5.1, Sonnet 5.5, and Haiku 5.5",
+        "impact": "critical",
+        "start": "2026-10-23T23:37:42.659000+00:00",
+        "end": "2026-10-24T00:11:20.874000+00:00"
+      },
+      "wj6r4t6mxq1r": {
+        "name": "Elevated errors affecting Connectors",
+        "impact": "minor",
+        "start": "2026-10-22T03:50:12.621000+00:00",
+        "end": "2026-10-22T08:07:03.869000+00:00"
+      },
+      "njk29r81v3wg": {
+        "name": "Degraded performance for Claude Fable 5",
+        "impact": "minor",
+        "start": "2026-10-21T19:49:06.486000+00:00",
+        "end": "2026-10-21T20:29:17.844000+00:00"
+      },
+      "978mjkgw6mh7": {
+        "name": "Elevated errors on platform.claude.com",
+        "impact": "major",
+        "start": "2026-10-07T13:25:04.155000+00:00",
+        "end": "2026-10-13T18:00:04.363000+00:00"
+      },
+      "vmys9qn874h4": {
+        "name": "Issue with spend limits",
+        "impact": "none",
+        "start": "2026-10-07T21:23:29.599000+00:00",
+        "end": "2026-10-07T21:23:29.656000+00:00"
+      },
+      "wf2v8ms031sx": {
+        "name": "Elevated errors loading usage data on platform.claude.com",
+        "impact": "major",
+        "start": "2026-10-07T01:20:26.673000+00:00",
+        "end": "2026-10-07T02:33:38.815000+00:00"
+      },
+      "ch27pb90bn85": {
+        "name": "Elevated errors for Claude Opus 5.5",
+        "impact": "major",
+        "start": "2026-10-06T12:24:32.621000+00:00",
+        "end": "2026-10-06T12:43:02.988000+00:00"
+      },
+      "bhphxz3vr58g": {
+        "name": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+        "impact": "major",
+        "start": "2026-10-05T13:05:44.480000+00:00",
+        "end": "2026-10-05T13:21:37.611000+00:00"
+      },
+      "k0h22tsvnydg": {
+        "name": "Delayed credits on the Claude Platform",
+        "impact": "minor",
+        "start": "2026-10-01T16:20:40.767000+00:00",
+        "end": "2026-10-01T22:36:22.210000+00:00"
+      },
+      "4xvtc2gnq73l": {
+        "name": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
+        "impact": "major",
+        "start": "2026-09-29T14:21:37.180000+00:00",
+        "end": "2026-09-29T16:27:21.369000+00:00"
       }
     },
     "gpt": {
@@ -506,6 +592,156 @@
         "impact": "minor",
         "start": "2026-09-10T19:49:49+00:00",
         "end": "2026-09-10T21:30:02+00:00"
+      },
+      "01M5NFF94XCJ6CGTD4S78A9BEB": {
+        "name": "Degraded experience with ChatGPT app connections using CIMD",
+        "impact": "minor",
+        "start": "2026-10-23T22:52:56+00:00",
+        "end": "2026-10-23T23:43:22+00:00"
+      },
+      "01M5NAR5GZC5M7D0S7AQ6CGEEN": {
+        "name": "Help Center Chat Support Degraded",
+        "impact": "none",
+        "start": "2026-10-23T21:30:25+00:00",
+        "end": "2026-10-23T22:02:57+00:00"
+      },
+      "01M5KDJ4079XQTZDSRX40NMN6H": {
+        "name": "Delays in customer support responses",
+        "impact": "none",
+        "start": "2026-10-23T03:41:03+00:00",
+        "end": "2026-10-23T05:58:06+00:00"
+      },
+      "01M5JHVJVC8WAXB4WRYFMKG6HP": {
+        "name": "New Ad Accounts failing to provision admins",
+        "impact": "minor",
+        "start": "2026-10-22T19:36:53+00:00",
+        "end": "2026-10-23T00:07:55+00:00"
+      },
+      "01M5JF8DR3EGQJNTXPZ24AKX2G": {
+        "name": "Degraded Performance of Dots on Enterprise",
+        "impact": "minor",
+        "start": "2026-10-22T18:51:28+00:00",
+        "end": "2026-10-22T20:55:48+00:00"
+      },
+      "01M5GPE9C4E19HE461P8JAMYXD": {
+        "name": "Elevated ChatGPT conversation and Responses API errors",
+        "impact": "minor",
+        "start": "2026-10-22T02:18:32+00:00",
+        "end": "2026-10-22T08:50:43+00:00"
+      },
+      "01M5FD63HHDRPQPM5YMQWJ5HTN": {
+        "name": "Elevated FedRAMP API error rates for Astra and Sol",
+        "impact": "minor",
+        "start": "2026-10-21T14:17:32+00:00",
+        "end": "2026-10-21T19:34:58+00:00"
+      },
+      "01M5FHKHPQJMSHCE2B2WDPZW2N": {
+        "name": "Elevated error rates for gpt-5.6-luna API requests",
+        "impact": "minor",
+        "start": "2026-10-21T15:34:47+00:00",
+        "end": "2026-10-21T16:44:09+00:00"
+      },
+      "01M5E4G39TD1BW1QWHZG6RFA5H": {
+        "name": "Degraded performance in ChatGPT, Codex, and APIs",
+        "impact": "minor",
+        "start": "2026-10-21T02:26:28+00:00",
+        "end": "2026-10-21T03:28:00+00:00"
+      },
+      "01M5G9QQ9V4CYDWFRYF9BWZ5GG": {
+        "name": "Authentication errors for some users",
+        "impact": "major",
+        "start": "2026-10-21T22:36:29+00:00",
+        "end": "2026-10-20T17:35:00+00:00"
+      },
+      "01M5A5S1ATN3QB2WCHQ3VDZC81": {
+        "name": "File Download errors",
+        "impact": "minor",
+        "start": "2026-10-19T13:31:52+00:00",
+        "end": "2026-10-19T14:14:03+00:00"
+      },
+      "01M4XNQX7C6RCBNGX9H711WFSG": {
+        "name": "Delayed Costs data in the Compliance API",
+        "impact": "minor",
+        "start": "2026-10-14T17:00:44+00:00",
+        "end": "2026-10-16T10:44:58+00:00"
+      },
+      "01M506BA4XRSWH7THR53HQGN3Z": {
+        "name": "Widespread feature degradation",
+        "impact": "major",
+        "start": "2026-10-15T16:29:26+00:00",
+        "end": "2026-10-15T18:56:00+00:00"
+      },
+      "01M4WYPP5QA0CJ3JV76KH285K8": {
+        "name": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
+        "impact": "minor",
+        "start": "2026-10-14T10:18:07+00:00",
+        "end": "2026-10-14T10:58:07+00:00"
+      },
+      "01M4WKPE1EY48ZB4RZJ80YH7ES": {
+        "name": "Degraded performance in Codex and ChatGPT Work",
+        "impact": "minor",
+        "start": "2026-10-14T07:05:44+00:00",
+        "end": "2026-10-14T09:53:11+00:00"
+      },
+      "01M4T4ZCM54D3ZPTQXRSWFG0XS": {
+        "name": "Degraded performance in GPT-6.1 Sol Codex and Work mode",
+        "impact": "minor",
+        "start": "2026-10-13T08:10:00+00:00",
+        "end": "2026-10-13T16:36:42+00:00"
+      },
+      "01M4GV1M2A3K38T73JCVCD9G0R": {
+        "name": "Delayed Costs data in the Compliance API",
+        "impact": "minor",
+        "start": "2026-10-09T17:23:18+00:00",
+        "end": "2026-10-12T16:02:47+00:00"
+      },
+      "01M4H7FKXDA425TDNP2CRGEYA3": {
+        "name": "Some ChatGPT content may be unavailable on Android",
+        "impact": "major",
+        "start": "2026-10-09T21:00:39+00:00",
+        "end": "2026-10-10T00:26:44+00:00"
+      },
+      "01M4HA7BCCXVHTR5DCYMSBQF2H": {
+        "name": "Workspace admins may be unable to manage plugins",
+        "impact": "major",
+        "start": "2026-10-09T21:48:34+00:00",
+        "end": "2026-10-09T23:26:59+00:00"
+      },
+      "01M4CR8GCAFC1RYQXZDXAZP2VT": {
+        "name": "Some APAC users are seeing errors in ChatGPT Work, conversations, and GPTs.",
+        "impact": "minor",
+        "start": "2026-10-08T03:17:40+00:00",
+        "end": "2026-10-08T04:51:39+00:00"
+      },
+      "01M4CBXZ62A9SVH8D74KVYQC8M": {
+        "name": "Elevated errors with GPT-5.6 Instant in FedRAMP workspaces",
+        "impact": "minor",
+        "start": "2026-10-07T23:42:12+00:00",
+        "end": "2026-10-08T00:03:18+00:00"
+      },
+      "01M4BP5JE7DKJSP3VG2S2DCWF2": {
+        "name": "Degraded performance in Codex and Work mode: Dot turn failures, delayed responses, and reduced proactivity",
+        "impact": "minor",
+        "start": "2026-10-07T17:21:52+00:00",
+        "end": "2026-10-07T18:23:25+00:00"
+      },
+      "01M4BK9J2M83R4SSC71D9FXW45": {
+        "name": "Dot in Codex may fail to create new threads",
+        "impact": "minor",
+        "start": "2026-10-07T16:31:37+00:00",
+        "end": "2026-10-07T18:06:37+00:00"
+      },
+      "01M4ADHMMBK7K92NJFJ0DXRYJM": {
+        "name": "Unable to create new ChatGPT Work threads in latest version of desktop app",
+        "impact": "major",
+        "start": "2026-10-07T05:31:56+00:00",
+        "end": "2026-10-07T11:53:35+00:00"
+      },
+      "01M49YQE6WZT02WYF0KBXVMQ5G": {
+        "name": "Workspace Agents Degraded and Responses Impacted",
+        "impact": "minor",
+        "start": "2026-10-07T01:12:57+00:00",
+        "end": "2026-10-07T03:00:54+00:00"
       }
     },
     "gemini": {
@@ -811,11 +1047,29 @@
         "start": "2025-10-01T23:40:00+00:00",
         "end": "2025-10-02T12:05:00+00:00"
       },
-      "INCcb17e2": {
-        "name": "API Inference Incident",
+      "ps_1bf7caceaa5f7a94": {
+        "name": "Degraded Model Performance",
         "impact": "minor",
-        "start": "2025-09-19T19:24:00+00:00",
-        "end": "2025-09-19T19:42:00+00:00"
+        "start": "2026-10-24T00:03:44+00:00",
+        "end": "2026-10-24T00:04:21+00:00"
+      },
+      "ps_d022a635bce02f4a": {
+        "name": "grok.com",
+        "impact": "minor",
+        "start": "2026-10-07T00:24:33+00:00",
+        "end": "2026-10-07T00:30:19+00:00"
+      },
+      "ps_f64984fa7d669b08": {
+        "name": "Enterprise Voice Degraded",
+        "impact": "minor",
+        "start": "2026-10-06T19:03:00+00:00",
+        "end": "2026-10-06T19:31:00+00:00"
+      },
+      "INC72f6dd00": {
+        "name": "Models outage",
+        "impact": "major",
+        "start": "2026-09-03T13:30:00+00:00",
+        "end": "2026-09-03T17:09:14+00:00"
       }
     },
     "meta": {},
@@ -897,71 +1151,109 @@
         "comments": 983,
         "points": 1564
       }
+    },
+    "2026-10-26": {
+      "claude": {
+        "n": 822,
+        "notable": 54,
+        "comments": 10966,
+        "points": 15985
+      },
+      "gpt": {
+        "n": 580,
+        "notable": 43,
+        "comments": 9039,
+        "points": 12426
+      },
+      "gemini": {
+        "n": 88,
+        "notable": 6,
+        "comments": 2586,
+        "points": 4109
+      },
+      "grok": {
+        "n": 49,
+        "notable": 0,
+        "comments": 63,
+        "points": 246
+      },
+      "meta": {
+        "n": 33,
+        "notable": 5,
+        "comments": 806,
+        "points": 1913
+      },
+      "mistral": {
+        "n": 28,
+        "notable": 7,
+        "comments": 1534,
+        "points": 4073
+      }
     }
   },
   "aa_last": {
-    "Anthropic": {
-      "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
-      "intel": 57.6,
-      "pin": 4.0,
-      "pout": 20.0,
-      "speed": 95.831
+    "Z.ai (GLM)": {
+      "name": "GLM-5.3 (Max)",
+      "intel": 44.8,
+      "pin": 1.4,
+      "pout": 4.4,
+      "speed": 98.22
+    },
+    "Google": {
+      "name": "Gemini 4 Argon (High)",
+      "intel": 52.6,
+      "pin": 2.0,
+      "pout": 10.0,
+      "speed": 80.91
     },
     "OpenAI": {
-      "name": "GPT-6 Astra (max)",
+      "name": "GPT-6 Astra (Max)",
       "intel": 52.7,
       "pin": 10.0,
       "pout": 50.0,
-      "speed": 63.239
-    },
-    "Meta": {
-      "name": "Muse Spark 1.3 (max)",
-      "intel": 48.1,
-      "pin": 1.25,
-      "pout": 4.25,
-      "speed": 164.982
-    },
-    "xAI": {
-      "name": "Grok 4.7 (xhigh)",
-      "intel": 46.4,
-      "pin": 2.0,
-      "pout": 6.0,
-      "speed": 79.968
+      "speed": 66.67
     },
     "Alibaba (Qwen)": {
       "name": "Qwen3.8 Max (0902)",
       "intel": 45.4,
       "pin": 2.0,
       "pout": 6.0,
-      "speed": 37.963
+      "speed": 41.57
     },
-    "Z.ai (GLM)": {
-      "name": "GLM-5.3 (max)",
-      "intel": 44.8,
-      "pin": 1.4,
-      "pout": 4.4,
-      "speed": 82.378
+    "Anthropic": {
+      "name": "Claude Opus 5.5 (Max, Default Fallback)",
+      "intel": 57.6,
+      "pin": 4.0,
+      "pout": 20.0,
+      "speed": 97.61
     },
-    "Google": {
-      "name": "Gemini 3.8 Flash (high)",
-      "intel": 40.9,
-      "pin": 0.75,
-      "pout": 3.75,
-      "speed": 290.58
+    "xAI": {
+      "name": "Grok 4.7 (Xhigh)",
+      "intel": 46.4,
+      "pin": 2.0,
+      "pout": 6.0,
+      "speed": 88.83
     },
-    "DeepSeek": {
-      "name": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
-      "intel": 39.5,
-      "pin": 0.3,
-      "pout": 1.2,
-      "speed": 220.021
+    "Meta": {
+      "name": "Muse Wonder Full (Max)",
+      "intel": 55.8,
+      "pin": null,
+      "pout": null,
+      "speed": null
     },
     "Mistral": {
-      "name": "Mistral Medium 3.5",
-      "intel": 14.2,
-      "pin": 1.5,
-      "pout": 7.5,
-      "speed": 170.601
+      "name": "Mistral Large 4 Preview",
+      "intel": 38.4,
+      "pin": 1.36,
+      "pout": 4.18,
+      "speed": 113.06
+    },
+    "DeepSeek": {
+      "name": "DeepSeek V4.1 Flash 1017 (Max)",
+      "intel": 45.1,
+      "pin": 0.3,
+      "pout": 1.2,
+      "speed": 169.04
     }
   },
   "youtube_weekly": {
@@ -1027,6 +1319,38 @@
         "views7": 0,
         "subs": 16500,
         "n30": 2
+      }
+    },
+    "2026-10-26": {
+      "claude": {
+        "views7": 0,
+        "subs": 826000,
+        "n30": 0
+      },
+      "gpt": {
+        "views7": 2661250,
+        "subs": 2100000,
+        "n30": 50
+      },
+      "gemini": {
+        "views7": 0,
+        "subs": 34500,
+        "n30": 9
+      },
+      "grok": {
+        "views7": 0,
+        "subs": 34300,
+        "n30": 10
+      },
+      "meta": {
+        "views7": 0,
+        "subs": 45500,
+        "n30": 2
+      },
+      "mistral": {
+        "views7": 0,
+        "subs": 19000,
+        "n30": 7
       }
     }
   },
@@ -1126,6 +1450,14 @@
       "grok": 5,
       "meta": 4,
       "mistral": 3
+    },
+    "2026-09": {
+      "claude": 61,
+      "gpt": 84,
+      "gemini": 10,
+      "grok": 4,
+      "meta": 5,
+      "mistral": 4
     }
   },
   "aa_weekly": {
@@ -1208,6 +1540,47 @@
         "Mistral": [
           "Mistral Medium 3.5",
           14.2
+        ]
+      }
+    },
+    "2026-10-26": {
+      "version": 4.3,
+      "best": {
+        "Z.ai (GLM)": [
+          "GLM-5.3 (Max)",
+          44.8
+        ],
+        "Google": [
+          "Gemini 4 Argon (High)",
+          52.6
+        ],
+        "OpenAI": [
+          "GPT-6 Astra (Max)",
+          52.7
+        ],
+        "Alibaba (Qwen)": [
+          "Qwen3.8 Max (0902)",
+          45.4
+        ],
+        "Anthropic": [
+          "Claude Opus 5.5 (Max, Default Fallback)",
+          57.6
+        ],
+        "xAI": [
+          "Grok 4.7 (Xhigh)",
+          46.4
+        ],
+        "Meta": [
+          "Muse Wonder Full (Max)",
+          55.8
+        ],
+        "Mistral": [
+          "Mistral Large 4 Preview",
+          38.4
+        ],
+        "DeepSeek": [
+          "DeepSeek V4.1 Flash 1017 (Max)",
+          45.1
         ]
       }
     }
@@ -1698,7 +2071,10 @@
     "moonshotai/kimi-k2.6": "2026-05-11",
     "openai/gpt-6-sol": "2026-09-22",
     "openai/gpt-6-astra": "2026-09-22",
-    "openai/gpt-5.6-sol": "2026-09-22"
+    "openai/gpt-5.6-sol": "2026-09-22",
+    "google/gemini-4-argon": "2026-10-16",
+    "deepseek-ai/DeepSeek-V4.1-Flash": "2026-10-22",
+    "anthropic/claude-opus-5-5": "2026-10-22"
   },
   "vectara_parsed_shas": [
     "00c93c46f3b0591c380c632e5c0ad83f64b8f7a1",
@@ -1717,6 +2093,7 @@
     "21b25e2fb26bd8870ef286bee917dcec66ecfa34",
     "2409e3600042a0981cc7a07b3d618393b1edf313",
     "25a9e0a6317175bff65f0144c23c0ab5acc92157",
+    "26d674a50b18c1e576003ac170daa0e3da2749b0",
     "279c928fee126b0616b087c00267b47ff12f1a5a",
     "29c11e0f1bca47bb458d8ab598ac1ce53911cb73",
     "2bf6f4fb8c61854e9b3f5d5f22a02348aefc3f64",
@@ -1735,6 +2112,7 @@
     "4dc753ecd93f8bb572ad8f175db8d498a156318a",
     "4f007d67c78159e40a934b31a05c8955e617d572",
     "4faaabf73fefb277615fe3c8d3d8763d8d04c267",
+    "5107e1e7299bf8529c83cbd30b4355463a6fcab5",
     "551d2fa572292b299599a9cd20dfc3ee232f686b",
     "5533744e88d183e78fe81343328b5ed87965a275",
     "56180d02cfbdb16638ed53a6b1e704229cb85b34",
@@ -1831,5 +2209,5 @@
     "fe944bacd6a243d0a1542d8b3ab35e3fe818412f",
     "ff0077f9daf06f7ed2520abf5a36584c1d6d86d5"
   ],
-  "youtube_last_run": "2026-09-28T12:50:01.656253+00:00"
+  "youtube_last_run": "2026-10-26T14:50:22.346161+00:00"
 }
