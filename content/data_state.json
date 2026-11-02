@@ -6,6 +6,7 @@
     "anthropic/claude-opus-4-5-20251101",
     "anthropic/claude-opus-4-6",
     "anthropic/claude-opus-4-7",
+    "anthropic/claude-opus-5-5",
     "anthropic/claude-sonnet-4-20250514",
     "anthropic/claude-sonnet-4-5-20250929",
     "anthropic/claude-sonnet-4-6",
@@ -16,6 +17,7 @@
     "google/gemini-3-pro-preview",
     "google/gemini-3.1-flash-lite-preview",
     "google/gemini-3.1-pro-preview",
+    "google/gemini-4-argon",
     "meta-llama/Llama-3.3-70B-Instruct-Turbo",
     "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
     "meta-llama/Llama-4-Scout-17B-16E-Instruct",
@@ -354,6 +356,114 @@
         "impact": "minor",
         "start": "2026-07-24T09:09:56.933000+00:00",
         "end": "2026-07-24T10:22:06.541000+00:00"
+      },
+      "phg1y2yh07n2": {
+        "name": "Elevated errors affecting the Google Calendar connector",
+        "impact": "minor",
+        "start": "2026-10-28T16:19:09.935000+00:00",
+        "end": "2026-10-28T20:05:18.208000+00:00"
+      },
+      "9ftx658xtd5z": {
+        "name": "Elevated errors affecting the Gmail connector",
+        "impact": "minor",
+        "start": "2026-10-28T03:59:32.227000+00:00",
+        "end": "2026-10-28T05:48:13.126000+00:00"
+      },
+      "lqhknfdjrcst": {
+        "name": "Elevated errors for Claude Sonnet 5.5",
+        "impact": "major",
+        "start": "2026-10-27T15:09:08.926000+00:00",
+        "end": "2026-10-27T15:50:17.700000+00:00"
+      },
+      "0q89dylg9vjk": {
+        "name": "Elevated errors for Claude Sonnet 5.5",
+        "impact": "major",
+        "start": "2026-10-27T09:14:35.040000+00:00",
+        "end": "2026-10-27T09:56:46.355000+00:00"
+      },
+      "vx06kp8wfpq2": {
+        "name": "Elevated errors for Claude Fable 5.1",
+        "impact": "major",
+        "start": "2026-10-25T08:17:08.277000+00:00",
+        "end": "2026-10-25T08:49:29.501000+00:00"
+      },
+      "334jvgbrc4ff": {
+        "name": "Elevated errors for Claude Sonnet 5.5 and other models",
+        "impact": "major",
+        "start": "2026-10-25T06:14:18.088000+00:00",
+        "end": "2026-10-25T07:53:39.004000+00:00"
+      },
+      "0ns5clsk8p2x": {
+        "name": "Elevated errors for Claude Fable 5 and Claude Fable 5.1",
+        "impact": "major",
+        "start": "2026-10-24T05:16:50.579000+00:00",
+        "end": "2026-10-24T05:53:30.600000+00:00"
+      },
+      "3cqf3pmlnr96": {
+        "name": "Elevated errors for Claude Opus 5.5",
+        "impact": "major",
+        "start": "2026-10-24T00:31:37.594000+00:00",
+        "end": "2026-10-24T00:37:17.808000+00:00"
+      },
+      "h101vcmhnfky": {
+        "name": "Elevated errors for Claude Fable 5.1, Sonnet 5.5, and Haiku 5.5",
+        "impact": "critical",
+        "start": "2026-10-23T23:37:42.659000+00:00",
+        "end": "2026-10-24T00:11:20.874000+00:00"
+      },
+      "wj6r4t6mxq1r": {
+        "name": "Elevated errors affecting Connectors",
+        "impact": "minor",
+        "start": "2026-10-22T03:50:12.621000+00:00",
+        "end": "2026-10-22T08:07:03.869000+00:00"
+      },
+      "njk29r81v3wg": {
+        "name": "Degraded performance for Claude Fable 5",
+        "impact": "minor",
+        "start": "2026-10-21T19:49:06.486000+00:00",
+        "end": "2026-10-21T20:29:17.844000+00:00"
+      },
+      "978mjkgw6mh7": {
+        "name": "Elevated errors on platform.claude.com",
+        "impact": "major",
+        "start": "2026-10-07T13:25:04.155000+00:00",
+        "end": "2026-10-13T18:00:04.363000+00:00"
+      },
+      "vmys9qn874h4": {
+        "name": "Issue with spend limits",
+        "impact": "none",
+        "start": "2026-10-07T21:23:29.599000+00:00",
+        "end": "2026-10-07T21:23:29.656000+00:00"
+      },
+      "wf2v8ms031sx": {
+        "name": "Elevated errors loading usage data on platform.claude.com",
+        "impact": "major",
+        "start": "2026-10-07T01:20:26.673000+00:00",
+        "end": "2026-10-07T02:33:38.815000+00:00"
+      },
+      "ch27pb90bn85": {
+        "name": "Elevated errors for Claude Opus 5.5",
+        "impact": "major",
+        "start": "2026-10-06T12:24:32.621000+00:00",
+        "end": "2026-10-06T12:43:02.988000+00:00"
+      },
+      "bhphxz3vr58g": {
+        "name": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+        "impact": "major",
+        "start": "2026-10-05T13:05:44.480000+00:00",
+        "end": "2026-10-05T13:21:37.611000+00:00"
+      },
+      "k0h22tsvnydg": {
+        "name": "Delayed credits on the Claude Platform",
+        "impact": "minor",
+        "start": "2026-10-01T16:20:40.767000+00:00",
+        "end": "2026-10-01T22:36:22.210000+00:00"
+      },
+      "4xvtc2gnq73l": {
+        "name": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
+        "impact": "major",
+        "start": "2026-09-29T14:21:37.180000+00:00",
+        "end": "2026-09-29T16:27:21.369000+00:00"
       }
     },
     "gpt": {
@@ -506,6 +616,156 @@
         "impact": "minor",
         "start": "2026-09-10T19:49:49+00:00",
         "end": "2026-09-10T21:30:02+00:00"
+      },
+      "01M6754SR14HCQ3E9FX426E2N7": {
+        "name": "Elevated errors with search in Dots, ChatGPT Work, and certain ChatGPT thinking experiences",
+        "impact": "minor",
+        "start": "2026-10-30T19:38:47+00:00",
+        "end": "2026-10-30T21:14:12+00:00"
+      },
+      "01M66KSDH67V5BQ73PE8AD2W8S": {
+        "name": "Elevated errors for GPT Image 2 API image edits",
+        "impact": "minor",
+        "start": "2026-10-30T14:35:28+00:00",
+        "end": "2026-10-30T18:36:55+00:00"
+      },
+      "01M5YY4A3TQETEQ53DVSK8SW10": {
+        "name": "6.1 Sol Degraded Model Performance",
+        "impact": "minor",
+        "start": "2026-10-27T15:02:15+00:00",
+        "end": "2026-10-27T16:20:06+00:00"
+      },
+      "01M5Y60NQGGN514EB3943V94EN": {
+        "name": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
+        "impact": "none",
+        "start": "2026-10-27T08:00:50+00:00",
+        "end": "2026-10-27T08:30:00+00:00"
+      },
+      "01M5WPZTT0385GMEV1353ZC4AM": {
+        "name": "Elevated error rates for Ads POST requests",
+        "impact": "minor",
+        "start": "2026-10-26T18:19:00+00:00",
+        "end": "2026-10-26T18:30:18+00:00"
+      },
+      "01M5NFF94XCJ6CGTD4S78A9BEB": {
+        "name": "Degraded experience with ChatGPT app connections using CIMD",
+        "impact": "minor",
+        "start": "2026-10-23T22:52:56+00:00",
+        "end": "2026-10-23T23:43:22+00:00"
+      },
+      "01M5NAR5GZC5M7D0S7AQ6CGEEN": {
+        "name": "Help Center Chat Support Degraded",
+        "impact": "none",
+        "start": "2026-10-23T21:30:25+00:00",
+        "end": "2026-10-23T22:02:57+00:00"
+      },
+      "01M5KDJ4079XQTZDSRX40NMN6H": {
+        "name": "Delays in customer support responses",
+        "impact": "none",
+        "start": "2026-10-23T03:41:03+00:00",
+        "end": "2026-10-23T05:58:06+00:00"
+      },
+      "01M5JHVJVC8WAXB4WRYFMKG6HP": {
+        "name": "New Ad Accounts failing to provision admins",
+        "impact": "minor",
+        "start": "2026-10-22T19:36:53+00:00",
+        "end": "2026-10-23T00:07:55+00:00"
+      },
+      "01M5JF8DR3EGQJNTXPZ24AKX2G": {
+        "name": "Degraded Performance of Dots on Enterprise",
+        "impact": "minor",
+        "start": "2026-10-22T18:51:28+00:00",
+        "end": "2026-10-22T20:55:48+00:00"
+      },
+      "01M5GPE9C4E19HE461P8JAMYXD": {
+        "name": "Elevated ChatGPT conversation and Responses API errors",
+        "impact": "minor",
+        "start": "2026-10-22T02:18:32+00:00",
+        "end": "2026-10-22T08:50:43+00:00"
+      },
+      "01M5FD63HHDRPQPM5YMQWJ5HTN": {
+        "name": "Elevated FedRAMP API error rates for Astra and Sol",
+        "impact": "minor",
+        "start": "2026-10-21T14:17:32+00:00",
+        "end": "2026-10-21T19:34:58+00:00"
+      },
+      "01M5FHKHPQJMSHCE2B2WDPZW2N": {
+        "name": "Elevated error rates for gpt-5.6-luna API requests",
+        "impact": "minor",
+        "start": "2026-10-21T15:34:47+00:00",
+        "end": "2026-10-21T16:44:09+00:00"
+      },
+      "01M5E4G39TD1BW1QWHZG6RFA5H": {
+        "name": "Degraded performance in ChatGPT, Codex, and APIs",
+        "impact": "minor",
+        "start": "2026-10-21T02:26:28+00:00",
+        "end": "2026-10-21T03:28:00+00:00"
+      },
+      "01M5G9QQ9V4CYDWFRYF9BWZ5GG": {
+        "name": "Authentication errors for some users",
+        "impact": "major",
+        "start": "2026-10-21T22:36:29+00:00",
+        "end": "2026-10-20T17:35:00+00:00"
+      },
+      "01M5A5S1ATN3QB2WCHQ3VDZC81": {
+        "name": "File Download errors",
+        "impact": "minor",
+        "start": "2026-10-19T13:31:52+00:00",
+        "end": "2026-10-19T14:14:03+00:00"
+      },
+      "01M4XNQX7C6RCBNGX9H711WFSG": {
+        "name": "Delayed Costs data in the Compliance API",
+        "impact": "minor",
+        "start": "2026-10-14T17:00:44+00:00",
+        "end": "2026-10-16T10:44:58+00:00"
+      },
+      "01M506BA4XRSWH7THR53HQGN3Z": {
+        "name": "Widespread feature degradation",
+        "impact": "major",
+        "start": "2026-10-15T16:29:26+00:00",
+        "end": "2026-10-15T18:56:00+00:00"
+      },
+      "01M4WYPP5QA0CJ3JV76KH285K8": {
+        "name": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
+        "impact": "minor",
+        "start": "2026-10-14T10:18:07+00:00",
+        "end": "2026-10-14T10:58:07+00:00"
+      },
+      "01M4WKPE1EY48ZB4RZJ80YH7ES": {
+        "name": "Degraded performance in Codex and ChatGPT Work",
+        "impact": "minor",
+        "start": "2026-10-14T07:05:44+00:00",
+        "end": "2026-10-14T09:53:11+00:00"
+      },
+      "01M4T4ZCM54D3ZPTQXRSWFG0XS": {
+        "name": "Degraded performance in GPT-6.1 Sol Codex and Work mode",
+        "impact": "minor",
+        "start": "2026-10-13T08:10:00+00:00",
+        "end": "2026-10-13T16:36:42+00:00"
+      },
+      "01M4GV1M2A3K38T73JCVCD9G0R": {
+        "name": "Delayed Costs data in the Compliance API",
+        "impact": "minor",
+        "start": "2026-10-09T17:23:18+00:00",
+        "end": "2026-10-12T16:02:47+00:00"
+      },
+      "01M4H7FKXDA425TDNP2CRGEYA3": {
+        "name": "Some ChatGPT content may be unavailable on Android",
+        "impact": "major",
+        "start": "2026-10-09T21:00:39+00:00",
+        "end": "2026-10-10T00:26:44+00:00"
+      },
+      "01M4HA7BCCXVHTR5DCYMSBQF2H": {
+        "name": "Workspace admins may be unable to manage plugins",
+        "impact": "major",
+        "start": "2026-10-09T21:48:34+00:00",
+        "end": "2026-10-09T23:26:59+00:00"
+      },
+      "01M4CR8GCAFC1RYQXZDXAZP2VT": {
+        "name": "Some APAC users are seeing errors in ChatGPT Work, conversations, and GPTs.",
+        "impact": "minor",
+        "start": "2026-10-08T03:17:40+00:00",
+        "end": "2026-10-08T04:51:39+00:00"
       }
     },
     "gemini": {
@@ -811,11 +1071,581 @@
         "start": "2025-10-01T23:40:00+00:00",
         "end": "2025-10-02T12:05:00+00:00"
       },
-      "INCcb17e2": {
-        "name": "API Inference Incident",
+      "ps_dece7cc03ecef152": {
+        "name": "Issues with source control integrations",
         "impact": "minor",
-        "start": "2025-09-19T19:24:00+00:00",
-        "end": "2025-09-19T19:42:00+00:00"
+        "start": "2026-11-02T09:09:29+00:00",
+        "end": "2026-11-02T10:24:48+00:00"
+      },
+      "ps_838fe2a3a154acfa": {
+        "name": "Service Degradation - Billing and Usage Dashboard",
+        "impact": "minor",
+        "start": "2026-11-01T05:38:43+00:00",
+        "end": "2026-11-01T10:53:33+00:00"
+      },
+      "ps_061cf14060aff263": {
+        "name": "Multiple services degraded",
+        "impact": "minor",
+        "start": "2026-10-31T06:04:02+00:00",
+        "end": "2026-10-31T06:47:33+00:00"
+      },
+      "ps_d1d05831fabe8abf": {
+        "name": "Grok Degradation",
+        "impact": "minor",
+        "start": "2026-10-30T01:45:19+00:00",
+        "end": "2026-10-30T02:48:38+00:00"
+      },
+      "ps_e5eb22a9954466c4": {
+        "name": "Auto Review Degradation",
+        "impact": "minor",
+        "start": "2026-10-29T23:44:42+00:00",
+        "end": "2026-10-30T01:20:15+00:00"
+      },
+      "ps_35b661ea1cde5cbc": {
+        "name": "Cloud Agent Degradation",
+        "impact": "minor",
+        "start": "2026-10-29T23:29:27+00:00",
+        "end": "2026-10-30T07:11:00+00:00"
+      },
+      "ps_ad31c985bfc193b9": {
+        "name": "Investigating Service Degradation with VS Code Extensions",
+        "impact": "minor",
+        "start": "2026-10-29T21:38:10+00:00",
+        "end": "2026-10-30T07:12:25+00:00"
+      },
+      "ps_95a4f0b2be913452": {
+        "name": "Degraded performance — Origin and Cloud Agents",
+        "impact": "minor",
+        "start": "2026-10-29T09:01:50+00:00",
+        "end": "2026-10-29T09:18:22+00:00"
+      },
+      "ps_d25569b21cabd283": {
+        "name": "Multiple services degraded",
+        "impact": "minor",
+        "start": "2026-10-28T21:15:10+00:00",
+        "end": "2026-10-28T23:13:34+00:00"
+      },
+      "ps_45622ec185897742": {
+        "name": "Delayed responses in Grok Bot",
+        "impact": "minor",
+        "start": "2026-10-27T20:33:09+00:00",
+        "end": "2026-10-27T20:43:04+00:00"
+      },
+      "ps_7e6bd6bbd3e53c30": {
+        "name": "Elevated errors affecting repository integrations",
+        "impact": "minor",
+        "start": "2026-10-27T07:33:08+00:00",
+        "end": "2026-10-27T08:18:40+00:00"
+      },
+      "ps_3e59314c94d41d47": {
+        "name": "Payment System Sync Issues",
+        "impact": "minor",
+        "start": "2026-10-27T00:19:53+00:00",
+        "end": "2026-10-27T00:24:28+00:00"
+      },
+      "ps_67a789782eda77b3": {
+        "name": "Degraded agent personalization and codebase sync",
+        "impact": "minor",
+        "start": "2026-10-26T22:02:31+00:00",
+        "end": "2026-10-27T01:19:29+00:00"
+      },
+      "tf5vxc32161d": {
+        "name": "Elevated errors for Claude Sonnet 5.5",
+        "impact": "minor",
+        "start": "2026-10-26T14:02:00+00:00",
+        "end": "2026-10-26T15:25:50+00:00"
+      },
+      "ps_1bf7caceaa5f7a94": {
+        "name": "Degraded Model Performance",
+        "impact": "minor",
+        "start": "2026-10-24T00:03:44+00:00",
+        "end": "2026-10-24T00:04:21+00:00"
+      },
+      "z1rz4fcd48j6": {
+        "name": "Investigating service outage - Grok models unavailable",
+        "impact": "major",
+        "start": "2026-10-23T23:39:03+00:00",
+        "end": "2026-10-24T00:20:24+00:00"
+      },
+      "691lnxhmwgs6": {
+        "name": "Elevated errors for Bitbucket Cloud integrations",
+        "impact": "minor",
+        "start": "2026-10-21T17:40:17+00:00",
+        "end": "2026-10-21T17:53:46+00:00"
+      },
+      "qy67qt0s4n18": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-10-21T15:46:15+00:00",
+        "end": "2026-10-21T17:40:30+00:00"
+      },
+      "ysjcf4lrs5y0": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-10-21T10:37:17+00:00",
+        "end": "2026-10-21T10:21:00+00:00"
+      },
+      "c30f94k6rtrp": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-10-19T18:09:57+00:00",
+        "end": "2026-10-19T18:28:33+00:00"
+      },
+      "48bg6xqptq72": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-10-19T16:15:04+00:00",
+        "end": "2026-10-19T17:21:36+00:00"
+      },
+      "fhvjq1tr18sl": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-10-19T13:24:52+00:00",
+        "end": "2026-10-19T13:52:07+00:00"
+      },
+      "h76w09vs1vqq": {
+        "name": "Elevated errors affecting Grok models",
+        "impact": "minor",
+        "start": "2026-10-15T22:25:11+00:00",
+        "end": "2026-10-16T05:20:54+00:00"
+      },
+      "6y0yq43mvwg2": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-10-14T15:46:23+00:00",
+        "end": "2026-10-14T21:04:46+00:00"
+      },
+      "bg1b759jsjqf": {
+        "name": "Grok Bot routines not triggering",
+        "impact": "minor",
+        "start": "2026-10-13T21:13:09+00:00",
+        "end": "2026-10-13T20:29:00+00:00"
+      },
+      "8nlyd6t95xjm": {
+        "name": "Degraded performance and errors across Cursor services",
+        "impact": "minor",
+        "start": "2026-10-13T00:22:00+00:00",
+        "end": "2026-10-13T03:07:41+00:00"
+      },
+      "gh45ycs0zs0g": {
+        "name": "Investigating service degradation — Cloud Agents and Grok Bot",
+        "impact": "minor",
+        "start": "2026-10-09T22:37:52+00:00",
+        "end": "2026-10-09T23:09:17+00:00"
+      },
+      "ktfzb72q01z5": {
+        "name": "Investigating service degradation — Cloud Agents",
+        "impact": "minor",
+        "start": "2026-10-09T21:31:17+00:00",
+        "end": "2026-10-09T21:42:56+00:00"
+      },
+      "25l5bm6rdrb6": {
+        "name": "Elevated errors affecting Opus 5.5",
+        "impact": "minor",
+        "start": "2026-10-08T19:52:44+00:00",
+        "end": "2026-10-08T20:51:06+00:00"
+      },
+      "x4mnlflpqc4w": {
+        "name": "Opus 5.5 is Experiencing 429s",
+        "impact": "minor",
+        "start": "2026-10-08T13:54:56+00:00",
+        "end": "2026-10-08T15:31:29+00:00"
+      },
+      "p7fmcg2j968f": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-10-07T15:59:32+00:00",
+        "end": "2026-10-07T17:25:18+00:00"
+      },
+      "ps_d022a635bce02f4a": {
+        "name": "grok.com",
+        "impact": "minor",
+        "start": "2026-10-07T00:24:33+00:00",
+        "end": "2026-10-07T00:30:19+00:00"
+      },
+      "lft9b2dfmfsy": {
+        "name": "Investigating service degradation — Cloud Agents",
+        "impact": "minor",
+        "start": "2026-10-06T22:48:00+00:00",
+        "end": "2026-10-06T23:04:57+00:00"
+      },
+      "bccntkmymws0": {
+        "name": "Investigating service degradation — Cloud Agents and Grok Bot",
+        "impact": "minor",
+        "start": "2026-10-06T19:27:23+00:00",
+        "end": "2026-10-06T22:06:44+00:00"
+      },
+      "ps_f64984fa7d669b08": {
+        "name": "Enterprise Voice Degraded",
+        "impact": "minor",
+        "start": "2026-10-06T19:03:00+00:00",
+        "end": "2026-10-06T19:31:00+00:00"
+      },
+      "xgj4x58k55dx": {
+        "name": "Investigating service degradation — Security Reviewer Agents",
+        "impact": "minor",
+        "start": "2026-10-06T17:49:30+00:00",
+        "end": "2026-10-06T18:56:35+00:00"
+      },
+      "w865g74p3k6g": {
+        "name": "Elevated errors affecting Anthropic models",
+        "impact": "minor",
+        "start": "2026-10-06T12:40:51+00:00",
+        "end": "2026-10-06T16:00:55+00:00"
+      },
+      "tjs10pzx9qxg": {
+        "name": "Investigating service degradation — Grok Bot and Review Agents",
+        "impact": "minor",
+        "start": "2026-10-03T06:50:57+00:00",
+        "end": "2026-10-03T07:26:51+00:00"
+      },
+      "dk1g1h4q8yf8": {
+        "name": "Investigating service degradation - xAI models",
+        "impact": "minor",
+        "start": "2026-09-29T19:43:08+00:00",
+        "end": "2026-09-29T20:18:00+00:00"
+      },
+      "jb59kzth2pwf": {
+        "name": "Investigating service degradation — Cloud Agents and Grok Bot",
+        "impact": "minor",
+        "start": "2026-09-29T14:25:00+00:00",
+        "end": "2026-09-29T18:05:31+00:00"
+      },
+      "x2g19tzq27sg": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-09-28T20:23:05+00:00",
+        "end": "2026-09-28T20:36:19+00:00"
+      },
+      "bfcck6qks18q": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-09-25T23:47:29+00:00",
+        "end": "2026-09-26T00:32:45+00:00"
+      },
+      "n540z31sbqp6": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-09-25T05:17:29+00:00",
+        "end": "2026-09-25T06:51:32+00:00"
+      },
+      "wkjw4b51h1yq": {
+        "name": "Investigating service degradation - Grok 4.7",
+        "impact": "minor",
+        "start": "2026-09-23T20:28:02+00:00",
+        "end": "2026-09-23T20:36:47+00:00"
+      },
+      "lh1fpdkb4kcp": {
+        "name": "Investigating — Cloud Agent Dockerfile Builds",
+        "impact": "minor",
+        "start": "2026-09-23T17:14:16+00:00",
+        "end": "2026-09-23T18:43:20+00:00"
+      },
+      "0cn36t8pvhfj": {
+        "name": "Investigating service degradation — Automations and Cloud Agents w/ Grok 4.7",
+        "impact": "minor",
+        "start": "2026-09-22T13:02:04+00:00",
+        "end": "2026-09-22T13:45:43+00:00"
+      },
+      "ymdqwbhcc85q": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-09-22T01:07:24+00:00",
+        "end": "2026-09-22T01:42:57+00:00"
+      },
+      "9lzqc8vy6jjj": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-09-21T06:39:00+00:00",
+        "end": "2026-09-21T07:00:48+00:00"
+      },
+      "r44l5qk34kj1": {
+        "name": "Sign-in and dashboard errors for some users",
+        "impact": "minor",
+        "start": "2026-09-18T23:02:10+00:00",
+        "end": "2026-09-18T23:13:29+00:00"
+      },
+      "14xbn0wxbpdb": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-09-18T17:19:03+00:00",
+        "end": "2026-09-18T23:02:23+00:00"
+      },
+      "3slwgs0612sc": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-09-18T11:37:50+00:00",
+        "end": "2026-09-18T14:33:59+00:00"
+      },
+      "jdm0j510q78b": {
+        "name": "Investigating service degradation — Cloud Agents and Automations",
+        "impact": "minor",
+        "start": "2026-09-17T15:20:00+00:00",
+        "end": "2026-09-17T20:04:04+00:00"
+      },
+      "lqp75t47dvpm": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-09-17T12:30:56+00:00",
+        "end": "2026-09-17T14:34:44+00:00"
+      },
+      "37hs7jj05wkx": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-09-16T14:27:16+00:00",
+        "end": "2026-09-16T20:57:14+00:00"
+      },
+      "p463n7yf5fq9": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-09-16T08:03:00+00:00",
+        "end": "2026-09-16T08:42:49+00:00"
+      },
+      "2bw21tcjqzg6": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-09-15T21:26:49+00:00",
+        "end": "2026-09-15T22:00:04+00:00"
+      },
+      "bgwm1q5652hy": {
+        "name": "Investigating Grok service degradation",
+        "impact": "minor",
+        "start": "2026-09-14T08:14:46+00:00",
+        "end": "2026-09-14T09:07:24+00:00"
+      },
+      "vgsv8kjxxylh": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-09-11T11:08:41+00:00",
+        "end": "2026-09-11T11:36:00+00:00"
+      },
+      "8mwzyv0n0jyk": {
+        "name": "Investigating service degradation — Review Agents and Cloud Agents",
+        "impact": "minor",
+        "start": "2026-09-10T17:07:24+00:00",
+        "end": "2026-09-10T17:32:05+00:00"
+      },
+      "jw6mzctqkq56": {
+        "name": "Grok Bot computers unreachable for some users",
+        "impact": "minor",
+        "start": "2026-09-07T20:32:42+00:00",
+        "end": "2026-09-07T21:37:45+00:00"
+      },
+      "nk7ln2sb6n6q": {
+        "name": "Investigating service degradation — CLI, Cloud Agents, and IDE",
+        "impact": "minor",
+        "start": "2026-09-07T13:35:48+00:00",
+        "end": "2026-09-07T13:08:00+00:00"
+      },
+      "kt27kgrd7pf1": {
+        "name": "Degraded performance for Grok Bot routine triggers",
+        "impact": "minor",
+        "start": "2026-09-03T23:42:36+00:00",
+        "end": "2026-09-04T00:42:13+00:00"
+      },
+      "22xs8yq5d2pf": {
+        "name": "Degraded performance of Grok 4.6",
+        "impact": "minor",
+        "start": "2026-09-03T17:42:36+00:00",
+        "end": "2026-09-03T19:21:13+00:00"
+      },
+      "sg98v936964m": {
+        "name": "Elevated errors for OpenAI Models",
+        "impact": "minor",
+        "start": "2026-09-03T15:17:05+00:00",
+        "end": "2026-09-03T17:05:20+00:00"
+      },
+      "0h8jlvzfp1jr": {
+        "name": "Elevated errors for Anthropic Models",
+        "impact": "minor",
+        "start": "2026-09-03T14:17:07+00:00",
+        "end": "2026-09-03T16:31:46+00:00"
+      },
+      "dj4cgfmwgm65": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-09-03T13:41:00+00:00",
+        "end": "2026-09-03T17:07:00+00:00"
+      },
+      "INC72f6dd00": {
+        "name": "Models outage",
+        "impact": "major",
+        "start": "2026-09-03T13:30:00+00:00",
+        "end": "2026-09-03T17:09:14+00:00"
+      },
+      "rl1xj0xgtrqx": {
+        "name": "Investigating service degradation — Automations, Cloud Agents, Review Agents",
+        "impact": "minor",
+        "start": "2026-09-02T14:50:00+00:00",
+        "end": "2026-09-02T16:10:18+00:00"
+      },
+      "mdvngs1cnchd": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-09-02T00:48:00+00:00",
+        "end": "2026-09-02T03:07:00+00:00"
+      },
+      "j827pshbz93b": {
+        "name": "Degraded performance of Grok 4.5",
+        "impact": "minor",
+        "start": "2026-09-01T16:42:01+00:00",
+        "end": "2026-09-01T18:40:29+00:00"
+      },
+      "zxhsl1vgfvf0": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-09-01T01:01:00+00:00",
+        "end": "2026-09-01T01:14:23+00:00"
+      },
+      "ttm7sdszxfy4": {
+        "name": "Investigating service degradation — cursor.com and IDE",
+        "impact": "minor",
+        "start": "2026-08-27T19:31:41+00:00",
+        "end": "2026-08-27T19:38:48+00:00"
+      },
+      "jvn3tt2zcqkw": {
+        "name": "Investigating service degradation — Grok Bot",
+        "impact": "minor",
+        "start": "2026-08-27T14:23:20+00:00",
+        "end": "2026-08-27T15:05:23+00:00"
+      },
+      "b5gh4w9q83dj": {
+        "name": "Degraded performance of Grok models",
+        "impact": "minor",
+        "start": "2026-08-25T20:34:50+00:00",
+        "end": "2026-08-25T21:28:42+00:00"
+      },
+      "3tkszvmnqz7c": {
+        "name": "Degraded performance of Grok 4.6",
+        "impact": "minor",
+        "start": "2026-08-25T14:54:02+00:00",
+        "end": "2026-08-25T17:36:45+00:00"
+      },
+      "vwdtvk9w7d6g": {
+        "name": "Investigating service degradation — Automations",
+        "impact": "minor",
+        "start": "2026-08-24T16:04:41+00:00",
+        "end": "2026-08-24T16:33:46+00:00"
+      },
+      "mb61dpg4nfk0": {
+        "name": "Elevated errors for Claude Opus 5",
+        "impact": "minor",
+        "start": "2026-08-24T05:38:49+00:00",
+        "end": "2026-08-24T08:51:09+00:00"
+      },
+      "68krhwzd0r1m": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-08-21T09:20:30+00:00",
+        "end": "2026-08-21T10:07:54+00:00"
+      },
+      "zzm04sp8129g": {
+        "name": "Fable 5 unavailable",
+        "impact": "major",
+        "start": "2026-08-19T23:10:31+00:00",
+        "end": "2026-08-20T01:51:32+00:00"
+      },
+      "s64d4yw0jknv": {
+        "name": "Increased error rates for Composer 2.5",
+        "impact": "minor",
+        "start": "2026-08-19T12:52:32+00:00",
+        "end": "2026-08-19T15:54:55+00:00"
+      },
+      "tp690gjy8prx": {
+        "name": "GitHub-connected Cloud Agent workflows degraded",
+        "impact": "minor",
+        "start": "2026-08-18T19:47:44+00:00",
+        "end": "2026-08-19T02:43:55+00:00"
+      },
+      "60bjmxq5x5tk": {
+        "name": "Grok Bot connector delays",
+        "impact": "minor",
+        "start": "2026-08-18T18:46:26+00:00",
+        "end": "2026-08-18T20:15:48+00:00"
+      },
+      "dwdfpbhv6zl7": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-08-18T10:38:01+00:00",
+        "end": "2026-08-18T11:45:51+00:00"
+      },
+      "ddj7j4d7l3sl": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-08-18T07:42:41+00:00",
+        "end": "2026-08-18T08:50:01+00:00"
+      },
+      "zsvdfz3gdmk3": {
+        "name": "Grok 4.6 availability issues",
+        "impact": "minor",
+        "start": "2026-08-17T21:50:54+00:00",
+        "end": "2026-08-17T22:57:43+00:00"
+      },
+      "l9h9vrd726jv": {
+        "name": "GitHub degradation affecting some Cursor services — Automations, Cloud Agents, Codebase",
+        "impact": "minor",
+        "start": "2026-08-17T14:34:00+00:00",
+        "end": "2026-08-17T20:40:02+00:00"
+      },
+      "46p6kv334swz": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-08-17T09:32:24+00:00",
+        "end": "2026-08-17T13:40:26+00:00"
+      },
+      "8gbqbmsmq7cy": {
+        "name": "Investigating service degradation — Automations, Cloud Agents, and IDE",
+        "impact": "minor",
+        "start": "2026-08-13T14:46:00+00:00",
+        "end": "2026-08-13T18:49:36+00:00"
+      },
+      "kpr6z8dy1sth": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-08-12T05:08:35+00:00",
+        "end": "2026-08-12T05:29:18+00:00"
+      },
+      "5rrkh2hs18q1": {
+        "name": "Investigating service degradation — Automations, Cloud Agents, and IDE",
+        "impact": "minor",
+        "start": "2026-08-12T01:39:00+00:00",
+        "end": "2026-08-12T04:11:22+00:00"
+      },
+      "64zr735jl8sj": {
+        "name": "Investigating service degradation — Automations, Cloud Agents, and IDE",
+        "impact": "minor",
+        "start": "2026-08-11T17:22:00+00:00",
+        "end": "2026-08-11T23:38:05+00:00"
+      },
+      "dyvz7vmw9ymh": {
+        "name": "MCP authentication failures in Automations and Cloud Agents",
+        "impact": "minor",
+        "start": "2026-08-07T15:53:54+00:00",
+        "end": "2026-08-07T18:50:45+00:00"
+      },
+      "9wc9210xpc2l": {
+        "name": "Degraded Performance for Grok 4.5",
+        "impact": "minor",
+        "start": "2026-08-06T19:59:13+00:00",
+        "end": "2026-08-06T20:27:32+00:00"
+      },
+      "hmd3mww247rn": {
+        "name": "Investigating service degradation — Cloud Agents & Automations",
+        "impact": "minor",
+        "start": "2026-08-05T16:27:00+00:00",
+        "end": "2026-08-05T18:47:49+00:00"
+      },
+      "kwxt4c14w1yp": {
+        "name": "Investigating service degradation",
+        "impact": "minor",
+        "start": "2026-08-05T08:01:20+00:00",
+        "end": "2026-08-05T14:36:15+00:00"
+      },
+      "0rjgb6y1mf5p": {
+        "name": "Degraded performance for Cloud Agents",
+        "impact": "minor",
+        "start": "2026-08-04T23:34:20+00:00",
+        "end": "2026-08-05T00:01:37+00:00"
       }
     },
     "meta": {},
@@ -897,136 +1727,142 @@
         "comments": 983,
         "points": 1564
       }
+    },
+    "2026-11-02": {
+      "claude": {
+        "n": 874,
+        "notable": 65,
+        "comments": 14406,
+        "points": 22057
+      },
+      "gpt": {
+        "n": 462,
+        "notable": 40,
+        "comments": 7650,
+        "points": 11845
+      },
+      "gemini": {
+        "n": 83,
+        "notable": 5,
+        "comments": 2336,
+        "points": 3540
+      },
+      "grok": {
+        "n": 45,
+        "notable": 0,
+        "comments": 45,
+        "points": 174
+      },
+      "meta": {
+        "n": 27,
+        "notable": 4,
+        "comments": 791,
+        "points": 1811
+      },
+      "mistral": {
+        "n": 32,
+        "notable": 7,
+        "comments": 1975,
+        "points": 5756
+      }
     }
   },
   "aa_last": {
     "Anthropic": {
-      "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
-      "intel": 57.6,
+      "name": "Claude Opus 5.5 (Max, Default Fallback)",
+      "intel": 58.4,
       "pin": 4.0,
       "pout": 20.0,
-      "speed": 95.831
+      "speed": 95.54
     },
     "OpenAI": {
-      "name": "GPT-6 Astra (max)",
-      "intel": 52.7,
+      "name": "GPT-6 Astra (Max)",
+      "intel": 56.9,
       "pin": 10.0,
       "pout": 50.0,
-      "speed": 63.239
+      "speed": 72.54
     },
-    "Meta": {
-      "name": "Muse Spark 1.3 (max)",
-      "intel": 48.1,
-      "pin": 1.25,
-      "pout": 4.25,
-      "speed": 164.982
+    "Google": {
+      "name": "Gemini 4 Carbon (High)",
+      "intel": 59.4,
+      "pin": 4.0,
+      "pout": 20.0,
+      "speed": 96.21
+    },
+    "Z.ai (GLM)": {
+      "name": "GLM-5.3 (Max)",
+      "intel": 31.7,
+      "pin": 1.4,
+      "pout": 4.4,
+      "speed": 88.97
     },
     "xAI": {
-      "name": "Grok 4.7 (xhigh)",
-      "intel": 46.4,
+      "name": "Grok 4.7 (High)",
+      "intel": 35.0,
       "pin": 2.0,
       "pout": 6.0,
-      "speed": 79.968
+      "speed": 77.6
+    },
+    "Mistral": {
+      "name": "Mistral Large 4 (High)",
+      "intel": 26.0,
+      "pin": 0.7,
+      "pout": 2.1,
+      "speed": null
     },
     "Alibaba (Qwen)": {
       "name": "Qwen3.8 Max (0902)",
-      "intel": 45.4,
+      "intel": 33.6,
       "pin": 2.0,
       "pout": 6.0,
-      "speed": 37.963
+      "speed": 39.58
     },
-    "Z.ai (GLM)": {
-      "name": "GLM-5.3 (max)",
-      "intel": 44.8,
-      "pin": 1.4,
-      "pout": 4.4,
-      "speed": 82.378
-    },
-    "Google": {
-      "name": "Gemini 3.8 Flash (high)",
-      "intel": 40.9,
-      "pin": 0.75,
-      "pout": 3.75,
-      "speed": 290.58
+    "Meta": {
+      "name": "Muse Wonder Full (Max)",
+      "intel": 49.7,
+      "pin": null,
+      "pout": null,
+      "speed": null
     },
     "DeepSeek": {
-      "name": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
-      "intel": 39.5,
+      "name": "DeepSeek V4.1 Flash 1017 (Max)",
+      "intel": 32.5,
       "pin": 0.3,
       "pout": 1.2,
-      "speed": 220.021
-    },
-    "Mistral": {
-      "name": "Mistral Medium 3.5",
-      "intel": 14.2,
-      "pin": 1.5,
-      "pout": 7.5,
-      "speed": 170.601
+      "speed": 173.21
     }
   },
   "youtube_weekly": {
-    "2026-09-27": {
+    "2026-11-02": {
       "claude": {
-        "views7": 4724732,
-        "subs": 806000,
-        "n30": 3
+        "views7": 0,
+        "subs": 831000,
+        "n30": 0
       },
       "gpt": {
-        "views7": null,
-        "subs": 2070000,
+        "views7": 3616304,
+        "subs": 2100000,
         "n30": 50
       },
       "gemini": {
-        "views7": null,
-        "subs": 23800,
-        "n30": 19
+        "views7": 130483,
+        "subs": 36300,
+        "n30": 14
       },
       "grok": {
-        "views7": 1919252,
-        "subs": 20700,
-        "n30": 2
-      },
-      "meta": {
-        "views7": null,
-        "subs": 39700,
-        "n30": 0
-      },
-      "mistral": {
-        "views7": null,
-        "subs": 16500,
-        "n30": 2
-      }
-    },
-    "2026-09-28": {
-      "claude": {
-        "views7": 843976,
-        "subs": 807000,
-        "n30": 3
-      },
-      "gpt": {
-        "views7": 3871175,
-        "subs": 2070000,
-        "n30": 50
-      },
-      "gemini": {
-        "views7": 79920,
-        "subs": 23900,
-        "n30": 19
-      },
-      "grok": {
-        "views7": 119898,
-        "subs": 21000,
-        "n30": 2
+        "views7": 231147,
+        "subs": 36800,
+        "n30": 11
       },
       "meta": {
         "views7": 0,
-        "subs": 39800,
-        "n30": 0
+        "subs": 45900,
+        "n30": 2
       },
       "mistral": {
         "views7": 0,
-        "subs": 16500,
-        "n30": 2
+        "subs": 19400,
+        "n30": 9
       }
     }
   },
@@ -1126,6 +1962,22 @@
       "grok": 5,
       "meta": 4,
       "mistral": 3
+    },
+    "2026-09": {
+      "claude": 61,
+      "gpt": 84,
+      "gemini": 10,
+      "grok": 4,
+      "meta": 5,
+      "mistral": 4
+    },
+    "2026-10": {
+      "claude": 65,
+      "gpt": 43,
+      "gemini": 6,
+      "grok": 0,
+      "meta": 4,
+      "mistral": 7
     }
   },
   "aa_weekly": {
@@ -1208,6 +2060,47 @@
         "Mistral": [
           "Mistral Medium 3.5",
           14.2
+        ]
+      }
+    },
+    "2026-11-02": {
+      "version": 5,
+      "best": {
+        "Anthropic": [
+          "Claude Opus 5.5 (Max, Default Fallback)",
+          58.4
+        ],
+        "OpenAI": [
+          "GPT-6 Astra (Max)",
+          56.9
+        ],
+        "Google": [
+          "Gemini 4 Carbon (High)",
+          59.4
+        ],
+        "Z.ai (GLM)": [
+          "GLM-5.3 (Max)",
+          31.7
+        ],
+        "xAI": [
+          "Grok 4.7 (High)",
+          35.0
+        ],
+        "Mistral": [
+          "Mistral Large 4 (High)",
+          26.0
+        ],
+        "Alibaba (Qwen)": [
+          "Qwen3.8 Max (0902)",
+          33.6
+        ],
+        "Meta": [
+          "Muse Wonder Full (Max)",
+          49.7
+        ],
+        "DeepSeek": [
+          "DeepSeek V4.1 Flash 1017 (Max)",
+          32.5
         ]
       }
     }
@@ -1698,7 +2591,10 @@
     "moonshotai/kimi-k2.6": "2026-05-11",
     "openai/gpt-6-sol": "2026-09-22",
     "openai/gpt-6-astra": "2026-09-22",
-    "openai/gpt-5.6-sol": "2026-09-22"
+    "openai/gpt-5.6-sol": "2026-09-22",
+    "google/gemini-4-argon": "2026-10-16",
+    "deepseek-ai/DeepSeek-V4.1-Flash": "2026-10-22",
+    "anthropic/claude-opus-5-5": "2026-10-22"
   },
   "vectara_parsed_shas": [
     "00c93c46f3b0591c380c632e5c0ad83f64b8f7a1",
@@ -1717,6 +2613,7 @@
     "21b25e2fb26bd8870ef286bee917dcec66ecfa34",
     "2409e3600042a0981cc7a07b3d618393b1edf313",
     "25a9e0a6317175bff65f0144c23c0ab5acc92157",
+    "26d674a50b18c1e576003ac170daa0e3da2749b0",
     "279c928fee126b0616b087c00267b47ff12f1a5a",
     "29c11e0f1bca47bb458d8ab598ac1ce53911cb73",
     "2bf6f4fb8c61854e9b3f5d5f22a02348aefc3f64",
@@ -1735,6 +2632,7 @@
     "4dc753ecd93f8bb572ad8f175db8d498a156318a",
     "4f007d67c78159e40a934b31a05c8955e617d572",
     "4faaabf73fefb277615fe3c8d3d8763d8d04c267",
+    "5107e1e7299bf8529c83cbd30b4355463a6fcab5",
     "551d2fa572292b299599a9cd20dfc3ee232f686b",
     "5533744e88d183e78fe81343328b5ed87965a275",
     "56180d02cfbdb16638ed53a6b1e704229cb85b34",
@@ -1831,5 +2729,5 @@
     "fe944bacd6a243d0a1542d8b3ab35e3fe818412f",
     "ff0077f9daf06f7ed2520abf5a36584c1d6d86d5"
   ],
-  "youtube_last_run": "2026-09-28T12:50:01.656253+00:00"
+  "youtube_last_run": "2026-11-02T17:47:53.452287+00:00"
 }
